@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Conexión</title>
+</head>
+<body>
+    <h1>Prueba de Conexión a LMStudio</h1>
+    <textarea id="user-message" placeholder="Escribe tu mensaje..." rows="4" cols="50"></textarea><br>
+    <button id="send-button">Enviar</button>
+    <h2>Respuesta del Servidor:</h2>
+    <pre id="server-response"></pre>
+
+    <script>
+        const apiUrl = '/api/v1/completions'; // Proxy inverso configurado
+        const apiKey = 'lm-studio'; // Clave de autorización
+
+        document.getElementById('send-button').addEventListener('click', async () => {
+            const userMessage = document.getElementById('user-message').value.trim();
+            if (!userMessage) {
+                alert("Por favor, escribe un mensaje.");
+                return;
+            }
+
+            const payload = {
+                model: "lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF",
+                prompt: userMessage, // Campo 'prompt' requerido
+                temperature: 0.7,
+                max_tokens: 300 // Define cuántos tokens se generarán en la respuesta
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${apiKey}`
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    console.error(`Error ${response.status}: ${errorText}`);
+                    throw new Error(`HTTP ${response.status}: ${errorText}`);
+                }
+
+                const data = await response.json();
+
+                // Extraer solo el texto de la respuesta
+                const generatedText = data.choices[0].text.trim();
+                document.getElementById('server-response').textContent = generatedText;
+
+            } catch (error) {
+                document.getElementById('server-response').textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>
