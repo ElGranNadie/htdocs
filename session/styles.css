@@ -1,90 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Pacifico&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #f8c6c1, #fccedb);
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #5d73ee, #fc5fa8);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    position: relative;
-    background-image: url('../img/fondo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
 
-        .container {
-            width: 400px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+form {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px 25px 25px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+    backdrop-filter: blur(15px);
+    position: relative;
+    animation: slideIn 1s ease-in-out;
+}
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff4d88;
-            margin-bottom: 20px;
-        }
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
 
-        h2 {
-            font-size: 20px;
-            color: #666;
-            margin-bottom: 20px;
-        }
+h2 {
+    text-align: center;
+    color: #222;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+    animation: glow 2s infinite alternate;
+}
 
-        input[type="email"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fc5fa8; }
+    to { text-shadow: 0 0 20px #5d73ee; }
+}
 
-        .logo img {
-            width: 100px;
-            height: auto;
-            display: block;
-            margin: 0 auto 10px;
-        }
+input {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #1c0abb9c;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+input:focus {
+    border-color: #6C63FF;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(108, 99, 255, 0.6);
+    transform: scale(1.05);
+}
 
-        .register {
-            background-color: #a4d466;
-        }
+button {
+    background: linear-gradient(135deg, #6C63FF, #574bff);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
 
-        a {
-            display: block;
-            margin-top: 10px;
-            color: #666;
-            font-size: 14px;
-            text-decoration: none;
-        }
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(108, 99, 255, 0.6);
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 50%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
 
-        /* Mensaje de error */
-        .error {
-            color: red;
-            font-size: 14px;
-            display: none;
-            margin-bottom: 10px;
-        }
+button:active::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+button:last-child {
+    background: linear-gradient(135deg, #ff6584, #e44d6b);
+}
+
+button:last-child:hover {
+    box-shadow: 0px 4px 15px rgba(255, 101, 132, 0.6);
+}
