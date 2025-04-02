@@ -7,8 +7,9 @@
     <title>Login</title>
 </head>
 <body>
-    <h2>Iniciar Sesión</h2>
+    
     <form action="procesar_login.php" method="POST">
+        <h2>Iniciar Sesión</h2>
         <input type="text" name="correo" placeholder="correo" required>
         <input type="password" name="pass" placeholder="pass" required>
         <button type="submit">Entrar</button>
