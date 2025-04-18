@@ -33,7 +33,6 @@
             <option value="Deportista">Deportista</option>
         </select>
         <br>
-        <input type="text" name="correo" placeholder="correo" required><br>        <br>
         <button type="submit">Entrar</button>
     </form>
 </body>
