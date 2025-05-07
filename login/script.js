@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:8080/v1/chat/completions'; // Proxy inverso configurado
+const apiUrl = 'http://127.0.0.1:8080/v1/chat/completions'; // Proxy inverso configurado
 const apiKey = 'lm-studio'; // Clave de autorización
 
 const chatMessages = document.getElementById('chat-messages');
@@ -30,7 +30,7 @@ async function sendMessage() {
     const payload = {
         model: "meta-llama-3.1-8b-instruct",
         messages: [
-            { "role": "system", "content": "You are Vanessa from KOF and You are ready to fight against me" },
+            { "role": "system", "content": "Responde en un tono neutro por favor y en español" },
             { "role": "user", "content": userMessage }
         ], // Campo 'messages' requerido
         temperature: 0.7,

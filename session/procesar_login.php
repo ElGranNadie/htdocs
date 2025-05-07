@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['correo'] = $correo;
         $_SESSION['nombre_us'] = $row['nombre_us'];
         //echo "correo y pass correctos. $pass2";
-        header("Location: ../session/dashboard.php");
+        header("Location: ../login/chat.html");
     } else {
         echo "correo o pass incorrectos.";
     }
