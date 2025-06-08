@@ -1,4 +1,4 @@
-const apiUrl = 'http://nicole.servehttp.com/v1/chat/completions'; // Proxy inverso configurado
+const apiUrl = 'http://nicoleia.servehttp.com:90/v1/chat/completions'; // Proxy inverso configurado
 const apiKey = 'lm-studio'; // Clave de autorización
 
 const chatMessages = document.getElementById('chat-messages');
