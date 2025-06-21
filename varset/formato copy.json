@@ -1,0 +1,73 @@
+{
+    "type": "object",
+    "properties": {
+        "acciones": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "mensaje": {
+                    "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "mensaje"
+                ]
+            }
+        },
+        "alimento": {
+            "type": "string",
+            "enum": [
+                "arepadelapulpadelcactus",
+                "arraciraba",
+                "arrozconmilpeso",
+                "asadohuilense",
+                "bedabeta",
+                "blackeyebeansricearrozconfrijolabecitanegra",
+                "caguanadepiña",
+                "caldodecuchas",
+                "caldodepreza",
+                "casabedealmidon",
+                "chichadeiwalayafrutodelcactus",
+                "chichademaiz",
+                "chocolo",
+                "chucula",
+                "dumplingesponjosobolitademasahervida",
+                "envueltosdemazorca",
+                "fariña",
+                "guarapo",
+                "guarrus",
+                "injokowo",
+                "johnnycakewithbutterjohnnycakeconmantequilla",
+                "jurichifrishe",
+                "kankuku",
+                "lechona",
+                "masatodearroz",
+                "mazamorradepescado",
+                "mermeladadecactus",
+                "mincedfish",
+                "nozi",
+                "owirralet",
+                "pescadoahumadoomoqueado",
+                "pescadoguisado",
+                "pescadomoquiao",
+                "pilaodecerrillo",
+                "poyoapoijushyfrijolguajiro",
+                "quiñapirasopapicante",
+                "rondon",
+                "sancochoconchichavoyo",
+                "sancochodegallina",
+                "sopaderesplandor",
+                "sopadezapallo",
+                "tamales",
+                "turujashycarneseca",
+                "viudodepescado",
+                "zhibi"
+            ]
+        }
+    },
+    "required": [
+        "acciones"
+    ]
+}

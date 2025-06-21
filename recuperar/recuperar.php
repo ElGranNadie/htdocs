@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+    session_start(); 
+    require '../varset/varset.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -66,7 +69,7 @@
             transform: translateY(-2px);
         }
     </style>
-    <script src="../js/main.js"></script>
+    <script src='<?php echo $mainjs?>'></script>
     
 </head>
 <body>
@@ -82,7 +85,7 @@
         </div>
         <div class="right-section">
             <div class="login-container">
-            <img src="../imagenes/icono.jpg" alt="Icono" class="mb-4" width="100">
+            <img src='<?php echo $logo ?>' alt="Icono" class="mb-4" width="100">
                 <h3>recuperar tu contraseña</h3>
                 <?php if(isset($_SESSION['error'])): ?>
                     <div class="error-message"><?php echo $_SESSION['error']; ?></div>

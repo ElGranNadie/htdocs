@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+    require '../varset/varset.php';
+    session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>N.I.C.O.L.E</title>
-    <script src="../js/main.js"></script>
+    <script src='<?php echo $mainjs?>'></script> <!-- script main, añadido desde la lista de variables -->
     <style>
-     
-
+        
+/*  estilo del carrusel   */
         .carousel {
             position: relative;
             margin-top: 2rem;
@@ -57,7 +60,9 @@
         .carousel-item:nth-child(3) { animation-delay: 10s; }
     </style>
 </head>
+<!--  cuerpo de la pagina -->
 <body>
+<!--  nombre y carrusel de frases  -->
     <div class="app-container">
         <div class="left-section">
             <h1 class="logo">N.I.C.O.L.E</h1>
@@ -67,14 +72,17 @@
                 <div class="carousel-item">estas a nada de cocinar!!!</div>
             </div>
         </div>
+        <!--   formulario de inicio de seccion -->
         <div class="right-section">
             <div class="login-container">
-            <img src="../imagenes/icono.jpg" alt="Icono" class="mb-4" width="100">
-                <h3>iniciar sesion</h3>
+            <img src='<?php echo $logo ?>' alt="Icono" class="mb-4" width="100">
+            <!-- Mensaje de error si hay un problema con el inicio de sesión -->    
+            <h3>iniciar sesion</h3>
                 <?php if(isset($_SESSION['error'])): ?>
                     <div class="error-message"><?php echo $_SESSION['error']; ?></div>
                     <?php unset($_SESSION['error']); ?>
                 <?php endif; ?>
+                <!-- Formulario de inicio de sesión -->
                 <form action="procesar_login.php" method="POST">
                     <div class="form-group">
                         <input type="email" name="correo" placeholder="correo" required>
@@ -82,12 +90,15 @@
                     <div class="form-group">
                         <div class="password-container">
                             <input type="password" id="pass" name="pass" placeholder="contraseña" required>
+                            <!-- boton de icono para mostrar o ocultar contraseña  -->
                             <button type="button" class="toggle-password" onclick="togglePassword('pass')"><i class="eye-icon">👁️</i></button>
                         </div>
                     </div>
+                    <!-- Enlace para recuperar contraseña -->
                     <div class="forgot-password">
                         <a href="../recuperar/recuperar.php">¿olvidaste tu contraseña?</a>
                     </div>
+                    <!-- Botones de inicio de sesión y registro -->
                     <div class="button-group">
                         <button type="submit" class="login-btn">iniciar sesion</button>
                         <button type="button" onclick="window.location.href='../registro/registro.php'" class="register-btn">registrarse</button>

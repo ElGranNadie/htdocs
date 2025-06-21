@@ -1,15 +1,17 @@
+<?php // Se requiere porque aqui se definen las variables que se usan en el dashboard
+  require 'varset/varset.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 </head>
+<!-- Contenido visible para el usuario -->
+<!--Redirección del lado del servidor a la ruta de login-->
 <body>
-    <h1>hola mundo!</h1>
     <?php
-    header("Location: ../login/login.php");
+    //header("Location: ../login/login.php");
+    header("Location: ../dashboard/index.php"); // Redirige al dashboard
+    exit(); // Asegura que no se ejecute más código después de la redirección
     ?>
-    <script>
-        //window.location.replace("http://localhost/session/login.php");
-        //window.location.href = "https://localhost/index copy.html";
-    </script>
 </body>
 </html>
