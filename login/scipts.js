@@ -1,10 +1,8 @@
-//const apiUrl = 'http://192.168.1.10/v1/chat/completions'; // Proxy inverso configurado
-const apiUrl = 'http://nicoleia.servehttp.com:90/v1/chat/completions'; // URL activa de la API (proxy inverso)
-//const apiUrl = 'http://nicole.servehttp.com/v1/chat/completions'; // Otra opción de proxy
-
+//const apiUrl = 'http://192.168.1.10/v1/chat/completions'; // Proxy inverso configurado en el servidor local
+//const apiUrl = 'http://nicole.servehttp.com/v1/chat/completions'; // Otra opción de proxy que estuvimos probando
+const apiUrl = 'http://nicoleia.servehttp.com:90/v1/chat/completions'; // URL activa de la API (proxy inverso) puerto 90
 // Clave de autorización para acceder a la API, tipo "Bearer"
 const apiKey = 'lm-studio';
-
 // Referencias a elementos del DOM (interfaz)
 const chatMessages = document.getElementById('chat-messages'); // Contenedor donde aparecen los mensajes del chat
 const userMessageInput = document.getElementById('user-message'); // Campo de entrada de texto del usuario
@@ -16,10 +14,13 @@ const microphoneButton = document.getElementById('microphone-button'); // Botón
 function appendMessage(content, className) {
     const messageElement = document.createElement('div'); // Crea un nuevo <div> para el mensaje
     messageElement.textContent = content; // Establece el texto del mensaje
-    messageElement.className = `message ${className}`; // Aplica clases CSS para estilo (por ejemplo: "message user")
+    messageElement.className = `message ${className}`; // Aplica clases CSS para estilo
     chatMessages.appendChild(messageElement); // Inserta el nuevo mensaje en el contenedor
     chatMessages.scrollTop = chatMessages.scrollHeight; // Auto scroll hacia el final del chat
 }
+// ---PROBANDO---
+// -------------------- FUNCIÓN: Agrega un mensaje con imagen al chat (aun no sirve bien :v)--------------------
+
 function appendMessageImg(content, className, image) {
     const messageElementImg = document.createElement('div'); // Crea un nuevo <div> para el mensaje
     messageElementImg.appendChild = document.createElement(`img src="../../../imagenes/imgcomidas${image}img.jpg"`); // Establece el texto del mensaje
@@ -27,7 +28,7 @@ function appendMessageImg(content, className, image) {
     chatMessages.appendChild(messageElementImg); // Inserta el nuevo mensaje en el contenedor
     chatMessages.scrollTop = chatMessages.scrollHeight; // Auto scroll hacia el final del chat
 }
-
+// ---PROBANDO---
 // -------------------- FUNCIÓN: Enviar mensaje --------------------
 
 async function sendMessage() {
@@ -37,45 +38,64 @@ async function sendMessage() {
         return;
     }
 
-    appendMessage(userMessage, 'user'); // Muestra el mensaje del usuario en el chat
+    appendMessage(userMessage, 'user'); // Muestra el mensaje del usuario en el chat, la idea es que se muestre con un estilo diferente
+    // (por ejemplo: "message user" para mensajes del usuario)
+    // Aquí necesitamos un estilo CSS para diferenciar los mensajes del usuario de los del bot
+    // (por ejemplo: "message bot" para mensajes del bot)
+    // Aun no se ha implementado, pero tenemos que ver que inventarnos
     userMessageInput.value = ''; // Limpia el campo de entrada
 
-    const payload = {
+    // OK AQUI HAY QUE ESTAR ALERTAS, porque si no se pone el modelo correcto, la API no funciona
+    // Aquí se arma el objeto que se enviará a la API
+    // Contiene el modelo, mensajes y parámetros de la solicitud
+    // Es complicado, pero es así como funciona la API de OpenAI y similares
+    // Estudienselo lo mas posible, porque es la base de todo lo que vamos a hacer
+    const payload = { // Un payload ss el conjunto de datos transmitidos útiles, por eso ese nombre
         model: "meta-llama-3.1-8b-instruct", // Modelo a utilizar en el backend
         messages: [
-            { "role": "system", "content": "Responde en un tono neutro por favor y en español" },
+            // Mensaje del sistema que define el comportamiento del modelo, por esto es que habla español
+            // Si no se pone, el modelo puede responder en inglés u otro idioma
+            { "role": "system", "content": "Responde en un tono neutro y en español, tu nombre es NICOLE, una gata cocinera cuya IA esta diseñada en gran parte por ALPHA 22 una compañida de programacion. toma en cuenta las necesidades de nuestro usuario para realizar recomendaciones viables para su alimentacion, no puedes desviarte a temas que no esten relacionados con comida. Intenta, si te es solicitado, escoger entre una lista de resetas predeterminada, en caso de tener que diseñar una propia, indica que no puedes procurar la seguridad del usuario" }, 
+            // Mensaje del usuario con el contenido que se envía
+            // Aquí es donde se pone el mensaje del usuario que se acaba de enviar
+            // El modelo lo procesa y genera una respuesta basada en este mensaje
             { "role": "user", "content": userMessage }
         ],
         temperature: 0.3, // Controla la creatividad de la respuesta (0: determinista, 1: más aleatorio)
         max_tokens: 300 // Límite máximo de tokens (palabras aproximadamente) en la respuesta
     };
 
+    // Aquí se envía la solicitud a la API que tenemos configurada de antes
+    // Se puede liar si no se pone bien la URL o la clave de API
     try {
         // Envío de la solicitud a la API usando POST
-        const response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: {
+        const response = await fetch(apiUrl, { // una funcion asíncrona que espera la respuesta de la API
+            method: 'POST', // Método HTTP POST para enviar datos
+            headers: { 
                 "Content-Type": "application/json", // Indica que el cuerpo es JSON
-                "Authorization": `Bearer ${apiKey}` // Token de autenticación
+                "Authorization": `Bearer ${apiKey}` // Token de autenticación, esto es la validacion para acceder a la API
             },
             body: JSON.stringify(payload) // Convierte el objeto payload a JSON string
         });
-
+        // ESTO TOCA CAMBIARLO DESPUES
         if (!response.ok) {
             // Si hubo error en la respuesta (por ejemplo, 500, 403, etc.)
             const errorText = await response.text(); // Lee el texto del error
-            console.error(`Error ${response.status}: ${errorText}`);
-            throw new Error(`HTTP ${response.status}: ${errorText}`); // Lanza una excepción con detalle
+            console.error(`Error ${response.status}: ${errorText}`); // Muestra el error en consola, esto es mas que nada para debuggear, quitenlo si quieren
+            throw new Error(`HTTP ${response.status}: ${errorText}`); // Lanza una excepción con detalle esto lo cambiamos por un mensaje de error mas amigable
         }
 
         const data = await response.json(); // Convierte la respuesta a objeto JSON
         const generatedText = data.choices[0].message.content; // Extrae la respuesta generada (asume formato específico)
+        // Muestra la respuesta en el chat cambiar el ant por bot o algo asi, para que se 
+        // diferencie del usuario y sepamos que esta haciendo
+        appendMessage(generatedText, 'ant'); 
+        // ---PROBANDO---
         const imagenselected = data.choices[0].message.content.alimento; // Extrae la imagen seleccionada
-        appendMessage(generatedText, 'ant'); // Muestra la respuesta en el chat
         if (imagenselected) {
             appendMessageImg(generatedText, 'ant', imagenselected); // Muestra la imagen si existe
         }
-
+        // ---PROBANDO---
     } catch (error) {
         console.error('Error enviando mensaje:', error); // Muestra error en consola
         appendMessage(`Error: ${error.message}`, 'ant'); // Informa del error al usuario en el chat
@@ -95,7 +115,7 @@ userMessageInput.addEventListener('keypress', (event) => {
     }
 });
 
-// -------------------- RECONOCIMIENTO DE VOZ --------------------
+// -------------------- RECONOCIMIENTO DE VOZ ESTA MADRE NO FUNCIONA ... AUN --------------------
 
 // Verifica si el navegador soporta la API de reconocimiento de voz de Chrome
 if ('webkitSpeechRecognition' in window) {

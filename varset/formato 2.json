@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "alimento": {
+            "type": ["array","null"],
+            "description": "escoger un alimento entre una lista de alimentos disponibles",
+            "enum":[
+                "null",
+                "arepadelapulpadelcactus",
+                "arraciraba",
+                "arrozconmilpeso",
+                "asadohuilense"
+            ]
+        },
+        "mensaje": {
+            "type": "string",
+            "description": "Mensaje que se mostrará al usuario."
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "alimento",
+        "mensaje"
+    ]
+}

@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica si el método de solicit
             $_SESSION['correo'] = $usuario['correo']; // Almacena el correo electrónico del usuario en la sesión.
             $_SESSION['nombre_us'] = $usuario['nombre_us']; // Almacena el nombre de usuario en la sesión.
             
-            header("Location: ../login/chat.html"); // Redirige al usuario a la página de chat después de un inicio de sesión exitoso.
+            header("Location: ../login/chat.php"); // Redirige al usuario a la página de chat después de un inicio de sesión exitoso.
             exit();
         } else {
             $_SESSION['error'] = "Contraseña incorrecta"; // Si la contraseña no coincide, genera un mensaje de error en la sesión.

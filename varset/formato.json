@@ -1,64 +1,69 @@
 {
     "type": "object",
     "properties": {
-        "acciones": {
-            "type": "array",
+        "alimento": {
+            "type": ["string","null"],
+            "title": "Alimento",
+            "description": "Alimento que se va a mostrar al usuario, en caso de que la IA lo crea conveniente.",
+            "enum": [
+                "null",
+                "arepadelapulpadelcactus",
+                "arraciraba",
+                "arrozconmilpeso",
+                "asadohuilense",
+                "bedabeta",
+                "blackeyebeansricearrozconfrijolabecitanegra",
+                "caguanadepiña",
+                "caldodecuchas",
+                "caldodepreza",
+                "casabedealmidon",
+                "chichadeiwalayafrutodelcactus",
+                "chichademaiz",
+                "chocolo",
+                "chucula",
+                "dumplingesponjosobolitademasahervida",
+                "envueltosdemazorca",
+                "fariña",
+                "guarapo",
+                "guarrus",
+                "injokowo",
+                "johnnycakewithbutterjohnnycakeconmantequilla",
+                "jurichifrishe",
+                "kankuku",
+                "lechona",
+                "masatodearroz",
+                "mazamorradepescado",
+                "mermeladadecactus",
+                "mincedfish",
+                "nozi",
+                "owirralet",
+                "pescadoahumadoomoqueado",
+                "pescadoguisado",
+                "pescadomoquiao",
+                "pilaodecerrillo",
+                "poyoapoijushyfrijolguajiro",
+                "quiñapirasopapicante",
+                "rondon",
+                "sancochoconchichavoyo",
+                "sancochodegallina",
+                "sopaderesplandor",
+                "sopadezapallo",
+                "tamales",
+                "turujashycarneseca",
+                "viudodepescado",
+                "zhibi"
+            ]
+        },
+        "mensaje": {
+            "type": "string",
+            "description": "Mensaje que se mostrará al usuario."
+        },
+            "acciones": {
+            "type": ["string","null"],
+            "description": "Acciones que se pueden realizar en caso de que se necesite modificar la base de datos.",
             "items": {
-                "type": "object",
+                "description": "Acciones que se pueden realizar en caso de que se necesite modificar la base de datos.",
                 "properties": {
-                    "alimento": {
-                        "type": "string",
-                        "enum": [
-                            "arepadelapulpadelcactus",
-                            "arraciraba",
-                            "arrozconmilpeso",
-                            "asadohuilense",
-                            "bedabeta",
-                            "blackeyebeansricearrozconfrijolabecitanegra",
-                            "caguanadepiña",
-                            "caldodecuchas",
-                            "caldodepreza",
-                            "casabedealmidon",
-                            "chichadeiwalayafrutodelcactus",
-                            "chichademaiz",
-                            "chocolo",
-                            "chucula",
-                            "dumplingesponjosobolitademasahervida",
-                            "envueltosdemazorca",
-                            "fariña",
-                            "guarapo",
-                            "guarrus",
-                            "injokowo",
-                            "johnnycakewithbutterjohnnycakeconmantequilla",
-                            "jurichifrishe",
-                            "kankuku",
-                            "lechona",
-                            "masatodearroz",
-                            "mazamorradepescado",
-                            "mermeladadecactus",
-                            "mincedfish",
-                            "nozi",
-                            "owirralet",
-                            "pescadoahumadoomoqueado",
-                            "pescadoguisado",
-                            "pescadomoquiao",
-                            "pilaodecerrillo",
-                            "poyoapoijushyfrijolguajiro",
-                            "quiñapirasopapicante",
-                            "rondon",
-                            "sancochoconchichavoyo",
-                            "sancochodegallina",
-                            "sopaderesplandor",
-                            "sopadezapallo",
-                            "tamales",
-                            "turujashycarneseca",
-                            "viudodepescado",
-                            "zhibi"
-                        ]
-                    },
-                    "mensaje": {
-                    "type": "string"
-                    }
                 },
                 "required": [
                     "id",
@@ -68,6 +73,8 @@
         }
     },
     "required": [
+        "mensaje",
+        "alimento",
         "acciones"
     ]
 }

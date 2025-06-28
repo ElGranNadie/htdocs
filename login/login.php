@@ -16,7 +16,7 @@
     <script src='<?php echo $mainjs?>'></script> <!-- script main, añadido desde la lista de variables -->
     <style>
         
-/*  estilo del carrusel   */
+    /*  estilo del carrusel  (no es el mismo que el del login, por lo que no los podemos juntar) */
         .carousel {
             position: relative;
             margin-top: 2rem;

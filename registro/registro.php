@@ -21,6 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <style>
+/*  estilo del carrusel  (no es el mismo que el del login, por lo que no los podemos juntar) */
+
         .carousel {
             position: relative;
             margin-top: 2rem;
