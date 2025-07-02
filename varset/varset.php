@@ -46,7 +46,7 @@
     "viudodepescado",
     "zhibi"
   ]; // un array con el nombre de las imagenes que se usan en el sitio web
-  $logo = "../imagenes/icono.jpg"; // ruta del logo que se usa en el sitio web
+  $logo = "../imagenes/logo512.png"; // ruta del logo que se usa en el sitio web
   $imagenportada = "../imagenes/imgcomidas/bedabetaimg.jpg"; // esto era un experimento, lo dejo porque funca en casos de error
   $index = "../dashboard/index.php"; // ruta del index del dashboard
   $quienessomos = "../dashboard/quienes-somos.php"; // ruta de la pagina quienes somos del dashboard

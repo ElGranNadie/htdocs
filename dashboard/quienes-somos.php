@@ -41,6 +41,35 @@
         Con ese espíritu innovador nació NICOLE, la primera creación emblemática de la empresa. Más que una aplicación o una plataforma, NICOLE es el corazón de Alpha 22: un sistema inteligente, adaptable y humano que refleja todo lo que representa la empresa. El nombre "NICOLE" proviene del deseo de <b>darle rostro humano a la tecnología</b>, de hacer que lo digital se sienta cercano, confiable y siempre dispuesto a ayudar.
       </div>
     </section>
+    <section class="intro-section category-content container mt-5">
+      <div class="brand-row d-flex align-items-center justify-content-center gap-3 mb-3" bis_skin_checked="1">
+        <span class="alpha"><span class="highlight">¿Que es 
+        </span> Alpha 22 <span class="highlight">?</span></span>
+      </div>
+      <div class="row">
+        <div class="col mb-4">
+          <div class="brand-row d-flex align-items-center justify-content-center gap-3 mb-3" bis_skin_checked="1">
+            <span class="alpha"><span class="highlight"> Misión </span>
+          </div>
+          <h2 class="fw-bold mb-3">
+            Crear conocimiento para que las personas <br>
+            tengan una vida mejor a través de <br>
+            herramientas digitales.
+          </h2>
+        </div>
+        <div class="col mb-4">
+          <div class="brand-row d-flex align-items-center justify-content-center gap-3 mb-3" bis_skin_checked="1">
+            <span class="alpha"><span class="highlight"> Vision </span>
+          </div>
+          <h2 class="fw-bold mb-3">
+            Ser aquellos que permitan a la sociedad <br>
+            llegar a un mejor mañana, siendo reconocidos <br>
+            por la excelencia en calidad, innovación y <br>
+            sostenibilidad a nivel mundial.
+          </h2>
+        </div>
+      </div>
+    </section>
   </main> <!-- Pie de página, el mismo pie de pagina de toda la vida -->
   <footer class="footer py-4" style="background: #d36b5a; border-bottom-left-radius:32px; border-bottom-right-radius:32px; margin-top:32px;">
     <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">

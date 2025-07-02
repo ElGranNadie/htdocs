@@ -86,7 +86,7 @@
         <!-- Sección derecha con formulario de registro -->
         <div class="right-section">
             <div class="login-container">
-                <img src="../imagenes/icono.jpg" alt="Icono" style="width: 60px; margin-bottom: 1rem;"><!-- Logo de la marca -->
+                <img src='<?php echo $logo ?>' alt="Icono" style="width: 60px; margin-bottom: 1rem;"><!-- Logo de la marca -->
                 <h3>regístrate ya!!!</h3>
 
                 <!-- Muestra mensajes de error si existen en la sesión -->

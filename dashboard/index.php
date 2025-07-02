@@ -27,14 +27,40 @@
     </nav>
   </header>
   <main> <!-- Contenido principal de la página -->
-    <section class="intro-section container mt-5"> <!-- Sección de introducción -->
-      <span class="alpha"><span class="highlght">Bienvenido a Nicole</span></span> <!-- Título de bienvenida -->
-      <h1 class="fw-bold mb-3">introducción a NICOLE, una IA<br>con la capacidad de un chef<br>profesional</h1> <!-- Título principal -->
+    <section class="intro-section category-content container mt-5"> <!-- Sección de introducción -->
+        <div class="brand-row d-flex align-items-center justify-content-center gap-3 mb-3" bis_skin_checked="1">
+          <span class="alpha"><span class="highlight">Bienvenido a 
+          </span> N.I.C.O.L.E</span>
+          <img src='<?php echo $logo ?>' alt="Logo" style="height:36px;vertical-align:middle;">
+        </div>
+      <h1 class="fw-bold mb-3">una IA con la capacidad de un chef<br>profesional</h1> <!-- Título principal -->
       <div class="img-center mb-4">
         <div class="carousel d-flex align-items-center justify-content-center"> <!-- Contenedor del carrusel de imágenes -->
           <button class="carousel-btn left btn btn-outline-danger me-2 rounded-circle"><i class="bi bi-arrow-left"></i></button> <!-- Botón para ir a la imagen anterior -->
           <img src='<?php echo $imagenportada ?>' alt="Comida" class="carousel-img img-fluid rounded" style="max-width: 100%; height: auto;"> <!-- Imagenes del carrusel, la imagen que esta alli de base funciona para evitar fallos en cargas y que no se muestre nada -->
           <button class="carousel-btn right btn btn-outline-danger ms-2 rounded-circle"><i class="bi bi-arrow-right"></i></button> <!-- Botón para ir a la imagen posterior -->
+        </div>
+      </div>
+    </section>
+    <section class="intro-section category-content container mt-5">
+        <div class="brand-row d-flex align-items-center justify-content-center gap-3 mb-3" bis_skin_checked="1">
+          <span class="alpha"><span class="highlight">¿Que es 
+          </span> N.I.C.O.L.E <span class="highlight">?</span></span>
+          <img src='<?php echo $logo ?>' alt="Logo" style="height:36px;vertical-align:middle;">
+        </div>
+      <h2 class="fw-bold mb-3">NICOLE es una IA diseñada para ayudarte a cocinar de manera fácil y rápida</h2> <!-- Descripción de NICOLE -->
+      <div class="row">
+        <div class="col mb-4">
+          <h2 class="fw-bold mb-3">
+            Es un felino con el conocimiento para que las personas tengan una vida mejor a través de <br>
+            herramientas digitales. <br> <br>
+            Un proyecto que busca ayudar a las personas a mejorar sus hábitos alimenticios, <br>
+            informando, enseñando y mostrando como es que se puede salir adelante con <br>
+            una buena alimentación.
+          </h2>
+        </div>
+        <div class="col mb-4">
+          <img src='<?php echo $logo ?>' alt="Logo" style="height:256px;vertical-align:middle;">
         </div>
       </div>
     </section>
