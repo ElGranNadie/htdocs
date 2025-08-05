@@ -1,25 +1,33 @@
 {
-    "type": "object",
-    "properties": {
-        "alimento": {
-            "type": ["array","null"],
-            "description": "escoger un alimento entre una lista de alimentos disponibles",
-            "enum":[
-                "null",
-                "arepadelapulpadelcactus",
-                "arraciraba",
-                "arrozconmilpeso",
-                "asadohuilense"
-            ]
-        },
-        "mensaje": {
-            "type": "string",
-            "description": "Mensaje que se mostrará al usuario."
-        }
+  "type": "object",
+  "properties": {
+    "alimento": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "escoger un alimento entre una lista de alimentos disponibles",
+      "enum": [
+        "null",
+        "arepadelapulpadelcactus",
+        "arraciraba",
+        "arrozconmilpeso",
+        "asadohuilense"
+      ]
     },
-    "additionalProperties": false,
-    "required": [
-        "alimento",
-        "mensaje"
-    ]
+    "mensaje": {
+      "type": "string",
+      "description": "Mensaje que se mostrará al usuario."
+    },
+    "resumen": {
+      "type": "string",
+      "description": "Resumen actualizado de la conversación hasta ahora."
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "alimento",
+    "mensaje",
+    "resumen"
+  ]
 }

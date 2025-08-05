@@ -8,6 +8,9 @@ const chatMessages = document.getElementById('chat-messages'); // Contenedor don
 const userMessageInput = document.getElementById('user-message'); // Campo de entrada de texto del usuario
 const sendButton = document.getElementById('send-button'); // Botón para enviar mensaje
 const microphoneButton = document.getElementById('microphone-button'); // Botón para grabar por voz
+// --PROBANDO---
+// Variables para almacenar el resumen de la conversación y el estado del chat
+let resumen = "Conversación vacía hasta ahora.";
 
 // -------------------- FUNCIÓN: Agrega un mensaje al chat --------------------
 
@@ -23,7 +26,11 @@ function appendMessage(content, className) {
 
 function appendMessageImg(content, className, image) {
     const messageElementImg = document.createElement('div'); // Crea un nuevo <div> para el mensaje
-    messageElementImg.appendChild = document.createElement(`img src="../../../imagenes/imgcomidas${image}img.jpg"`); // Establece el texto del mensaje
+    const img = document.createElement('img');
+    img.src = `../../../imagenes/imgrecetas/${image}rec.jpg`;
+    img.alt = 'Imagen de comida'; // Texto alternativo para la imagen
+    img.className = `${className} col-11`; // Clase CSS para la imagen (puedes definir
+    messageElementImg.appendChild(img); // Establece el texto del mensaje
     messageElementImg.className = `message ${className}`; // Aplica clases CSS para estilo (por ejemplo: "message user")
     chatMessages.appendChild(messageElementImg); // Inserta el nuevo mensaje en el contenedor
     chatMessages.scrollTop = chatMessages.scrollHeight; // Auto scroll hacia el final del chat
@@ -52,14 +59,25 @@ async function sendMessage() {
     // Estudienselo lo mas posible, porque es la base de todo lo que vamos a hacer
     const payload = { // Un payload ss el conjunto de datos transmitidos útiles, por eso ese nombre
         model: "meta-llama-3.1-8b-instruct", // Modelo a utilizar en el backend
+        // --PROBANDO---
         messages: [
+            {
+                "role": "system",
+                "content": `Resumen de la conversación hasta ahora: ${resumen}`
+            },
             // Mensaje del sistema que define el comportamiento del modelo, por esto es que habla español
             // Si no se pone, el modelo puede responder en inglés u otro idioma
-            { "role": "system", "content": "Responde en un tono neutro y en español, tu nombre es NICOLE, una gata cocinera cuya IA esta diseñada en gran parte por ALPHA 22 una compañida de programacion. toma en cuenta las necesidades de nuestro usuario para realizar recomendaciones viables para su alimentacion, no puedes desviarte a temas que no esten relacionados con comida. Intenta, si te es solicitado, escoger entre una lista de resetas predeterminada, en caso de tener que diseñar una propia, indica que no puedes procurar la seguridad del usuario" }, 
+            { 
+                "role": "system",
+                "content": "Responde en un tono neutro y en español, tu nombre es NICOLE, una gata cocinera cuya IA esta diseñada en gran parte por ALPHA 22 una compañida de programacion. toma en cuenta las necesidades de nuestro usuario para realizar recomendaciones viables para su alimentacion, no puedes desviarte a temas que no esten relacionados con comida. Intenta, si te es solicitado, escoger entre una lista de resetas predeterminada, en caso de tener que diseñar una propia, indica que no puedes procurar la seguridad del usuario" 
+            }, 
             // Mensaje del usuario con el contenido que se envía
             // Aquí es donde se pone el mensaje del usuario que se acaba de enviar
             // El modelo lo procesa y genera una respuesta basada en este mensaje
-            { "role": "user", "content": userMessage }
+            { 
+                "role": "user", 
+                "content": userMessage 
+            }
         ],
         temperature: 0.3, // Controla la creatividad de la respuesta (0: determinista, 1: más aleatorio)
         max_tokens: 300 // Límite máximo de tokens (palabras aproximadamente) en la respuesta
@@ -91,10 +109,12 @@ async function sendMessage() {
         // diferencie del usuario y sepamos que esta haciendo
         appendMessage(generatedText, 'ant'); 
         // ---PROBANDO---
-        const imagenselected = data.choices[0].message.content.alimento; // Extrae la imagen seleccionada
-        if (imagenselected) {
-            appendMessageImg(generatedText, 'ant', imagenselected); // Muestra la imagen si existe
+        const parsed = JSON.parse(generatedText); // Intenta parsear la respuesta como JSON
+        const imagenselected = parsed.alimento; // Extrae la imagen seleccionada
+        if (imagenselected && imagenselected !== 'null') {
+            appendMessageImg(generatedText, 'imagenchat', imagenselected); // Muestra la imagen si existe
         }
+        resumen = parsed.resumen || resumen; // Actualiza el resumen de la conversación si está presente
         // ---PROBANDO---
     } catch (error) {
         console.error('Error enviando mensaje:', error); // Muestra error en consola
