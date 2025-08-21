@@ -12,6 +12,7 @@
     <title>Chat</title> <!-- Título de la página -->
 </head>
 <body>
+    <?php require '../dashboard/header.php'; ?> <!-- Incluye el encabezado de la página -->
     <div class="body-container row"> 
             <div id="chat-container" class="chat-section col-12" style="background-color: burlywood;"> <!-- Contenedor del chat -->
                 <div id="chat-header" class="row"> <!-- Encabezado del chat -->

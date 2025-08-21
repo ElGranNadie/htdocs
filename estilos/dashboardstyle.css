@@ -1,24 +1,11 @@
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-    background: url('../imagenes/fondo.jpg') no-repeat center center fixed;
+  background: var(--imagen-fondo) no-repeat center center fixed;
   background-size: cover;
-  min-height: 100vh;
   box-sizing: border-box;
   padding-bottom: 0 !important;
   overflow-x: hidden;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Cambiado para que el nav ocupe el centro */
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 0 32px;
-  height: 60px;
-  position: relative;
-  z-index: 10;
 }
 
 .logo-container {
@@ -57,7 +44,6 @@ nav ul {
 .nav-item {
   position: relative;
   padding: 0;
-  border-radius: 20px;
   cursor: pointer;
   font-weight: 500;
   transition: background 0.2s;
@@ -66,10 +52,14 @@ nav ul {
 
 .nav-item a {
   display: block;
-  padding: 8px 18px;
-  border-radius: 20px;
+  padding: 5px 18px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #7b4ca0;
+  border-width: 1px;
   background: linear-gradient(90deg, #f9c5d1 0%, #fbc2eb 100%);
-  color: #7b4ca0;
+  background: #7c4ca030;
+  color: var(--bs-body-color);
   text-decoration: none;
   font-weight: 500;
   transition: background 0.2s, color 0.2s;
@@ -100,12 +90,8 @@ nav ul {
 }
 
 .category-content {
-  min-width: 700px;
-  max-width: 900px;
-  min-height: 320px;
   background: #fff;
   border-radius: 32px;
-  margin: 32px auto 0 auto;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
@@ -119,14 +105,12 @@ nav ul {
 
 .category-content h2 {
   font-size: 2rem;
-  font-weight: bold;
   margin-bottom: 12px;
   color: #222;
 }
 
 .category-content .subtitle {
   font-size: 1.2rem;
-  font-weight: bold;
   margin-bottom: 18px;
   color: #222;
 }
@@ -144,7 +128,6 @@ nav ul {
 }
 
 .category-content .brand-row .brand {
-  font-weight: bold;
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
@@ -152,7 +135,7 @@ nav ul {
 .category-content .alpha {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #222;
+  color: var(--bs-body-color);
 }
 
 .category-content .alpha .highlight {
@@ -177,7 +160,6 @@ nav ul {
   background: rgba(255,255,255,0.7);
   border-radius: 24px;
   margin: 32px auto 0 auto;
-  max-width: 900px;
   padding: 32px 24px 24px 24px;
   text-align: center;
 }
@@ -206,12 +188,6 @@ nav ul {
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
 }
 
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
 
 .carousel-btn {
   background: rgba(255,255,255,0.8);
@@ -261,7 +237,6 @@ nav ul {
 }
 
 main {
-  min-height: 100vh;
   overflow-y: auto;
   padding-bottom: 0 !important;
 }

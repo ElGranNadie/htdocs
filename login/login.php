@@ -63,6 +63,8 @@
 <!--  cuerpo de la pagina -->
 <body>
 <!--  nombre y carrusel de frases  -->
+    <?php require '../dashboard/header.php'; ?> <!-- Incluye el encabezado de la página -->
+
     <div class="app-container">
         <div class="left-section">
             <h1 class="logo">N.I.C.O.L.E</h1>
@@ -75,7 +77,7 @@
         <!--   formulario de inicio de seccion -->
         <div class="right-section">
             <div class="login-container">
-            <img src='<?php echo $logo ?>' alt="Icono" class="mb-4" width="100">
+            <img src='<?php echo $logo ?>-120.png' alt="Icono" width="100">
             <!-- Mensaje de error si hay un problema con el inicio de sesión -->    
             <h3>iniciar sesion</h3>
                 <?php if(isset($_SESSION['error'])): ?>
@@ -101,7 +103,7 @@
                     <!-- Botones de inicio de sesión y registro -->
                     <div class="button-group">
                         <button type="submit" class="login-btn">iniciar sesion</button>
-                        <button type="button" onclick="window.location.href='../registro/registro.php'" class="register-btn">registrarse</button>
+                        <button type="button" onclick="window.location.href='../dashboard/registro.php'" class="register-btn">registrarse</button>
                     </div>
                 </form>
             </div>
