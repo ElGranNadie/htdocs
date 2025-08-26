@@ -3,17 +3,11 @@
     require '../varset/varset.php';
 ?>
 <!DOCTYPE html>
-<html lang="es">
 <head> <!-- Metadatos esenciales para visualización correcta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../estilos/base.css" rel="stylesheet">    <!-- Estilos base personalizados NO ESTAN VACIOS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!-- Bootstrap desde CDN para estilos y reponsividad -->
     <!-- Fuentes decorativas desde Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>N.I.C.O.L.E - Preferencias</title><!-- Título de la pestaña del navegador -->
+    <?php include "../dashboard/other.php"; ?>
+    <?php include "../dashboard/stylesheet.php"; ?>
     <!-- Estilos internos para animaciones del carrusel -->
     <style>
         .carousel {
@@ -62,31 +56,23 @@
 <script src='<?php echo $mainjs?>'></script>
 </head>
 <body>
+    <?php include "../dashboard/header.php"; ?>
     <div class="app-container"><!-- Sección izquierda: branding y carrusel motivacional -->
-        <div class="left-section">
-            <h1 class="logo">N.I.C.O.L.E</h1>
-            <div class="carousel">
-                <div class="carousel-item">dinos tus gustos<br>culinarios</div>
-                <div class="carousel-item">personaliza tu<br>experiencia</div>
-                <div class="carousel-item">cocinaremos juntos<br>algo especial</div>
-            </div>
-        </div>
-                <!-- Sección derecha: formulario para preferencias del usuario -->
         <div class="right-section">
             <div class="login-container">
-            <img src='<?php echo $logo ?>' alt="Icono" class="mb-4" width="100">
+            <img src='<?php echo $logo ?>64.png' alt="Icono" class="mb-4" width="64">
                 <h3>ayúdanos a conocer más de ti</h3>
                 <!-- Formulario para enviar preferencias del usuario -->
                 <form action="procesar_registro.php" method="POST">
                     <input type="hidden" name="finalizar_registro" value="1">
                     <!-- sección de gustos personales -->
                     <p class="form-hint">cuentanos que se adapta mas a ti</p>
-                    <div class="taste-buttons">
+                    <div class="taste-buttons row justify-content-evenly">
                         <!-- Botones con valores que se asignan dinámicamente -->
-                        <button type="button" class="taste-btn" data-value="salado">salado</button>
-                        <button type="button" class="taste-btn" data-value="dulce">dulce</button>
-                        <button type="button" class="taste-btn" data-value="acido">ácido</button>
-                        <button type="button" class="taste-btn" data-value="picante">picante</button>
+                        <button type="button" class="taste-btn col-5" data-value="salado">salado</button>
+                        <button type="button" class="taste-btn col-5" data-value="dulce">dulce</button>
+                        <button type="button" class="taste-btn col-5" data-value="acido">ácido</button>
+                        <button type="button" class="taste-btn col-5" data-value="picante">picante</button>
                         <!-- Campo oculto donde se guarda la selección de sabores -->
                         <input type="hidden" name="sabores" id="sabores-seleccionados">
                     </div>
@@ -120,11 +106,9 @@
                     Se ha registrado el usuario satisfactoriamente
                 </div>
             </div>
-            <!-- Mensaje lateral motivacional -->
-            <div class="side-message">
-                <h3>creo que ya sabemos que es lo primero que cocinaremos hoy</h3>
-            </div>
         </div>
     </div>
+    <?php include "../dashboard/footer.php"; ?>
+    <?php include "../dashboard/scripts.php"; ?>
 </body>
 </html>

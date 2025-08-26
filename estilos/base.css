@@ -39,13 +39,6 @@ body {
 }
 
 /* Typography */
-.logo {
-    color: var(--bs-body-color);
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 3rem;
-    letter-spacing: 0.2em;
-}
 
 .welcome-message h2 {
     font-size: 2.5rem;
@@ -442,11 +435,6 @@ input:focus {
 
     .welcome-message .subtitle {
         font-size: 1rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
     }
 
     .taste-options {

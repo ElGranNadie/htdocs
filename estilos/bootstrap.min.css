@@ -506,7 +506,11 @@ button:not(:disabled),
 textarea {
   resize: vertical;
 }
-
+textarea:focus {
+    outline: none;
+    border-color: #bfa1f0; 
+    box-shadow: 0 0 0 3px rgba(209, 179, 255, 0.3);
+}
 fieldset {
   min-width: 0;
   padding: 0;

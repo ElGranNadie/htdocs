@@ -3,5 +3,6 @@
 <link rel="stylesheet" href="../estilos/bootstrap.min.css">
 <link rel="stylesheet" href="../estilos/navbar-fixed.css">
 <link rel="stylesheet" href="../estilos/base.css">
+<link rel="stylesheet" href="../estilos/chat.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

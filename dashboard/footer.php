@@ -7,16 +7,14 @@
 </svg>
 <div class="row justify-content-evenly" >
 <div class="container HeadYFoot" style="position: fixed; bottom: 0; height:61px; padding:0px;">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top HeadYFoot" >
-        <div class="col-1"></div>
-        <div class="col-md-3 d-flex align-items-center">
-            <a class="col-1 mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
-                <img src='<?php echo $logo ?>64.png' alt="Logo" style="height: 24px; vertical-align: middle;"> <!-- Logo de la compañia -->
-            </a>
-            <span class="col-5 mb-3 mb-md-0 text-body-secondary">&copy; 2025 Alpha 22</span> 
-            <a class="col-7 mb-3 mb-md-0 text-body-secondary" href="../dashboard/terminos.php">Términos y condiciones</a> <!-- Enlace a los términos y condiciones -->
-        </div>
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <footer class="d-flex row-cols-auto flex-wrap py-3 border-top HeadYFoot" >
+        <a    class="col-1 mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
+            <img src='<?php echo $logo ?>64.png' alt="Logo" style="height: 24px; vertical-align: middle;"> <!-- Logo de la compañia -->
+        </a>
+        <span class="col-3 mb-3 mb-md-0 text-body-secondary">&copy; 2025 Alpha 22</span> 
+        <a    class="col-3 mb-3 mb-md-0 text-body-secondary" href="../dashboard/terminos.php">Términos y condiciones</a> <!-- Enlace a los términos y condiciones -->
+        <a    class="col-2 mb-3 mb-md-0 text-body-secondary" href="../dashboard/privacidad.php">Privacidad</a> <!-- Enlace a la ley de manejo de privacidad -->
+        <ul class="  col-2 nav list-unstyled d-flex">
             <li class="ms-3">
                 <a class="text-body-secondary" href="#" aria-label="Instagram">
                     <svg class="bi" width="24" height="24" aria-hidden="true">
@@ -32,7 +30,6 @@
                 </a>
             </li> 
         </ul> 
-        <div class="col-1"></div>
     </footer> 
 </div> 
 </div>

@@ -54,10 +54,7 @@
     </ul> 
 </div>  
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top HeadYFoot"> 
-    <div class="container-fluid"> 
-        <div class="logo-container"> <!-- Contenedor del logo y nombre de la marca -->
-            <!--img src='<?php echo $logo ?>' alt="Logo" class="logo"-->
-        </div>
+    <div class="container-fluid">
         <a class="navbar-brand" style="color: var(--bs-emphasis-color-rgb);">N.I.C.O.L.E</a> 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> 
             <span class="navbar-toggler-icon"></span> 
