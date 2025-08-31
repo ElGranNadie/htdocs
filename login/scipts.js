@@ -1,6 +1,6 @@
 //const apiUrl = 'http://192.168.1.10/v1/chat/completions'; // Proxy inverso configurado en el servidor local
 //const apiUrl = 'http://nicole.servehttp.com/v1/chat/completions'; // Otra opción de proxy que estuvimos probando
-const apiUrl = 'http://nicoleia.servehttp.com:90/v1/chat/completions'; // URL activa de la API (proxy inverso) puerto 90
+const apiUrl = 'https://nicoleia.servehttp.com:90/v1/chat/completions'; // URL activa de la API (proxy inverso) puerto 90
 // Clave de autorización para acceder a la API, tipo "Bearer"
 const apiKey = 'lm-studio';
 // Referencias a elementos del DOM (interfaz)

@@ -1,59 +1,61 @@
 <?php
-// ------------------------
-// inicio de sesión y conexión a la base de datos
-//--------------------------
-session_start(); // Inicia o retoma una sesión existente.
-require_once "../dashboard/conexion.php"; // Incluye el archivo que contiene la conexión a la base de datos(conexion.php).
-// Verifica si la conexión fue exitosa
+session_start();
+require_once "../dashboard/conexion.php"; 
+require_once "../utils/validaciones.php";
 
-//------------------------------------
-// captura de datos del formulario de inicio de sesión
-//------------------------------------
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $correo = trim($_POST['correo']);
+    $password = trim($_POST['pass']);
+    $errores = [];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica si el método de solicitud es POST.
-    // Verifica si los campos de correo y contraseña están establecidos
-    $correo = $_POST['correo']; //correo electrónico del formulario de inicio de sesión.
-    $password = $_POST['pass']; //contraseña del formulario de inicio de sesión.
-
-//---------------------------------
- // Preparar la consulta para prevenir inyección SQL
-//---------------------------------
-    //background: linear-gradient(135deg,rgba(255, 0, 0, 0), #333);
-
-    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE correo = ?"); // Prepara la consulta SQL para seleccionar el usuario por correo electrónico.
-    $stmt->bind_param("s", $correo); // Vincula el  correo electrónico como una cadena (s).
-    $stmt->execute(); // Ejecuta la consulta 
-    $result = $stmt->get_result(); // Obtiene el resultado de la consulta 
-
-    if ($result->num_rows > 0) {  // Verifica si se encontró al menos un usuario con el correo proporcionado.
-        $usuario = $result->fetch_assoc(); // si se encontró un usuario, obtiene sus datos como un array asociativo.
-
-//---------------------------------       
-// Verificar la contraseña
-//---------------------------------
-
-        if (password_verify($password, $usuario['pass'])) {  // Verifica si la contraseña  coincide con la almacenada en la base de datos.
-            $_SESSION['usuario_id'] = $usuario['id']; // Almacena el ID del usuario en la sesión.
-            $_SESSION['correo'] = $usuario['correo']; // Almacena el correo electrónico del usuario en la sesión.
-            $_SESSION['nombre_us'] = $usuario['nombre_us']; // Almacena el nombre de usuario en la sesión.
-            
-            header("Location: ../dashboard/chat.php"); // Redirige al usuario a la página de chat después de un inicio de sesión exitoso.
-            exit();
-        } else {
-            $_SESSION['error'] = "Contraseña incorrecta"; // Si la contraseña no coincide, genera un mensaje de error en la sesión.
-        }
-    } else {
-        $_SESSION['error'] = "Usuario no encontrado"; // Si no se encuentra el usuario con el correo proporcionado, genera un mensaje de error en la sesión.
+    if (empty($correo) || empty($password)) {
+        $errores[] = "Por favor ingrese correo y contraseña";
     }
 
-    if (isset($_SESSION['error'])) {
-        header("Location: login.php"); // SI hay un error, redirige al usuario de vuelta a la página del login.
+    // Validar correo antes de la consulta
+    $validCorreo = validarCorreo($correo);
+    if (!empty($validCorreo)) {
+        $errores = array_merge($errores, $validCorreo);
+    }
+
+    if (empty($errores)) {
+        if ($stmt = $conn->prepare("SELECT id, correo, nombre_us, pass FROM usuarios WHERE correo = ?")) {
+            $stmt->bind_param("s", $correo);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if ($result && $result->num_rows > 0) {
+                $usuario = $result->fetch_assoc();
+
+                if (password_verify($password, $usuario['pass'])) {
+                    // Guardamos variables de sesión consistentes
+                    $_SESSION['user_id'] = $usuario['id'];
+                    $_SESSION['correo'] = $usuario['correo'];
+                    $_SESSION['usuario_nombre'] = $usuario['nombre_us'];
+
+                    header("Location: ../dashboard/chat.php");
+                    exit();
+                } else {
+                    $errores[] = "Contraseña incorrecta";
+                }
+            } else {
+                $errores[] = "Usuario no encontrado";
+            }
+
+            $stmt->close();
+        } else {
+            $errores[] = "Error en la consulta a la base de datos";
+        }
+    }
+
+    if (!empty($errores)) {
+        $_SESSION['error'] = $errores;
+        header("Location: login.php");
         exit();
     }
-
-    $stmt->close();
 } else {
-    header("Location: login.php"); // Si el método de solicitud no es POST, redirige al usuario a la página de login .
+    header("Location: login.php");
+    exit();
 }
 
-$conn->close(); // Cierra la conexión a la base de datos.
+$conn->close();

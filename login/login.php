@@ -85,7 +85,7 @@
                     <?php unset($_SESSION['error']); ?>
                 <?php endif; ?>
                 <!-- Formulario de inicio de sesión -->
-                <form action="procesar_login.php" method="POST">
+                <form action="dashboard/procesar_login.php" method="POST">
                     <div class="form-group">
                         <input type="email" name="correo" placeholder="correo" required>
                     </div>

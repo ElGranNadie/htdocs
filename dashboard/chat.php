@@ -1,5 +1,39 @@
-<?php
-    require '../varset/varset.php';
+<?php 
+require '../varset/varset.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Usuario logueado
+$user_id = $_SESSION['user_id'] ?? null;
+$nombre_usuario = $_SESSION['usuario_nombre'] ?? "Invitado";
+
+require 'conexion.php';
+$es_premium = false;
+if ($user_id) {
+    $sql = "SELECT nombre_us AS nombre, es_premium, premium_expiracion 
+            FROM usuarios 
+            WHERE id = ?";
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($row = $result->fetch_assoc()) {
+            $nombre_usuario = $row['nombre'] ?? $nombre_usuario;
+            $_SESSION['usuario_nombre'] = $nombre_usuario;
+
+            if ($row['es_premium'] == 1 && !empty($row['premium_expiracion']) && strtotime($row['premium_expiracion']) > time()) {
+                $es_premium = true;
+                $_SESSION['usuario_premium'] = 1;
+            } else {
+                $_SESSION['usuario_premium'] = 0;
+            }
+        }
+        $stmt->close();
+    }
+}
+
+$current_page = basename(__FILE__);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,7 +44,7 @@
 </head>
 <body>
     <?php require '../dashboard/header.php'; ?> <!-- Incluye el encabezado de la página -->
-    <div class="body-container row" style="padding:0;margin: 0px;"> 
+    <div class="body-container row" style="padding:0;margin: 0px;">
         <div id="chat-container" class="chat-section col-12" style="padding:0;margin: 0px;"> <!-- Contenedor del chat -->
             <div id="chat-header" class="row"> <!-- Encabezado del chat -->
                 <div class="chat-header col-12"><?php ?></div> 

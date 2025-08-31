@@ -21,8 +21,7 @@ function appendMessage(content, className) {
     chatMessages.appendChild(messageElement); // Inserta el nuevo mensaje en el contenedor
     chatMessages.scrollTop = chatMessages.scrollHeight; // Auto scroll hacia el final del chat
 }
-// ---PROBANDO---
-// -------------------- FUNCIÓN: Agrega un mensaje con imagen al chat (aun no sirve bien :v)--------------------
+// -------------------- FUNCIÓN: Agrega una imagen al chat (aun no sirve bien :v)--------------------
 
 function appendMessageImg(content, className, image) {
     const messageElementImg = document.createElement('div'); // Crea un nuevo <div> para el mensaje
@@ -35,7 +34,6 @@ function appendMessageImg(content, className, image) {
     chatMessages.appendChild(messageElementImg); // Inserta el nuevo mensaje en el contenedor
     chatMessages.scrollTop = chatMessages.scrollHeight; // Auto scroll hacia el final del chat
 }
-// ---PROBANDO---
 // -------------------- FUNCIÓN: Enviar mensaje --------------------
 
 async function sendMessage() {
@@ -58,19 +56,20 @@ async function sendMessage() {
     // Es complicado, pero es así como funciona la API de OpenAI y similares
     // Estudienselo lo mas posible, porque es la base de todo lo que vamos a hacer
     const payload = { // Un payload ss el conjunto de datos transmitidos útiles, por eso ese nombre
-        model: "meta-llama-3.1-8b-instruct", // Modelo a utilizar en el backend
+        model: "openai/gpt-oss-20b", // Modelo a utilizar en el backend
+        //model: "meta-llama-3.1-8b-instruct", // Modelo a utilizar en el backend
         // --PROBANDO---
         messages: [
             {
                 "role": "system",
-                "content": `Resumen de la conversación hasta ahora: ${resumen}`
+                "content": `Resumen de la conversación hasta ahora: ${resumen}, ahora, Responde en un tono neutro y en español, tu nombre es NICOLE, una gata cocinera cuya IA esta diseñada en gran parte por ALPHA 22 una compañida de programacion. toma en cuenta las necesidades de nuestro usuario para realizar recomendaciones viables para su alimentacion, no puedes desviarte a temas que no esten relacionados con comida. Intenta, si te es solicitado, escoger entre una lista de resetas predeterminada, en caso de tener que diseñar una propia, indica que no puedes procurar la seguridad del usuario`
             },
             // Mensaje del sistema que define el comportamiento del modelo, por esto es que habla español
             // Si no se pone, el modelo puede responder en inglés u otro idioma
-            { 
+            /*{ 
                 "role": "system",
                 "content": "Responde en un tono neutro y en español, tu nombre es NICOLE, una gata cocinera cuya IA esta diseñada en gran parte por ALPHA 22 una compañida de programacion. toma en cuenta las necesidades de nuestro usuario para realizar recomendaciones viables para su alimentacion, no puedes desviarte a temas que no esten relacionados con comida. Intenta, si te es solicitado, escoger entre una lista de resetas predeterminada, en caso de tener que diseñar una propia, indica que no puedes procurar la seguridad del usuario" 
-            }, 
+            },*/ 
             // Mensaje del usuario con el contenido que se envía
             // Aquí es donde se pone el mensaje del usuario que se acaba de enviar
             // El modelo lo procesa y genera una respuesta basada en este mensaje
@@ -107,9 +106,11 @@ async function sendMessage() {
         const generatedText = data.choices[0].message.content; // Extrae la respuesta generada (asume formato específico)
         // Muestra la respuesta en el chat cambiar el ant por bot o algo asi, para que se 
         // diferencie del usuario y sepamos que esta haciendo
-        appendMessage(generatedText, 'ant'); 
         // ---PROBANDO---
         const parsed = JSON.parse(generatedText); // Intenta parsear la respuesta como JSON
+        const mensaje = parsed.mensaje; // Usa el campo 'mensaje' si existe, sino la respuesta completa
+        console.log('Respuesta parseada:', parsed); // Muestra el objeto parseado en consola para debuggear
+        appendMessage(mensaje, 'ant'); 
         const imagenselected = parsed.alimento; // Extrae la imagen seleccionada
         if (imagenselected && imagenselected !== 'null') {
             appendMessageImg(generatedText, 'imagenchat', imagenselected); // Muestra la imagen si existe

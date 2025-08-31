@@ -11,27 +11,28 @@
 <body>
 <div>
   <?php require 'header.php';?> <!-- Incluye el encabezado de la página -->
-    <main> <!-- Contenido principal de la página -->
-      <div class="row justify-content-evenly rowdecontenedores">
-        <div class="col-md-5 col-11" style="max-height: 75vh;">
-          <section class="category-content container contenedordeseccion">
-            <span class="alpha">    
-              <span class="highlight">¿Quienes somos?
-              </span>
+  <main> <!-- Contenido principal de la página -->
+    <div class="row justify-content-evenly rowdecontenedores">
+      <div class="col-md-6 col-12" style="min-height: 75vh; padding-bottom: 1rem;">
+        <section class="category-content container contenedordeseccion">
+          <span class="alpha">    
+            <span class="highlight">¿Quienes somos?
             </span>
-            <div class="brand-row d-flex align-items-center justify-content-center gap-3 mb-3">
-              <span class="alpha">Alpha <span class="highlight">22</span></span>
-              <span class="divider">|</span>
-              <img src='<?php echo $logo ?>48.png' alt="Logo" style="height:36px;vertical-align:middle;">
-            </div>
-            <p class="text-justify contenedordesecciontexto">
-              En un pequeño cuarto lleno de ideas, sueños y pantallas brillantes nació <b>Alpha 22</b>, una empresa fundada por un grupo de jóvenes visionarios apasionados por la tecnología y el poder transformador del software. Su objetivo era claro: crear <b>herramientas digitales que resolvieran problemas reales de forma simple, intuitiva y eficiente</b>.<br><br>
-              Desde sus inicios, Alpha 22 se enfocó en el desarrollo de soluciones tecnológicas con propósito. No se trataba solo de escribir código, sino de construir <b>puentes digitales entre personas, empresas y oportunidades</b>. Cada línea de programación llevaba el desafío de que al uso más noble: hacer del mundo un lugar más conectado y accesible.<br><br>
-              Con ese espíritu innovador nació NICOLE, la primera creación emblemática de la empresa. Más que una aplicación o una plataforma, NICOLE es el corazón de Alpha 22: un sistema inteligente, adaptable y humano que refleja todo lo que representa la empresa. El nombre "NICOLE" proviene del deseo de <b>darle rostro humano a la tecnología</b>, de hacer que lo digital se sienta cercano, confiable y siempre dispuesto a ayudar.
-            </p>
-          </section>
-        </div>
-        <div class="col-md-5 col-11" style="max-height: 75vh;">
+          </span>
+          <div class="brand-row d-flex align-items-center justify-content-center gap-3 mb-3">
+            <span class="alpha">Alpha <span class="highlight">22</span></span>
+            <span class="divider">|</span>
+            <img src='<?php echo $logo ?>48.png' alt="Logo" style="height:36px;vertical-align:middle;">
+          </div>
+          <p class="text-justify contenedordesecciontexto">
+            En un pequeño cuarto lleno de ideas, sueños y pantallas brillantes nació <b>Alpha 22</b>, una empresa fundada por un grupo de jóvenes visionarios apasionados por la tecnología y el poder transformador del software. Su objetivo era claro: crear <b>herramientas digitales que resolvieran problemas reales de forma simple, intuitiva y eficiente</b>.<br><br>
+            Desde sus inicios, Alpha 22 se enfocó en el desarrollo de soluciones tecnológicas con propósito. No se trataba solo de escribir código, sino de construir <b>puentes digitales entre personas, empresas y oportunidades</b>. Cada línea de programación llevaba el desafío de que al uso más noble: hacer del mundo un lugar más conectado y accesible.<br><br>
+            Con ese espíritu innovador nació NICOLE, la primera creación emblemática de la empresa. Más que una aplicación o una plataforma, NICOLE es el corazón de Alpha 22: un sistema inteligente, adaptable y humano que refleja todo lo que representa la empresa. El nombre "NICOLE" proviene del deseo de <b>darle rostro humano a la tecnología</b>, de hacer que lo digital se sienta cercano, confiable y siempre dispuesto a ayudar.
+          </p>
+        </section>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="col-md-12 col-12" style="max-height: 75vh; padding-bottom: 1rem;">
           <section class="category-content container contenedordeseccion">
             <div class="brand-row d-flex align-items-center justify-content-center gap-3 mb-3"  bis_skin_checked="1">
               <span class="alpha">
@@ -66,6 +67,49 @@
               </div>
             </div>
           </section>
+        </div>
+        <div class="col-md-12 col-12" style="max-height: 75vh;">
+          <section class="category-content container contenedordeseccion">
+            <div class="brand-row d-flex align-items-center justify-content-center gap-3 mb-3"  bis_skin_checked="1">
+              <span class="alpha"> Miembros del equipo </span>
+            </div>
+            <div class="row justify-content-center" bis_skin_checked="1">
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              Cristian Andrés Gómez
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              Daniel Chávez Pejendino
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              David Mateo Vega Perdomo
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              Jhon Daved Taborda
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              Jorge Enrique Romero
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              José Daniel Vanegas Molina
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              Juan Esteban Villegas Vélez
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              Juan José Victoria
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              Manuel stiven cespedes
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              Mario Alejandro Ruiz Bedoya
+              </p>
+              <p class="col-6 fw-normal contenedordesecciontexto">
+              Néstor Alexander Martínez Palencia
+              </p>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </main> <!-- Pie de página, el mismo pie de pagina de toda la vida -->
