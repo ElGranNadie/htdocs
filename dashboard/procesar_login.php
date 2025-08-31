@@ -3,10 +3,9 @@ session_start();
 require_once "../dashboard/conexion.php"; 
 require_once "../utils/validaciones.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {// Verifica si el método de solicitud es POST.
-    // Verifica si los campos de correo y contraseña están establecidos
-    $correo = trim($_POST['correo']); //correo electrónico del formulario de inicio de sesión.
-    $password = trim($_POST['pass']); //contraseña del formulario de inicio de sesión.
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $correo = trim($_POST['correo']);
+    $password = trim($_POST['pass']);
     $errores = [];
 
     if (empty($correo) || empty($password)) {

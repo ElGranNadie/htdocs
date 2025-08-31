@@ -44,7 +44,7 @@ $current_page = basename(__FILE__);
 </head>
 <body>
     <?php require '../dashboard/header.php'; ?> <!-- Incluye el encabezado de la página -->
-    <div class="body-container row" style="padding:0;margin: 0px;">
+    <div class="body-container row" style="padding:0;margin: 0px;"> 
         <div id="chat-container" class="chat-section col-12" style="padding:0;margin: 0px;"> <!-- Contenedor del chat -->
             <div id="chat-header" class="row"> <!-- Encabezado del chat -->
                 <div class="chat-header col-12"><?php ?></div> 

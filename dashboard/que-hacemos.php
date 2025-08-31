@@ -15,8 +15,9 @@
     <div class="row justify-content-evenly rowdecontenedores" style="margin-top:1rem; margin-left: 0px; margin-right: 0px; max-height: 75vh;">
       <div class="col-11" style="max-height: 75vh;">
         <section class="category-content container contenedordeseccion"> <!-- Sección de contenido principal -->
-        <span class="alpha contenedordesecciontexto">¿Qué Hacemos como compañia?</span>
-          <div class="contenedordesecciontexto fw-normal">Creamos soluciones digitales para la cocina y más allá. Nuestro objetivo es facilitar la vida de las personas a través de la tecnología, brindando herramientas inteligentes, intuitivas y eficientes para el día a día.</div>
+        <span class="alpha contenedordesecciontexto">¿Qué Hace NICOLE?</span>
+          <div class="contenedordesecciontexto fw-normal">Hasta el momento, nuestra primera creacion, N.I.C.O.l.E. Funciona como una plataforma que guia a las personas en su dieta, encontrando recetas sanas y locales, puede enseñarte sobre los ingredientes que la componen y lo saludable que pueden llegar a ser</div>
+          <div class="contenedordesecciontexto fw-normal"></div>
         </section>
       </div>
     </div>

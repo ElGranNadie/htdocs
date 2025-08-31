@@ -1,7 +1,5 @@
 {
     "require": {
-        "phpmailer/phpmailer": "^6.10",
-        "mercadopago/dx-php": "^3.5",
-        "vlucas/phpdotenv": "^5.6"
+        "phpmailer/phpmailer": "^6.10"
     }
 }
