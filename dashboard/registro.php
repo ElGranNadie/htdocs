@@ -102,7 +102,7 @@ unset($_SESSION['error'], $_SESSION['old']);
                             <div class="row">
                                 <!-- Aceptación de términos -->
                                 <div class="form-group col-12 col-lg-6" style="font-size: 0.8rem;">
-                                    <div id="password-match-message" style="font-size: 0.8rem;"></div>
+                                    <div id="password-match-message col-12 col-lg-6" class="input-help" style="font-size: 0.8rem;"></div>
                                     <label class="checkbox-container" style="display: flex; gap: 0.5rem; align-items: center;">
                                         <input type="checkbox" name="privacidad" required style="width: auto; margin: 0;">
                                         <a href="../terminos/terminos.html" target="_blank" style="color: var(--bs-body-color); margin-left: 1rem;">

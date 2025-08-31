@@ -6,9 +6,10 @@ require '../varset/varset.php';
 <html lang="es">
 <head>
     <title>N.I.C.O.L.E</title>
-    <?php require 'other.php'; ?>
-    <?php require 'stylesheet.php'; ?>
+    <?php require 'other.php'; ?> <!-- Incluye metadatos y enlaces comunes -->
+    <?php require 'stylesheet.php'; ?> <!-- Incluye los estilos del dashboard -->
     <style>
+        /*  estilo del carrusel  (no es el mismo que el del login, por lo que no los podemos juntar a lo mejor y lo quitamos) */
         .carousel {
             position: relative;
             margin-top: 2rem;
@@ -25,7 +26,7 @@ require '../varset/varset.php';
             width: 100%;
             text-align: center;
             font-size: 2.8rem;
-            color: var(--bs-body-color);
+            color:  var(--bs-body-color);
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.5s ease;
@@ -53,8 +54,10 @@ require '../varset/varset.php';
         }
     </style>
 </head>
+<!--  cuerpo de la pagina -->
 <body>
-    <?php require '../dashboard/header.php'; ?>
+<!--  nombre y carrusel de frases  -->
+    <?php require '../dashboard/header.php'; ?> <!-- Incluye el encabezado de la página -->
     <div class="row">
         <div class="offset-lg-0 col-lg-6 left-section">
             <div class="carousel">
@@ -63,7 +66,7 @@ require '../varset/varset.php';
                 <div class="carousel-item">estas a nada de cocinar!!!</div>
             </div>
         </div>
-
+            <!--   formulario de inicio de seccion -->
         <div class="col-xs-11 col-lg-6">
             <div class="right-section">
                 <div class="login-container">
