@@ -47,7 +47,10 @@ $current_page = basename(__FILE__);
     <div class="body-container row" style="padding:0;margin: 0px;"> 
         <div id="chat-container" class="chat-section col-12" style="padding:0;margin: 0px;"> <!-- Contenedor del chat -->
             <div id="chat-header" class="row"> <!-- Encabezado del chat -->
-                <div class="chat-header col-12"><?php ?></div> 
+                <div class="chat-header col-12">
+                    <?php if ($user_id): ?>
+                        <a class="nav-unused ">👤 <?php echo htmlspecialchars($nombre_usuario); ?></a>
+                    <?php endif; ?></div> 
             </div>
             <div id="chat-messages" class="chat-messages row"></div> <!-- Contenedor de mensajes del chat -->
             <div id="message-input input-container" class="chat-input row"> <!-- Contenedor de entrada de mensajes -->

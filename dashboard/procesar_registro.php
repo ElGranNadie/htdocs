@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../dashboard/conexion.php';
-
+try{
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Paso 1: Registro inicial
     if (isset($_POST['paso']) && $_POST['paso'] === '1') {
@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $usuario = $_POST['usuario'];
 
         // Validar longitud de contraseña
-        if (strlen($password) < 6) {
-            $_SESSION['error'] = "La contraseña debe tener al menos 6 caracteres";
+        if (strlen($password) < 8) {
+            $_SESSION['error'] = "La contraseña debe tener al menos 8 caracteres";
             header("Location: registro.php");
             exit();
         }
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sabores = $_POST['sabores'] ?? '';
             $alergias = $_POST['alergias'] ?? '';
             $peso = $_POST['peso'] ?? '';
-            $altura = ($_POST['altura'] ?? '') ? ($_POST['altura'] / 100) : ''; // Convertir centímetros a metros
+            $altura = ($_POST['altura'] ?? '');
 
             $stmt->bind_param("issss", $usuario_id, $sabores, $alergias, $peso, $altura);
             $stmt->execute();
@@ -94,11 +94,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $conn->commit();
             unset($_SESSION['temp_user_data']);
             $_SESSION['success'] = "Registro completado exitosamente. Por favor, inicia sesión";
-            header("Location: ../login/login.php");
+            header("Location: ../dashboard/login.php");
         } catch (Exception $e) {
             $conn->rollback();
             $_SESSION['error'] = "Error al completar el registro: " . $e->getMessage();
+            echo "<script>console.log('" . $e . "');</script>";
             header("Location: preferencias.php");
+            
         }
     } else {
         header("Location: registro.php");
@@ -106,5 +108,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     header("Location: registro.php");
 }
-
+} catch (Exception $e) {
+    $_SESSION['error'] = "Error inesperado: " . $e->getMessage();
+    echo "<script>console.log('" . $e . "');</script>";
+    header("Location: registro.php");
+}
 $conn->close();

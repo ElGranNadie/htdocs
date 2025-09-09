@@ -16,14 +16,14 @@
         <a    class="col-2 mb-3 mb-md-0 text-body-secondary" href="../dashboard/privacidad.php">Privacidad</a> <!-- Enlace a la ley de manejo de privacidad -->
         <ul class="  col-2 nav list-unstyled d-flex">
             <li class="ms-3">
-                <a class="text-body-secondary" href="#" aria-label="Instagram">
+                <a class="text-body-secondary" href="https://www.instagram.com/n.i.c.o.l.e.2025" aria-label="Instagram">
                     <svg class="bi" width="24" height="24" aria-hidden="true">
                         <use xlink:href="#instagram"></use>
                     </svg>
                 </a>
             </li>
             <li class="ms-3">
-                <a class="text-body-secondary" href="#" aria-label="Facebook">
+                <a class="text-body-secondary" href="https://www.facebook.com/profile.php?id=61579706241974&notif_id=1755891940951528&notif_t=page_user_activity&ref=notif" aria-label="Facebook">
                     <svg class="bi" width="24" height="24">
                         <use xlink:href="#facebook"></use>
                     </svg>

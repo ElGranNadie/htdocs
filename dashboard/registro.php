@@ -17,7 +17,7 @@ unset($_SESSION['error'], $_SESSION['old']);
 <body>
     <?php require '../dashboard/header.php'; ?>
     <div class="app-container" style="align-items:normal;">
-        <div class="login-container" style="max-width: 100%; color: #212529;">
+        <div class="login-container" style="max-width: 100%;">
             <div class="col-12">
                 <div class="row">
                     <div class="col-12 col-lg-6">
@@ -32,6 +32,7 @@ unset($_SESSION['error'], $_SESSION['old']);
                 <?php if (!empty($errores)): ?>
                     <div class="error-message" style="color: red; margin-bottom: 1rem; text-align:center; font-weight:bold;">
                         <ul style="list-style: none; padding:0;">
+                            <?php if (is_string($errores)) $errores = [$errores]; // Asegurarse de que $errores es un array ?>
                             <?php foreach ($errores as $err): ?>
                                 <li>⚠️ <?= htmlspecialchars($err) ?></li>
                             <?php endforeach; ?>
@@ -47,16 +48,16 @@ unset($_SESSION['error'], $_SESSION['old']);
                                 <!-- Campo: Nombre -->
                                 <div class="form-group col-12 col-lg-6">
                                     <label for="nombre">nombre:</label>
-                                    <input type="text" style="color: #212529;" id="nombre" name="nombre" 
-                                           value="<?= htmlspecialchars($old['nombre'] ?? '') ?>" 
-                                           required placeholder="ingrese su nombre">
+                                    <input type="text" id="nombre" name="nombre" 
+                                        value="<?= htmlspecialchars($old['nombre'] ?? '') ?>" 
+                                        required placeholder="ingrese su nombre">
                                 </div>
                                 <!-- Campo: Correo -->
                                 <div class="form-group col-12 col-lg-6">
-                                    <label for="correo">correo:</label>
-                                    <input type="email" style="color: #212529;" id="correo" name="correo" 
-                                           value="<?= htmlspecialchars($old['correo'] ?? '') ?>" 
-                                           required placeholder="ingrese un correo electrónico">
+                                    <label for="correo">correo asociado (se requiere para la verificacion de contraseña y usuario):</label>
+                                    <input type="email" id="correo" name="correo" 
+                                        value="<?= htmlspecialchars($old['correo'] ?? '') ?>" 
+                                        required placeholder="ingrese un correo electrónico">
                                 </div>
                             </div>
 
@@ -64,16 +65,16 @@ unset($_SESSION['error'], $_SESSION['old']);
                                 <!-- Campo: Usuario -->
                                 <div class="form-group col-12 col-lg-6">
                                     <label for="usuario">usuario:</label>
-                                    <input type="text" style="color: #212529;" id="usuario" name="usuario" 
-                                           value="<?= htmlspecialchars($old['usuario'] ?? '') ?>" 
-                                           required placeholder="elige un nombre de usuario">
+                                    <input type="text" id="usuario" name="usuario" 
+                                        value="<?= htmlspecialchars($old['usuario'] ?? '') ?>" 
+                                        required placeholder="elige un nombre de usuario">
                                 </div>
                                 <!-- Campo: Edad -->
                                 <div class="form-group col-12 col-lg-6">
                                     <label for="edad">edad:</label>
-                                    <input type="number" style="color: #212529;" id="edad" name="edad" 
-                                           value="<?= htmlspecialchars($old['edad'] ?? '') ?>" 
-                                           required min="1" max="120" placeholder="ingresa tu edad">
+                                    <input type="number" id="edad" name="edad" 
+                                        value="<?= htmlspecialchars($old['edad'] ?? '') ?>" 
+                                        required min="1" max="120" placeholder="ingresa tu edad">
                                 </div>
                             </div>
 
@@ -82,7 +83,7 @@ unset($_SESSION['error'], $_SESSION['old']);
                                 <div class="form-group col-12 col-lg-6">
                                     <label for="pass">contraseña:</label>
                                     <div class="password-container">
-                                        <input type="password" style="color: #212529;" id="pass" name="pass" placeholder="contraseña" required>
+                                        <input type="password" id="pass" name="pass" placeholder="contraseña" required>
                                         <button type="button" class="toggle-password" onclick="togglePasswordAll()">
                                             <i class="eye-icon">👁️</i>
                                         </button>
@@ -92,9 +93,9 @@ unset($_SESSION['error'], $_SESSION['old']);
                                 <div class="form-group col-12 col-lg-6">
                                     <label class="col-12 col-lg-6" for="confirmar_pass">confirmar contraseña:</label>
                                     <div class="password-container">
-                                        <input type="password" style="color: #212529;" id="confirmar_pass" name="confirmar_pass" required 
-                                               oninput="validarContraseñas()" 
-                                               placeholder="vuelva a digitar su contraseña">
+                                        <input type="password" id="confirmar_pass" name="confirmar_pass" required 
+                                            oninput="validarContraseñas()" 
+                                            placeholder="vuelva a digitar su contraseña">
                                     </div>
                                 </div>
                             </div>

@@ -50,7 +50,7 @@
   $imagenportada = "../imagenes/imgcomidas/bedabetaimg.jpg"; // esto era un experimento, lo dejo porque funca en casos de error
   $index = "../dashboard/index.php"; // ruta del index del dashboard
   $quienessomos = "../dashboard/quienes-somos.php"; // ruta de la pagina quienes somos del dashboard
-  $quehacemos = "../dashboard/que-hacemos.php"; // ruta de la pagina que hacemos del dashboard
+  $quehacemos = "../dashboard/Nicole.php"; // ruta de la pagina que hacemos del dashboard
   $contactanos = "../dashboard/contactanos.php"; // ruta de la pagina contactanos del dashboard
   $terycon = "../terminos/terminos.php"; // ruta de la pagina terminos y condiciones
   $estilosdashboard = "../estilos/dashboardstyle.css"; // ruta de estilos del dashboard

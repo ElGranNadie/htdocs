@@ -5,7 +5,7 @@ const urlsToCache = [
   '/',// La raíz del sitio, importante para las visitas iniciales.
   'index.php',
   'quienes-somos.php',
-  'que-hacemos.php',
+  'Nicole.php',
   'contactanos.php',
   'estilos/base.css',
   'estilos/dashboardstyle.css',
