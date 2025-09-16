@@ -28,7 +28,7 @@ function appendMessageImg(content, className, image) {
     const img = document.createElement('img');
     img.src = `../../../imagenes/imgrecetas/${image}rec.jpg`;
     img.alt = 'Imagen de comida'; // Texto alternativo para la imagen
-    img.className = `${className} col-11`; // Clase CSS para la imagen (puedes definir
+    img.className = `col-11`; // Clase CSS para la imagen (puedes definir
     messageElementImg.appendChild(img); // Establece el texto del mensaje
     messageElementImg.className = `message ${className}`; // Aplica clases CSS para estilo (por ejemplo: "message user")
     chatMessages.appendChild(messageElementImg); // Inserta el nuevo mensaje en el contenedor
@@ -42,8 +42,14 @@ async function sendMessage() {
         alert("Por favor, escribe un mensaje."); // Valida que haya texto
         return;
     }
-
-    appendMessage(userMessage, 'user'); // Muestra el mensaje del usuario en el chat, la idea es que se muestre con un estilo diferente
+    //$_SESSION['usuario_nombre']
+    const nombre_usuario = document.createElement('div');
+    let nombre = document.getElementById('nav-unused').dataset.nombre;
+    console.log(nombre);
+    nombre_usuario.textContent = nombre
+    nombre_usuario.className = 'message nombre_usuario align-self-end';
+    chatMessages.appendChild(nombre_usuario);
+    appendMessage(userMessage, 'user align-self-end'); // Muestra el mensaje del usuario en el chat, la idea es que se muestre con un estilo diferente
     // (por ejemplo: "message user" para mensajes del usuario)
     // Aquí necesitamos un estilo CSS para diferenciar los mensajes del usuario de los del bot
     // (por ejemplo: "message bot" para mensajes del bot)
@@ -56,19 +62,30 @@ async function sendMessage() {
     // Es complicado, pero es así como funciona la API de OpenAI y similares
     // Estudienselo lo mas posible, porque es la base de todo lo que vamos a hacer
     const payload = { // Un payload ss el conjunto de datos transmitidos útiles, por eso ese nombre
-        model: "openai/gpt-oss-20b", // Modelo a utilizar en el backend
-        //model: "meta-llama-3.1-8b-instruct", // Modelo a utilizar en el backend
+        //model: "openai/gpt-oss-20b", // Modelo a utilizar en el backend
+        model: "meta-llama-3.1-8b-instruct", // Modelo a utilizar en el backend
         // --PROBANDO---
         messages: [
             {
                 "role": "system",
-                "content": `Resumen de la conversación hasta ahora: ${resumen}, ahora, Responde en un tono neutro y en español, tu nombre es NICOLE, una gata cocinera cuya IA esta diseñada en gran parte por ALPHA 22 una compañida de programacion. toma en cuenta las necesidades de nuestro usuario para realizar recomendaciones viables para su alimentacion, no puedes desviarte a temas que no esten relacionados con comida. Intenta, si te es solicitado, escoger entre una lista de resetas predeterminada, en caso de tener que diseñar una propia, indica que no puedes procurar la seguridad del usuario`
+                "content": `Resumen de la conversación hasta ahora: ${resumen}, ahora, Responde en un tono neutro y
+                 en español, tu nombre es NICOLE, una gata cocinera cuya IA esta diseñada en gran parte por ALPHA
+                 22 una compañida de programacion. toma en cuenta las necesidades de nuestro usuario para realizar
+                 recomendaciones viables para su alimentacion, no puedes desviarte a temas que no esten
+                 relacionados con comida. Intenta, si te es solicitado, escoger entre una lista de resetas
+                 predeterminada, en caso de tener que diseñar una propia, indica que no puedes procurar la seguridad
+                 del usuario`
             },
             // Mensaje del sistema que define el comportamiento del modelo, por esto es que habla español
             // Si no se pone, el modelo puede responder en inglés u otro idioma
             /*{ 
                 "role": "system",
-                "content": "Responde en un tono neutro y en español, tu nombre es NICOLE, una gata cocinera cuya IA esta diseñada en gran parte por ALPHA 22 una compañida de programacion. toma en cuenta las necesidades de nuestro usuario para realizar recomendaciones viables para su alimentacion, no puedes desviarte a temas que no esten relacionados con comida. Intenta, si te es solicitado, escoger entre una lista de resetas predeterminada, en caso de tener que diseñar una propia, indica que no puedes procurar la seguridad del usuario" 
+                "content": "Responde en un tono neutro y en español, tu nombre es NICOLE, una gata cocinera cuya IA
+                 esta diseñada en gran parte por ALPHA 22 una compañida de programacion. toma en cuenta las
+                  necesidades de nuestro usuario para realizar recomendaciones viables para su alimentacion,
+                   no puedes desviarte a temas que no esten relacionados con comida. Intenta, si te es solicitado,
+                    escoger entre una lista de resetas predeterminada, en caso de tener que diseñar una propia,
+                     indica que no puedes procurar la seguridad del usuario" 
             },*/ 
             // Mensaje del usuario con el contenido que se envía
             // Aquí es donde se pone el mensaje del usuario que se acaba de enviar
@@ -98,8 +115,10 @@ async function sendMessage() {
         if (!response.ok) {
             // Si hubo error en la respuesta (por ejemplo, 500, 403, etc.)
             const errorText = await response.text(); // Lee el texto del error
-            console.error(`Error ${response.status}: ${errorText}`); // Muestra el error en consola, esto es mas que nada para debuggear, quitenlo si quieren
-            throw new Error(`HTTP ${response.status}: ${errorText}`); // Lanza una excepción con detalle esto lo cambiamos por un mensaje de error mas amigable
+            // Muestra el error en consola, esto es mas que nada para debuggear, quitenlo si quieren
+            console.error(`Error ${response.status}: ${errorText}`); 
+            // Lanza una excepción con detalle esto lo cambiamos por un mensaje de error mas amigable
+            throw new Error(`HTTP ${response.status}: ${errorText}`); 
         }
 
         const data = await response.json(); // Convierte la respuesta a objeto JSON
@@ -109,17 +128,25 @@ async function sendMessage() {
         // ---PROBANDO---
         const parsed = JSON.parse(generatedText); // Intenta parsear la respuesta como JSON
         const mensaje = parsed.mensaje; // Usa el campo 'mensaje' si existe, sino la respuesta completa
-        console.log('Respuesta parseada:', parsed); // Muestra el objeto parseado en consola para debuggear
-        appendMessage(mensaje, 'ant'); 
+        //console.log('Respuesta parseada:', parsed); // Muestra el objeto parseado en consola para debuggear
+        const division = document.createElement('div');
+        const imagen = "../imagenes/logo4-48.png" //Img en variable para enviar lo que desees
+        division.className = `icono-mensaje`; // Aplica clases CSS para estilo
+        division.insertAdjacentHTML(
+            "beforeend",
+            `<img src=${imagen} alt=${imagen}>` // Backticks para img variable
+        );
+        chatMessages.appendChild(division);
+        appendMessage(mensaje, 'ant align-self-start'); 
         const imagenselected = parsed.alimento; // Extrae la imagen seleccionada
         if (imagenselected && imagenselected !== 'null') {
-            appendMessageImg(generatedText, 'imagenchat', imagenselected); // Muestra la imagen si existe
+            appendMessageImg(generatedText, 'imagenchat align-self-start', imagenselected); // Muestra la imagen si existe
         }
         resumen = parsed.resumen || resumen; // Actualiza el resumen de la conversación si está presente
         // ---PROBANDO---
     } catch (error) {
         console.error('Error enviando mensaje:', error); // Muestra error en consola
-        appendMessage(`Error: ${error.message}`, 'ant'); // Informa del error al usuario en el chat
+        appendMessage(`Error: ${error.message}`, 'ant align-self-start'); // Informa del error al usuario en el chat
     }
 }
 
@@ -160,7 +187,7 @@ if ('webkitSpeechRecognition' in window) {
     // Evento: Error en reconocimiento
     recognition.onerror = (event) => {
         console.error('Error en reconocimiento de voz:', event.error);
-        appendMessage('Error en reconocimiento de voz. Intenta de nuevo.', 'ant');
+        appendMessage('Error en reconocimiento de voz. Intenta de nuevo.', 'ant align-self-start');
     };
 
     // Grabación por ratón: iniciar al presionar
@@ -185,6 +212,6 @@ if ('webkitSpeechRecognition' in window) {
     });
 } else {
     // Si no hay soporte, muestra mensaje e inactiva el botón
-    appendMessage('Tu navegador no soporta reconocimiento de voz.', 'ant');
+    appendMessage('Tu navegador no soporta reconocimiento de voz.', 'ant align-self-start');
     microphoneButton.disabled = true;
 }

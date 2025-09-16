@@ -2,12 +2,10 @@
 require '../varset/varset.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
-}
-
+};
 // Usuario logueado
 $user_id = $_SESSION['user_id'] ?? null;
 $nombre_usuario = $_SESSION['usuario_nombre'] ?? "Invitado";
-
 require 'conexion.php';
 $es_premium = false;
 if ($user_id) {
@@ -47,12 +45,12 @@ $current_page = basename(__FILE__);
     <div class="body-container row" style="padding:0;margin: 0px;"> 
         <div id="chat-container" class="chat-section col-12" style="padding:0;margin: 0px;"> <!-- Contenedor del chat -->
             <div id="chat-header" class="row"> <!-- Encabezado del chat -->
-                <div class="chat-header col-12">
+                <div class="chat-header col-11">
                     <?php if ($user_id): ?>
-                        <a class="nav-unused ">👤 <?php echo htmlspecialchars($nombre_usuario); ?></a>
+                        <a id="nav-unused" class="nav-unused" data-nombre="<?php echo htmlspecialchars($nombre_usuario); ?>">👤 <?php echo htmlspecialchars($nombre_usuario); ?></a>
                     <?php endif; ?></div> 
             </div>
-            <div id="chat-messages" class="chat-messages row"></div> <!-- Contenedor de mensajes del chat -->
+            <div id="chat-messages" class="chat-messages row" style="padding:0;margin: 0px;"></div> <!-- Contenedor de mensajes del chat -->
             <div id="message-input input-container" class="chat-input row"> <!-- Contenedor de entrada de mensajes -->
                 <textarea id="user-message" class="col-10" rows="1" placeholder="Escribe tu mensaje..."></textarea> <!-- Área de texto para escribir mensajes -->
                 <button id="microphone-button" class="mic-btn col-1"> <!-- Botón de micrófono que aun no funciona por cierto-->
