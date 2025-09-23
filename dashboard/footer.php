@@ -11,8 +11,8 @@
         <a    class="col-1 mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
             <img src='<?php echo $logo ?>64.png' alt="Logo" style="height: 24px; vertical-align: middle;"> <!-- Logo de la compañia -->
         </a>
-        <span class="col-3 mb-3 mb-md-0 text-body-secondary">&copy; 2025 Alpha 22</span> 
-        <a    class="col-3 mb-3 mb-md-0 text-body-secondary" href="../dashboard/terminos.php">Términos y condiciones</a> <!-- Enlace a los términos y condiciones -->
+        <span class="col-2 mb-3 mb-md-0 text-body-secondary">&copy; 2025 Alpha 22</span> 
+        <a    class="col-2 mb-3 mb-md-0 text-body-secondary" href="../dashboard/terminos.php">Términos y condiciones</a> <!-- Enlace a los términos y condiciones -->
         <a    class="col-2 mb-3 mb-md-0 text-body-secondary" href="../dashboard/privacidad.php">Privacidad</a> <!-- Enlace a la ley de manejo de privacidad -->
         <ul class="  col-2 nav list-unstyled d-flex">
             <li class="ms-3">
@@ -29,6 +29,11 @@
                     </svg>
                 </a>
             </li> 
+            <li class="ms-3">
+                <a class="col-1 mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" href="../dashboard/manual.php" aria-label="Bootstrap">
+                    <img src='../imagenes/Help.png' alt="Logo" style="height: 24px; vertical-align: middle;"> <!-- Logo de ayuda -->
+                </a>
+            </li>
         </ul> 
     </footer> 
 </div> 
