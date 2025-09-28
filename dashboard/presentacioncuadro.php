@@ -2,10 +2,10 @@
     <div class="row" style="padding-right: 1rem;padding-left: 1rem; margin-top: 1rem; margin-bottom: 1rem;">
         <div class="col-9 d-flex align-items-center justify-content-center" bis_skin_checked="1">
             <span class="alpha" >
-                <span class="highlight">¿Que es 
-                </span> 
-            <span class="alpha">N.I.C.O.L.E </span>
-            <span class="highlight">?</span>
+                <span class="highlight">¿Que es </span> 
+                <span class="alpha">N.I.C.O.L.E </span>
+                <span class="highlight">?</span>
+            </span>
         </div>
         <div class="col-2 d-flex align-items-center justify-content-center">
             <img src='<?php echo $logo ?>64.png' alt="Logo" style="height: 64px;px;vertical-align:middle;">

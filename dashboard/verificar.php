@@ -1,16 +1,14 @@
 <?php
 session_start();
+require '../varset/varset.php';
 require_once '../dashboard/conexion.php';
-
 // ✅ Verifica si hay un correo guardado en sesión
 if (!isset($_SESSION['correo_verificar'])) {
     $_SESSION['error'] = "Sesión no válida. Inicia el proceso de registro nuevamente.";
     header("Location: ../registro/registro.php");
     exit();
 }
-
 $correo = $_SESSION['correo_verificar'];
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $codigo = $_POST['codigo'] ?? '';
 
@@ -59,46 +57,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
 }
 ?>
-
 <!-- HTML del formulario -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Verificar correo</title>
+    <?php require 'other.php'; ?> <!-- Incluye metadatos y enlaces comunes -->
+    <?php require 'stylesheet.php'; ?> <!-- Incluye los estilos del dashboard -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 40px;
-            background-color: #f7f7f7;
-        }
-        h2 {
-            color: #333;
-        }
         form {
-            background-color: white;
+            background-color: var();
             padding: 25px;
             border-radius: 8px;
             box-shadow: 0 0 10px #ccc;
             max-width: 400px;
-        }
-        input {
-            padding: 10px;
-            width: 100%;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-        button {
-            padding: 12px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
         }
         .message {
             margin-bottom: 15px;
@@ -116,22 +89,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body>
-
-    <h2>Verificación de Correo Electrónico</h2>
-
-    <?php if (isset($_SESSION['error'])): ?>
-        <div class="message error"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
-    <?php endif; ?>
-
-    <?php if (isset($_SESSION['success'])): ?>
-        <div class="message success"><?= $_SESSION['success']; unset($_SESSION['success']); ?></div>
-    <?php endif; ?>
-
-    <form method="POST" action="verificar.php">
-        <input type="text" name="codigo" placeholder="Código de verificación" required>
-        <button type="submit">Verificar</button>
-    </form>
-
+    <?php include '../dashboard/header.php'; ?>
+    <main>
+        <div class="row justify-content-evenly rowdecontenedores">
+            <section class="intro-section contenedordeseccion category-content" style="padding: 1rem;">
+                <span class="alpha">
+                    <span class="highlight">
+                        Verificación de Correo Electrónico
+                    </span>
+                </span>
+                <?php if (isset($_SESSION['error'])): ?>
+                    <div class="message error"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['success'])): ?>
+                    <div class="message success"><?= $_SESSION['success']; unset($_SESSION['success']); ?></div>
+                <?php endif; ?>
+                <form method="POST" action="verificar.php" style="padding:1rem; margin:1rem;">
+                    <input type="text" name="codigo" placeholder="Código de verificación" required>
+                    <div class="nav-item">
+                        <button type="submit" class="nav-link">Verificar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <?php include '../dashboard/footer.php'; ?>
+    <?php require 'scripts.php';?><!-- Enlace a Bootstrap JS -->
 </body>
 </html>
 

@@ -7,7 +7,7 @@
 body {
     height: 100%;
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--imagen-fondo) no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
