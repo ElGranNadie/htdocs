@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['dashboard_20webhook_20php_0',['Webhook (dashboard/webhook.php)',['../endpoints.html#webhook',1,'']]],
+  ['datos_1',['Consultar usuario en la base de datos',['../verificar_8php.html#paso4',1,'']]],
+  ['datos_20del_20formulario_20login_20php_2',['Capturar datos del formulario login.php',['../verificar_8php.html#paso2',1,'']]],
+  ['db_5fconfig_3',['db_config',['../namespacemain.html#ac8176bbda95a55af61f54d9b7f70505d',1,'main.db_config'],['../namespacetest.html#ab217fc9b58b250ef4c71a3920f06edfd',1,'test.db_config']]],
+  ['de_20éxito_4',['Redirección en caso de éxito',['../procesar__registro_8php.html#pasoFinal',1,'']]],
+  ['de_20datos_5',['Consultar usuario en la base de datos',['../verificar_8php.html#paso4',1,'']]],
+  ['de_20errores_6',['de errores',['../procesar__registro_8php.html#paso9',1,'Manejo de errores'],['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#manejo_errores',1,'Manejo de errores']]],
+  ['de_20flujo_7',['Resumen de flujo',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/verificar.php#resumen',1,'']]],
+  ['de_20la_20interfaz_8',['Dinámica de la interfaz',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#interfaz',1,'']]],
+  ['de_20mensajería_20con_20ia_9',['Módulo de mensajería con IA',['../index.html#autotoc_md57',1,'']]],
+  ['de_20negocio_20y_20lógica_20principal_10',['Archivos de negocio y lógica principal',['../index.html#autotoc_md55',1,'']]],
+  ['de_20seguridad_11',['Consideraciones de seguridad',['../login_8php.html#seguridad',1,'']]],
+  ['de_20sesiones_20y_20roles_12',['Gestión de Sesiones y Roles',['../index.html#autotoc_md64',1,'']]],
+  ['de_20usuarios_13',['Autenticación de Usuarios',['../index.html#autotoc_md62',1,'']]],
+  ['del_20formulario_14',['Campos del formulario',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#campos',1,'']]],
+  ['del_20formulario_20login_20php_15',['Capturar datos del formulario login.php',['../verificar_8php.html#paso2',1,'']]],
+  ['del_20proyecto_16',['del Proyecto',['../index.html#autotoc_md50',1,'🎯 Objetivo del Proyecto'],['../index.html#autotoc_md54',1,'📁 Estructura del Proyecto']]],
+  ['dependencias_17',['Dependencias',['../procesar__registro_8php.html#dependencias',1,'']]],
+  ['desarrollador_18',['👥 Equipo Desarrollador',['../index.html#autotoc_md69',1,'']]],
+  ['dinámica_20de_20la_20interfaz_19',['Dinámica de la interfaz',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#interfaz',1,'']]],
+  ['documentación_20y_20utilidades_20',['Documentación y utilidades',['../index.html#autotoc_md58',1,'']]],
+  ['documento_20visual_20y_20técnico_21',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]]
+];

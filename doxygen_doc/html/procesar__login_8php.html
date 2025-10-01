@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Referencia del archivo dashboard/procesar_login.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('procesar__login_8php.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo procesar_login.php</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Maneja el inicio de sesión de usuarios.  
+<a href="#details">Más...</a></p>
+
+<p><a href="procesar__login_8php_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f" id="r_a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a> = trim($_POST['correo'])</td></tr>
+<tr class="memitem:a607686ef9f99ea7c42f4f3dd3dbb2b0d" id="r_a607686ef9f99ea7c42f4f3dd3dbb2b0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a> = trim($_POST['pass'])</td></tr>
+<tr class="memitem:a70fbb718980d7db3d52d37d7a5c39166" id="r_a70fbb718980d7db3d52d37d7a5c39166"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> = []</td></tr>
+<tr class="memitem:a31c6205830169e8a3668a3f48b763154" id="r_a31c6205830169e8a3668a3f48b763154"><td class="memItemLeft" align="right" valign="top"><a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(empty($correo)||empty($password))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31c6205830169e8a3668a3f48b763154">$validCorreo</a> = <a class="el" href="validaciones_8php.html#a61c6731c6de20d45ab3bfeaba4b28ad1">validarCorreo</a>($correo)</td></tr>
+<tr class="memitem:a80c9c23fd80ed0e9bac8bc35480b4069" id="r_a80c9c23fd80ed0e9bac8bc35480b4069"><td class="memItemLeft" align="right" valign="top"><a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(!empty($validCorreo)) <a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(empty( $errores)) <a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(!empty($errores))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80c9c23fd80ed0e9bac8bc35480b4069">else</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Maneja el inicio de sesión de usuarios. </p>
+<p>Este script recibe los datos del formulario de login, valida la entrada, consulta la base de datos, verifica la contraseña y gestiona la sesión.</p>
+<h1 class="doxsection"><a class="anchor" id="dependencias"></a>
+Dependencias</h1>
+<ul>
+<li>../dashboard/conexion.php : Conexión a la base de datos</li>
+<li>../utils/validaciones.php : Funciones de validación de datos</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="flujo"></a>
+Flujo general</h1>
+<ol type="1">
+<li>Verificar que la solicitud sea POST.</li>
+<li>Recibir los datos del formulario <span class="tt"><a class="el" href="login_8php.html" title="Vista del formulario de inicio de sesión del sistema N.I.C.O.L.E.">login.php</a></span> (correo y contraseña).</li>
+<li>Validar correo y contraseña ingresados.</li>
+<li>Consultar el usuario en la base de datos.</li>
+<li>Verificar contraseña encriptada.</li>
+<li>Guardar datos del usuario en la sesión.</li>
+<li>Redirigir al dashboard en caso exitoso.</li>
+<li>Redirigir de nuevo a <span class="tt"><a class="el" href="login_8php.html" title="Vista del formulario de inicio de sesión del sistema N.I.C.O.L.E.">login.php</a></span> si la autenticación falla o no es POST.</li>
+</ol>
+<p>Variables de sesión utilizadas:</p><ul>
+<li>$_SESSION['user_id'] : ID del usuario autenticado.</li>
+<li>$_SESSION['correo'] : Correo electrónico del usuario.</li>
+<li>$_SESSION['usuario_nombre'] : Nombre del usuario para mostrar.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="paso1"></a>
+Verificar método POST</h2>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> ($_SERVER[<span class="stringliteral">&quot;REQUEST_METHOD&quot;</span>] == <span class="stringliteral">&quot;POST&quot;</span>) {</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="paso2"></a>
+Capturar datos del formulario login.php</h2>
+<div class="fragment"><div class="line"><a class="code hl_variable" href="#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a> = trim($_POST[<span class="stringliteral">&#39;correo&#39;</span>]);</div>
+<div class="line"><a class="code hl_variable" href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a> = trim($_POST[<span class="stringliteral">&#39;pass&#39;</span>]);</div>
+<div class="line"><a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> = [];</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (empty(<a class="code hl_variable" href="#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a>) || empty(<a class="code hl_variable" href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>)) {</div>
+<div class="line">    <a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>[] = <span class="stringliteral">&quot;Por favor ingrese correo y contraseña&quot;</span>;</div>
+<div class="line">}</div>
+<div class="ttc" id="aprocesar__login_8php_html_a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f"><div class="ttname"><a href="#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a></div><div class="ttdeci">$correo</div><div class="ttdef"><b>Definition</b> <a href="procesar__login_8php_source.html#l00141">procesar_login.php:141</a></div></div>
+<div class="ttc" id="aprocesar__login_8php_html_a607686ef9f99ea7c42f4f3dd3dbb2b0d"><div class="ttname"><a href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a></div><div class="ttdeci">$password</div><div class="ttdef"><b>Definition</b> <a href="procesar__login_8php_source.html#l00142">procesar_login.php:142</a></div></div>
+<div class="ttc" id="aprocesar__login_8php_html_a70fbb718980d7db3d52d37d7a5c39166"><div class="ttname"><a href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a></div><div class="ttdeci">$errores</div><div class="ttdef"><b>Definition</b> <a href="procesar__login_8php_source.html#l00149">procesar_login.php:149</a></div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="paso3"></a>
+Validar correo</h2>
+<div class="fragment"><div class="line"><a class="code hl_variable" href="#a31c6205830169e8a3668a3f48b763154">$validCorreo</a> = <a class="code hl_function" href="validaciones_8php.html#a61c6731c6de20d45ab3bfeaba4b28ad1">validarCorreo</a>(<a class="code hl_variable" href="#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a>);</div>
+<div class="line"><span class="keywordflow">if</span> (!empty(<a class="code hl_variable" href="#a31c6205830169e8a3668a3f48b763154">$validCorreo</a>)) {</div>
+<div class="line">    <a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> = array_merge(<a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>, <a class="code hl_variable" href="#a31c6205830169e8a3668a3f48b763154">$validCorreo</a>);</div>
+<div class="line">}</div>
+<div class="ttc" id="aprocesar__login_8php_html_a31c6205830169e8a3668a3f48b763154"><div class="ttname"><a href="#a31c6205830169e8a3668a3f48b763154">$validCorreo</a></div><div class="ttdeci">if(empty($correo)||empty($password)) $validCorreo</div><div class="ttdef"><b>Definition</b> <a href="procesar__login_8php_source.html#l00161">procesar_login.php:161</a></div></div>
+<div class="ttc" id="avalidaciones_8php_html_a61c6731c6de20d45ab3bfeaba4b28ad1"><div class="ttname"><a href="validaciones_8php.html#a61c6731c6de20d45ab3bfeaba4b28ad1">validarCorreo</a></div><div class="ttdeci">validarCorreo($correo)</div><div class="ttdoc">Valida el formato de un correo electrónico.</div><div class="ttdef"><b>Definition</b> <a href="validaciones_8php_source.html#l00031">validaciones.php:31</a></div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="paso4"></a>
+Consultar usuario en la base de datos</h2>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (empty(<a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>)) {</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="pago__exitoso_8php.html#af27a9140d5f2658693e7fd107f716449">$stmt</a> = <a class="code hl_variable" href="dashboard_2conexion_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;prepare(<span class="stringliteral">&quot;SELECT id, correo, nombre_us, pass FROM usuarios WHERE correo = ?&quot;</span>)) {</div>
+<div class="line">        <a class="code hl_variable" href="pago__exitoso_8php.html#af27a9140d5f2658693e7fd107f716449">$stmt</a>-&gt;bind_param(<span class="stringliteral">&quot;s&quot;</span>, <a class="code hl_variable" href="#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a>);</div>
+<div class="line">        <a class="code hl_variable" href="pago__exitoso_8php.html#af27a9140d5f2658693e7fd107f716449">$stmt</a>-&gt;execute();</div>
+<div class="line">        <a class="code hl_variable" href="test__webhook_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = <a class="code hl_variable" href="pago__exitoso_8php.html#af27a9140d5f2658693e7fd107f716449">$stmt</a>-&gt;get_result();</div>
+<div class="ttc" id="adashboard_2conexion_8php_html_aa8a5a87b9c1a6a0819b88447cbe41877"><div class="ttname"><a href="dashboard_2conexion_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a></div><div class="ttdeci">$conn</div><div class="ttdef"><b>Definition</b> <a href="dashboard_2conexion_8php_source.html#l00011">conexion.php:11</a></div></div>
+<div class="ttc" id="apago__exitoso_8php_html_af27a9140d5f2658693e7fd107f716449"><div class="ttname"><a href="pago__exitoso_8php.html#af27a9140d5f2658693e7fd107f716449">$stmt</a></div><div class="ttdeci">$stmt</div><div class="ttdef"><b>Definition</b> <a href="pago__exitoso_8php_source.html#l00078">pago_exitoso.php:78</a></div></div>
+<div class="ttc" id="atest__webhook_8php_html_a112ef069ddc0454086e3d1e6d8d55d07"><div class="ttname"><a href="test__webhook_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a></div><div class="ttdeci">$result</div><div class="ttdef"><b>Definition</b> <a href="test__webhook_8php_source.html#l00022">test_webhook.php:22</a></div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="paso5"></a>
+Verificar contraseña y guardar sesión</h2>
+<div class="fragment"><div class="line">        <span class="keywordflow">if</span> (<a class="code hl_variable" href="test__webhook_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> &amp;&amp; <a class="code hl_variable" href="test__webhook_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;num_rows &gt; 0) {</div>
+<div class="line">            $usuario = <a class="code hl_variable" href="test__webhook_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;fetch_assoc();</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span> (password_verify(<a class="code hl_variable" href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>, $usuario[<span class="stringliteral">&#39;pass&#39;</span>])) {</div>
+<div class="line">                $_SESSION[<span class="stringliteral">&#39;user_id&#39;</span>] = $usuario[<span class="stringliteral">&#39;id&#39;</span>];</div>
+<div class="line">                $_SESSION[<span class="stringliteral">&#39;correo&#39;</span>] = $usuario[<span class="stringliteral">&#39;correo&#39;</span>];</div>
+<div class="line">                $_SESSION[<span class="stringliteral">&#39;usuario_nombre&#39;</span>] = $usuario[<span class="stringliteral">&#39;nombre_us&#39;</span>];</div>
+<div class="line">                header(<span class="stringliteral">&quot;Location: ../dashboard/chat.php&quot;</span>);</div>
+<div class="line">                <a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="line">            } <span class="keywordflow">else</span> {</div>
+<div class="line">                <a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>[] = <span class="stringliteral">&quot;Contraseña incorrecta&quot;</span>;</div>
+<div class="line">            }</div>
+<div class="line">        } <span class="keywordflow">else</span> {</div>
+<div class="line">            <a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>[] = <span class="stringliteral">&quot;Usuario no encontrado&quot;</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <a class="code hl_variable" href="pago__exitoso_8php.html#af27a9140d5f2658693e7fd107f716449">$stmt</a>-&gt;close();</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        <a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>[] = <span class="stringliteral">&quot;Error en la consulta a la base de datos&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="apago_8php_html_a6733eb5f605d09eaede9845835d71c4e"><div class="ttname"><a href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a></div><div class="ttdeci">exit</div><div class="ttdef"><b>Definition</b> <a href="pago_8php_source.html#l00090">pago.php:90</a></div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="pasoFinal"></a>
+Redirección en caso de éxito</h2>
+<p>Si todas las validaciones son correctas y la contraseña coincide, se inicia la sesión del usuario y se redirige al dashboard/chat. Esto indica que el usuario ha sido autenticado correctamente.</p>
+<div class="fragment"><div class="line">$_SESSION[<span class="stringliteral">&#39;user_id&#39;</span>] = $usuario[<span class="stringliteral">&#39;id&#39;</span>];</div>
+<div class="line">$_SESSION[<span class="stringliteral">&#39;correo&#39;</span>] = $usuario[<span class="stringliteral">&#39;correo&#39;</span>];</div>
+<div class="line">$_SESSION[<span class="stringliteral">&#39;usuario_nombre&#39;</span>] = $usuario[<span class="stringliteral">&#39;nombre_us&#39;</span>];</div>
+<div class="line">header(<span class="stringliteral">&quot;Location: ../dashboard/chat.php&quot;</span>);</div>
+<div class="line"><a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+</div><!-- fragment --> <h2 class="doxsection"><a class="anchor" id="paso6"></a>
+Redirigir si hay errores</h2>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (!empty(<a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>)) {</div>
+<div class="line">    $_SESSION[<span class="stringliteral">&#39;error&#39;</span>] = <a class="code hl_variable" href="#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>;</div>
+<div class="line">    header(<span class="stringliteral">&quot;Location: login.php&quot;</span>);</div>
+<div class="line">    <a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="paso7"></a>
+Redirigir si no es POST</h2>
+<div class="fragment"><div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    header(<span class="stringliteral">&quot;Location: login.php&quot;</span>);</div>
+<div class="line">    <a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="paso8"></a>
+Cerrar conexión</h2>
+<div class="fragment"><div class="line"><a class="code hl_variable" href="dashboard_2conexion_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;close();</div>
+</div><!-- fragment --> 
+<p class="definition">Definición en el archivo <a class="el" href="procesar__login_8php_source.html">procesar_login.php</a>.</p>
+</div><a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f" name="a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">&#9670;&#160;</a></span>$correo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$correo = trim($_POST['correo'])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Correo electrónico ingresado por el usuario desde el formulario de login.</p>
+<p>Correo actual obtenido de la sesión, usado para consultas en base de datos. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="procesar__login_8php_source.html#l00141">141</a> del archivo <a class="el" href="procesar__login_8php_source.html">procesar_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a70fbb718980d7db3d52d37d7a5c39166" name="a70fbb718980d7db3d52d37d7a5c39166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70fbb718980d7db3d52d37d7a5c39166">&#9670;&#160;</a></span>$errores</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$errores = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Almacena los mensajes de error generados durante el proceso de validación y autenticación. Se utiliza para redirigir al usuario con retroalimentación si el login falla.</p>
+<p><br  />
+ Lista de mensajes de error cargados desde &lsquo;$_SESSION['error&rsquo;]`. <br  />
+ Cada elemento representa un mensaje de validación mostrado al usuario. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="procesar__login_8php_source.html#l00149">149</a> del archivo <a class="el" href="procesar__login_8php_source.html">procesar_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a607686ef9f99ea7c42f4f3dd3dbb2b0d" name="a607686ef9f99ea7c42f4f3dd3dbb2b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">&#9670;&#160;</a></span>$password</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$password = trim($_POST['pass'])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="procesar__login_8php_source.html#l00142">142</a> del archivo <a class="el" href="procesar__login_8php_source.html">procesar_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a31c6205830169e8a3668a3f48b763154" name="a31c6205830169e8a3668a3f48b763154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c6205830169e8a3668a3f48b763154">&#9670;&#160;</a></span>$validCorreo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a> (empty( $correo)||empty( $password)) $validCorreo = <a class="el" href="validaciones_8php.html#a61c6731c6de20d45ab3bfeaba4b28ad1">validarCorreo</a>($correo)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Validación del correo ingresado.</p>
+<ul>
+<li>Se aplica la función <a class="el" href="validaciones_8php.html#a61c6731c6de20d45ab3bfeaba4b28ad1" title="Valida el formato de un correo electrónico.">validarCorreo()</a> para asegurar que el formato sea correcto.</li>
+<li>Si la validación retorna errores, se agregan al arreglo $errores. </li>
+</ul>
+
+<p class="definition">Definición en la línea <a class="el" href="procesar__login_8php_source.html#l00161">161</a> del archivo <a class="el" href="procesar__login_8php_source.html">procesar_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a80c9c23fd80ed0e9bac8bc35480b4069" name="a80c9c23fd80ed0e9bac8bc35480b4069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80c9c23fd80ed0e9bac8bc35480b4069">&#9670;&#160;</a></span>else</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(!empty( $validCorreo)) <a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(empty($errores)) <a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a> (!empty( $errores)) else</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    </div>
+<div class="line">    header(<span class="stringliteral">&quot;Location: login.php&quot;</span>)</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="procesar__login_8php_source.html#l00203">203</a> del archivo <a class="el" href="procesar__login_8php_source.html">procesar_login.php</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_97f27a8d3efc40e8fefbbd7dfe5560e8.html">dashboard</a></li><li class="navelem"><a href="procesar__login_8php.html">procesar_login.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

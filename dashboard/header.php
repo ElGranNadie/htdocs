@@ -3,20 +3,49 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+/**
+ * Identificador del usuario en sesión.
+ */
+
 $user_id = $_SESSION['user_id'] ?? null;
+
+/**
+ * Nombre del usuario autenticado.
+ */
+
 $nombre_usuario = $_SESSION['usuario_nombre'] ?? null;
+
+/**
+ * Indica si el usuario tiene suscripción premium.
+ */
+
 $es_premium = $_SESSION['usuario_premium'] ?? false;
 
-// 👉 Detectar página actual
+/**
+ * 👉 Detectar página actual
+ */
+ 
 $current_page = basename($_SERVER['PHP_SELF']);
 
-// 👉 Definir rutas
+
+/** Página principal (inicio) */
 $index = "/index.php";
+
+/** Sección "Quiénes somos" */
 $quienessomos = "/dashboard/quienes-somos.php";   
+
+/** Sección "Qué hacemos" */
 $quehacemos = "/dashboard/Nicole.php";       
+
+/** Sección "Contáctanos" */
 $contactanos = "/dashboard/contactanos.php";
+
+/** Sección "Iniciar sesión" */
 $tlogin = "/dashboard/login.php";
+
+/** Página de chat */
 $chat = "/dashboard/chat.php";
+
 ?>
 
 <style>

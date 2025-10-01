@@ -1,13 +1,65 @@
 <?php
-// ==========================
-// 🔹 Incluir conexión a TiDB
-// ==========================
+
+/**
+ * @file webhook.php
+ * @brief Endpoint para recibir notificaciones de MercadoPago.
+ *
+ * Este archivo actúa como un **webhook**: MercadoPago envía peticiones HTTP POST
+ * con información de eventos (ej. pagos) a este script.
+ *
+ * Flujo principal:
+ * 1. Recibir el JSON crudo enviado por MercadoPago.
+ * 2. Decodificarlo a un arreglo PHP con `json_decode()`.
+ * 3. Validar que la estructura contenga un evento válido.
+ * 4. Consultar la API de MercadoPago con el ID de pago recibido.
+ * 5. Guardar/actualizar la información en la base de datos.
+ * 6. Responder con el código HTTP apropiado (200 = OK, 400/500 = error).
+ *
+ * @note Línea clave del endpoint:
+ * ```php
+ * $data = json_decode($input, true);
+ * ```
+ * Convierte el JSON recibido en un **array asociativo**, lo que permite acceder a
+ * elementos como `$data["type"]` o `$data["data"]["id"]`.
+ *
+ * @return void Este archivo no retorna valores; responde directamente a MercadoPago.
+ * 
+ * @require conexion.php
+ * Archivo que inicializa la conexión a la base de datos TiDB.
+ *
+ * Es indispensable para:
+ * - Insertar registros en la tabla `pagos`.
+ * - Actualizar el estado premium de los usuarios.
+ *
+ * @note Si la conexión falla, el webhook no podrá registrar los pagos.
+ 
+ */
+
 require 'conexion.php';
 
 // ==========================
 // 🔹 Recibir el contenido del webhook
 // ==========================
+/**
+ * @var string $input
+ * Contenido crudo recibido en el cuerpo del request (`php://input`).
+ * 
+ * Este valor es un JSON enviado por MercadoPago en cada notificación.
+ * Ejemplo de contenido:
+ * ```json
+ * { "type": "payment", "data": { "id": 123456789 } }
+ * ```
+ */
 $input = file_get_contents("php://input");
+
+/**
+ * @var array $data
+ * Representación en arreglo asociativo del JSON recibido en `$input`.
+ * 
+ * Permite acceder de forma estructurada a la información:
+ * - `$data["type"]` → Tipo de evento (ej. `payment`)
+ * - `$data["data"]["id"]` → ID del pago generado en MercadoPago
+ */
 $data = json_decode($input, true);
 
 // Guardar log para depuración
@@ -56,6 +108,9 @@ if (isset($data["type"]) && $data["type"] === "payment") {
         // ==========================
         // 🔹 Insertar en la tabla pagos (si no existe ya)
         // ==========================
+        
+
+        
         $stmt = $conn->prepare("INSERT IGNORE INTO pagos (payment_id, status, amount, method, date, reference) 
                                 VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("isdsss", $id_pago, $estado, $monto, $metodo, $fecha, $referencia);
@@ -66,7 +121,22 @@ if (isset($data["type"]) && $data["type"] === "payment") {
             // ==========================
             if ($estado === "approved" && $referencia) {
                 $usuario_id = intval($referencia);
-
+                
+                /**
+                * Inserta el pago en la base de datos si aún no existe.
+                 *
+                 * Se usa `INSERT IGNORE` para prevenir registros duplicados en caso de que 
+                 * MercadoPago envíe la notificación varias veces (lo cual es común en webhooks).
+                 *
+                 * Tabla: `pagos`
+                 * Campos guardados:
+                 * - payment_id → ID único del pago en MercadoPago.
+                 * - status     → Estado del pago (`approved`, `pending`, `rejected`).
+                 * - amount     → Monto de la transacción.
+                 * - method     → Método de pago (tarjeta, boleto, etc.).
+                 * - date       → Fecha de creación del pago.
+                 * - reference  → Identificador interno (ej. user_id).
+                */
                 $stmt2 = $conn->prepare("UPDATE usuarios 
                                          SET es_premium = 1, 
                                              premium_expiracion = DATE_ADD(NOW(), INTERVAL 30 DAY) 

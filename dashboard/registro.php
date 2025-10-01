@@ -1,4 +1,107 @@
 <?php 
+<?php 
+session_start(); 
+/**
+ * @file registro.php
+ * @brief Vista del formulario de registro inicial del sistema N.I.C.O.L.E.
+ *
+ * Este archivo presenta la primera etapa del registro de usuario, donde se recopilan
+ * los datos básicos como nombre, correo, usuario, edad y contraseña. 
+ * Envía la información mediante POST hacia @ref procesar_registro.php para su validación
+ * y posterior creación del registro temporal en la base de datos.
+ *
+ * --------------------------------------------------------------
+ * @section dependencias Dependencias
+ * --------------------------------------------------------------
+ * 
+ * @code
+ * session_start();
+ * require '../varset/varset.php';
+ * require 'other.php';
+ * require 'stylesheet.php';
+ * require '../dashboard/header.php';
+ * require 'footer.php';
+ * require 'scripts.php';
+ * @endcode
+ *
+ * - `session_start()` → permite el uso de variables de sesión, como los errores y datos antiguos.
+ * - `../varset/varset.php` → define variables globales compartidas (por ejemplo, el logo institucional `$logo`).
+ * - `other.php` → agrega metadatos y configuraciones comunes (charset, viewport, etc.).
+ * - `stylesheet.php` → incluye las hojas de estilo base del sistema (colores, tipografías, temas oscuros, etc.).
+ * - `../dashboard/header.php` → muestra el encabezado o barra superior común a todo el sistema.
+ * - `footer.php` → pie de página con créditos o enlaces institucionales.
+ * - `scripts.php` → carga dependencias JavaScript (Bootstrap, funciones auxiliares, etc.).
+ *
+ * --------------------------------------------------------------
+ * @section flujo Flujo general
+ * --------------------------------------------------------------
+ * 
+ * 1. El usuario accede a la vista de registro inicial.
+ * 2. Se cargan posibles errores o valores antiguos almacenados en sesión.
+ * 3. Se renderiza el formulario con los campos requeridos:
+ *    - Nombre  
+ *    - Correo  
+ *    - Usuario (apodo elegido por el usuario)  
+ *    - Edad  
+ *    - Contraseña y confirmación  
+ *    - Aceptación de términos y condiciones
+ * 4. El usuario completa la información y presiona **“siguiente”**.
+ * 5. Los datos se envían mediante POST a `procesar_registro.php` (Paso 1 del flujo de registro).
+ *
+ * --------------------------------------------------------------
+ * @section manejo_errores Manejo de errores
+ * --------------------------------------------------------------
+ * 
+ * - Si existen errores en `$_SESSION['error']`, se muestran como una lista visible en color rojo.
+ * - Los valores previos del formulario se almacenan en `$_SESSION['old']` para que no se pierdan al recargar.
+ * - Después de mostrarse en pantalla, las variables se eliminan:
+ * @code
+ * unset($_SESSION['error'], $_SESSION['old']);
+ * @endcode
+ *
+ * --------------------------------------------------------------
+ * @section campos Campos del formulario
+ * --------------------------------------------------------------
+ *
+ * | Campo | Tipo | Requerido | Descripción |
+ * |--------|------|------------|--------------|
+ * | **nombre** | texto | ✔ | Nombre real del usuario. |
+ * | **correo** | email | ✔ | Correo principal (usado para verificación por código). |
+ * | **usuario** | texto | ✔ | Apodo único que el usuario elige dentro del sistema. |
+ * | **edad** | número | ✔ | Edad del usuario (rango permitido: 1–120). |
+ * | **pass** | contraseña | ✔ | Contraseña del usuario. |
+ * | **confirmar_pass** | contraseña | ✔ | Validación de coincidencia con la anterior. |
+ * | **privacidad** | checkbox | ✔ | Aceptación de términos y condiciones. |
+ *
+ * --------------------------------------------------------------
+ * @section interfaz Dinámica de la interfaz
+ * --------------------------------------------------------------
+ *
+ * - Las contraseñas pueden alternar visibilidad con el botón 👁️ mediante `togglePasswordAll()`.
+ * - El campo de confirmación muestra alertas si las contraseñas no coinciden (`validarContraseñas()`).
+ * - El enlace a los términos abre una nueva pestaña (`target="_blank"`).
+ * - Los errores se muestran centrados y en rojo, con iconos ⚠️ para resaltar.
+ *
+ * --------------------------------------------------------------
+ * @section variables Variables principales
+ * --------------------------------------------------------------
+ * 
+ * @var array $errores  
+ * Lista de mensajes de error cargados desde `$_SESSION['error']`.  
+ * Cada elemento representa un mensaje de validación mostrado al usuario.
+ *
+ * @var array $old  
+ * Contiene los valores ingresados por el usuario (`$_SESSION['old']`)  
+ * que se vuelven a mostrar en caso de error en el registro.
+ *
+ * @var string $logo  
+ * Variable definida en `../varset/varset.php` que contiene la ruta al logotipo institucional del sistema.
+ *
+ * --------------------------------------------------------------
+ * @note
+ * Este formulario utiliza estilos y contenedores flexibles propios del sistema N.I.C.O.L.E.
+ * No debe incluir salida HTML antes de `session_start()` para evitar errores de cabecera.
+ */
 session_start(); 
 require '../varset/varset.php';
 

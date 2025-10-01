@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente dashboard/registro.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('registro_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">registro.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="registro_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>&lt;?php </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>session_start(); </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>session_start(); </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>require <span class="stringliteral">&#39;../varset/varset.php&#39;</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">// Cargamos errores y datos viejos si existen</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="registro_8php.html#a70fbb718980d7db3d52d37d7a5c39166">  109</a></span><a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> = $_SESSION[<span class="stringliteral">&#39;error&#39;</span>] ?? [];</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="registro_8php.html#a48f5e5707f8bb584ced38eb6a0bcba96">  110</a></span><a class="code hl_variable" href="registro_8php.html#a48f5e5707f8bb584ced38eb6a0bcba96">$old</a> = $_SESSION[<span class="stringliteral">&#39;old&#39;</span>] ?? [];</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>unset($_SESSION[<span class="stringliteral">&#39;error&#39;</span>], $_SESSION[<span class="stringliteral">&#39;old&#39;</span>]);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>?&gt;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>&lt;!DOCTYPE html&gt;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>&lt;html lang=<span class="stringliteral">&quot;es&quot;</span>&gt;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>&lt;head&gt;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    &lt;title&gt;Registro en N.I.C.O.L.E&lt;/title&gt;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    &lt;?php require <span class="stringliteral">&#39;other.php&#39;</span>; ?&gt;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    &lt;?php require <span class="stringliteral">&#39;stylesheet.php&#39;</span>; ?&gt;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>&lt;/head&gt;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>&lt;body&gt;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    &lt;?php require <span class="stringliteral">&#39;../dashboard/header.php&#39;</span>; ?&gt;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;app-container&quot;</span> style=<span class="stringliteral">&quot;align-items:normal;&quot;</span>&gt;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;login-container&quot;</span> style=<span class="stringliteral">&quot;max-width: 100%;&quot;</span>&gt;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;col-12&quot;</span>&gt;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;row&quot;</span>&gt;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;col-12 col-lg-6&quot;</span>&gt;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                        &lt;img src=<span class="stringliteral">&#39;&lt;?php echo $logo ?&gt;64.png&#39;</span> alt=<span class="stringliteral">&quot;Icono&quot;</span> style=<span class="stringliteral">&quot;width: 64px;&quot;</span>&gt;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    &lt;/div&gt;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;col-12 col-lg-6&quot;</span>&gt;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                        &lt;h3 style=<span class="stringliteral">&quot;color: var(--bs-body-color);&quot;</span>&gt;regístrate ya!!!&lt;/h3&gt;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    &lt;/div&gt;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                &lt;!-- Mostrar errores --&gt;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                &lt;?php <span class="keywordflow">if</span> (!empty(<a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>)): ?&gt;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;error-message&quot;</span> style=<span class="stringliteral">&quot;color: red; margin-bottom: 1rem; text-align:center; font-weight:bold;&quot;</span>&gt;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                        &lt;ul style=<span class="stringliteral">&quot;list-style: none; padding:0;&quot;</span>&gt;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                            &lt;?php <span class="keywordflow">if</span> (is_string(<a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>)) <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> = [<a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>]; <span class="comment">// Asegurarse de que $errores es un array ?&gt;</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                            &lt;?php <span class="keywordflow">foreach</span> (<a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> as $err): ?&gt;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                                &lt;li&gt;⚠️ &lt;?= htmlspecialchars($err) ?&gt;&lt;/li&gt;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                            &lt;?php endforeach; ?&gt;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                        &lt;/ul&gt;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                    &lt;/div&gt;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                &lt;?php <a class="code hl_variable" href="chat_8php.html#a82cd33ca97ff99f2fcc5e9c81d65251b">endif</a>; ?&gt;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;row&quot;</span>&gt;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                    &lt;form action=<span class="stringliteral">&quot;procesar_registro.php&quot;</span> method=<span class="stringliteral">&quot;POST&quot;</span> style=<span class="stringliteral">&quot;text-align: left;&quot;</span>&gt;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                        &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;col-12&quot;</span> style=<span class="stringliteral">&quot;color: var(--bs-body-color);&quot;</span>&gt;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                            &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;paso&quot;</span> value=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                            &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;row&quot;</span>&gt;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                                &lt;!-- Campo: Nombre --&gt;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                                &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;form-group col-12 col-lg-6&quot;</span>&gt;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                                    &lt;label <span class="keywordflow">for</span>=<span class="stringliteral">&quot;nombre&quot;</span>&gt;nombre:&lt;/label&gt;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                                    &lt;input type=<span class="stringliteral">&quot;text&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;nombre&quot;</span> name=<span class="stringliteral">&quot;nombre&quot;</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                                        value=<span class="stringliteral">&quot;&lt;?= htmlspecialchars($old[&#39;nombre&#39;] ?? &#39;&#39;) ?&gt;&quot;</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                                        required placeholder=<span class="stringliteral">&quot;ingrese su nombre&quot;</span>&gt;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                                &lt;/div&gt;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                                &lt;!-- Campo: Correo --&gt;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                                &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;form-group col-12 col-lg-6&quot;</span>&gt;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                                    &lt;label <span class="keywordflow">for</span>=<span class="stringliteral">&quot;correo&quot;</span>&gt;correo asociado (se requiere para la verificacion de contraseña y usuario):&lt;/label&gt;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                                    &lt;input type=<span class="stringliteral">&quot;email&quot;</span> id=<span class="stringliteral">&quot;correo&quot;</span> name=<span class="stringliteral">&quot;correo&quot;</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                                        value=<span class="stringliteral">&quot;&lt;?= htmlspecialchars($old[&#39;correo&#39;] ?? &#39;&#39;) ?&gt;&quot;</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                                        required placeholder=<span class="stringliteral">&quot;ingrese un correo electrónico&quot;</span>&gt;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                                &lt;/div&gt;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                            &lt;/div&gt;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                            &lt;div class=<span class="stringliteral">&quot;row&quot;</span>&gt;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                                &lt;!-- Campo: Usuario --&gt;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                                &lt;div class=<span class="stringliteral">&quot;form-group col-12 col-lg-6&quot;</span>&gt;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                                    &lt;label for=<span class="stringliteral">&quot;usuario&quot;</span>&gt;usuario:&lt;/label&gt;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                                    &lt;input type=<span class="stringliteral">&quot;text&quot;</span> id=<span class="stringliteral">&quot;usuario&quot;</span> name=<span class="stringliteral">&quot;usuario&quot;</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                                        value=<span class="stringliteral">&quot;&lt;?= htmlspecialchars($old[&#39;usuario&#39;] ?? &#39;&#39;) ?&gt;&quot;</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                                        required placeholder=<span class="stringliteral">&quot;elige un nombre de usuario&quot;</span>&gt;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                                &lt;/div&gt;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                                &lt;!-- Campo: Edad --&gt;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                                &lt;div class=<span class="stringliteral">&quot;form-group col-12 col-lg-6&quot;</span>&gt;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                                    &lt;label for=<span class="stringliteral">&quot;edad&quot;</span>&gt;edad:&lt;/label&gt;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                                    &lt;input type=<span class="stringliteral">&quot;number&quot;</span> id=<span class="stringliteral">&quot;edad&quot;</span> name=<span class="stringliteral">&quot;edad&quot;</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                                        value=<span class="stringliteral">&quot;&lt;?= htmlspecialchars($old[&#39;edad&#39;] ?? &#39;&#39;) ?&gt;&quot;</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                                        required min=<span class="stringliteral">&quot;1&quot;</span> max=<span class="stringliteral">&quot;120&quot;</span> placeholder=<span class="stringliteral">&quot;ingresa tu edad&quot;</span>&gt;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                                &lt;/div&gt;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                            &lt;/div&gt;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                            &lt;div class=<span class="stringliteral">&quot;row&quot;</span>&gt;    </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                                &lt;!-- Campo: Contraseña --&gt;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                                &lt;div class=<span class="stringliteral">&quot;form-group col-12 col-lg-6&quot;</span>&gt;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                                    &lt;label for=<span class="stringliteral">&quot;pass&quot;</span>&gt;contraseña:&lt;/label&gt;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                                    &lt;div class=<span class="stringliteral">&quot;password-container&quot;</span>&gt;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                                        &lt;input type=<span class="stringliteral">&quot;password&quot;</span> id=<span class="stringliteral">&quot;pass&quot;</span> name=<span class="stringliteral">&quot;pass&quot;</span> placeholder=<span class="stringliteral">&quot;contraseña&quot;</span> required&gt;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                                        &lt;button type=<span class="stringliteral">&quot;button&quot;</span> class=<span class="stringliteral">&quot;toggle-password&quot;</span> onclick=<span class="stringliteral">&quot;togglePasswordAll()&quot;</span>&gt;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                                            &lt;i class=<span class="stringliteral">&quot;eye-icon&quot;</span>&gt;👁️&lt;/i&gt;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                                        &lt;/button&gt;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                                    &lt;/div&gt;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                                &lt;/div&gt;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                                &lt;!-- Campo: Confirmar contraseña --&gt;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                                &lt;div class=<span class="stringliteral">&quot;form-group col-12 col-lg-6&quot;</span>&gt;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                                    &lt;label class=<span class="stringliteral">&quot;col-12 col-lg-6&quot;</span> for=<span class="stringliteral">&quot;confirmar_pass&quot;</span>&gt;confirmar contraseña:&lt;/label&gt;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                                    &lt;div class=<span class="stringliteral">&quot;password-container&quot;</span>&gt;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                                        &lt;input type=<span class="stringliteral">&quot;password&quot;</span> id=<span class="stringliteral">&quot;confirmar_pass&quot;</span> name=<span class="stringliteral">&quot;confirmar_pass&quot;</span> required </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                                            oninput=<span class="stringliteral">&quot;validarContraseñas()&quot;</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                                            placeholder=<span class="stringliteral">&quot;vuelva a digitar su contraseña&quot;</span>&gt;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                                    &lt;/div&gt;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                                &lt;/div&gt;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                            &lt;/div&gt;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                            &lt;div class=<span class="stringliteral">&quot;row&quot;</span>&gt;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                                &lt;!-- Aceptación de términos --&gt;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                                &lt;div class=<span class="stringliteral">&quot;form-group col-12 col-lg-6&quot;</span> style=<span class="stringliteral">&quot;font-size: 0.8rem;&quot;</span>&gt;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                                    &lt;div id=<span class="stringliteral">&quot;password-match-message&quot;</span> style=<span class="stringliteral">&quot;font-size: 0.8rem;&quot;</span>&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                                    &lt;label class=<span class="stringliteral">&quot;checkbox-container&quot;</span> style=<span class="stringliteral">&quot;display: flex; gap: 0.5rem; align-items: center;&quot;</span>&gt;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                                        &lt;input type=<span class="stringliteral">&quot;checkbox&quot;</span> name=<span class="stringliteral">&quot;privacidad&quot;</span> required style=<span class="stringliteral">&quot;width: auto; margin: 0;&quot;</span>&gt;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                                        &lt;a href=<span class="stringliteral">&quot;../terminos/terminos.html&quot;</span> target=<span class="stringliteral">&quot;_blank&quot;</span> style=<span class="stringliteral">&quot;color: var(--bs-body-color); margin-left: 1rem;&quot;</span>&gt;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                                            aceptar los términos y condiciones</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                                        &lt;/a&gt;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                                    &lt;/label&gt;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                                &lt;/div&gt;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                                &lt;!-- Botones --&gt;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                                &lt;div class=<span class="stringliteral">&quot;button-group col-12 col-lg-6&quot;</span> style=<span class="stringliteral">&quot;display: flex; gap: 1rem; text-align:center;&quot;</span>&gt;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                                    &lt;a href=<span class="stringliteral">&quot;../dashboard/login.php&quot;</span> class=<span class="stringliteral">&quot;back-btn&quot;</span>&gt;regresar&lt;/a&gt;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                                    &lt;button type=<span class="stringliteral">&quot;submit&quot;</span> class=<span class="stringliteral">&quot;login-btn&quot;</span>&gt;siguiente&lt;/button&gt;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                                &lt;/div&gt;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                            &lt;/div&gt;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                        &lt;/div&gt;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                    &lt;/form&gt;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    &lt;?php require <span class="stringliteral">&#39;footer.php&#39;</span>; ?&gt;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    &lt;?php require <span class="stringliteral">&#39;scripts.php&#39;</span>; ?&gt;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>&lt;/body&gt;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>&lt;/html&gt;</div>
+<div class="ttc" id="achat_8php_html_a82cd33ca97ff99f2fcc5e9c81d65251b"><div class="ttname"><a href="chat_8php.html#a82cd33ca97ff99f2fcc5e9c81d65251b">endif</a></div><div class="ttdeci">endif</div><div class="ttdef"><b>Definition</b> <a href="chat_8php_source.html#l00051">chat.php:51</a></div></div>
+<div class="ttc" id="aprocesar__login_8php_html_a70fbb718980d7db3d52d37d7a5c39166"><div class="ttname"><a href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a></div><div class="ttdeci">$errores</div><div class="ttdef"><b>Definition</b> <a href="procesar__login_8php_source.html#l00149">procesar_login.php:149</a></div></div>
+<div class="ttc" id="aregistro_8php_html_a48f5e5707f8bb584ced38eb6a0bcba96"><div class="ttname"><a href="registro_8php.html#a48f5e5707f8bb584ced38eb6a0bcba96">$old</a></div><div class="ttdeci">$old</div><div class="ttdef"><b>Definition</b> <a href="#l00110">registro.php:110</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_97f27a8d3efc40e8fefbbd7dfe5560e8.html">dashboard</a></li><li class="navelem"><a href="registro_8php.html">registro.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

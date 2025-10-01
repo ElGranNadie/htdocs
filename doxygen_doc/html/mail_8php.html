@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Referencia del archivo dashboard/mail.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('mail_8php.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo mail.php</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Módulo responsable del envío de correos electrónicos con códigos de verificación.  
+<a href="#details">Más...</a></p>
+
+<p><a href="mail_8php_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a08ec1d76b975f20ad771b0f6e73f425e" id="r_a08ec1d76b975f20ad771b0f6e73f425e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08ec1d76b975f20ad771b0f6e73f425e">enviarCodigo</a> ($correoDestino, $codigo)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Módulo responsable del envío de correos electrónicos con códigos de verificación. </p>
+<p>Este archivo utiliza la librería PHPMailer para enviar correos electrónicos a los usuarios con un código de verificación, utilizado generalmente para procesos de recuperación de contraseña o validación de cuenta. La función principal <span class="tt"><a class="el" href="#a08ec1d76b975f20ad771b0f6e73f425e">enviarCodigo()</a></span> recibe el correo destino y el código generado, y gestiona todo el proceso de configuración y envío mediante SMTP.</p>
+<ul>
+<li>Implementa autenticación segura a través del servidor SMTP de Gmail.</li>
+<li>Maneja errores mediante excepciones y registros en el log del servidor.</li>
+<li>El mensaje se envía en formato HTML e incluye el código de verificación y su tiempo de validez. </li>
+</ul>
+
+<p class="definition">Definición en el archivo <a class="el" href="mail_8php_source.html">mail.php</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a08ec1d76b975f20ad771b0f6e73f425e" name="a08ec1d76b975f20ad771b0f6e73f425e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ec1d76b975f20ad771b0f6e73f425e">&#9670;&#160;</a></span>enviarCodigo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enviarCodigo </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$correoDestino</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$codigo</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Envía un correo con un código de verificación al correo indicado</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$correoDestino</td><td>El correo del usuario </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$codigo</td><td>El código de verificación a enviar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>bool true si se envió correctamente, false si falló </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="mail_8php_source.html#l00031">31</a> del archivo <a class="el" href="mail_8php_source.html">mail.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                                               {</div>
+<div class="line"><span class="lineno">   32</span>    <span class="comment">// Crea una nueva instancia de PHPMailer con excepciones habilitadas</span></div>
+<div class="line"><span class="lineno">   33</span>    $mail = <span class="keyword">new</span> PHPMailer(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="comment">// Configura el uso de SMTP para el envío de correos</span></div>
+<div class="line"><span class="lineno">   37</span>        $mail-&gt;isSMTP();</div>
+<div class="line"><span class="lineno">   38</span>        <span class="comment">// Establece el servidor SMTP de Gmail</span></div>
+<div class="line"><span class="lineno">   39</span>        $mail-&gt;Host = <span class="stringliteral">&#39;smtp.gmail.com&#39;</span>;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="comment">// Habilita la autenticación SMTP</span></div>
+<div class="line"><span class="lineno">   41</span>        $mail-&gt;SMTPAuth = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>        <span class="comment">// Nombre de usuario para autenticarse (correo del remitente)</span></div>
+<div class="line"><span class="lineno">   43</span>        $mail-&gt;Username = <a class="code hl_variable" href="credenciales_8php.html#a74a8e02cbd5a70c2dd02b2141ea2853c">EMAIL_USER</a>;</div>
+<div class="line"><span class="lineno">   44</span>        <span class="comment">// Contraseña del correo del remitente</span></div>
+<div class="line"><span class="lineno">   45</span>        $mail-&gt;Password = <a class="code hl_variable" href="credenciales_8php.html#aca54116159bde79e8bba10aba9636940">EMAIL_PASS</a>;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="comment">// Tipo de cifrado (TLS)</span></div>
+<div class="line"><span class="lineno">   47</span>        $mail-&gt;SMTPSecure = <span class="stringliteral">&#39;tls&#39;</span>;</div>
+<div class="line"><span class="lineno">   48</span>        <span class="comment">// Puerto del servidor SMTP (587 para TLS)</span></div>
+<div class="line"><span class="lineno">   49</span>        $mail-&gt;Port = 587;</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>        <span class="comment">// Configura el juego de caracteres a UTF-8</span></div>
+<div class="line"><span class="lineno">   52</span>        $mail-&gt;CharSet = <span class="stringliteral">&#39;UTF-8&#39;</span>;</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>        <span class="comment">// Establece el remitente del correo</span></div>
+<div class="line"><span class="lineno">   55</span>        $mail-&gt;setFrom(<a class="code hl_variable" href="credenciales_8php.html#a74a8e02cbd5a70c2dd02b2141ea2853c">EMAIL_USER</a>, <span class="stringliteral">&#39;Verificación App&#39;</span>);</div>
+<div class="line"><span class="lineno">   56</span>        <span class="comment">// Añade el destinatario del correo</span></div>
+<div class="line"><span class="lineno">   57</span>        $mail-&gt;addAddress($correoDestino);</div>
+<div class="line"><span class="lineno">   58</span>        <span class="comment">// Indica que el contenido del correo estará en formato HTML</span></div>
+<div class="line"><span class="lineno">   59</span>        $mail-&gt;isHTML(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   60</span>        <span class="comment">// Asunto del correo</span></div>
+<div class="line"><span class="lineno">   61</span>        $mail-&gt;Subject = <span class="stringliteral">&#39;Código de verificación para recuperar tu contrasena&#39;</span>;</div>
+<div class="line"><span class="lineno">   62</span>        <span class="comment">// Cuerpo del correo (mensaje HTML con el código de verificación)</span></div>
+<div class="line"><span class="lineno">   63</span>        $mail-&gt;Body = <span class="stringliteral">&quot;&lt;p&gt;Hola, tu código de verificación es: &lt;strong&gt;$codigo&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Este código expirará en 10 minutos.&lt;/p&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>        <span class="comment">// Intenta enviar el correo</span></div>
+<div class="line"><span class="lineno">   66</span>        $mail-&gt;send();</div>
+<div class="line"><span class="lineno">   67</span>        <span class="comment">// Retorna true si el correo fue enviado exitosamente</span></div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   69</span>    } <span class="keywordflow">catch</span> (Exception $e) {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="comment">// Si ocurre un error, lo registra en el log del servidor</span></div>
+<div class="line"><span class="lineno">   71</span>        error_log(<span class="stringliteral">&quot;No se pudo enviar el correo: {$mail-&gt;ErrorInfo}&quot;</span>);</div>
+<div class="line"><span class="lineno">   72</span>        <span class="comment">// Retorna false indicando que el envío falló</span></div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span>}</div>
+<div class="ttc" id="acredenciales_8php_html_a74a8e02cbd5a70c2dd02b2141ea2853c"><div class="ttname"><a href="credenciales_8php.html#a74a8e02cbd5a70c2dd02b2141ea2853c">EMAIL_USER</a></div><div class="ttdeci">const EMAIL_USER</div><div class="ttdef"><b>Definition</b> <a href="credenciales_8php_source.html#l00003">credenciales.php:3</a></div></div>
+<div class="ttc" id="acredenciales_8php_html_aca54116159bde79e8bba10aba9636940"><div class="ttname"><a href="credenciales_8php.html#aca54116159bde79e8bba10aba9636940">EMAIL_PASS</a></div><div class="ttdeci">const EMAIL_PASS</div><div class="ttdef"><b>Definition</b> <a href="credenciales_8php_source.html#l00004">credenciales.php:4</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_97f27a8d3efc40e8fefbbd7dfe5560e8.html">dashboard</a></li><li class="navelem"><a href="mail_8php.html">mail.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

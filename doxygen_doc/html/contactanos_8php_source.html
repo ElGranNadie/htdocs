@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente dashboard/contactanos.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('contactanos_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">contactanos.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="contactanos_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php <span class="comment">// Se requiere porque aqui se definen las variables que se usan en el dashboard</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>  require <span class="stringliteral">&#39;../varset/varset.php&#39;</span>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>?&gt;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>&lt;!DOCTYPE html&gt;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>&lt;html lang=<span class="stringliteral">&quot;es&quot;</span>&gt;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>&lt;head&gt;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  &lt;title&gt;Contáctanos | N.I.C.O.L.E&lt;/title&gt; &lt;!-- Título de la página --&gt;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  &lt;?php require <span class="stringliteral">&#39;other.php&#39;</span>; ?&gt; &lt;!-- Incluye metadatos y enlaces comunes --&gt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  &lt;?php require <span class="stringliteral">&#39;stylesheet.php&#39;</span>; ?&gt; &lt;!-- Incluye los estilos del dashboard --&gt;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>&lt;/head&gt;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>&lt;body&gt;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>&lt;div&gt;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  &lt;?php require <span class="stringliteral">&#39;header.php&#39;</span>;?&gt; </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  &lt;<a class="code hl_namespace" href="namespacemain.html">main</a>&gt; &lt;!-- Contenido principal de la página --&gt; </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;row justify-content-evenly rowdecontenedores&quot;</span> style=<span class="stringliteral">&quot;margin-top:1rem; margin-left: 0px; margin-right: 0px; max-height: 75vh;&quot;</span>&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;col-md-6 col-12&quot;</span> style=<span class="stringliteral">&quot;max-height: 75vh;&quot;</span>&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        &lt;section <span class="keyword">class</span>=<span class="stringliteral">&quot;category-content container contenedordeseccion&quot;</span>&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>          &lt;div style=<span class="stringliteral">&quot;height:1rem;&quot;</span>&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>          &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;brand-row d-flex align-items-center justify-content-center gap-3 mb-3&quot;</span>&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            &lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;alpha&quot;</span>&gt;Alpha &lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;highlight&quot;</span>&gt;22&lt;/span&gt;&lt;/span&gt; &lt;!-- Nombre de la compañia desarrolladora --&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>          &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;contenedordesecciontexto&quot;</span>&gt;Si necesitas más ayuda o más información puedes comunicarte con nosotros por los siguientes canales:&lt;/div&gt; &lt;!-- Descripción de la sección --&gt;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>          &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;contenedordesecciontexto&quot;</span>&gt;por el cual podrás contactarnos para iniciar nuevos proyectos o preguntar sobre alguno de nuestros otros trabajos:  &lt;/div&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>          &lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;alpha&quot;</span>&gt;Correo electronico: &lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;highlight&quot;</span>&gt;alpha22.desarrollo@gmail.com&lt;/span&gt;&lt;/span&gt; &lt;!-- Correo electrónico de contacto --&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>          &lt;div style=<span class="stringliteral">&quot;height:1rem;&quot;</span>&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        &lt;/section&gt;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;col-md-6 col-12&quot;</span> style=<span class="stringliteral">&quot;max-height: 75vh;&quot;</span>&gt;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        &lt;section <span class="keyword">class</span>=<span class="stringliteral">&quot;category-content container contenedordeseccion&quot;</span>&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>          &lt;div style=<span class="stringliteral">&quot;height:1rem;&quot;</span>&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>          &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;brand-row d-flex align-items-center justify-content-center gap-3 mb-3&quot;</span>&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            &lt;img src=<span class="stringliteral">&#39;&lt;?php echo $logo ?&gt;48.png&#39;</span> alt=<span class="stringliteral">&quot;Logo&quot;</span> style=<span class="stringliteral">&quot;height:36px;vertical-align:middle;&quot;</span>&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            &lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;alpha&quot;</span>&gt;&lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;highlight&quot;</span>&gt;N.I.C.O.L.E&lt;/span&gt; &lt;/span&gt;&lt;!-- Nombre de la aplicacion --&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>          &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;contenedordesecciontexto&quot;</span>&gt;Si necesitas más ayuda o más información puedes comunicarte con nosotros por los siguientes canales:&lt;/div&gt; &lt;!-- Descripción de la sección --&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>          &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;contenedordesecciontexto&quot;</span>&gt;resolver problemas o recibir soporte de la aplicación:  &lt;/div&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>          &lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;alpha&quot;</span>&gt;Correo electronico: &lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;highlight&quot;</span>&gt;nicole.informacion.1@gmail.com&lt;/span&gt;&lt;/span&gt; &lt;!-- Correo electrónico de contacto --&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>          &lt;div style=<span class="stringliteral">&quot;height:3rem;&quot;</span>&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            &lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;alpha&quot;</span>&gt;Instagram: &lt;/span&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            &lt;a <span class="keyword">class</span>=<span class="stringliteral">&quot;text-body-secondary alpha&quot;</span> href=<span class="stringliteral">&quot;https://www.instagram.com/n.i.c.o.l.e.2025&quot;</span> aria-label=<span class="stringliteral">&quot;Instagram&quot;</span>&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>              &lt;svg <span class="keyword">class</span>=<span class="stringliteral">&quot;bi&quot;</span> width=<span class="stringliteral">&quot;24&quot;</span> height=<span class="stringliteral">&quot;24&quot;</span> aria-hidden=<span class="stringliteral">&quot;true&quot;</span>&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                  &lt;use xlink:href=<span class="stringliteral">&quot;#instagram&quot;</span>&gt;&lt;/use&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>              &lt;/svg&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>              n.i.c.o.l.e.2025</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            &lt;/a&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>          &lt;div style=<span class="stringliteral">&quot;height:3rem;&quot;</span>&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            &lt;span <span class="keyword">class</span>=<span class="stringliteral">&quot;alpha&quot;</span>&gt;Facebook: &lt;/span&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            &lt;a <span class="keyword">class</span>=<span class="stringliteral">&quot;text-body-secondary alpha&quot;</span> href=<span class="stringliteral">&quot;https://www.facebook.com/profile.php?id=61579706241974&amp;notif_id=1755891940951528&amp;notif_t=page_user_activity&amp;ref=notif&quot;</span> aria-label=<span class="stringliteral">&quot;Facebook&quot;</span>&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>              &lt;svg <span class="keyword">class</span>=<span class="stringliteral">&quot;bi&quot;</span> width=<span class="stringliteral">&quot;24&quot;</span> height=<span class="stringliteral">&quot;24&quot;</span>&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                  &lt;use xlink:href=<span class="stringliteral">&quot;#facebook&quot;</span>&gt;&lt;/use&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>              &lt;/svg&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>              Nicole by Alpha 22</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            &lt;/a&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>          &lt;div style=<span class="stringliteral">&quot;height:1rem;&quot;</span>&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        &lt;/section&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  &lt;/<a class="code hl_namespace" href="namespacemain.html">main</a>&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  &lt;?php require <span class="stringliteral">&#39;footer.php&#39;</span>;?&gt;&lt;!-- Incluye el pie de página --&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  &lt;?php require <span class="stringliteral">&#39;scripts.php&#39;</span>;?&gt;&lt;!-- Enlace a Bootstrap JS --&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>&lt;/body&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>&lt;/html&gt;</div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_97f27a8d3efc40e8fefbbd7dfe5560e8.html">dashboard</a></li><li class="navelem"><a href="contactanos_8php.html">contactanos.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

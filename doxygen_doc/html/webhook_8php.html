@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Referencia del archivo dashboard/webhook.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('webhook_8php.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo webhook.php</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Endpoint para recibir notificaciones de MercadoPago.  
+<a href="#details">Más...</a></p>
+
+<p><a href="webhook_8php_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a69b271260be394b90709736cccb22c76" id="r_a69b271260be394b90709736cccb22c76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69b271260be394b90709736cccb22c76">$input</a> = file_get_contents(&quot;php://input&quot;)</td></tr>
+<tr class="memitem:a6efc15b5a2314dd4b5aaa556a375c6d6" id="r_a6efc15b5a2314dd4b5aaa556a375c6d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a> = json_decode($input, true)</td></tr>
+<tr class="memitem:a0ab0b2cbf9917533ce8ce070f5ea6461" id="r_a0ab0b2cbf9917533ce8ce070f5ea6461"><td class="memItemLeft" align="right" valign="top"><a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(! $data) <a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(isset($data[&quot;type&quot;]) &amp;&amp; $data[&quot;type&quot;]===&quot;payment&quot;)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ab0b2cbf9917533ce8ce070f5ea6461">else</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Endpoint para recibir notificaciones de MercadoPago. </p>
+<p>Este archivo actúa como un <b>webhook</b>: MercadoPago envía peticiones HTTP POST con información de eventos (ej. pagos) a este script.</p>
+<p>Flujo principal:</p><ol type="1">
+<li>Recibir el JSON crudo enviado por MercadoPago.</li>
+<li>Decodificarlo a un arreglo PHP con <span class="tt">json_decode()</span>.</li>
+<li>Validar que la estructura contenga un evento válido.</li>
+<li>Consultar la API de MercadoPago con el ID de pago recibido.</li>
+<li>Guardar/actualizar la información en la base de datos.</li>
+<li>Responder con el código HTTP apropiado (200 = OK, 400/500 = error).</li>
+</ol>
+<dl class="section note"><dt>Nota</dt><dd>Línea clave del endpoint: <div class="fragment"><div class="line"><a class="code hl_variable" href="#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a> = json_decode(<a class="code hl_variable" href="#a69b271260be394b90709736cccb22c76">$input</a>, <span class="keyword">true</span>);</div>
+<div class="ttc" id="awebhook_8php_html_a69b271260be394b90709736cccb22c76"><div class="ttname"><a href="#a69b271260be394b90709736cccb22c76">$input</a></div><div class="ttdeci">$input</div><div class="ttdef"><b>Definition</b> <a href="webhook_8php_source.html#l00053">webhook.php:53</a></div></div>
+<div class="ttc" id="awebhook_8php_html_a6efc15b5a2314dd4b5aaa556a375c6d6"><div class="ttname"><a href="#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a></div><div class="ttdeci">$data</div><div class="ttdef"><b>Definition</b> <a href="webhook_8php_source.html#l00063">webhook.php:63</a></div></div>
+</div><!-- fragment --> Convierte el JSON recibido en un <b>array asociativo</b>, lo que permite acceder a elementos como <span class="tt">$data["type"]</span> o <span class="tt">$data["data"]["id"]</span>.</dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void Este archivo no retorna valores; responde directamente a MercadoPago.</dd></dl>
+<p>@require conexion.php Archivo que inicializa la conexión a la base de datos TiDB.</p>
+<p>Es indispensable para:</p><ul>
+<li>Insertar registros en la tabla <span class="tt">pagos</span>.</li>
+<li>Actualizar el estado premium de los usuarios.</li>
+</ul>
+<dl class="section note"><dt>Nota</dt><dd>Si la conexión falla, el webhook no podrá registrar los pagos. </dd></dl>
+
+<p class="definition">Definición en el archivo <a class="el" href="webhook_8php_source.html">webhook.php</a>.</p>
+</div><a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a6efc15b5a2314dd4b5aaa556a375c6d6" name="a6efc15b5a2314dd4b5aaa556a375c6d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6efc15b5a2314dd4b5aaa556a375c6d6">&#9670;&#160;</a></span>$data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$data = json_decode($input, true)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="webhook_8php_source.html#l00063">63</a> del archivo <a class="el" href="webhook_8php_source.html">webhook.php</a>.</p>
+
+</div>
+</div>
+<a id="a69b271260be394b90709736cccb22c76" name="a69b271260be394b90709736cccb22c76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b271260be394b90709736cccb22c76">&#9670;&#160;</a></span>$input</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$input = file_get_contents(&quot;php://input&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Contenido crudo recibido en el cuerpo del request (<span class="tt">php://input</span>).</p>
+<p>Este valor es un JSON enviado por MercadoPago en cada notificación. Ejemplo de contenido: </p><div class="fragment"><div class="line">{ &quot;type&quot;: &quot;payment&quot;, &quot;data&quot;: { &quot;id&quot;: 123456789 } }</div>
+</div><!-- fragment --> 
+<p class="definition">Definición en la línea <a class="el" href="webhook_8php_source.html#l00053">53</a> del archivo <a class="el" href="webhook_8php_source.html">webhook.php</a>.</p>
+
+</div>
+</div>
+<a id="a0ab0b2cbf9917533ce8ce070f5ea6461" name="a0ab0b2cbf9917533ce8ce070f5ea6461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab0b2cbf9917533ce8ce070f5ea6461">&#9670;&#160;</a></span>else</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(! $data) <a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a> (isset( $data[&quot;type&quot;]) &amp;&amp;$data[&quot;type&quot;]===&quot;payment&quot;) else</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    http_response_code(200)</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="webhook_8php_source.html#l00162">162</a> del archivo <a class="el" href="webhook_8php_source.html">webhook.php</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_97f27a8d3efc40e8fefbbd7dfe5560e8.html">dashboard</a></li><li class="navelem"><a href="webhook_8php.html">webhook.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

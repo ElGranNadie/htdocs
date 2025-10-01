@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Referencia del archivo utils/validaciones.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('validaciones_8php.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo validaciones.php</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Módulo encargado de validar los datos ingresados por el usuario, como correos y contraseñas.  
+<a href="#details">Más...</a></p>
+
+<p><a href="validaciones_8php_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a61c6731c6de20d45ab3bfeaba4b28ad1" id="r_a61c6731c6de20d45ab3bfeaba4b28ad1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61c6731c6de20d45ab3bfeaba4b28ad1">validarCorreo</a> ($correo)</td></tr>
+<tr class="memdesc:a61c6731c6de20d45ab3bfeaba4b28ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valida el formato de un correo electrónico.  <br /></td></tr>
+<tr class="memitem:a3ad9b9e20da874f35a6efa052c8e714c" id="r_a3ad9b9e20da874f35a6efa052c8e714c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ad9b9e20da874f35a6efa052c8e714c">validarPassword</a> ($password)</td></tr>
+<tr class="memdesc:a3ad9b9e20da874f35a6efa052c8e714c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valida la seguridad de una contraseña.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Módulo encargado de validar los datos ingresados por el usuario, como correos y contraseñas. </p>
+<p>Este archivo contiene funciones para verificar el formato del correo electrónico y la seguridad de las contraseñas según las políticas establecidas. Forma parte del sistema de autenticación y recuperación de cuentas, garantizando que los datos cumplan con los requisitos mínimos antes de ser procesados o almacenados.</p>
+<ul>
+<li>Las validaciones se realizan utilizando expresiones regulares y funciones nativas de PHP.</li>
+<li>No depende de librerías externas.</li>
+<li>Retorna listas de errores detalladas para mostrar al usuario o registrar en logs.</li>
+</ul>
+<p>@dependencies</p><ul>
+<li>PHP &gt;= 7.4</li>
+<li>Extensión <span class="tt">filter</span> (para la función <span class="tt">filter_var</span>) </li>
+</ul>
+
+<p class="definition">Definición en el archivo <a class="el" href="validaciones_8php_source.html">validaciones.php</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a61c6731c6de20d45ab3bfeaba4b28ad1" name="a61c6731c6de20d45ab3bfeaba4b28ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c6731c6de20d45ab3bfeaba4b28ad1">&#9670;&#160;</a></span>validarCorreo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">validarCorreo </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$correo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valida el formato de un correo electrónico. </p>
+<p>Esta función utiliza el filtro nativo <span class="tt">FILTER_VALIDATE_EMAIL</span> para determinar si el correo ingresado cumple con el formato estándar RFC 822.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$correo</td><td>El correo electrónico a validar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>array Lista de errores encontrados (vacía si el correo es válido). </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="validaciones_8php_source.html#l00031">31</a> del archivo <a class="el" href="validaciones_8php_source.html">validaciones.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                                {</div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> = [];</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">if</span> (!filter_var(<a class="code hl_variable" href="procesar__login_8php.html#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a>, FILTER_VALIDATE_EMAIL)) {</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>[] = <span class="stringliteral">&quot;El formato del correo electrónico no es válido&quot;</span>;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>;</div>
+<div class="line"><span class="lineno">   37</span>}</div>
+<div class="ttc" id="aprocesar__login_8php_html_a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f"><div class="ttname"><a href="procesar__login_8php.html#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a></div><div class="ttdeci">$correo</div><div class="ttdef"><b>Definition</b> <a href="procesar__login_8php_source.html#l00141">procesar_login.php:141</a></div></div>
+<div class="ttc" id="aprocesar__login_8php_html_a70fbb718980d7db3d52d37d7a5c39166"><div class="ttname"><a href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a></div><div class="ttdeci">$errores</div><div class="ttdef"><b>Definition</b> <a href="procesar__login_8php_source.html#l00149">procesar_login.php:149</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3ad9b9e20da874f35a6efa052c8e714c" name="a3ad9b9e20da874f35a6efa052c8e714c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ad9b9e20da874f35a6efa052c8e714c">&#9670;&#160;</a></span>validarPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">validarPassword </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$password</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valida la seguridad de una contraseña. </p>
+<p>Esta función comprueba que la contraseña cumpla con los requisitos mínimos de seguridad: longitud mínima, presencia de letras mayúsculas, números y caracteres especiales.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$password</td><td>La contraseña a validar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>array Lista de errores encontrados (vacía si la contraseña es segura). </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="validaciones_8php_source.html#l00048">48</a> del archivo <a class="el" href="validaciones_8php_source.html">validaciones.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                    {</div>
+<div class="line"><span class="lineno">   49</span>    <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> = [];</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">if</span> (strlen(<a class="code hl_variable" href="dashboard_2conexion_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>) &lt; 8) {</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>[] = <span class="stringliteral">&quot;La contraseña debe tener al menos 8 caracteres&quot;</span>;</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">if</span> (!preg_match(<span class="stringliteral">&#39;/[A-Z]/&#39;</span>, <a class="code hl_variable" href="dashboard_2conexion_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>)) {</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>[] = <span class="stringliteral">&quot;La contraseña debe contener al menos una letra mayúscula&quot;</span>;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span> (!preg_match(<span class="stringliteral">&#39;/[0-9]/&#39;</span>, <a class="code hl_variable" href="dashboard_2conexion_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>)) {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>[] = <span class="stringliteral">&quot;La contraseña debe contener al menos un número&quot;</span>;</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">if</span> (!preg_match(<span class="stringliteral">&#39;/[!@#$%^&amp;*(),.?&quot;:{}|&lt;&gt;]/&#39;</span>, <a class="code hl_variable" href="dashboard_2conexion_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>)) {</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>[] = <span class="stringliteral">&quot;La contraseña debe contener al menos un carácter especial&quot;</span>;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="procesar__login_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>;</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+<div class="ttc" id="adashboard_2conexion_8php_html_a607686ef9f99ea7c42f4f3dd3dbb2b0d"><div class="ttname"><a href="dashboard_2conexion_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a></div><div class="ttdeci">$password</div><div class="ttdef"><b>Definition</b> <a href="dashboard_2conexion_8php_source.html#l00005">conexion.php:5</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a href="validaciones_8php.html">validaciones.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

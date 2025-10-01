@@ -5,6 +5,22 @@ use PHPMailer\PHPMailer\Exception;
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/credenciales.php';
 
+<?php
+/**
+ * @file mail.php
+ * @brief Módulo responsable del envío de correos electrónicos con códigos de verificación.
+ *
+ * Este archivo utiliza la librería PHPMailer para enviar correos electrónicos a los usuarios
+ * con un código de verificación, utilizado generalmente para procesos de recuperación de contraseña
+ * o validación de cuenta. La función principal `enviarCodigo()` recibe el correo destino y el
+ * código generado, y gestiona todo el proceso de configuración y envío mediante SMTP.
+ *
+ * @details 
+ * - Implementa autenticación segura a través del servidor SMTP de Gmail.
+ * - Maneja errores mediante excepciones y registros en el log del servidor.
+ * - El mensaje se envía en formato HTML e incluye el código de verificación y su tiempo de validez.
+ */
+
 /**
  * Envía un correo con un código de verificación al correo indicado
  *

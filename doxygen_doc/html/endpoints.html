@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Endpoints N.I.C.O.L.E — Documento visual y técnico</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('endpoints.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Endpoints N.I.C.O.L.E — Documento visual y técnico </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Guía completa y visual de los endpoints principales (auth, CRUD, recetas, ingredientes, usuarios, webhook, IA).</p>
+<p>Este documento describe los endpoints REST disponibles en N.I.C.O.L.E. </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
+Actualmente cuenta con <b>14 endpoints activos</b> organizados por módulos.</h2>
+<h1 class="doxsection"><a class="anchor" id="auth"></a>
+Autenticación (auth.php)</h1>
+<div style="padding:8px; border-radius:6px; background:#e0f7ff; color:#003366;"> <b>Registrar Usuario</b> </div><p><b>Registrar</b></p><ul>
+<li><b>Qué hace:</b> Crea un nuevo usuario en el sistema. <br  />
+</li>
+<li><b>Para qué sirve:</b> Permitir acceso a nuevos clientes o cuentas. <br  />
+</li>
+<li><b>Cómo funciona:</b> Recibe datos → valida duplicados → inserta en BD → retorna ID.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/usuarios.php?action=register</code> (POST)<br  />
+ <b>Respuesta (201):</b> </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot;, &quot;id&quot;: 1 }</div>
+</div><!-- fragment --><p> <b>Listar</b></p><ul>
+<li><b>Qué hace:</b> Devuelve todos los usuarios registrados. <br  />
+</li>
+<li><b>Para qué sirve:</b> Exponer información de usuarios para consumo interno del sistema, facilitando autenticación, personalización y control de permisos.</li>
+<li><b>Cómo funciona:</b> SELECT en tabla <span class="tt">usuarios</span>.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/usuarios.php?action=list</code> (GET)<br  />
+ <b>Respuesta (200):</b> </p><div class="fragment"><div class="line">[ { &quot;id&quot;: 1, &quot;nombre&quot;: &quot;Juan&quot; } ]</div>
+</div><!-- fragment --><div style="padding:8px; border-radius:6px; background:#e6fffa; color:#065f46;"> <b>Login</b> </div><ul>
+<li><b>Qué hace:</b> Autentica a un usuario contra el sistema. <br  />
+</li>
+<li><b>Para qué sirve:</b> Permite validar credenciales y obtener un token de sesión que será usado en llamadas posteriores. <br  />
+</li>
+<li><b>Cómo funciona:</b> El backend recibe usuario + contraseña, consulta la base de datos, y si coinciden devuelve un token (JWT o PHP session ID).</li>
+</ul>
+<p><b>Endpoint:</b> <code>/auth.php?action=login</code><br  />
+ <b>Método:</b> POST<br  />
+ <b>Ejemplo respuesta (200):</b> </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot;, &quot;token&quot;: &quot;eyJ...jwt...&quot; }</div>
+</div><!-- fragment --><hr  />
+<div style="padding:8px; border-radius:6px; background:#fff7ed; color:#92400e;"> <b>Logout</b> </div><ul>
+<li><b>Qué hace:</b> Cierra la sesión activa eliminando el token. <br  />
+</li>
+<li><b>Para qué sirve:</b> Garantiza que el usuario ya no pueda usar su sesión y deba volver a loguearse. <br  />
+</li>
+<li><b>Cómo funciona:</b> El backend destruye la sesión o invalida el token, luego redirige al login.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/auth.php?action=logout</code><br  />
+ <b>Método:</b> GET<br  />
+ <b>Respuesta (200):</b> </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot;, &quot;message&quot;: &quot;Sesión cerrada&quot; }</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="crud"></a>
+CRUD Genérico (helpers_crud.php)</h1>
+<div style="background:#eef2ff; padding:8px; border-radius:6px; color:#3730a3;"> <b>Crear (create)</b> </div><ul>
+<li><b>Qué hace:</b> Inserta un nuevo registro en la tabla indicada. <br  />
+</li>
+<li><b>Para qué sirve:</b> Agregar nuevos elementos dinámicamente (ingredientes, recetas, usuarios, etc.). <br  />
+</li>
+<li><b>Cómo funciona:</b> Recibe el nombre de la tabla y un JSON con los campos → construye un INSERT → retorna el ID generado.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/helpers_crud.php?action=create</code> (POST)<br  />
+ <b>Respuesta (201):</b> </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot;, &quot;id&quot;: 12 }</div>
+</div><!-- fragment --><hr  />
+<div style="background:#f0fdf4; padding:8px; border-radius:6px; color:#065f46;"> <b>Leer (read)</b> </div><ul>
+<li><b>Qué hace:</b> Consulta registros de la tabla especificada. <br  />
+</li>
+<li><b>Para qué sirve:</b> Obtener información filtrada o listados completos. <br  />
+</li>
+<li><b>Cómo funciona:</b> Recibe parámetros de tabla y filtros → construye un SELECT → devuelve array JSON de resultados.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/helpers_crud.php?action=read</code> (GET)<br  />
+ <b>Respuesta (200):</b> </p><div class="fragment"><div class="line">[ { &quot;id&quot;: 1, &quot;campo&quot;: &quot;valor&quot; } ]</div>
+</div><!-- fragment --><hr  />
+<div style="background:#fff7ed; padding:8px; border-radius:6px; color:#92400e;"> <b>Actualizar (update)</b> </div><ul>
+<li><b>Qué hace:</b> Modifica un registro existente según su ID. <br  />
+</li>
+<li><b>Para qué sirve:</b> Editar información ya almacenada. <br  />
+</li>
+<li><b>Cómo funciona:</b> Recibe el ID + JSON de campos a cambiar → ejecuta UPDATE en BD → confirma éxito.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/helpers_crud.php?action=update</code> (POST)<br  />
+ <b>Respuesta (200):</b> </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot; }</div>
+</div><!-- fragment --><hr  />
+<div style="background:#fff1f2; padding:8px; border-radius:6px; color:#9f1239;"> <b>Eliminar (delete)</b> </div><ul>
+<li><b>Qué hace:</b> Borra un registro de la tabla especificada. <br  />
+</li>
+<li><b>Para qué sirve:</b> Eliminar datos innecesarios o caducados. <br  />
+</li>
+<li><b>Cómo funciona:</b> Recibe el ID → ejecuta DELETE → confirma éxito.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/helpers_crud.php?action=delete</code> (POST)<br  />
+ <b>Respuesta (200):</b> </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot; }</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="ingredientes"></a>
+Ingredientes (ingredientes.php)</h1>
+<p><b>Listar</b></p><ul>
+<li><b>Qué hace:</b> Devuelve todos los ingredientes registrados. <br  />
+</li>
+<li><b>Para qué sirve:</b> Mostrar inventario disponible al usuario o IA. <br  />
+</li>
+<li><b>Cómo funciona:</b> Ejecuta un SELECT en la tabla <span class="tt">ingredientes</span>.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/ingredientes.php?action=list</code> (GET)<br  />
+ <b>Respuesta (200):</b> </p><div class="fragment"><div class="line">[ { &quot;id&quot;: 1, &quot;nombre&quot;: &quot;Arroz&quot; } ]</div>
+</div><!-- fragment --><hr  />
+<p><b>Agregar</b></p><ul>
+<li><b>Qué hace:</b> Inserta un nuevo ingrediente. <br  />
+</li>
+<li><b>Para qué sirve:</b> Mantener actualizado el inventario. <br  />
+</li>
+<li><b>Cómo funciona:</b> Recibe nombre y cantidad → INSERT en tabla → retorna ID.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/ingredientes.php?action=add</code> (POST)<br  />
+ <b>Respuesta (201):</b> </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot;, &quot;id&quot;: 1 }</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="recetas"></a>
+Recetas (recetas.php)</h1>
+<p><b>Listar</b></p><ul>
+<li><b>Qué hace:</b> Devuelve todas las recetas creadas. <br  />
+</li>
+<li><b>Para qué sirve:</b> Permite a usuarios y la IA sugerir preparaciones. <br  />
+</li>
+<li><b>Cómo funciona:</b> SELECT en tabla <span class="tt">recetas</span> y devuelve JSON.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/recetas.php?action=list</code> (GET)<br  />
+ <b>Respuesta (200):</b> </p><div class="fragment"><div class="line">[ { &quot;id&quot;: 1, &quot;nombre&quot;: &quot;Sopa&quot; } ]</div>
+</div><!-- fragment --><hr  />
+<p><b>Agregar</b></p><ul>
+<li><b>Qué hace:</b> Registra una nueva receta con sus ingredientes. <br  />
+</li>
+<li><b>Para qué sirve:</b> Ampliar el catálogo de recetas disponibles. <br  />
+</li>
+<li><b>Cómo funciona:</b> Recibe nombre + array de ingredientes → INSERT en <span class="tt">recetas</span> y <span class="tt">recetas_ingredientes</span>.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/recetas.php?action=add</code> (POST)<br  />
+ <b>Respuesta (201):</b> </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot;, &quot;id&quot;: 1 }</div>
+</div><!-- fragment --><hr  />
+<hr  />
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="webhook"></a>
+Webhook (dashboard/webhook.php)</h1>
+<ul>
+<li><b>Qué hace:</b> Procesa notificaciones enviadas automáticamente por MercadoPago. <br  />
+</li>
+<li><b>Para qué sirve:</b> Mantener sincronizado el estado de los pagos (aprobado, rechazado, pendiente). <br  />
+</li>
+<li><b>Cómo funciona:</b> El servicio de pagos llama este endpoint → el backend valida datos y actualiza tablas de pagos/usuarios.</li>
+</ul>
+<p><b>Endpoint:</b> <code>/dashboard/webhook.php</code> (POST)<br  />
+ <b>Respuesta (200):</b> </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot;, &quot;message&quot;: &quot;Pago procesado&quot; }</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="ia"></a>
+IA / Completions (scripts.js)</h1>
+<ul>
+<li><b>Qué hace:</b> Envía un prompt/conversación y recibe texto generado por la IA. <br  />
+</li>
+<li><b>Para qué sirve:</b> Responder dudas de usuario o proponer recetas automáticas. <br  />
+</li>
+<li><b>Cómo funciona:</b> Recibe <span class="tt">messages</span> + config → reenvía al servidor IA (LMStudio u OpenAI-like) → retorna respuesta textual.</li>
+</ul>
+<p><b>Endpoint:</b> <code><a href="https://nicoleia.servehttp.com:90/v1/chat/completions">https://nicoleia.servehttp.com:90/v1/chat/completions</a></code> (POST)<br  />
+ <b>Respuesta (200):</b> </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;choices&quot;: [</div>
+<div class="line">    { &quot;message&quot;: { &quot;content&quot;: &quot;Aquí tienes una receta rápida...&quot; } }</div>
+<div class="line">  ]</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
