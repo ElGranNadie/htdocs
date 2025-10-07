@@ -95,6 +95,9 @@ if ($status === "approved" && $reference) {
     $stmt->bind_param("i", $usuario_id);
     $stmt->execute();
     $stmt->close();
+    require 'enviar_factura.php';
+generarYEnviarFactura($conn, $usuario_id, $amount, $method, $payment_id);
+
 }
 
 // ==========================
