@@ -8,7 +8,6 @@ echo "
     <title>Pago Pendiente</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #e0eafc, #cfdef3);
             display: flex;
             justify-content: center;

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Webhook de Mercado Pago — Documento técnico y funcional</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('webhook.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Webhook de Mercado Pago — Documento técnico y funcional </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Endpoint encargado de recibir y procesar las notificaciones automáticas enviadas por Mercado Pago.</p>
+<p>Este módulo gestiona las <b>notificaciones HTTP (webhooks)</b> que Mercado Pago envía cuando ocurre un evento relevante en el ciclo de vida de un pago (por ejemplo, aprobado, rechazado o en revisión).</p>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="resumen"></a>
+Resumen funcional</h1>
+<ul>
+<li><b>Qué hace:</b> Recibe las notificaciones de Mercado Pago y actualiza el estado del pago en la base de datos.</li>
+<li><b>Para qué sirve:</b> Permite mantener sincronizado el backend con el estado real de las transacciones realizadas.</li>
+<li><b>Cómo funciona:</b><ol type="1">
+<li>Mercado Pago realiza un <span class="tt">POST</span> al endpoint cada vez que se actualiza un pago.</li>
+<li>El sistema lee el cuerpo JSON del mensaje y valida que provenga de una notificación válida.</li>
+<li>Con el <span class="tt">id</span> de la transacción, se consulta la API oficial de Mercado Pago (para obtener más datos).</li>
+<li>Se actualiza el estado del pedido en la base de datos según el resultado (ej: aprobado, rechazado, pendiente).</li>
+<li>Se registra la notificación en una tabla de logs para auditoría.</li>
+</ol>
+</li>
+</ul>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="endpoint"></a>
+Endpoint del Webhook</h1>
+<p><b>Ruta:</b> <code>/webhook.php</code><br  />
+ <b>Método:</b> POST<br  />
+</p>
+<p><b>Cabeceras esperadas:</b> </p><div class="fragment"><div class="line">Content-Type: application/json</div>
+<div class="line">User-Agent: MercadoPago Webhook</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="json"></a>
+JSON recibido desde Mercado Pago</h1>
+<p><b>Ejemplo de cuerpo recibido (pago aprobado):</b> </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;id&quot;: 123456789,</div>
+<div class="line">  &quot;live_mode&quot;: true,</div>
+<div class="line">  &quot;type&quot;: &quot;payment&quot;,</div>
+<div class="line">  &quot;date_created&quot;: &quot;2025-10-08T15:32:05Z&quot;,</div>
+<div class="line">  &quot;user_id&quot;: &quot;999999999&quot;,</div>
+<div class="line">  &quot;api_version&quot;: &quot;v1&quot;,</div>
+<div class="line">  &quot;data&quot;: {</div>
+<div class="line">    &quot;id&quot;: &quot;987654321&quot;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="respuestas"></a>
+Respuestas del Webhook</h1>
+<ul>
+<li>✅ <b>200 OK</b> → Cuando la notificación fue procesada correctamente.</li>
+<li>⚠️ <b>400 Bad Request</b> → Cuando el cuerpo JSON está vacío o es inválido.</li>
+<li>❌ <b>500 Error interno</b> → Si ocurre una falla al consultar la API o actualizar la base de datos.</li>
+</ul>
+<p><b>Ejemplo de respuesta exitosa:</b> </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;success&quot;: true,</div>
+<div class="line">  &quot;message&quot;: &quot;Notificación procesada con éxito&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>Ejemplo de error:</b> </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;success&quot;: false,</div>
+<div class="line">  &quot;message&quot;: &quot;Error al actualizar el estado del pago&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="log"></a>
+Registro y trazabilidad</h1>
+<p>Cada notificación procesada puede almacenarse en una tabla auxiliar (por ejemplo <span class="tt">webhook_log</span>) para mantener un historial completo de eventos, facilitando la auditoría y depuración.</p>
+<p><b>Estructura sugerida de la tabla <span class="tt">webhook_log</span>:</b> </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Campo  </th><th class="markdownTableHeadNone">Tipo  </th><th class="markdownTableHeadNone">Descripción  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">id  </td><td class="markdownTableBodyNone">INT AUTO_INC  </td><td class="markdownTableBodyNone">Identificador del evento  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">event_type  </td><td class="markdownTableBodyNone">VARCHAR(50)  </td><td class="markdownTableBodyNone">Tipo de evento recibido (payment, refund...)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">payment_id  </td><td class="markdownTableBodyNone">BIGINT  </td><td class="markdownTableBodyNone">ID del pago en Mercado Pago  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">payload  </td><td class="markdownTableBodyNone">JSON  </td><td class="markdownTableBodyNone">Cuerpo completo de la notificación  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">fecha_registro  </td><td class="markdownTableBodyNone">DATETIME  </td><td class="markdownTableBodyNone">Fecha de recepción del webhook  </td></tr>
+</table>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="seguridad"></a>
+Consideraciones de seguridad</h1>
+<ul>
+<li>Validar siempre que el <span class="tt">type</span> del evento sea “payment”.</li>
+<li>Confirmar que el <span class="tt">id</span> recibido exista realmente en la base de datos de Mercado Pago (consultando la API).</li>
+<li>Registrar todos los intentos en logs, incluso los fallidos.</li>
+<li>Usar HTTPS obligatorio para evitar interceptaciones.</li>
+</ul>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="dependencias"></a>
+Dependencias</h1>
+<ul>
+<li><span class="tt">db_config.php</span> → conexión segura con la base de datos.</li>
+<li><span class="tt">m_pago_service.php</span> → módulo encargado de interactuar con la API oficial de Mercado Pago.</li>
+</ul>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="ejemplo"></a>
+Ejemplo de flujo completo</h1>
+<p>1️⃣ Usuario realiza el pago desde el frontend. <br  />
+ 2️⃣ Mercado Pago procesa la transacción. <br  />
+ 3️⃣ Una vez completado el proceso, envía un webhook al backend (<span class="tt">/webhook.php</span>). <br  />
+ 4️⃣ El backend valida y actualiza el estado de la compra. <br  />
+ 5️⃣ Si el pago es aprobado, se activan funciones internas (ej: habilitar beneficios Premium). <br  />
+</p>
+<hr  />
+ <dl class="section note"><dt>Nota</dt><dd>Este webhook es <b>idempotente</b>, lo que significa que puede recibir múltiples notificaciones del mismo evento sin causar duplicaciones en la base de datos.</dd></dl>
+<p><b>Autor:</b> Equipo N.I.C.O.L.E <br  />
+ <b>Versión:</b> 1.0 <br  />
+ <b>Última actualización:</b> 2025-10-08 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

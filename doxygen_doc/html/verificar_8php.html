@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
   <td id="projectalign">
-   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
    </div>
    <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
   </td>
@@ -103,6 +103,7 @@ $(function(){initNavTree('verificar_8php.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a6ab47df61c600526b34e7eed19d65d10" id="r_a6ab47df61c600526b34e7eed19d65d10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>(!isset($_SESSION['correo_verificar']))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ab47df61c600526b34e7eed19d65d10">$correo</a> = $_SESSION['correo_verificar']</td></tr>
+<tr class="memitem:a757ee748f7d55915e45fe8802c070509" id="r_a757ee748f7d55915e45fe8802c070509"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a757ee748f7d55915e45fe8802c070509">if</a> ( $_SERVER[ 'REQUEST_METHOD']==='POST')</td></tr>
 <tr class="memitem:a82cd33ca97ff99f2fcc5e9c81d65251b" id="r_a82cd33ca97ff99f2fcc5e9c81d65251b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82cd33ca97ff99f2fcc5e9c81d65251b">endif</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
@@ -115,8 +116,8 @@ Variables</h2></td></tr>
 <li>Si es válido, marca al usuario como verificado y limpia los datos temporales.</li>
 </ul>
 <hr  />
- <h2 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
-autotoc_md32</h2>
+ <h2 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+autotoc_md27</h2>
 <h1 class="doxsection"><a class="anchor" id="dependencias"></a>
 Dependencias</h1>
 <div class="fragment"><div class="line">session_start();</div>
@@ -127,8 +128,8 @@ Dependencias</h1>
 <li>Se requiere la extensión <span class="tt">mysqli</span> para consultas seguras y preparadas.</li>
 </ul>
 <hr  />
- <h2 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
-autotoc_md34</h2>
+ <h2 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
+autotoc_md29</h2>
 <h1 class="doxsection"><a class="anchor" id="flujo"></a>
 Flujo general</h1>
 <h2 class="doxsection"><a class="anchor" id="paso1"></a>
@@ -144,7 +145,7 @@ Verificar método POST</h2>
 <h2 class="doxsection"><a class="anchor" id="paso2"></a>
 Capturar datos del formulario login.php</h2>
 <div class="fragment"><div class="line"><a class="code hl_variable" href="#a6ab47df61c600526b34e7eed19d65d10">$correo</a> = $_SESSION[<span class="stringliteral">&#39;correo_verificar&#39;</span>];</div>
-<div class="ttc" id="averificar_8php_html_a6ab47df61c600526b34e7eed19d65d10"><div class="ttname"><a href="#a6ab47df61c600526b34e7eed19d65d10">$correo</a></div><div class="ttdeci">if(!isset($_SESSION[&#39;correo_verificar&#39;])) $correo</div><div class="ttdef"><b>Definition</b> <a href="verificar_8php_source.html#l00203">verificar.php:203</a></div></div>
+<div class="ttc" id="averificar_8php_html_a6ab47df61c600526b34e7eed19d65d10"><div class="ttname"><a href="#a6ab47df61c600526b34e7eed19d65d10">$correo</a></div><div class="ttdeci">if(!isset($_SESSION[&#39;correo_verificar&#39;])) $correo</div><div class="ttdef"><b>Definition</b> <a href="verificar_8php_source.html#l00202">verificar.php:202</a></div></div>
 </div><!-- fragment --><p>Almacena el correo electrónico actual del usuario desde la sesión, para posteriormente consultar su código de verificación en la base de datos.</p>
 <hr  />
 <h2 class="doxsection"><a class="anchor" id="paso3"></a>
@@ -167,7 +168,7 @@ Consultar usuario en la base de datos</h2>
 <div class="line"><a class="code hl_variable" href="test__webhook_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = <a class="code hl_variable" href="pago__exitoso_8php.html#af27a9140d5f2658693e7fd107f716449">$stmt</a>-&gt;get_result();</div>
 <div class="ttc" id="adashboard_2conexion_8php_html_aa8a5a87b9c1a6a0819b88447cbe41877"><div class="ttname"><a href="dashboard_2conexion_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a></div><div class="ttdeci">$conn</div><div class="ttdef"><b>Definition</b> <a href="dashboard_2conexion_8php_source.html#l00011">conexion.php:11</a></div></div>
 <div class="ttc" id="apago__exitoso_8php_html_af27a9140d5f2658693e7fd107f716449"><div class="ttname"><a href="pago__exitoso_8php.html#af27a9140d5f2658693e7fd107f716449">$stmt</a></div><div class="ttdeci">$stmt</div><div class="ttdef"><b>Definition</b> <a href="pago__exitoso_8php_source.html#l00078">pago_exitoso.php:78</a></div></div>
-<div class="ttc" id="atest__webhook_8php_html_a112ef069ddc0454086e3d1e6d8d55d07"><div class="ttname"><a href="test__webhook_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a></div><div class="ttdeci">$result</div><div class="ttdef"><b>Definition</b> <a href="test__webhook_8php_source.html#l00022">test_webhook.php:22</a></div></div>
+<div class="ttc" id="atest__webhook_8php_html_a112ef069ddc0454086e3d1e6d8d55d07"><div class="ttname"><a href="test__webhook_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a></div><div class="ttdeci">$result</div><div class="ttdef"><b>Definition</b> <a href="test__webhook_8php_source.html#l00061">test_webhook.php:61</a></div></div>
 </div><!-- fragment --><p>Se realiza una consulta preparada para obtener el código de verificación y su fecha de expiración. Si el correo no existe, el proceso termina y se redirige al formulario.</p>
 <hr  />
 <h2 class="doxsection"><a class="anchor" id="paso5"></a>
@@ -205,8 +206,8 @@ Cerrar conexión</h2>
 <div class="line"><a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
 </div><!-- fragment --><p>Limpia la variable de sesión y redirige al formulario de inicio de sesión, mostrando un mensaje de éxito.</p>
 <hr  />
- <h2 class="doxsection"><a class="anchor" id="autotoc_md43"></a>
-autotoc_md43</h2>
+ <h2 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
+autotoc_md38</h2>
 <h1 class="doxsection"><a class="anchor" id="variables"></a>
 Variables utilizadas en el proceso</h1>
 
@@ -224,7 +225,7 @@ Variables utilizadas en el proceso</h1>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="verificar_8php_source.html#l00203">203</a> del archivo <a class="el" href="verificar_8php_source.html">verificar.php</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="verificar_8php_source.html#l00202">202</a> del archivo <a class="el" href="verificar_8php_source.html">verificar.php</a>.</p>
 
 </div>
 </div>
@@ -240,7 +241,26 @@ Variables utilizadas en el proceso</h1>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="verificar_8php_source.html#l00315">315</a> del archivo <a class="el" href="verificar_8php_source.html">verificar.php</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="verificar_8php_source.html#l00294">294</a> del archivo <a class="el" href="verificar_8php_source.html">verificar.php</a>.</p>
+
+</div>
+</div>
+<a id="a757ee748f7d55915e45fe8802c070509" name="a757ee748f7d55915e45fe8802c070509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a757ee748f7d55915e45fe8802c070509">&#9670;&#160;</a></span>if</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if($_SERVER['REQUEST_METHOD']==='POST') </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$_SERVER</em></span>[ 'REQUEST_METHOD']<span class="paramdefsep"> = </span><span class="paramdefval">==&#160;'POST'</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="verificar_8php_source.html#l00203">203</a> del archivo <a class="el" href="verificar_8php_source.html">verificar.php</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📁_20estructura_20del_20proyecto_0',['📁 Estructura del Proyecto',['../index.html#autotoc_md54',1,'']]]
+  ['🚀_20funcionalidades_20principales_0',['🚀 Funcionalidades Principales',['../index.html#autotoc_md56',1,'']]]
 ];

@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['n_20i_20c_20o_20l_20e_20—_20documento_20visual_20y_20técnico_0',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
-  ['n_20i_20c_20o_20l_20e_20versión_20web_1',['Proyecto N.I.C.O.L.E Versión Web',['../index.html',1,'']]],
-  ['negocio_20y_20lógica_20principal_2',['Archivos de negocio y lógica principal',['../index.html#autotoc_md55',1,'']]],
-  ['nicole_2ephp_3',['Nicole.php',['../_nicole_8php.html',1,'']]],
-  ['no_20es_20post_4',['no es POST',['../procesar__registro_8php.html#paso10',1,'Redirección si no es POST'],['../verificar_8php.html#paso7',1,'Redirigir si no es POST']]]
+  ['o_20l_20e_20—_20documento_20visual_20y_20técnico_0',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
+  ['o_20l_20e_20versión_20web_1',['Proyecto N.I.C.O.L.E Versión Web',['../index.html',1,'']]],
+  ['objetivo_20del_20proyecto_2',['🎯 Objetivo del Proyecto',['../index.html#autotoc_md45',1,'']]],
+  ['obtener_20usuario_20obtener_5fusuario_20php_3',['Obtener Usuario (obtener_usuario.php)',['../endpoints.html#obtener',1,'']]],
+  ['obtener_5fusuario_20php_4',['Obtener Usuario (obtener_usuario.php)',['../endpoints.html#obtener',1,'']]],
+  ['other_2ephp_5',['other.php',['../other_8php.html',1,'']]]
 ];

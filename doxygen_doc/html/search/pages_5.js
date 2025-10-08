@@ -1,15 +1,8 @@
 var searchData=
 [
-  ['e_20—_20documento_20visual_20y_20técnico_0',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
-  ['e_20versión_20web_1',['Proyecto N.I.C.O.L.E Versión Web',['../index.html',1,'']]],
-  ['el_20proceso_2',['Variables utilizadas en el proceso',['../procesar__registro_8php.html#variables',1,'']]],
-  ['en_20caso_20de_20éxito_3',['Redirección en caso de éxito',['../procesar__registro_8php.html#pasoFinal',1,'']]],
-  ['en_20el_20proceso_4',['Variables utilizadas en el proceso',['../procesar__registro_8php.html#variables',1,'']]],
-  ['en_20la_20base_20de_20datos_5',['Consultar usuario en la base de datos',['../verificar_8php.html#paso4',1,'']]],
-  ['endpoints_20activos_20organizados_20por_20módulos_6',['Actualmente cuenta con &lt;b&gt;14 endpoints activos&lt;/b&gt; organizados por módulos.',['../endpoints.html#autotoc_md0',1,'']]],
-  ['endpoints_20n_20i_20c_20o_20l_20e_20—_20documento_20visual_20y_20técnico_7',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
-  ['equipo_20desarrollador_8',['👥 Equipo Desarrollador',['../index.html#autotoc_md69',1,'']]],
-  ['errores_9',['errores',['../procesar__registro_8php.html#paso9',1,'Manejo de errores'],['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#manejo_errores',1,'Manejo de errores'],['../verificar_8php.html#paso6',1,'Redirigir si hay errores']]],
-  ['es_20post_10',['es POST',['../procesar__registro_8php.html#paso10',1,'Redirección si no es POST'],['../verificar_8php.html#paso7',1,'Redirigir si no es POST']]],
-  ['estructura_20del_20proyecto_11',['📁 Estructura del Proyecto',['../index.html#autotoc_md54',1,'']]]
+  ['flujo_0',['Resumen de flujo',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/verificar.php#resumen',1,'']]],
+  ['flujo_20general_1',['Flujo general',['../procesar__registro_8php.html#flujo',1,'']]],
+  ['formulario_2',['Campos del formulario',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#campos',1,'']]],
+  ['formulario_20login_20php_3',['Capturar datos del formulario login.php',['../verificar_8php.html#paso2',1,'']]],
+  ['funcionalidades_20principales_4',['🚀 Funcionalidades Principales',['../index.html#autotoc_md56',1,'']]]
 ];

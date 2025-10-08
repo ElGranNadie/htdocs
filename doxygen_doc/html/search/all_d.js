@@ -1,12 +1,15 @@
 var searchData=
 [
-  ['lógica_20principal_0',['Archivos de negocio y lógica principal',['../index.html#autotoc_md55',1,'']]],
-  ['l_20e_20—_20documento_20visual_20y_20técnico_1',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
-  ['l_20e_20versión_20web_2',['Proyecto N.I.C.O.L.E Versión Web',['../index.html',1,'']]],
-  ['la_20base_20de_20datos_3',['Consultar usuario en la base de datos',['../verificar_8php.html#paso4',1,'']]],
-  ['la_20interfaz_4',['Dinámica de la interfaz',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#interfaz',1,'']]],
-  ['loadclassloader_5',['loadClassLoader',['../class_composer_autoloader_init2185d2f99bcd56787481d9357a5972d3.html#acf91a57c47dd528a158b2cc96c104f96',1,'ComposerAutoloaderInit2185d2f99bcd56787481d9357a5972d3']]],
-  ['login_20php_6',['Capturar datos del formulario login.php',['../verificar_8php.html#paso2',1,'']]],
-  ['login_2ephp_7',['login.php',['../login_8php.html',1,'']]],
-  ['logout_2ephp_8',['logout.php',['../logout_8php.html',1,'']]]
+  ['método_20post_0',['Verificar método POST',['../verificar_8php.html#paso1',1,'']]],
+  ['módulo_20de_20mensajería_20con_20ia_1',['Módulo de mensajería con IA',['../index.html#autotoc_md52',1,'']]],
+  ['mail_2ephp_2',['mail.php',['../mail_8php.html',1,'']]],
+  ['main_3',['main',['../namespacemain.html',1,'']]],
+  ['main_2epy_4',['main.py',['../main_8py.html',1,'']]],
+  ['manejo_20de_20errores_5',['Manejo de errores',['../procesar__registro_8php.html#paso9',1,'Manejo de errores'],['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#manejo_errores',1,'Manejo de errores']]],
+  ['manual_2ephp_6',['manual.php',['../manual_8php.html',1,'']]],
+  ['mensajería_20con_20ia_7',['Mensajería con IA',['../index.html#autotoc_md60',1,'']]],
+  ['mensajería_20con_20ia_8',['Módulo de mensajería con IA',['../index.html#autotoc_md52',1,'']]],
+  ['mercado_20pago_9',['Pagos con Mercado Pago',['../index.html#autotoc_md58',1,'']]],
+  ['mercadopago_20dashboard_20webhook_20php_10',['Webhook de MercadoPago (dashboard/webhook.php)',['../endpoints.html#webhook',1,'']]],
+  ['mercadopago_2ephp_11',['mercadopago.php',['../mercadopago_8php.html',1,'']]]
 ];

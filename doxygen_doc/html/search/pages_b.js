@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['lógica_20principal_0',['Archivos de negocio y lógica principal',['../index.html#autotoc_md55',1,'']]],
-  ['l_20e_20—_20documento_20visual_20y_20técnico_1',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
-  ['l_20e_20versión_20web_2',['Proyecto N.I.C.O.L.E Versión Web',['../index.html',1,'']]],
-  ['la_20base_20de_20datos_3',['Consultar usuario en la base de datos',['../verificar_8php.html#paso4',1,'']]],
-  ['la_20interfaz_4',['Dinámica de la interfaz',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#interfaz',1,'']]],
-  ['login_20php_5',['Capturar datos del formulario login.php',['../verificar_8php.html#paso2',1,'']]]
+  ['método_20post_0',['Verificar método POST',['../verificar_8php.html#paso1',1,'']]],
+  ['módulo_20de_20mensajería_20con_20ia_1',['Módulo de mensajería con IA',['../index.html#autotoc_md52',1,'']]],
+  ['manejo_20de_20errores_2',['Manejo de errores',['../procesar__registro_8php.html#paso9',1,'Manejo de errores'],['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#manejo_errores',1,'Manejo de errores']]],
+  ['mensajería_20con_20ia_3',['Mensajería con IA',['../index.html#autotoc_md60',1,'']]],
+  ['mensajería_20con_20ia_4',['Módulo de mensajería con IA',['../index.html#autotoc_md52',1,'']]],
+  ['mercado_20pago_5',['Pagos con Mercado Pago',['../index.html#autotoc_md58',1,'']]],
+  ['mercadopago_20dashboard_20webhook_20php_6',['Webhook de MercadoPago (dashboard/webhook.php)',['../endpoints.html#webhook',1,'']]]
 ];

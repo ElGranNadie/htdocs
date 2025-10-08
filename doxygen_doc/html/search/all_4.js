@@ -1,5 +1,30 @@
 var searchData=
 [
-  ['base_20de_20datos_0',['Consultar usuario en la base de datos',['../verificar_8php.html#paso4',1,'']]],
-  ['beneficios_5fpremium_2ephp_1',['beneficios_premium.php',['../beneficios__premium_8php.html',1,'']]]
+  ['código_20de_20verificación_20reenviar_5fcodigo_20php_0',['Reenviar Código de Verificación (reenviar_codigo.php)',['../endpoints.html#reenviar',1,'']]],
+  ['código_20verificar_20php_1',['Verificar Código (verificar.php)',['../endpoints.html#verificar',1,'']]],
+  ['c_20o_20l_20e_20—_20documento_20visual_20y_20técnico_2',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
+  ['c_20o_20l_20e_20versión_20web_3',['Proyecto N.I.C.O.L.E Versión Web',['../index.html',1,'']]],
+  ['campos_20del_20formulario_4',['Campos del formulario',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#campos',1,'']]],
+  ['capturar_20datos_20del_20formulario_20login_20php_5',['Capturar datos del formulario login.php',['../verificar_8php.html#paso2',1,'']]],
+  ['carrousel_2ephp_6',['carrousel.php',['../carrousel_8php.html',1,'']]],
+  ['caso_20de_20éxito_7',['Redirección en caso de éxito',['../procesar__registro_8php.html#pasoFinal',1,'']]],
+  ['cerrar_20conexión_8',['Cerrar conexión',['../verificar_8php.html#paso8',1,'']]],
+  ['chat_2ephp_9',['chat.php',['../chat_8php.html',1,'']]],
+  ['composer_3a_3aautoload_10',['Autoload',['../namespace_composer_1_1_autoload.html',1,'Composer']]],
+  ['composerautoloaderinit2185d2f99bcd56787481d9357a5972d3_11',['ComposerAutoloaderInit2185d2f99bcd56787481d9357a5972d3',['../class_composer_autoloader_init2185d2f99bcd56787481d9357a5972d3.html',1,'']]],
+  ['composerstaticinit2185d2f99bcd56787481d9357a5972d3_12',['ComposerStaticInit2185d2f99bcd56787481d9357a5972d3',['../class_composer_1_1_autoload_1_1_composer_static_init2185d2f99bcd56787481d9357a5972d3.html',1,'Composer::Autoload']]],
+  ['con_20ia_13',['con IA',['../index.html#autotoc_md52',1,'Módulo de mensajería con IA'],['../index.html#autotoc_md60',1,'Mensajería con IA']]],
+  ['con_20mercado_20pago_14',['Pagos con Mercado Pago',['../index.html#autotoc_md58',1,'']]],
+  ['conexión_15',['Cerrar conexión',['../verificar_8php.html#paso8',1,'']]],
+  ['conexion_2ephp_16',['conexion.php',['../dashboard_2conexion_8php.html',1,'(Espacio de nombres global)'],['../session_2conexion_8php.html',1,'(Espacio de nombres global)']]],
+  ['connection_17',['connection',['../namespacetest.html#ad0ef3debc95c8fdb9da57ef619e4ec42',1,'test']]],
+  ['consideraciones_20de_20seguridad_18',['Consideraciones de seguridad',['../login_8php.html#seguridad',1,'']]],
+  ['consultar_20usuario_20en_20la_20base_20de_20datos_19',['Consultar usuario en la base de datos',['../verificar_8php.html#paso4',1,'']]],
+  ['contactanos_2ephp_20',['contactanos.php',['../contactanos_8php.html',1,'']]],
+  ['contenido_20informativo_21',['Contenido informativo',['../index.html#autotoc_md61',1,'']]],
+  ['contraseña_20y_20guardar_20sesión_22',['Verificar contraseña y guardar sesión',['../verificar_8php.html#paso5',1,'']]],
+  ['correo_23',['Validar correo',['../verificar_8php.html#paso3',1,'']]],
+  ['crear_5fplan_2ephp_24',['crear_plan.php',['../crear__plan_8php.html',1,'']]],
+  ['credenciales_2ephp_25',['credenciales.php',['../credenciales_8php.html',1,'']]],
+  ['cursor_26',['cursor',['../namespacetest.html#a436af500adc940b16e245f37c29c218b',1,'test']]]
 ];

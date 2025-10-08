@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['scripts_20js_0',['IA / Completions (scripts.js)',['../endpoints.html#ia',1,'']]],
-  ['scripts_2ephp_1',['scripts.php',['../scripts_8php.html',1,'']]],
-  ['seguridad_2',['Consideraciones de seguridad',['../login_8php.html#seguridad',1,'']]],
-  ['sesión_3',['Verificar contraseña y guardar sesión',['../verificar_8php.html#paso5',1,'']]],
-  ['sesiones_20y_20roles_4',['Gestión de Sesiones y Roles',['../index.html#autotoc_md64',1,'']]],
-  ['si_20hay_20errores_5',['Redirigir si hay errores',['../verificar_8php.html#paso6',1,'']]],
-  ['si_20no_20es_20post_6',['si no es POST',['../procesar__registro_8php.html#paso10',1,'Redirección si no es POST'],['../verificar_8php.html#paso7',1,'Redirigir si no es POST']]],
-  ['stylesheet_2ephp_7',['stylesheet.php',['../stylesheet_8php.html',1,'']]]
+  ['técnico_0',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
+  ['tecnologías_20utilizadas_1',['⚙️ Tecnologías Utilizadas',['../index.html#autotoc_md47',1,'']]],
+  ['terminos_2ephp_2',['terminos.php',['../terminos_8php.html',1,'']]],
+  ['test_3',['test',['../namespacetest.html',1,'']]],
+  ['test_2epy_4',['test.py',['../test_8py.html',1,'']]],
+  ['test_5ftidb_2ephp_5',['test_tidb.php',['../test__tidb_8php.html',1,'']]],
+  ['test_5fwebhook_2ephp_6',['test_webhook.php',['../test__webhook_8php.html',1,'']]]
 ];

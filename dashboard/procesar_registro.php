@@ -1,4 +1,4 @@
-<?php<?php
+<?php
 /**
  * @file procesar_registro.php
  * @brief Maneja el proceso de registro de usuarios, validaciones, preferencias y verificación por correo.

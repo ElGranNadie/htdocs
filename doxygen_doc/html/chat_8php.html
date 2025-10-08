@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
   <td id="projectalign">
-   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20250923</span>
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
    </div>
    <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
   </td>
@@ -95,6 +95,9 @@ $(function(){initNavTree('chat_8php.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>Interfaz principal del chat de la aplicación.  
+<a href="#details">Más...</a></p>
+
 <p><a href="chat_8php_source.html">Ir al código fuente de este archivo.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
@@ -106,7 +109,17 @@ Variables</h2></td></tr>
 <tr class="memitem:a6f0d082d1f2e2016d936e53d66b5022a" id="r_a6f0d082d1f2e2016d936e53d66b5022a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aaa6cb2f0dcc39b4cc1d795b40dac50d0">if</a>($user_id)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f0d082d1f2e2016d936e53d66b5022a">$current_page</a> = basename(__FILE__)</td></tr>
 <tr class="memitem:a82cd33ca97ff99f2fcc5e9c81d65251b" id="r_a82cd33ca97ff99f2fcc5e9c81d65251b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82cd33ca97ff99f2fcc5e9c81d65251b">endif</a></td></tr>
 </table>
-<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Interfaz principal del chat de la aplicación. </p>
+<p>Este módulo gestiona la vista principal del sistema de chat del proyecto. Valida si existe una sesión activa y, en caso afirmativo, obtiene los datos del usuario (nombre, estado premium y fecha de expiración). Luego renderiza la interfaz HTML con el área de mensajes, el campo de texto y los botones de interacción.</p>
+<ul>
+<li>Si el usuario está logueado, se muestra su nombre en el encabezado del chat.</li>
+<li>Se valida si la cuenta es premium y si su suscripción sigue activa.</li>
+<li>Si no existe sesión, se considera al usuario como “Invitado”. </li>
+</ul>
+
+<p class="definition">Definición en el archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
+</div><a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
 <a id="a6f0d082d1f2e2016d936e53d66b5022a" name="a6f0d082d1f2e2016d936e53d66b5022a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f0d082d1f2e2016d936e53d66b5022a">&#9670;&#160;</a></span>$current_page</h2>
 
@@ -119,7 +132,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00034">34</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00062">62</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
 
 </div>
 </div>
@@ -134,8 +147,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Indica si el usuario tiene una suscripción premium activa. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00010">10</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00037">37</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
 
 </div>
 </div>
@@ -150,8 +164,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Nombre del usuario conectado. Si no hay sesión, por defecto es “Invitado”. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00008">8</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00030">30</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
 
 </div>
 </div>
@@ -166,8 +181,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ID único del usuario logueado, obtenido desde la sesión. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00007">7</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00024">24</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
 
 </div>
 </div>
@@ -183,7 +199,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00051">51</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00079">79</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
 
 </div>
 </div>
@@ -202,7 +218,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00003">3</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="chat_8php_source.html#l00017">17</a> del archivo <a class="el" href="chat_8php_source.html">chat.php</a>.</p>
 
 </div>
 </div>

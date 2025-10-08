@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['flujo_0',['Resumen de flujo',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/verificar.php#resumen',1,'']]],
-  ['flujo_20general_1',['Flujo general',['../procesar__registro_8php.html#flujo',1,'']]],
-  ['footer_2ephp_2',['footer.php',['../footer_8php.html',1,'']]],
-  ['formulario_3',['Campos del formulario',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/registro.php#campos',1,'']]],
-  ['formulario_20login_20php_4',['Capturar datos del formulario login.php',['../verificar_8php.html#paso2',1,'']]],
-  ['funcionalidades_20principales_5',['🚀 Funcionalidades Principales',['../index.html#autotoc_md61',1,'']]]
+  ['general_0',['Flujo general',['../procesar__registro_8php.html#flujo',1,'']]],
+  ['gestión_20de_20sesiones_20y_20roles_1',['Gestión de Sesiones y Roles',['../index.html#autotoc_md59',1,'']]],
+  ['getinitializer_2',['getInitializer',['../class_composer_1_1_autoload_1_1_composer_static_init2185d2f99bcd56787481d9357a5972d3.html#aff219b1ededf034c73bbd8e00aa2d5bf',1,'Composer::Autoload::ComposerStaticInit2185d2f99bcd56787481d9357a5972d3']]],
+  ['getloader_3',['getLoader',['../class_composer_autoloader_init2185d2f99bcd56787481d9357a5972d3.html#ab496157bcc2dd4c093f65143199cd7aa',1,'ComposerAutoloaderInit2185d2f99bcd56787481d9357a5972d3']]],
+  ['guardar_20sesión_4',['Verificar contraseña y guardar sesión',['../verificar_8php.html#paso5',1,'']]],
+  ['guardar_5fpreferencia_20php_5',['Preferencias del Usuario (guardar_preferencia.php)',['../endpoints.html#preferencias',1,'']]]
 ];

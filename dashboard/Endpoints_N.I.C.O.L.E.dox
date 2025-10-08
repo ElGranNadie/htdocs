@@ -2,221 +2,283 @@
 /**
  * @file endpoints_doc.php
  * @page endpoints Endpoints N.I.C.O.L.E — Documento visual y técnico
- * @brief Guía completa y visual de los endpoints principales (auth, CRUD, recetas, ingredientes, usuarios, webhook, IA).
+ * @brief Guía completa y visual de los endpoints principales (auth, usuarios, webhook, IA).
  *
  * Este documento describe los endpoints REST disponibles en N.I.C.O.L.E.
- * Actualmente cuenta con **14 endpoints activos** organizados por módulos.
+ * Actualmente cuenta con **8 endpoints activos** organizados por módulos.
+ *
  * -------------------------------------------------------------------------------------------
- * @section auth Autenticación (auth.php)
+ * @section registro Registro de Usuario (register.php)
  *
-
-
- * <div style="padding:8px; border-radius:6px; background:#e0f7ff; color:#003366;">
- * <b>Registrar Usuario</b>
+ * <div style="background:#e0f7ff; padding:8px; border-radius:6px; color:#003366;">
+ * <b>Registrar Usuario + Envío de Código de Verificación</b>
  * </div>
-
-  * **Registrar**
- * - **Qué hace:** Crea un nuevo usuario en el sistema.  
- * - **Para qué sirve:** Permitir acceso a nuevos clientes o cuentas.  
- * - **Cómo funciona:** Recibe datos → valida duplicados → inserta en BD → retorna ID.
  *
- * **Endpoint:** <code>/usuarios.php?action=register</code> (POST)<br>
- * **Respuesta (201):**
- * @code{.json}
- * { "status": "success", "id": 1 }
- * @endcode
- * **Listar**
- * - **Qué hace:** Devuelve todos los usuarios registrados.  
- * - **Para qué sirve:**  Exponer información de usuarios para consumo interno del sistema, facilitando autenticación, personalización y control de permisos. 
- * - **Cómo funciona:** SELECT en tabla `usuarios`.
+ * - **Qué hace:** Crea un nuevo usuario en la base de datos y envía por correo un código de verificación temporal.
+ * - **Para qué sirve:** Permite que los nuevos usuarios se registren en el sistema y confirmen su cuenta mediante un código recibido en su correo electrónico.
+ * - **Cómo funciona:**
+ *   1. Recibe los datos del usuario (nombre, correo, usuario, contraseña, edad).
+ *   2. Verifica si el correo o usuario ya existen.
+ *   3. Genera un código aleatorio de 6 dígitos y una fecha de expiración (10 minutos).
+ *   4. Inserta el nuevo usuario en la tabla `usuarios` y crea su registro en `preferencias_culinarias`.
+ *   5. Envía el código por correo electrónico usando la función `enviarCodigo()`.
+ *   6. Si algo falla (envío o inserción), se realiza **rollback** de la transacción.
  *
- * **Endpoint:** <code>/usuarios.php?action=list</code> (GET)<br>
- * **Respuesta (200):**
- * @code{.json}
- * [ { "id": 1, "nombre": "Juan" } ]
- * @endcode
- *
-
-
-
- * <div style="padding:8px; border-radius:6px; background:#e6fffa; color:#065f46;">
- * <b>Login</b>
- * </div>
- * - **Qué hace:** Autentica a un usuario contra el sistema.  
- * - **Para qué sirve:** Permite validar credenciales y obtener un token de sesión que será usado en llamadas posteriores.  
- * - **Cómo funciona:** El backend recibe usuario + contraseña, consulta la base de datos, y si coinciden devuelve un token (JWT o PHP session ID).
- *
- * **Endpoint:** <code>/auth.php?action=login</code><br>
+ * **Endpoint:** <code>/auth/register.php</code><br>
  * **Método:** POST<br>
- * **Ejemplo respuesta (200):**
- * @code{.json}
- * { "status": "success", "token": "eyJ...jwt..." }
+ *
+ * **Cabeceras requeridas:**
+ * @code
+ * Access-Control-Allow-Origin: *
+ * Content-Type: application/json
  * @endcode
  *
- * ---
- *
- * <div style="padding:8px; border-radius:6px; background:#fff7ed; color:#92400e;">
- * <b>Logout</b>
- * </div>
- * - **Qué hace:** Cierra la sesión activa eliminando el token.  
- * - **Para qué sirve:** Garantiza que el usuario ya no pueda usar su sesión y deba volver a loguearse.  
- * - **Cómo funciona:** El backend destruye la sesión o invalida el token, luego redirige al login.
- *
- * **Endpoint:** <code>/auth.php?action=logout</code><br>
- * **Método:** GET<br>
- * **Respuesta (200):**
+ * **Cuerpo esperado (JSON):**
  * @code{.json}
- * { "status": "success", "message": "Sesión cerrada" }
+ * {
+ *   "nombre_us": "Juan Pérez",
+ *   "correo": "juan@example.com",
+ *   "pass": "12345678",
+ *   "edad": 25,
+ *   "usuario": "juanp"
+ * }
  * @endcode
+ *
+ * **Ejemplo respuesta exitosa (200):**
+ * @code{.json}
+ * {
+ *   "success": true,
+ *   "message": "Registro exitoso. Se envió un código de verificación."
+ * }
+ * @endcode
+ *
+ * **Ejemplo respuesta por error (409):**
+ * @code{.json}
+ * {
+ *   "success": false,
+ *   "message": "El correo o usuario ya está registrado"
+ * }
+ * @endcode
+ *
+ * **Errores comunes:**
+ * - <b>Faltan datos</b>: cuando algún campo obligatorio está vacío.
+ * - <b>Correo duplicado</b>: ya existe un registro con el mismo correo o usuario.
+ * - <b>Error al enviar correo</b>: no se pudo enviar el código, se deshace el registro.
+ *
+ * **Detalles técnicos:**
+ * - El código de verificación tiene una validez de **10 minutos**.
+ * - La contraseña se almacena con **password_hash()**.
+ * - Si falla el correo, se usa **rollback()** para revertir el registro.
+ * - Inserta también una fila vacía en `preferencias_culinarias` vinculada al nuevo `usuario_id`.
+ *
+ * **Dependencias:**
+ * - `db_config.php`
+ * - `../dashboard/mail.php`
  *
  * -------------------------------------------------------------------------------------------
- * @section crud CRUD Genérico (helpers_crud.php)
+ * @section reenviar Reenviar Código de Verificación (reenviar_codigo.php)
  *
- * <div style="background:#eef2ff; padding:8px; border-radius:6px; color:#3730a3;">
- * <b>Crear (create)</b>
- * </div>
- * - **Qué hace:** Inserta un nuevo registro en la tabla indicada.  
- * - **Para qué sirve:** Agregar nuevos elementos dinámicamente (ingredientes, recetas, usuarios, etc.).  
- * - **Cómo funciona:** Recibe el nombre de la tabla y un JSON con los campos → construye un INSERT → retorna el ID generado.
+ * - **Qué hace:** Genera un nuevo código de 6 dígitos y lo envía por correo electrónico
+ *   a un usuario que aún no ha completado su registro.
  *
- * **Endpoint:** <code>/helpers_crud.php?action=create</code> (POST)<br>
- * **Respuesta (201):**
- * @code{.json}
- * { "status": "success", "id": 12 }
- * @endcode
+ * - **Cuándo se usa:** Cuando el usuario ha ingresado su correo, pero no ha confirmado
+ *   su registro porque no recibió o su código anterior expiró.
  *
- * ---
+ * - **Cómo funciona:**
+ *   1. Recibe el correo electrónico desde el frontend.
+ *   2. Genera un nuevo código aleatorio y establece una nueva fecha de expiración (+10 minutos).
+ *   3. Actualiza los campos `codigo_verificacion` y `expiracion_codigo` en la tabla `usuarios`.
+ *   4. Envía el nuevo código al correo mediante `enviarCodigo()`.
  *
- * <div style="background:#f0fdf4; padding:8px; border-radius:6px; color:#065f46;">
- * <b>Leer (read)</b>
- * </div>
- * - **Qué hace:** Consulta registros de la tabla especificada.  
- * - **Para qué sirve:** Obtener información filtrada o listados completos.  
- * - **Cómo funciona:** Recibe parámetros de tabla y filtros → construye un SELECT → devuelve array JSON de resultados.
+ * - **Método:** POST
  *
- * **Endpoint:** <code>/helpers_crud.php?action=read</code> (GET)<br>
- * **Respuesta (200):**
- * @code{.json}
- * [ { "id": 1, "campo": "valor" } ]
- * @endcode
+ * - **Entrada esperada (JSON):**
+ *   ```json
+ *   {
+ *     "email": "usuario@ejemplo.com"
+ *   }
+ *   ```
  *
- * ---
+ * - **Respuesta exitosa:**
+ *   ```json
+ *   {
+ *     "success": true,
+ *     "message": "Código reenviado"
+ *   }
+ *   ```
  *
- * <div style="background:#fff7ed; padding:8px; border-radius:6px; color:#92400e;">
- * <b>Actualizar (update)</b>
- * </div>
- * - **Qué hace:** Modifica un registro existente según su ID.  
- * - **Para qué sirve:** Editar información ya almacenada.  
- * - **Cómo funciona:** Recibe el ID + JSON de campos a cambiar → ejecuta UPDATE en BD → confirma éxito.
- *
- * **Endpoint:** <code>/helpers_crud.php?action=update</code> (POST)<br>
- * **Respuesta (200):**
- * @code{.json}
- * { "status": "success" }
- * @endcode
- *
- * ---
- *
- * <div style="background:#fff1f2; padding:8px; border-radius:6px; color:#9f1239;">
- * <b>Eliminar (delete)</b>
- * </div>
- * - **Qué hace:** Borra un registro de la tabla especificada.  
- * - **Para qué sirve:** Eliminar datos innecesarios o caducados.  
- * - **Cómo funciona:** Recibe el ID → ejecuta DELETE → confirma éxito.
- *
- * **Endpoint:** <code>/helpers_crud.php?action=delete</code> (POST)<br>
- * **Respuesta (200):**
- * @code{.json}
- * { "status": "success" }
- * @endcode
+ * - **Respuesta de error:**
+ *   ```json
+ *   {
+ *     "success": false,
+ *     "message": "Error al reenviar el código"
+ *   }
+ *   ```
  *
  * -------------------------------------------------------------------------------------------
- * @section ingredientes Ingredientes (ingredientes.php)
+ * @section verificar Verificar Código (verificar.php)
  *
- * **Listar**
- * - **Qué hace:** Devuelve todos los ingredientes registrados.  
- * - **Para qué sirve:** Mostrar inventario disponible al usuario o IA.  
- * - **Cómo funciona:** Ejecuta un SELECT en la tabla `ingredientes`.
+ * - **Qué hace:** Valida que el código ingresado sea correcto y no haya expirado.
+ *   Si la verificación es exitosa, marca la cuenta como confirmada.
  *
- * **Endpoint:** <code>/ingredientes.php?action=list</code> (GET)<br>
- * **Respuesta (200):**
- * @code{.json}
- * [ { "id": 1, "nombre": "Arroz" } ]
- * @endcode
+ * - **Cuándo se usa:** En el paso final del registro, cuando el usuario introduce
+ *   el código que recibió por correo electrónico.
  *
- * ---
+ * - **Método:** POST
  *
- * **Agregar**
- * - **Qué hace:** Inserta un nuevo ingrediente.  
- * - **Para qué sirve:** Mantener actualizado el inventario.  
- * - **Cómo funciona:** Recibe nombre y cantidad → INSERT en tabla → retorna ID.
+ * - **Entrada esperada (JSON):**
+ *   ```json
+ *   {
+ *     "email": "usuario@ejemplo.com",
+ *     "codigo": "123456"
+ *   }
+ *   ```
  *
- * **Endpoint:** <code>/ingredientes.php?action=add</code> (POST)<br>
- * **Respuesta (201):**
- * @code{.json}
- * { "status": "success", "id": 1 }
- * @endcode
- *
- * -------------------------------------------------------------------------------------------
- * @section recetas Recetas (recetas.php)
- *
- * **Listar**
- * - **Qué hace:** Devuelve todas las recetas creadas.  
- * - **Para qué sirve:** Permite a usuarios y la IA sugerir preparaciones.  
- * - **Cómo funciona:** SELECT en tabla `recetas` y devuelve JSON.
- *
- * **Endpoint:** <code>/recetas.php?action=list</code> (GET)<br>
- * **Respuesta (200):**
- * @code{.json}
- * [ { "id": 1, "nombre": "Sopa" } ]
- * @endcode
- *
- * ---
- *
- * **Agregar**
- * - **Qué hace:** Registra una nueva receta con sus ingredientes.  
- * - **Para qué sirve:** Ampliar el catálogo de recetas disponibles.  
- * - **Cómo funciona:** Recibe nombre + array de ingredientes → INSERT en `recetas` y `recetas_ingredientes`.
- *
- * **Endpoint:** <code>/recetas.php?action=add</code> (POST)<br>
- * **Respuesta (201):**
- * @code{.json}
- * { "status": "success", "id": 1 }
- * @endcode
+ * - **Respuestas posibles:**
+ *   ✅ Éxito:
+ *   ```json
+ *   { "success": true, "message": "Cuenta verificada exitosamente" }
+ *   ```
+ *   ❌ Código incorrecto:
+ *   ```json
+ *   { "success": false, "message": "Código incorrecto" }
+ *   ```
+ *   ⏰ Código expirado:
+ *   ```json
+ *   { "success": false, "message": "El código ha expirado" }
+ *   ```
+ *   ⚠️ Faltan datos:
+ *   ```json
+ *   { "success": false, "message": "Faltan datos" }
+ *   ```
  *
  * -------------------------------------------------------------------------------------------
-
- * ---
+ * @section login Inicio de Sesión (login.php)
  *
+ * - **Qué hace:** Valida credenciales, verifica si la cuenta fue confirmada
+ *   y devuelve datos básicos del usuario si todo es correcto.
+ *
+ * - **Método:** POST
+ *
+ * - **Entrada esperada (JSON):**
+ *   ```json
+ *   { "email": "usuario@ejemplo.com", "password": "contraseña123" }
+ *   ```
+ *
+ * - **Respuestas:**
+ *   ✅ Éxito:
+ *   ```json
+ *   {
+ *     "success": true,
+ *     "message": "Inicio de sesión exitoso",
+ *     "user": { "id": 1, "nombre": "Juan", "correo": "juan@ejemplo.com" }
+ *   }
+ *   ```
+ *   ⚠️ No verificada:
+ *   ```json
+ *   { "success": false, "message": "Tu cuenta aún no ha sido verificada." }
+ *   ```
+ *   ❌ Contraseña incorrecta:
+ *   ```json
+ *   { "success": false, "message": "Contraseña incorrecta" }
+ *   ```
  *
  * -------------------------------------------------------------------------------------------
- * @section webhook Webhook (dashboard/webhook.php)
+ * @section preferencias Preferencias del Usuario (guardar_preferencia.php)
  *
- * - **Qué hace:** Procesa notificaciones enviadas automáticamente por MercadoPago.  
- * - **Para qué sirve:** Mantener sincronizado el estado de los pagos (aprobado, rechazado, pendiente).  
- * - **Cómo funciona:** El servicio de pagos llama este endpoint → el backend valida datos y actualiza tablas de pagos/usuarios.
+ * - **Qué hace:** Registra o actualiza las preferencias alimenticias, datos físicos y alergias de un usuario existente.
+ * - **Cómo funciona:** Recibe correo, sabores, alergias, peso, altura y fecha de nacimiento.  
+ *   Verifica el usuario, recalcula edad si aplica, crea o actualiza preferencias.
  *
- * **Endpoint:** <code>/dashboard/webhook.php</code> (POST)<br>
- * **Respuesta (200):**
- * @code{.json}
+ * **Endpoint:** `/guardar_preferencia.php`  
+ * **Método:** POST  
+ *
+ * **Entrada esperada:**
+ * ```json
+ * {
+ *   "correo": "juan@example.com",
+ *   "sabores_preferidos": "Dulce, Picante",
+ *   "alergias": "Mariscos",
+ *   "peso": 68.2,
+ *   "altura": 1.70,
+ *   "fecha_nacimiento": "2002-04-15"
+ * }
+ * ```
+ *
+ * **Ejemplo éxito:**
+ * ```json
+ * { "success": true, "message": "Preferencias guardadas correctamente" }
+ * ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section obtener Obtener Usuario (obtener_usuario.php)
+ *
+ * - **Qué hace:** Devuelve la información general y preferencias básicas del usuario según su correo.
+ *
+ * - **Método:** POST  
+ * - **Entrada:**
+ * ```json
+ * { "correo": "usuario@ejemplo.com" }
+ * ```
+ * - **Respuesta éxito:**
+ * ```json
+ * {
+ *   "success": true,
+ *   "user": {
+ *     "id": 1,
+ *     "nombre": "Juan",
+ *     "correo": "juan@ejemplo.com",
+ *     "edad": 25,
+ *     "peso": 70.5,
+ *     "altura": 1.75
+ *   }
+ * }
+ * ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section actualizar Actualizar Usuario (actualizar_usuario.php)
+ *
+ * - **Qué hace:** Inserta o actualiza la información del usuario (gustos, alergias, peso y altura).
+ * - **Uso típico:** En perfil o después del registro.
+ *
+ * **Método:** POST  
+ * **Entrada:**
+ * ```json
+ * {
+ *   "correo": "usuario@ejemplo.com",
+ *   "gustos": ["dulce"],
+ *   "alergias": ["gluten"],
+ *   "peso": 70.5,
+ *   "altura": "175"
+ * }
+ * ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section webhook Webhook de MercadoPago (dashboard/webhook.php)
+ *
+ * - **Qué hace:** Procesa notificaciones automáticas de MercadoPago.  
+ * - **Para qué sirve:** Mantener actualizado el estado de pagos (aprobado, rechazado, pendiente).  
+ * - **Cómo funciona:** MercadoPago llama este endpoint, se valida y actualizan tablas de pagos/usuarios.
+ *
+ * **Endpoint:** `/dashboard/webhook.php` (POST)  
+ * **Respuesta:**  
+ * ```json
  * { "status": "success", "message": "Pago procesado" }
- * @endcode
+ * ```
  *
  * -------------------------------------------------------------------------------------------
- * @section ia IA / Completions (scripts.js)
+ * @section ia Inteligencia Artificial (scripts.js)
  *
- * - **Qué hace:** Envía un prompt/conversación y recibe texto generado por la IA.  
- * - **Para qué sirve:** Responder dudas de usuario o proponer recetas automáticas.  
- * - **Cómo funciona:** Recibe `messages` + config → reenvía al servidor IA (LMStudio u OpenAI-like) → retorna respuesta textual.
- *
- * **Endpoint:** <code>https://nicoleia.servehttp.com:90/v1/chat/completions</code> (POST)<br>
- * **Respuesta (200):**
- * @code{.json}
+ * - **Qué hace:** Envía un prompt y recibe respuesta generada por IA (LMStudio).  
+ * - **Para qué sirve:** Generar recetas, responder dudas o conversar.  
+ * - **Endpoint:** `https://nicoleia.servehttp.com:90/v1/chat/completions` (POST)
+ * **Respuesta ejemplo:**
+ * ```json
  * {
  *   "choices": [
  *     { "message": { "content": "Aquí tienes una receta rápida..." } }
  *   ]
  * }
- * @endcode
+ * ```
  */
 ?>

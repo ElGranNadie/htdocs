@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['—_20documento_20visual_20y_20técnico_0',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]]
+  ['⚙️_20tecnologías_20utilizadas_0',['⚙️ Tecnologías Utilizadas',['../index.html#autotoc_md47',1,'']]]
 ];

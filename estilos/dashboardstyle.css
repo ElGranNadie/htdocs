@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--imagen-fondo) no-repeat center center fixed;
   background-size: cover;
   box-sizing: border-box;
@@ -50,7 +50,7 @@ nav ul {
   background: none;
 }
 
-.nav-item a {
+.nav-item a, .nav-item button {
   display: block;
   padding: 5px 18px;
   border-style: solid;

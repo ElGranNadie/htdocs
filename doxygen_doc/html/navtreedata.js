@@ -27,12 +27,15 @@ var NAVTREE =
   [ "N.I.C.O.L.E", "index.html", [
     [ "Proyecto N.I.C.O.L.E Versión Web", "index.html", "index" ],
     [ "Endpoints N.I.C.O.L.E — Documento visual y técnico", "endpoints.html", [
-      [ "Autenticación (auth.php)", "endpoints.html#auth", null ],
-      [ "CRUD Genérico (helpers_crud.php)", "endpoints.html#crud", null ],
-      [ "Ingredientes (ingredientes.php)", "endpoints.html#ingredientes", null ],
-      [ "Recetas (recetas.php)", "endpoints.html#recetas", null ],
-      [ "Webhook (dashboard/webhook.php)", "endpoints.html#webhook", null ],
-      [ "IA / Completions (scripts.js)", "endpoints.html#ia", null ]
+      [ "Registro de Usuario (register.php)", "endpoints.html#registro", null ],
+      [ "Reenviar Código de Verificación (reenviar_codigo.php)", "endpoints.html#reenviar", null ],
+      [ "Verificar Código (verificar.php)", "endpoints.html#verificar", null ],
+      [ "Inicio de Sesión (login.php)", "endpoints.html#login", null ],
+      [ "Preferencias del Usuario (guardar_preferencia.php)", "endpoints.html#preferencias", null ],
+      [ "Obtener Usuario (obtener_usuario.php)", "endpoints.html#obtener", null ],
+      [ "Actualizar Usuario (actualizar_usuario.php)", "endpoints.html#actualizar", null ],
+      [ "Webhook de MercadoPago (dashboard/webhook.php)", "endpoints.html#webhook", null ],
+      [ "Inteligencia Artificial (scripts.js)", "endpoints.html#ia", null ]
     ] ],
     [ "Espacios de nombres", "namespaces.html", [
       [ "Lista de espacios de nombres", "namespaces.html", "namespaces_dup" ],
@@ -65,7 +68,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_nicole_8php.html",
-"varset_8php.html#abd96b8c4b695cfa001b2720004d66fc5"
+"varset_8php.html#a77e900e5988ce807b2e4c16f23e7c55d"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';

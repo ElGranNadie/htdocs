@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['⚙️_20tecnologías_20utilizadas_0',['⚙️ Tecnologías Utilizadas',['../index.html#autotoc_md52',1,'']]]
+  ['🎯_20objetivo_20del_20proyecto_0',['🎯 Objetivo del Proyecto',['../index.html#autotoc_md45',1,'']]]
 ];

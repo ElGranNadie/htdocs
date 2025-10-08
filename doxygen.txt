@@ -48,7 +48,7 @@ PROJECT_NAME           = "N.I.C.O.L.E"
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 20250923
+PROJECT_NUMBER         = 20251008
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewers a
@@ -307,7 +307,6 @@ OPTIMIZE_OUTPUT_FOR_C  = NO
 # qualified scopes will look different, etc.
 # The default value is: NO.
 
-OPTIMIZE_OUTPUT_FOR_PHP = YES
 
 OPTIMIZE_OUTPUT_JAVA   = NO
 
@@ -1429,7 +1428,7 @@ HTML_HEADER            =
 # that Doxygen normally uses.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_FOOTER            =
+HTML_FOOTER            =  
 
 # The HTML_STYLESHEET tag can be used to specify a user-defined cascading style
 # sheet that is used by each HTML page. It can be used to fine-tune the look of

@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['recetas_20php_0',['Recetas (recetas.php)',['../endpoints.html#recetas',1,'']]],
-  ['recetas_20recetas_20php_1',['Recetas (recetas.php)',['../endpoints.html#recetas',1,'']]],
-  ['redirección_20en_20caso_20de_20éxito_2',['Redirección en caso de éxito',['../procesar__registro_8php.html#pasoFinal',1,'']]],
-  ['redirección_20si_20no_20es_20post_3',['Redirección si no es POST',['../procesar__registro_8php.html#paso10',1,'']]],
-  ['redirigir_20si_20hay_20errores_4',['Redirigir si hay errores',['../verificar_8php.html#paso6',1,'']]],
-  ['redirigir_20si_20no_20es_20post_5',['Redirigir si no es POST',['../verificar_8php.html#paso7',1,'']]],
-  ['resumen_20de_20flujo_6',['Resumen de flujo',['../C:/Users/alex/Downloads/cloned/htdocs/dashboard/verificar.php#resumen',1,'']]],
-  ['roles_7',['Gestión de Sesiones y Roles',['../index.html#autotoc_md64',1,'']]]
+  ['scripts_20js_0',['Inteligencia Artificial (scripts.js)',['../endpoints.html#ia',1,'']]],
+  ['seguridad_1',['Consideraciones de seguridad',['../login_8php.html#seguridad',1,'']]],
+  ['sesión_2',['Verificar contraseña y guardar sesión',['../verificar_8php.html#paso5',1,'']]],
+  ['sesión_20login_20php_3',['Inicio de Sesión (login.php)',['../endpoints.html#login',1,'']]],
+  ['sesiones_20y_20roles_4',['Gestión de Sesiones y Roles',['../index.html#autotoc_md59',1,'']]],
+  ['si_20hay_20errores_5',['Redirigir si hay errores',['../verificar_8php.html#paso6',1,'']]],
+  ['si_20no_20es_20post_6',['si no es POST',['../procesar__registro_8php.html#paso10',1,'Redirección si no es POST'],['../verificar_8php.html#paso7',1,'Redirigir si no es POST']]]
 ];

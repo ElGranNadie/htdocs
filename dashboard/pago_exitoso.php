@@ -108,7 +108,6 @@ if ($status === "approved" && $reference) {
     <title>Resultado del Pago</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f4f8fb;
             display: flex;
             justify-content: center;

@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"varset_8php.html#a77e900e5988ce807b2e4c16f23e7c55d":[4,0,5,0,6],
+"varset_8php.html#a9fd34e8089328ef34318e5ecd68120f9":[4,0,5,0,7],
+"varset_8php.html#aa3683065aa7f88a0a1fd53f857083d4b":[4,0,5,0,3],
 "varset_8php.html#abd96b8c4b695cfa001b2720004d66fc5":[4,0,5,0,10],
 "varset_8php.html#ac6975b75ba39e5579653523608ab1d9a":[4,0,5,0,8],
 "varset_8php.html#afc31993e855f9631572adfedcfe6f34b":[4,0,5,0,5],
@@ -7,6 +10,7 @@ var NAVTREEINDEX1 =
 "varset_8php_source.html":[4,0,5,0],
 "verificar_8php.html":[4,0,0,32],
 "verificar_8php.html#a6ab47df61c600526b34e7eed19d65d10":[4,0,0,32,0],
+"verificar_8php.html#a757ee748f7d55915e45fe8802c070509":[4,0,0,32,2],
 "verificar_8php.html#a82cd33ca97ff99f2fcc5e9c81d65251b":[4,0,0,32,1],
 "verificar_8php_source.html":[4,0,0,32],
 "webhook_8php.html":[4,0,0,33],

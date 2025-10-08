@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['scripts_20js_0',['IA / Completions (scripts.js)',['../endpoints.html#ia',1,'']]],
-  ['seguridad_1',['Consideraciones de seguridad',['../login_8php.html#seguridad',1,'']]],
-  ['sesión_2',['Verificar contraseña y guardar sesión',['../verificar_8php.html#paso5',1,'']]],
-  ['sesiones_20y_20roles_3',['Gestión de Sesiones y Roles',['../index.html#autotoc_md64',1,'']]],
-  ['si_20hay_20errores_4',['Redirigir si hay errores',['../verificar_8php.html#paso6',1,'']]],
-  ['si_20no_20es_20post_5',['si no es POST',['../procesar__registro_8php.html#paso10',1,'Redirección si no es POST'],['../verificar_8php.html#paso7',1,'Redirigir si no es POST']]]
+  ['técnico_0',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
+  ['tecnologías_20utilizadas_1',['⚙️ Tecnologías Utilizadas',['../index.html#autotoc_md47',1,'']]]
 ];

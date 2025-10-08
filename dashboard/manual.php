@@ -34,6 +34,9 @@
     .spc4 {
       padding-left: 4rem;
     }
+    .spc5 {
+      padding-left: 5rem;
+    }
   </style>
 </head>
 <body>
@@ -172,8 +175,9 @@
             <p class="spc4">5Ec7. Puedes registrar tu altura actual, lo cual será útil para saber tu estado de salud.</p>
             <p class="spc4">5Ec8. Si te encuentras indeciso sobre tu registro, o si simplemente quieres volver al menú principal, podrás volver presionando el botón de “Regresar”</p>
             <p class="spc4">5Ec9. Con el botón de “Siguiente” podrás seguir a la página de validación de correo.</p>
-            <p>SE DEBE PONER UNA NUEVA INFERFAZ PARA PONER EL CODIGO DE VERIFICACION JUSTO DESPUES DE PREFERENCIAS</p>
-            <p>En el proceso de registro de usuario el sistema debe de contar con una interfaz que ira despues del apartado de preferencias, en la cual aparecera un input en el cual el usuario podra el codigo de 6 digitos que se le va a enviar al correo que previamente haya puesto en el proceso de registro, un boton para reviar el codigo y el boton de finalizar que reenviara a el inicio de sesion.</p>
+            <img class="std" src="../imagenes/21.png" alt="Imagen 21">
+            <p class="spc5">5Ec9A. En esta sección debes ingresar el código que llego a tu correo electrónico, la validación nos permitirá identificarte y mantener un registro de tus datos y enviarte notificaciones de ser necesario. Este código tiene diez minutos de expiración y tiene seis dígitos, por favor no lo compartas con nadie.</p>
+            <p class="spc1">5. El botón de verificar te enviara directamente al inicio de sesión (por eso el 5) así podrás iniciar sesión de vuelta con tu nueva cuenta.</p>
           </div>
         </section>
       </div>

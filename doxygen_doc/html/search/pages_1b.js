@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['👥_20equipo_20desarrollador_0',['👥 Equipo Desarrollador',['../index.html#autotoc_md69',1,'']]]
+  ['📁_20estructura_20del_20proyecto_0',['📁 Estructura del Proyecto',['../index.html#autotoc_md49',1,'']]]
 ];
