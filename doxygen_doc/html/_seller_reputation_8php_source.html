@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Resources/User/SellerReputation.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_seller_reputation_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SellerReputation.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_seller_reputation_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>MercadoPago\Resources\User;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use MercadoPago\Serialization\Mapper;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html">SellerReputation</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    use Mapper;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a97a05ab2d621aa29a0bb513fc4922b1b">   14</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a97a05ab2d621aa29a0bb513fc4922b1b">$level_id</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#ab5b2e08dc639a460e64c1e74cc913011">   17</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#ab5b2e08dc639a460e64c1e74cc913011">$power_seller_status</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#ad3c58f11755df813d879973852c2ab62">   20</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#ad3c58f11755df813d879973852c2ab62">$transactions</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a26c1209b0b50402b5212c0b8b3d5d24f">   23</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a26c1209b0b50402b5212c0b8b3d5d24f">$metrics</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a88acdd922db1014e118d27429cba2dff">   25</a></span>    <span class="keyword">public</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a88acdd922db1014e118d27429cba2dff">$map</a> = [</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="stringliteral">&quot;transactions&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\User\Transactions&quot;</span>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="stringliteral">&quot;metrics&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\User\Metrics&quot;</span>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    ];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a9beee244e77a4310f947d47e48691d08">   33</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a9beee244e77a4310f947d47e48691d08">getMap</a>(): array</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a88acdd922db1014e118d27429cba2dff">$this-&gt;map</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html">MercadoPago\Resources\User\SellerReputation</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">SellerReputation.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation_html_a26c1209b0b50402b5212c0b8b3d5d24f"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a26c1209b0b50402b5212c0b8b3d5d24f">MercadoPago\Resources\User\SellerReputation\$metrics</a></div><div class="ttdeci">array object null $metrics</div><div class="ttdef"><b>Definition</b> <a href="#l00023">SellerReputation.php:23</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation_html_a88acdd922db1014e118d27429cba2dff"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a88acdd922db1014e118d27429cba2dff">MercadoPago\Resources\User\SellerReputation\$map</a></div><div class="ttdeci">$map</div><div class="ttdef"><b>Definition</b> <a href="#l00025">SellerReputation.php:25</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation_html_a97a05ab2d621aa29a0bb513fc4922b1b"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a97a05ab2d621aa29a0bb513fc4922b1b">MercadoPago\Resources\User\SellerReputation\$level_id</a></div><div class="ttdeci">string $level_id</div><div class="ttdef"><b>Definition</b> <a href="#l00014">SellerReputation.php:14</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation_html_a9beee244e77a4310f947d47e48691d08"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#a9beee244e77a4310f947d47e48691d08">MercadoPago\Resources\User\SellerReputation\getMap</a></div><div class="ttdeci">getMap()</div><div class="ttdef"><b>Definition</b> <a href="#l00033">SellerReputation.php:33</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation_html_ab5b2e08dc639a460e64c1e74cc913011"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#ab5b2e08dc639a460e64c1e74cc913011">MercadoPago\Resources\User\SellerReputation\$power_seller_status</a></div><div class="ttdeci">string $power_seller_status</div><div class="ttdef"><b>Definition</b> <a href="#l00017">SellerReputation.php:17</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation_html_ad3c58f11755df813d879973852c2ab62"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html#ad3c58f11755df813d879973852c2ab62">MercadoPago\Resources\User\SellerReputation\$transactions</a></div><div class="ttdeci">array object null $transactions</div><div class="ttdef"><b>Definition</b> <a href="#l00020">SellerReputation.php:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_81b3df120731b49823a3878898d62a59.html">Resources</a></li><li class="navelem"><a href="dir_8a6b2eb5560f782bc4768121fcb79af9.html">User</a></li><li class="navelem"><a href="_seller_reputation_8php.html">SellerReputation.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

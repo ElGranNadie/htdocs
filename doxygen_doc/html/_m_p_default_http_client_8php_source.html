@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Net/MPDefaultHttpClient.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_m_p_default_http_client_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MPDefaultHttpClient.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_m_p_default_http_client_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>MercadoPago\Net;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use Exception;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>use MercadoPago\Exceptions\MPApiException;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>use MercadoPago\MercadoPagoConfig;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a> <span class="keyword">implements</span> <a class="code hl_interface" href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MPHttpClient</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">private</span> <span class="keyword">const</span> ONE_MILLISECOND = 1000;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">private</span> <a class="code hl_interface" href="interface_mercado_pago_1_1_net_1_1_http_request.html">HttpRequest</a> $httpRequest;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html#a72086ca704f271425b5f5fc5e13b50d8">   20</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html#a72086ca704f271425b5f5fc5e13b50d8">__construct</a>(?<a class="code hl_interface" href="interface_mercado_pago_1_1_net_1_1_http_request.html">HttpRequest</a> $httpRequest = <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        $this-&gt;httpRequest = $httpRequest ?? <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_curl_request.html">CurlRequest</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html#a8ac34ee2987799b2fd485ef996a56b7a">   32</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html#a8ac34ee2987799b2fd485ef996a56b7a">send</a>(<a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_request.html">MPRequest</a> $request): <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_response.html">MPResponse</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        $max_retries = <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a525aaf585e49b160a693ec6ba18e49ca">MercadoPagoConfig::getMaxRetries</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">for</span> ($retry_count = 0; $retry_count &lt;= $max_retries; $retry_count++) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keywordflow">return</span> $this-&gt;makeRequest($request);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            } <span class="keywordflow">catch</span> (<a class="code hl_class" href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html">MPApiException</a> $e) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                $status_code = $e-&gt;<a class="code hl_function" href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html#a8df0b34d461ad0a57b523e2ec0069492">getApiResponse</a>()-&gt;getStatusCode();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">if</span> ($this-&gt;isServerError($status_code) &amp;&amp; !$this-&gt;isLastRetry($retry_count)) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    $this-&gt;doExponentialBackoff($retry_count);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    <span class="keywordflow">throw</span> $e;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            } <span class="keywordflow">catch</span> (Exception $e) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordflow">if</span> (!$this-&gt;isLastRetry($retry_count)) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    $this-&gt;doExponentialBackoff($retry_count);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    <span class="keywordflow">throw</span> $e;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Error processing request. Please try again.&quot;</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">private</span> <span class="keyword">function</span> makeRequest(<a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_request.html">MPRequest</a> $request): <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_response.html">MPResponse</a></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        $request_options = $this-&gt;createHttpRequestOptions($request);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        $this-&gt;httpRequest-&gt;setOptionArray($request_options);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        $api_result = $this-&gt;httpRequest-&gt;execute();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        $status_code = $this-&gt;httpRequest-&gt;getInfo(CURLINFO_HTTP_CODE);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        $content = json_decode($api_result, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        $mp_response = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_response.html">MPResponse</a>($status_code, $content);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> ($api_result === <span class="keyword">false</span>) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            $error_message = $this-&gt;httpRequest-&gt;error();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            $this-&gt;httpRequest-&gt;close();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception($error_message);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> ($this-&gt;isApiError($status_code)) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            $this-&gt;httpRequest-&gt;close();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> MPApiException(<span class="stringliteral">&quot;Api error. Check response for details&quot;</span>, $mp_response);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        $this-&gt;httpRequest-&gt;close();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> $mp_response;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">private</span> <span class="keyword">function</span> doExponentialBackoff(<span class="keywordtype">int</span> $retry_count): void</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        $exponential_backoff_time = pow(2, $retry_count);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        $retry_delay_microseconds = $exponential_backoff_time * self::ONE_MILLISECOND * <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a5ce712807cecdf4dd2ca0f7df0f0c1bd">MercadoPagoConfig::getRetryDelay</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        usleep($retry_delay_microseconds);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">private</span> <span class="keyword">function</span> createHttpRequestOptions(MPRequest $request): array</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        $connection_timeout = $request-&gt;getConnectionTimeout() ?: <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a5ca9a67827739e00ed0596a2f63306ce">MercadoPagoConfig::getConnectionTimeout</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_variable" href="test__webhook_8php.html#a011800c63ece4cbbfa77136a20607023">$options</a> = array(</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            CURLOPT_URL =&gt; <a class="code hl_variable" href="class_mercado_pago_1_1_mercado_pago_config.html#abb617efed898a46d15b389272d640693">MercadoPagoConfig::$BASE_URL</a> . $request-&gt;getUri(),</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            CURLOPT_CUSTOMREQUEST =&gt; $request-&gt;getMethod(),</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            CURLOPT_HTTPHEADER =&gt; $request-&gt;getHeaders(),</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            CURLOPT_POSTFIELDS =&gt; $request-&gt;getPayload(),</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            CURLOPT_CONNECTTIMEOUT_MS =&gt; $connection_timeout,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            CURLOPT_MAXCONNECTS =&gt; <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#abd8965ce74d4fa80855ce214d320b4a1">MercadoPagoConfig::getMaxConnections</a>(),</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            CURLOPT_RETURNTRANSFER =&gt; <span class="keyword">true</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        );</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a644f1747dc1b8f814ff0d96ee8299d16">MercadoPagoConfig::getRuntimeEnviroment</a>() === <a class="code hl_variable" href="class_mercado_pago_1_1_mercado_pago_config.html#aef28b52ccbef3053dc55093817d96350">MercadoPagoConfig::LOCAL</a>) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <a class="code hl_variable" href="test__webhook_8php.html#a011800c63ece4cbbfa77136a20607023">$options</a> += [CURLOPT_SSL_VERIFYHOST =&gt; <span class="keyword">false</span>];</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <a class="code hl_variable" href="test__webhook_8php.html#a011800c63ece4cbbfa77136a20607023">$options</a> += [CURLOPT_SSL_VERIFYPEER =&gt; <span class="keyword">false</span>];</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="test__webhook_8php.html#a011800c63ece4cbbfa77136a20607023">$options</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">private</span> <span class="keyword">function</span> isServerError(<span class="keywordtype">int</span> $status_code): bool</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> $status_code &gt;= 500;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">private</span> <span class="keyword">function</span> isApiError(<span class="keywordtype">int</span> $status_code): bool</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> $status_code &lt; 200 || $status_code &gt;= 300;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">private</span> <span class="keyword">function</span> isLastRetry(<span class="keywordtype">int</span> $retry_count): bool</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">return</span> $retry_count &gt;= <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a525aaf585e49b160a693ec6ba18e49ca">MercadoPagoConfig::getMaxRetries</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_exceptions_1_1_m_p_api_exception_html"><div class="ttname"><a href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html">MercadoPago\Exceptions\MPApiException</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_api_exception_8php_source.html#l00009">MPApiException.php:10</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_exceptions_1_1_m_p_api_exception_html_a8df0b34d461ad0a57b523e2ec0069492"><div class="ttname"><a href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html#a8df0b34d461ad0a57b523e2ec0069492">MercadoPago\Exceptions\MPApiException\getApiResponse</a></div><div class="ttdeci">getApiResponse()</div><div class="ttdef"><b>Definition</b> <a href="_m_p_api_exception_8php_source.html#l00027">MPApiException.php:27</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a525aaf585e49b160a693ec6ba18e49ca"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a525aaf585e49b160a693ec6ba18e49ca">MercadoPago\MercadoPagoConfig\getMaxRetries</a></div><div class="ttdeci">static getMaxRetries()</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00158">MercadoPagoConfig.php:158</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a5ca9a67827739e00ed0596a2f63306ce"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a5ca9a67827739e00ed0596a2f63306ce">MercadoPago\MercadoPagoConfig\getConnectionTimeout</a></div><div class="ttdeci">static getConnectionTimeout()</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00215">MercadoPagoConfig.php:215</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a5ce712807cecdf4dd2ca0f7df0f0c1bd"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a5ce712807cecdf4dd2ca0f7df0f0c1bd">MercadoPago\MercadoPagoConfig\getRetryDelay</a></div><div class="ttdeci">static getRetryDelay()</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00177">MercadoPagoConfig.php:177</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a644f1747dc1b8f814ff0d96ee8299d16"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a644f1747dc1b8f814ff0d96ee8299d16">MercadoPago\MercadoPagoConfig\getRuntimeEnviroment</a></div><div class="ttdeci">static getRuntimeEnviroment()</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00234">MercadoPagoConfig.php:234</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_abb617efed898a46d15b389272d640693"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#abb617efed898a46d15b389272d640693">MercadoPago\MercadoPagoConfig\$BASE_URL</a></div><div class="ttdeci">static string $BASE_URL</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00016">MercadoPagoConfig.php:16</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_abd8965ce74d4fa80855ce214d320b4a1"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#abd8965ce74d4fa80855ce214d320b4a1">MercadoPago\MercadoPagoConfig\getMaxConnections</a></div><div class="ttdeci">static getMaxConnections()</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00196">MercadoPagoConfig.php:196</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_aef28b52ccbef3053dc55093817d96350"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#aef28b52ccbef3053dc55093817d96350">MercadoPago\MercadoPagoConfig\LOCAL</a></div><div class="ttdeci">const LOCAL</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00022">MercadoPagoConfig.php:22</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_curl_request_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_curl_request.html">MercadoPago\Net\CurlRequest</a></div><div class="ttdef"><b>Definition</b> <a href="_curl_request_8php_source.html#l00008">CurlRequest.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_default_http_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MercadoPago\Net\MPDefaultHttpClient</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">MPDefaultHttpClient.php:11</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_default_http_client_html_a72086ca704f271425b5f5fc5e13b50d8"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html#a72086ca704f271425b5f5fc5e13b50d8">MercadoPago\Net\MPDefaultHttpClient\__construct</a></div><div class="ttdeci">__construct(?HttpRequest $httpRequest=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">MPDefaultHttpClient.php:20</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_default_http_client_html_a8ac34ee2987799b2fd485ef996a56b7a"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html#a8ac34ee2987799b2fd485ef996a56b7a">MercadoPago\Net\MPDefaultHttpClient\send</a></div><div class="ttdeci">send(MPRequest $request)</div><div class="ttdef"><b>Definition</b> <a href="#l00032">MPDefaultHttpClient.php:32</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_request_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_request.html">MercadoPago\Net\MPRequest</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_request_8php_source.html#l00006">MPRequest.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_response_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_response.html">MercadoPago\Net\MPResponse</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_response_8php_source.html#l00006">MPResponse.php:7</a></div></div>
+<div class="ttc" id="ainterface_mercado_pago_1_1_net_1_1_http_request_html"><div class="ttname"><a href="interface_mercado_pago_1_1_net_1_1_http_request.html">MercadoPago\Net\HttpRequest</a></div><div class="ttdef"><b>Definition</b> <a href="_http_request_8php_source.html#l00008">HttpRequest.php:9</a></div></div>
+<div class="ttc" id="ainterface_mercado_pago_1_1_net_1_1_m_p_http_client_html"><div class="ttname"><a href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MercadoPago\Net\MPHttpClient</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_http_client_8php_source.html#l00006">MPHttpClient.php:7</a></div></div>
+<div class="ttc" id="atest__webhook_8php_html_a011800c63ece4cbbfa77136a20607023"><div class="ttname"><a href="test__webhook_8php.html#a011800c63ece4cbbfa77136a20607023">$options</a></div><div class="ttdeci">$options</div><div class="ttdef"><b>Definition</b> <a href="test__webhook_8php_source.html#l00043">test_webhook.php:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_c55b27cd77411c524a763a6b22f004c0.html">Net</a></li><li class="navelem"><a href="_m_p_default_http_client_8php.html">MPDefaultHttpClient.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

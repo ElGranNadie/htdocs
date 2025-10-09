@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Resources/Invoice/InvoiceSearchResult.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_invoice_search_result_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">InvoiceSearchResult.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_invoice_search_result_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="namespace_mercado_pago_1_1_resources_1_1_invoice.html">    3</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mercado_pago_1_1_resources_1_1_invoice.html">MercadoPago\Resources\Invoice</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use <a class="code hl_variable" href="namespace_mercado_pago_1_1_serialization.html#aca99c8710670e3a7d527a0436115a883">MercadoPago\Serialization\Mapper</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html">InvoiceSearchResult</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    use Mapper;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a80beb00bc5b03e9535e0a2431e078735">   14</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a80beb00bc5b03e9535e0a2431e078735">$id</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a15446f257050cfb1d8bd1d8d668ca0c8">   17</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a15446f257050cfb1d8bd1d8d668ca0c8">$type</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a97fd994f51c4b4f53f017a7b1afffcd7">   20</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a97fd994f51c4b4f53f017a7b1afffcd7">$date_created</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a22c71d366bf03fe2777d8a66ee8a6fe7">   23</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a22c71d366bf03fe2777d8a66ee8a6fe7">$last_modified</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a6192f2121fdb771e901e116caf4f88a3">   26</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a6192f2121fdb771e901e116caf4f88a3">$preapproval_id</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a4fc97cef4239c2bd54ad8fc21f49c9a7">   29</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a4fc97cef4239c2bd54ad8fc21f49c9a7">$reason</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#af5e05ace5e92c3e71af2a15030f28b3d">   32</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#af5e05ace5e92c3e71af2a15030f28b3d">$external_reference</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#ae8125db664719c134f05f74ddbabc695">   35</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#ae8125db664719c134f05f74ddbabc695">$currency_id</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a686d5443c98737be977bbe1e5431459d">   38</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">float</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a686d5443c98737be977bbe1e5431459d">$transaction_amount</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a5440175270b0fa6d573a5b3045b40a51">   41</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a5440175270b0fa6d573a5b3045b40a51">$debit_date</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#aef17d4355b512e002198fc27ee15cc34">   44</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#aef17d4355b512e002198fc27ee15cc34">$retry_attempt</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#acf7b2603a66538dce949d607da131b07">   47</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#acf7b2603a66538dce949d607da131b07">$status</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#ace8355bc24f751d18b08c8851f1fd384">   50</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#ace8355bc24f751d18b08c8851f1fd384">$summarized</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#ad0a6c42f941c5a0041436b3a3b637b96">   53</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#ad0a6c42f941c5a0041436b3a3b637b96">$payment</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a463f3dabe16a229e2fce1ccca785e338">   55</a></span>    <span class="keyword">public</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a463f3dabe16a229e2fce1ccca785e338">$map</a> = [</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="stringliteral">&quot;payment&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Invoice\Payment&quot;</span>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    ];</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a3001f9fd99881b4170a62f3f02b697e9">   62</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a3001f9fd99881b4170a62f3f02b697e9">getMap</a>(): array</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a463f3dabe16a229e2fce1ccca785e338">$this-&gt;map</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html">MercadoPago\Resources\Invoice\InvoiceSearchResult</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">InvoiceSearchResult.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a15446f257050cfb1d8bd1d8d668ca0c8"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a15446f257050cfb1d8bd1d8d668ca0c8">MercadoPago\Resources\Invoice\InvoiceSearchResult\$type</a></div><div class="ttdeci">string $type</div><div class="ttdef"><b>Definition</b> <a href="#l00017">InvoiceSearchResult.php:17</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a22c71d366bf03fe2777d8a66ee8a6fe7"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a22c71d366bf03fe2777d8a66ee8a6fe7">MercadoPago\Resources\Invoice\InvoiceSearchResult\$last_modified</a></div><div class="ttdeci">string $last_modified</div><div class="ttdef"><b>Definition</b> <a href="#l00023">InvoiceSearchResult.php:23</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a3001f9fd99881b4170a62f3f02b697e9"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a3001f9fd99881b4170a62f3f02b697e9">MercadoPago\Resources\Invoice\InvoiceSearchResult\getMap</a></div><div class="ttdeci">getMap()</div><div class="ttdef"><b>Definition</b> <a href="#l00062">InvoiceSearchResult.php:62</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a463f3dabe16a229e2fce1ccca785e338"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a463f3dabe16a229e2fce1ccca785e338">MercadoPago\Resources\Invoice\InvoiceSearchResult\$map</a></div><div class="ttdeci">$map</div><div class="ttdef"><b>Definition</b> <a href="#l00055">InvoiceSearchResult.php:55</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a4fc97cef4239c2bd54ad8fc21f49c9a7"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a4fc97cef4239c2bd54ad8fc21f49c9a7">MercadoPago\Resources\Invoice\InvoiceSearchResult\$reason</a></div><div class="ttdeci">string $reason</div><div class="ttdef"><b>Definition</b> <a href="#l00029">InvoiceSearchResult.php:29</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a5440175270b0fa6d573a5b3045b40a51"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a5440175270b0fa6d573a5b3045b40a51">MercadoPago\Resources\Invoice\InvoiceSearchResult\$debit_date</a></div><div class="ttdeci">string $debit_date</div><div class="ttdef"><b>Definition</b> <a href="#l00041">InvoiceSearchResult.php:41</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a6192f2121fdb771e901e116caf4f88a3"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a6192f2121fdb771e901e116caf4f88a3">MercadoPago\Resources\Invoice\InvoiceSearchResult\$preapproval_id</a></div><div class="ttdeci">string $preapproval_id</div><div class="ttdef"><b>Definition</b> <a href="#l00026">InvoiceSearchResult.php:26</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a686d5443c98737be977bbe1e5431459d"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a686d5443c98737be977bbe1e5431459d">MercadoPago\Resources\Invoice\InvoiceSearchResult\$transaction_amount</a></div><div class="ttdeci">float $transaction_amount</div><div class="ttdef"><b>Definition</b> <a href="#l00038">InvoiceSearchResult.php:38</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a80beb00bc5b03e9535e0a2431e078735"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a80beb00bc5b03e9535e0a2431e078735">MercadoPago\Resources\Invoice\InvoiceSearchResult\$id</a></div><div class="ttdeci">int $id</div><div class="ttdef"><b>Definition</b> <a href="#l00014">InvoiceSearchResult.php:14</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_a97fd994f51c4b4f53f017a7b1afffcd7"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#a97fd994f51c4b4f53f017a7b1afffcd7">MercadoPago\Resources\Invoice\InvoiceSearchResult\$date_created</a></div><div class="ttdeci">string $date_created</div><div class="ttdef"><b>Definition</b> <a href="#l00020">InvoiceSearchResult.php:20</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_ace8355bc24f751d18b08c8851f1fd384"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#ace8355bc24f751d18b08c8851f1fd384">MercadoPago\Resources\Invoice\InvoiceSearchResult\$summarized</a></div><div class="ttdeci">string $summarized</div><div class="ttdef"><b>Definition</b> <a href="#l00050">InvoiceSearchResult.php:50</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_acf7b2603a66538dce949d607da131b07"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#acf7b2603a66538dce949d607da131b07">MercadoPago\Resources\Invoice\InvoiceSearchResult\$status</a></div><div class="ttdeci">string $status</div><div class="ttdef"><b>Definition</b> <a href="#l00047">InvoiceSearchResult.php:47</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_ad0a6c42f941c5a0041436b3a3b637b96"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#ad0a6c42f941c5a0041436b3a3b637b96">MercadoPago\Resources\Invoice\InvoiceSearchResult\$payment</a></div><div class="ttdeci">array object null $payment</div><div class="ttdef"><b>Definition</b> <a href="#l00053">InvoiceSearchResult.php:53</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_ae8125db664719c134f05f74ddbabc695"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#ae8125db664719c134f05f74ddbabc695">MercadoPago\Resources\Invoice\InvoiceSearchResult\$currency_id</a></div><div class="ttdeci">string $currency_id</div><div class="ttdef"><b>Definition</b> <a href="#l00035">InvoiceSearchResult.php:35</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_aef17d4355b512e002198fc27ee15cc34"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#aef17d4355b512e002198fc27ee15cc34">MercadoPago\Resources\Invoice\InvoiceSearchResult\$retry_attempt</a></div><div class="ttdeci">int $retry_attempt</div><div class="ttdef"><b>Definition</b> <a href="#l00044">InvoiceSearchResult.php:44</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result_html_af5e05ace5e92c3e71af2a15030f28b3d"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html#af5e05ace5e92c3e71af2a15030f28b3d">MercadoPago\Resources\Invoice\InvoiceSearchResult\$external_reference</a></div><div class="ttdeci">string $external_reference</div><div class="ttdef"><b>Definition</b> <a href="#l00032">InvoiceSearchResult.php:32</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_1_1_resources_1_1_invoice_html"><div class="ttname"><a href="namespace_mercado_pago_1_1_resources_1_1_invoice.html">MercadoPago\Resources\Invoice</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">InvoiceSearchResult.php:3</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_1_1_serialization_html_aca99c8710670e3a7d527a0436115a883"><div class="ttname"><a href="namespace_mercado_pago_1_1_serialization.html#aca99c8710670e3a7d527a0436115a883">MercadoPago\Serialization\Mapper</a></div><div class="ttdeci">trait Mapper</div><div class="ttdef"><b>Definition</b> <a href="_mapper_8php_source.html#l00008">Mapper.php:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_81b3df120731b49823a3878898d62a59.html">Resources</a></li><li class="navelem"><a href="dir_ee5abbd2b21819ea4d2c0b2574e58320.html">Invoice</a></li><li class="navelem"><a href="_invoice_search_result_8php.html">InvoiceSearchResult.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

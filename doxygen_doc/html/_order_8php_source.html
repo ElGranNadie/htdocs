@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Resources/Order.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_order_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Order.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_order_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>MercadoPago\Resources;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>use MercadoPago\Net\MPResource;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>use MercadoPago\Serialization\Mapper;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html">   10</a></span><span class="keyword">class </span><a class="code hl_namespace" href="namespace_mercado_pago_1_1_resources_1_1_order.html">Order</a> <span class="keyword">extends</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_resource.html">MPResource</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    use Mapper;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a4f3b590dcde7f5658aa2404592c04703">   16</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a4f3b590dcde7f5658aa2404592c04703">$id</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#aaeefa9d90ee13908f9ad9ad6c9dff144">   19</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#aaeefa9d90ee13908f9ad9ad6c9dff144">$type</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#abad9a8f6636a3f7bd6a53bc96422a63e">   22</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#abad9a8f6636a3f7bd6a53bc96422a63e">$external_reference</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a6ae5efbf410102859a62bba14778d024">   25</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a6ae5efbf410102859a62bba14778d024">$country_code</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a4043497934f2297558b4e3941ca6a539">   28</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a4043497934f2297558b4e3941ca6a539">$status</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#abd3cd91cf7e3d63fad070c7a6e445e5d">   31</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#abd3cd91cf7e3d63fad070c7a6e445e5d">$status_detail</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#ac6a55ae904afabb8eb2bdfbdaa3173f8">   34</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#ac6a55ae904afabb8eb2bdfbdaa3173f8">$capture_mode</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a543a46aa81136e9c032caadda8fb4510">   37</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a543a46aa81136e9c032caadda8fb4510">$user_id</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a18aadf50995f898f19f25ea9213441bc">   40</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a18aadf50995f898f19f25ea9213441bc">$client_token</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#aba26b300c7044e0bc3dbe9c188ea2c1a">   43</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#aba26b300c7044e0bc3dbe9c188ea2c1a">$total_amount</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a1094fe01bfcc1280e32ad8da3b790279">   46</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a1094fe01bfcc1280e32ad8da3b790279">$total_paid_amount</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a6267c250d054cdc397e6278db47aa4fe">   49</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a6267c250d054cdc397e6278db47aa4fe">$processing_mode</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#ae3867c3d9c7b334dc206830f1bdce792">   52</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#ae3867c3d9c7b334dc206830f1bdce792">$description</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a6bd8c53222a20e7ee54258aa6bcd2276">   55</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a6bd8c53222a20e7ee54258aa6bcd2276">$marketplace</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a6bea1423ff3641830d6f1c90c79ad8b6">   58</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a6bea1423ff3641830d6f1c90c79ad8b6">$marketplace_fee</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#ad6580210b5d1d61a6d004e597aad6cac">   61</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#ad6580210b5d1d61a6d004e597aad6cac">$created_date</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#ae923c73896dfea0d7cf4007d128a8700">   64</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#ae923c73896dfea0d7cf4007d128a8700">$last_updated_date</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a9af7398681353df80bca84e489959352">   67</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a9af7398681353df80bca84e489959352">$checkout_available_at</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a564b84f94c49c1665134e2cb534373fc">   70</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a564b84f94c49c1665134e2cb534373fc">$expiration_time</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#ab697e666fbaa67e705325532b815b8d1">   73</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#ab697e666fbaa67e705325532b815b8d1">$integration_data</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a7cb4d7d463e801159feea9fb461ec7b0">   76</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a7cb4d7d463e801159feea9fb461ec7b0">$payer</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a8b34bb1163d5d671bc1d71750ade783d">   79</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a8b34bb1163d5d671bc1d71750ade783d">$transactions</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#ace5514e26fdc64e8f7d076d63647a32e">   82</a></span>    <span class="keyword">public</span> ?array <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#ace5514e26fdc64e8f7d076d63647a32e">$items</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a1335cc1416124db23864e56b0bad1bcf">   85</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a1335cc1416124db23864e56b0bad1bcf">$config</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a73ea8e79bfc907bbdb3ebe62cff8e66f">   88</a></span>    <span class="keyword">public</span> ?array <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_order.html#a73ea8e79bfc907bbdb3ebe62cff8e66f">$additional_info</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">private</span> $map = [</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="stringliteral">&quot;transactions&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Order\Transactions&quot;</span>,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="stringliteral">&quot;items&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Order\Items&quot;</span>,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="stringliteral">&quot;integration_data&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Order\IntegrationData&quot;</span>,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="stringliteral">&quot;payer&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Order\Payer&quot;</span>,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="stringliteral">&quot;config&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Order\Config&quot;</span>,</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    ];</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_order.html#a5aadf4e97e0413071ddc4c171e2bccaf">  101</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_resources_1_1_order.html#a5aadf4e97e0413071ddc4c171e2bccaf">getMap</a>(): array</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> $this-&gt;map;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_resource_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_resource.html">MercadoPago\Net\MPResource</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_resource_8php_source.html#l00006">MPResource.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a1094fe01bfcc1280e32ad8da3b790279"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a1094fe01bfcc1280e32ad8da3b790279">MercadoPago\Resources\Order\$total_paid_amount</a></div><div class="ttdeci">string $total_paid_amount</div><div class="ttdef"><b>Definition</b> <a href="#l00046">Order.php:46</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a1335cc1416124db23864e56b0bad1bcf"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a1335cc1416124db23864e56b0bad1bcf">MercadoPago\Resources\Order\$config</a></div><div class="ttdeci">array object null $config</div><div class="ttdef"><b>Definition</b> <a href="#l00085">Order.php:85</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a18aadf50995f898f19f25ea9213441bc"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a18aadf50995f898f19f25ea9213441bc">MercadoPago\Resources\Order\$client_token</a></div><div class="ttdeci">string $client_token</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Order.php:40</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a4043497934f2297558b4e3941ca6a539"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a4043497934f2297558b4e3941ca6a539">MercadoPago\Resources\Order\$status</a></div><div class="ttdeci">string $status</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Order.php:28</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a4f3b590dcde7f5658aa2404592c04703"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a4f3b590dcde7f5658aa2404592c04703">MercadoPago\Resources\Order\$id</a></div><div class="ttdeci">string $id</div><div class="ttdef"><b>Definition</b> <a href="#l00016">Order.php:16</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a543a46aa81136e9c032caadda8fb4510"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a543a46aa81136e9c032caadda8fb4510">MercadoPago\Resources\Order\$user_id</a></div><div class="ttdeci">string $user_id</div><div class="ttdef"><b>Definition</b> <a href="#l00037">Order.php:37</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a564b84f94c49c1665134e2cb534373fc"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a564b84f94c49c1665134e2cb534373fc">MercadoPago\Resources\Order\$expiration_time</a></div><div class="ttdeci">string $expiration_time</div><div class="ttdef"><b>Definition</b> <a href="#l00070">Order.php:70</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a5aadf4e97e0413071ddc4c171e2bccaf"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a5aadf4e97e0413071ddc4c171e2bccaf">MercadoPago\Resources\Order\getMap</a></div><div class="ttdeci">getMap()</div><div class="ttdef"><b>Definition</b> <a href="#l00101">Order.php:101</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a6267c250d054cdc397e6278db47aa4fe"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a6267c250d054cdc397e6278db47aa4fe">MercadoPago\Resources\Order\$processing_mode</a></div><div class="ttdeci">string $processing_mode</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Order.php:49</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a6ae5efbf410102859a62bba14778d024"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a6ae5efbf410102859a62bba14778d024">MercadoPago\Resources\Order\$country_code</a></div><div class="ttdeci">string $country_code</div><div class="ttdef"><b>Definition</b> <a href="#l00025">Order.php:25</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a6bd8c53222a20e7ee54258aa6bcd2276"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a6bd8c53222a20e7ee54258aa6bcd2276">MercadoPago\Resources\Order\$marketplace</a></div><div class="ttdeci">string $marketplace</div><div class="ttdef"><b>Definition</b> <a href="#l00055">Order.php:55</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a6bea1423ff3641830d6f1c90c79ad8b6"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a6bea1423ff3641830d6f1c90c79ad8b6">MercadoPago\Resources\Order\$marketplace_fee</a></div><div class="ttdeci">string $marketplace_fee</div><div class="ttdef"><b>Definition</b> <a href="#l00058">Order.php:58</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a73ea8e79bfc907bbdb3ebe62cff8e66f"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a73ea8e79bfc907bbdb3ebe62cff8e66f">MercadoPago\Resources\Order\$additional_info</a></div><div class="ttdeci">array $additional_info</div><div class="ttdef"><b>Definition</b> <a href="#l00088">Order.php:88</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a7cb4d7d463e801159feea9fb461ec7b0"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a7cb4d7d463e801159feea9fb461ec7b0">MercadoPago\Resources\Order\$payer</a></div><div class="ttdeci">array object null $payer</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Order.php:76</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a8b34bb1163d5d671bc1d71750ade783d"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a8b34bb1163d5d671bc1d71750ade783d">MercadoPago\Resources\Order\$transactions</a></div><div class="ttdeci">array object null $transactions</div><div class="ttdef"><b>Definition</b> <a href="#l00079">Order.php:79</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_a9af7398681353df80bca84e489959352"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#a9af7398681353df80bca84e489959352">MercadoPago\Resources\Order\$checkout_available_at</a></div><div class="ttdeci">string $checkout_available_at</div><div class="ttdef"><b>Definition</b> <a href="#l00067">Order.php:67</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_aaeefa9d90ee13908f9ad9ad6c9dff144"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#aaeefa9d90ee13908f9ad9ad6c9dff144">MercadoPago\Resources\Order\$type</a></div><div class="ttdeci">string $type</div><div class="ttdef"><b>Definition</b> <a href="#l00019">Order.php:19</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_ab697e666fbaa67e705325532b815b8d1"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#ab697e666fbaa67e705325532b815b8d1">MercadoPago\Resources\Order\$integration_data</a></div><div class="ttdeci">array object null $integration_data</div><div class="ttdef"><b>Definition</b> <a href="#l00073">Order.php:73</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_aba26b300c7044e0bc3dbe9c188ea2c1a"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#aba26b300c7044e0bc3dbe9c188ea2c1a">MercadoPago\Resources\Order\$total_amount</a></div><div class="ttdeci">string $total_amount</div><div class="ttdef"><b>Definition</b> <a href="#l00043">Order.php:43</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_abad9a8f6636a3f7bd6a53bc96422a63e"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#abad9a8f6636a3f7bd6a53bc96422a63e">MercadoPago\Resources\Order\$external_reference</a></div><div class="ttdeci">string $external_reference</div><div class="ttdef"><b>Definition</b> <a href="#l00022">Order.php:22</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_abd3cd91cf7e3d63fad070c7a6e445e5d"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#abd3cd91cf7e3d63fad070c7a6e445e5d">MercadoPago\Resources\Order\$status_detail</a></div><div class="ttdeci">string $status_detail</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Order.php:31</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_ac6a55ae904afabb8eb2bdfbdaa3173f8"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#ac6a55ae904afabb8eb2bdfbdaa3173f8">MercadoPago\Resources\Order\$capture_mode</a></div><div class="ttdeci">string $capture_mode</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Order.php:34</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_ace5514e26fdc64e8f7d076d63647a32e"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#ace5514e26fdc64e8f7d076d63647a32e">MercadoPago\Resources\Order\$items</a></div><div class="ttdeci">array $items</div><div class="ttdef"><b>Definition</b> <a href="#l00082">Order.php:82</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_ad6580210b5d1d61a6d004e597aad6cac"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#ad6580210b5d1d61a6d004e597aad6cac">MercadoPago\Resources\Order\$created_date</a></div><div class="ttdeci">string $created_date</div><div class="ttdef"><b>Definition</b> <a href="#l00061">Order.php:61</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_ae3867c3d9c7b334dc206830f1bdce792"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#ae3867c3d9c7b334dc206830f1bdce792">MercadoPago\Resources\Order\$description</a></div><div class="ttdeci">string $description</div><div class="ttdef"><b>Definition</b> <a href="#l00052">Order.php:52</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_order_html_ae923c73896dfea0d7cf4007d128a8700"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_order.html#ae923c73896dfea0d7cf4007d128a8700">MercadoPago\Resources\Order\$last_updated_date</a></div><div class="ttdeci">string $last_updated_date</div><div class="ttdef"><b>Definition</b> <a href="#l00064">Order.php:64</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_1_1_resources_1_1_order_html"><div class="ttname"><a href="namespace_mercado_pago_1_1_resources_1_1_order.html">MercadoPago\Resources\Order</a></div><div class="ttdef"><b>Definition</b> <a href="_attempt_8php_source.html#l00005">Attempt.php:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_81b3df120731b49823a3878898d62a59.html">Resources</a></li><li class="navelem"><a href="_order_8php.html">Order.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/examples/Payment/Create.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_payment_2_create_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Create.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_payment_2_create_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_payment.html">    3</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_examples_1_1_payment.html">Examples\Payment</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Step 1: Require the Composer library</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>require_once <span class="stringliteral">&#39;../../vendor/autoload.php&#39;</span>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">MercadoPago\Client\Common\RequestOptions</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">MercadoPago\Client\Payment\PaymentClient</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>use <a class="code hl_class" href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html">MercadoPago\Exceptions\MPApiException</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>use <a class="code hl_class" href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Step 2: Set the production or sandbox access token</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>MercadoPagoConfig::setAccessToken(<span class="stringliteral">&#39;&lt;ACCESS_TOKEN&gt;&#39;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Step 2.1 (optional - default is SERVER): Set your runtime enviroment from MercadoPagoConfig::RUNTIME_ENVIROMENTS</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// In case you want to test in your local machine first, set runtime enviroment to LOCAL</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>MercadoPagoConfig::setRuntimeEnviroment(MercadoPagoConfig::LOCAL);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Step 3: Initialize the API client</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_payment.html#ac8797c015bcb4e0cb67d0c50e538a5c0">   20</a></span><a class="code hl_variable" href="namespace_examples_1_1_payment.html#ac8797c015bcb4e0cb67d0c50e538a5c0">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">PaymentClient</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_payment.html#ab54f8a63d1b7213a2aaf065d365a6af6">   22</a></span><span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// Step 4: Create the request array</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    $request = [</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="stringliteral">&quot;transaction_amount&quot;</span> =&gt; 1000,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="stringliteral">&quot;description&quot;</span>        =&gt; <span class="stringliteral">&quot;Product title&quot;</span>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="stringliteral">&quot;payment_method_id&quot;</span>  =&gt; <span class="stringliteral">&quot;master&quot;</span>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="stringliteral">&quot;token&quot;</span>              =&gt; <span class="stringliteral">&quot;{{CARD_TOKEN}}&quot;</span>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="stringliteral">&quot;installments&quot;</span>       =&gt; 1,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="stringliteral">&quot;application_fee&quot;</span>    =&gt; <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="stringliteral">&quot;binary_mode&quot;</span>        =&gt; <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="stringliteral">&quot;capture&quot;</span>            =&gt; <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="stringliteral">&quot;external_reference&quot;</span> =&gt; <span class="stringliteral">&quot;Pedido01&quot;</span>,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="stringliteral">&quot;metadata&quot;</span>           =&gt; new \stdClass(),</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="stringliteral">&quot;notification_url&quot;</span>   =&gt; <span class="stringliteral">&quot;https://www.mercadopago.com&quot;</span>,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="stringliteral">&quot;sponsor_id&quot;</span>         =&gt; <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="stringliteral">&quot;statement_descriptor&quot;</span> =&gt; <span class="stringliteral">&quot;LOJA 123&quot;</span>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="stringliteral">&quot;payer&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="stringliteral">&quot;first_name&quot;</span> =&gt; <span class="stringliteral">&quot;Name&quot;</span>,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="stringliteral">&quot;last_name&quot;</span>  =&gt; <span class="stringliteral">&quot;Surname&quot;</span>,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="stringliteral">&quot;email&quot;</span>      =&gt; <span class="stringliteral">&quot;{{EMAIL}}&quot;</span>,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="stringliteral">&quot;identification&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="stringliteral">&quot;number&quot;</span> =&gt; <span class="stringliteral">&quot;{{DOCUMENT_NUMBER}}&quot;</span>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <span class="stringliteral">&quot;type&quot;</span>   =&gt; <span class="stringliteral">&quot;CPF&quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            ],</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="stringliteral">&quot;phone&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="stringliteral">&quot;area_code&quot;</span> =&gt; <span class="stringliteral">&quot;11&quot;</span>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="stringliteral">&quot;number&quot;</span>    =&gt; <span class="stringliteral">&quot;{{PHONE_NUMBER}}&quot;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            ],</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="stringliteral">&quot;address&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="stringliteral">&quot;street_name&quot;</span>    =&gt; <span class="stringliteral">&quot;Av. das Nações Unidas&quot;</span>,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="stringliteral">&quot;street_number&quot;</span>  =&gt; <span class="stringliteral">&quot;3003&quot;</span>,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="stringliteral">&quot;zip_code&quot;</span>       =&gt; <span class="stringliteral">&quot;206233-2002&quot;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            ]</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        ],</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="stringliteral">&quot;forward_data&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="stringliteral">&quot;sub_merchant&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="stringliteral">&quot;sub_merchant_id&quot;</span>    =&gt; <span class="stringliteral">&quot;1234183712&quot;</span>,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <span class="stringliteral">&quot;mcc&quot;</span>                =&gt; <span class="stringliteral">&quot;5462&quot;</span>,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="stringliteral">&quot;country&quot;</span>            =&gt; <span class="stringliteral">&quot;BRA&quot;</span>,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="stringliteral">&quot;address_door_number&quot;</span>=&gt; 123,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="stringliteral">&quot;zip&quot;</span>                =&gt; <span class="stringliteral">&quot;2222222&quot;</span>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="stringliteral">&quot;document_number&quot;</span>    =&gt; <span class="stringliteral">&quot;222222222222222&quot;</span>,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="stringliteral">&quot;city&quot;</span>               =&gt; <span class="stringliteral">&quot;SÃO PAULO&quot;</span>,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="stringliteral">&quot;address_street&quot;</span>     =&gt; <span class="stringliteral">&quot;RUA A&quot;</span>,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="stringliteral">&quot;legal_name&quot;</span>         =&gt; <span class="stringliteral">&quot;LOJINHA DO ZÉ&quot;</span>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="stringliteral">&quot;region_code_iso&quot;</span>    =&gt; <span class="stringliteral">&quot;BR-MG&quot;</span>,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="stringliteral">&quot;region_code&quot;</span>        =&gt; <span class="stringliteral">&quot;BR&quot;</span>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="stringliteral">&quot;document_type&quot;</span>      =&gt; <span class="stringliteral">&quot;CNPJ&quot;</span>,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="stringliteral">&quot;phone&quot;</span>              =&gt; <span class="stringliteral">&quot;{{PHONE}}&quot;</span>,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="stringliteral">&quot;url&quot;</span>                =&gt; <span class="stringliteral">&quot;www.mercadopago.com&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            ]</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        ],</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="stringliteral">&quot;additional_info&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="stringliteral">&quot;items&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                [</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    <span class="stringliteral">&quot;id&quot;</span>          =&gt; <span class="stringliteral">&quot;1941&quot;</span>,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    <span class="stringliteral">&quot;title&quot;</span>       =&gt; <span class="stringliteral">&quot;25/08/2022 | Pista Inteira5 lote - GREEN VALLEY GRAMADO 2022&quot;</span>,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    <span class="stringliteral">&quot;description&quot;</span> =&gt; <span class="stringliteral">&quot;25/08/2022 | Pista Inteira5 lote - GREEN VALLEY GRAMADO 2022&quot;</span>,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    <span class="stringliteral">&quot;category_id&quot;</span>  =&gt; <span class="stringliteral">&quot;Tickets&quot;</span>,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    <span class="stringliteral">&quot;quantity&quot;</span>     =&gt; 1,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    <span class="stringliteral">&quot;unit_price&quot;</span>   =&gt; 1000.00,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    <span class="stringliteral">&quot;event_date&quot;</span>   =&gt; <span class="stringliteral">&quot;2019-12-25T19:30:00.000-03:00&quot;</span>,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    <span class="stringliteral">&quot;picture_url&quot;</span>  =&gt; <span class="stringliteral">&quot;{{IMAGE_URL}}&quot;</span>,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    <span class="stringliteral">&quot;type&quot;</span>         =&gt; <span class="stringliteral">&quot;my_items_type&quot;</span>,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    <span class="stringliteral">&quot;warranty&quot;</span>     =&gt; <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    <span class="stringliteral">&quot;category_descriptor&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                        <span class="stringliteral">&quot;passenger&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                            <span class="stringliteral">&quot;first_name&quot;</span>    =&gt; <span class="stringliteral">&quot;Guest name&quot;</span>,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                            <span class="stringliteral">&quot;last_name&quot;</span>     =&gt; <span class="stringliteral">&quot;Guest surname&quot;</span>,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                            <span class="stringliteral">&quot;identification&quot;</span>=&gt; [</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                                <span class="stringliteral">&quot;type&quot;</span>      =&gt; <span class="stringliteral">&quot;DNI&quot;</span>,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                                <span class="stringliteral">&quot;number&quot;</span>    =&gt; <span class="stringliteral">&quot;{{DOCUMENT}}&quot;</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                            ]</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                        ],</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                        <span class="stringliteral">&quot;route&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                            <span class="stringliteral">&quot;arrival_date_time&quot;</span>   =&gt; <span class="stringliteral">&quot;2022-03-14T12:58:41.425-04:00&quot;</span>,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                            <span class="stringliteral">&quot;company&quot;</span>             =&gt; <span class="stringliteral">&quot;Companhia&quot;</span>,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                            <span class="stringliteral">&quot;departure&quot;</span>           =&gt; <span class="stringliteral">&quot;Osasco&quot;</span>,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                            <span class="stringliteral">&quot;departure_date_time&quot;</span> =&gt; <span class="stringliteral">&quot;2022-03-12T12:58:41.425-04:00&quot;</span>,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                            <span class="stringliteral">&quot;destination&quot;</span>         =&gt; <span class="stringliteral">&quot;Sao Paulo&quot;</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                        ]</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    ]</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                ]</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            ],</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="stringliteral">&quot;payer&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="stringliteral">&quot;first_name&quot;</span> =&gt; <span class="stringliteral">&quot;Name&quot;</span>,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="stringliteral">&quot;last_name&quot;</span>  =&gt; <span class="stringliteral">&quot;Surname&quot;</span>,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <span class="stringliteral">&quot;is_prime_user&quot;</span> =&gt; <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="stringliteral">&quot;is_first_purchase_online&quot;</span> =&gt; <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                <span class="stringliteral">&quot;last_purchase&quot;</span> =&gt; <span class="stringliteral">&quot;2019-10-25T19:30:00.000-03:00&quot;</span>,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="stringliteral">&quot;phone&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                    <span class="stringliteral">&quot;area_code&quot;</span> =&gt; <span class="stringliteral">&quot;11&quot;</span>,</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    <span class="stringliteral">&quot;number&quot;</span>    =&gt; <span class="stringliteral">&quot;{{PHONE_NUMBER}}&quot;</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                ],</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                <span class="stringliteral">&quot;address&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                    <span class="stringliteral">&quot;street_name&quot;</span>    =&gt; <span class="stringliteral">&quot;Av. das Nações Unidas&quot;</span>,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    <span class="stringliteral">&quot;street_number&quot;</span>  =&gt; <span class="stringliteral">&quot;3003&quot;</span>,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    <span class="stringliteral">&quot;zip_code&quot;</span>       =&gt; <span class="stringliteral">&quot;206233-2002&quot;</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                ],</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="stringliteral">&quot;registration_date&quot;</span>    =&gt; <span class="stringliteral">&quot;2020-08-06T09:25:04.000-03:00&quot;</span>,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <span class="stringliteral">&quot;authentication_type&quot;</span>  =&gt; <span class="stringliteral">&quot;Gmail&quot;</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            ],</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="stringliteral">&quot;shipments&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <span class="stringliteral">&quot;local_pickup&quot;</span> =&gt; <span class="stringliteral">&quot;1&quot;</span>,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="stringliteral">&quot;express_shipment&quot;</span> =&gt; <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                <span class="stringliteral">&quot;receiver_address&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    <span class="stringliteral">&quot;zip_code&quot;</span>     =&gt; <span class="stringliteral">&quot;306233-2003&quot;</span>,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <span class="stringliteral">&quot;street_name&quot;</span>  =&gt; <span class="stringliteral">&quot;Av. das Nações Unidas&quot;</span>,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    <span class="stringliteral">&quot;street_number&quot;</span>=&gt; <span class="stringliteral">&quot;3003&quot;</span>,</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    <span class="stringliteral">&quot;floor&quot;</span>        =&gt; <span class="stringliteral">&quot;5&quot;</span>,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    <span class="stringliteral">&quot;apartment&quot;</span>    =&gt; <span class="stringliteral">&quot;502&quot;</span>,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                    <span class="stringliteral">&quot;state_name&quot;</span>   =&gt; <span class="stringliteral">&quot;DF&quot;</span>,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                    <span class="stringliteral">&quot;city_name&quot;</span>    =&gt; <span class="stringliteral">&quot;Bogota&quot;</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                ]</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            ]</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        ],</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    ];</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>   <span class="comment">// Step 5: Create the request options, setting X-Idempotency-Key</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_payment.html#a0cd66f11c4da6146c731ce4920415a41">  141</a></span>    <a class="code hl_variable" href="namespace_examples_1_1_payment.html#a0cd66f11c4da6146c731ce4920415a41">$request_options</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a>();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <a class="code hl_variable" href="namespace_examples_1_1_payment.html#a0cd66f11c4da6146c731ce4920415a41">$request_options</a>-&gt;setCustomHeaders([<span class="stringliteral">&quot;X-Idempotency-Key: &lt;SOME_UNIQUE_VALUE&gt;&quot;</span>]);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">// Step 6: Make the request</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_payment.html#a8ac89a122c0c03451adc49ba32732018">  145</a></span>    <a class="code hl_variable" href="namespace_examples_1_1_payment.html#a8ac89a122c0c03451adc49ba32732018">$payment</a> = <a class="code hl_variable" href="namespace_examples_1_1_payment.html#ac8797c015bcb4e0cb67d0c50e538a5c0">$client</a>-&gt;create($request, <a class="code hl_variable" href="namespace_examples_1_1_payment.html#a0cd66f11c4da6146c731ce4920415a41">$request_options</a>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    echo <span class="stringliteral">&quot;Payment ID: &quot;</span> . <a class="code hl_variable" href="namespace_examples_1_1_payment.html#a8ac89a122c0c03451adc49ba32732018">$payment</a>-&gt;id . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    echo <span class="stringliteral">&quot;Status: &quot;</span> . <a class="code hl_variable" href="namespace_examples_1_1_payment.html#a8ac89a122c0c03451adc49ba32732018">$payment</a>-&gt;status . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> <span class="comment">// Step 7: Handle exceptions</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>} <span class="keywordflow">catch</span> (MPApiException $e) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    echo <span class="stringliteral">&quot;Status code: &quot;</span> . $e-&gt;getApiResponse()-&gt;getStatusCode() . <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    echo <span class="stringliteral">&quot;Content: &quot;</span>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    var_dump($e-&gt;getApiResponse()-&gt;getContent());</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    echo <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>} <span class="keywordflow">catch</span> (\Exception $e) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    echo $e-&gt;getMessage();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_common_1_1_request_options_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">MercadoPago\Client\Common\RequestOptions</a></div><div class="ttdef"><b>Definition</b> <a href="_request_options_8php_source.html#l00006">RequestOptions.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_payment_1_1_payment_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">MercadoPago\Client\Payment\PaymentClient</a></div><div class="ttdef"><b>Definition</b> <a href="_payment_client_8php_source.html#l00016">PaymentClient.php:17</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_exceptions_1_1_m_p_api_exception_html"><div class="ttname"><a href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html">MercadoPago\Exceptions\MPApiException</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_api_exception_8php_source.html#l00009">MPApiException.php:10</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a></div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00010">MercadoPagoConfig.php:11</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_payment_html"><div class="ttname"><a href="namespace_examples_1_1_payment.html">Examples\Payment</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">Create.php:3</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_payment_html_a0cd66f11c4da6146c731ce4920415a41"><div class="ttname"><a href="namespace_examples_1_1_payment.html#a0cd66f11c4da6146c731ce4920415a41">Examples\Payment\$request_options</a></div><div class="ttdeci">$request_options</div><div class="ttdef"><b>Definition</b> <a href="#l00141">Create.php:141</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_payment_html_a8ac89a122c0c03451adc49ba32732018"><div class="ttname"><a href="namespace_examples_1_1_payment.html#a8ac89a122c0c03451adc49ba32732018">Examples\Payment\$payment</a></div><div class="ttdeci">$payment</div><div class="ttdef"><b>Definition</b> <a href="#l00145">Create.php:145</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_payment_html_ac8797c015bcb4e0cb67d0c50e538a5c0"><div class="ttname"><a href="namespace_examples_1_1_payment.html#ac8797c015bcb4e0cb67d0c50e538a5c0">Examples\Payment\$client</a></div><div class="ttdeci">$client</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Create.php:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_83267cb93f6adc9ed4cd12f8c2a60616.html">examples</a></li><li class="navelem"><a href="dir_9b93eff44c72616f0bcbbf361e68bc3e.html">Payment</a></li><li class="navelem"><a href="_payment_2_create_8php.html">Create.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

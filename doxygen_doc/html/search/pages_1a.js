@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['técnico_0',['Endpoints N.I.C.O.L.E — Documento visual y técnico',['../endpoints.html',1,'']]],
+  ['tecnologías_20utilizadas_1',['⚙️ Tecnologías Utilizadas',['../index.html#autotoc_md72',1,'']]],
+  ['tests_2',['Tests',['../C:/Users/alex/Downloads/web2/htdocs/libs/PHPMailer/README.md#autotoc_md54',1,'Tests'],['../C:/Users/alex/Downloads/web2/htdocs/vendor/phpmailer/phpmailer/README.md#autotoc_md153',1,'Tests']]],
+  ['the_20api_20client_3',['Step 3: Initialize the API client',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md127',1,'']]],
+  ['the_20documentation_4',['Step 5: Review the Documentation',['../md_vendor_2mercadopago_2dx-php_2_m_i_g_r_a_t_i_o_n___g_u_i_d_e.html#autotoc_md114',1,'']]],
+  ['the_20feature_3a_5',['Changes made to the feature:',['../md_vendor_2mercadopago_2dx-php_2_p_u_l_l___r_e_q_u_e_s_t___t_e_m_p_l_a_t_e.html',1,'']]],
+  ['the_20libraries_6',['Step 1: Require the libraries',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md133',1,'']]],
+  ['the_20library_20from_20your_20composer_20vendor_20folder_7',['Step 1: Require the library from your Composer vendor folder',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md125',1,'']]],
+  ['the_20mercado_20pago_20php_20sdk_8',['Contributing to the Mercado Pago PHP SDK',['../md_vendor_2mercadopago_2dx-php_2_c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]],
+  ['the_20preference_20on_20mercado_20pago_20docs_9',['Step 4: Create the preference on Mercado Pago (&lt;a href=&quot;https://www.mercadopago.com.br/developers/pt/docs/sdks-library/server-side/php/preferences&quot;&gt;DOCS&lt;/a&gt;)',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md136',1,'']]],
+  ['the_20request_10',['Step 6: Make the request',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md130',1,'']]],
+  ['the_20request_20array_11',['Step 4: Create the request array',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md128',1,'']]],
+  ['the_20request_20options_20setting_20x_20idempotency_20key_12',['Step 5: Create the request options, setting X-Idempotency-Key',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md129',1,'']]],
+  ['to_20checkout_20pro_20page_13',['Step 3: Create customer&apos;s preference before proceeding to Checkout Pro page',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md135',1,'']]],
+  ['to_20contribute_14',['How to contribute',['../md_vendor_2mercadopago_2dx-php_2_c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md97',1,'']]],
+  ['to_20phpmailer_15',['to PHPMailer',['../md_libs_2_p_h_p_mailer_2_s_e_c_u_r_i_t_y.html',1,'Security notices relating to PHPMailer'],['../md_vendor_2phpmailer_2phpmailer_2_s_e_c_u_r_i_t_y.html',1,'Security notices relating to PHPMailer']]],
+  ['to_20the_20feature_3a_16',['Changes made to the feature:',['../md_vendor_2mercadopago_2dx-php_2_p_u_l_l___r_e_q_u_e_s_t___t_e_m_p_l_a_t_e.html',1,'']]],
+  ['to_20the_20mercado_20pago_20php_20sdk_17',['Contributing to the Mercado Pago PHP SDK',['../md_vendor_2mercadopago_2dx-php_2_c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]],
+  ['to_20v3_18',['Migration Guide from MercadoPago PHP SDK v2 to v3',['../md_vendor_2mercadopago_2dx-php_2_m_i_g_r_a_t_i_o_n___g_u_i_d_e.html',1,'']]],
+  ['to_20version_202_20x_20x_19',['Patches to version 2.x.x',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md139',1,'']]],
+  ['token_20',['Step 2: Set production or sandbox access token',['../C:/Users/alex/Downloads/web2/htdocs/vendor/mercadopago/dx-php/README.md#autotoc_md126',1,'']]],
+  ['transfer_20class_20for_20php_21',['transfer class for PHP',['../C:/Users/alex/Downloads/web2/htdocs/libs/PHPMailer/README.md#autotoc_md43',1,'PHPMailer – A full-featured email creation and transfer class for PHP'],['../C:/Users/alex/Downloads/web2/htdocs/vendor/phpmailer/phpmailer/README.md#autotoc_md142',1,'PHPMailer – A full-featured email creation and transfer class for PHP']]]
+];

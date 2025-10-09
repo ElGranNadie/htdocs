@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['ratings_2ephp_0',['Ratings.php',['../_ratings_8php.html',1,'']]],
+  ['reader_2ephp_1',['Reader.php',['../_reader_8php.html',1,'']]],
+  ['readerinterface_2ephp_2',['ReaderInterface.php',['../_reader_interface_8php.html',1,'']]],
+  ['readme_2emd_3',['README.md',['../libs_2_p_h_p_mailer_2_r_e_a_d_m_e_8md.html',1,'(Espacio de nombres global)'],['../_r_e_a_d_m_e_8md.html',1,'(Espacio de nombres global)'],['../vendor_2mercadopago_2dx-php_2_r_e_a_d_m_e_8md.html',1,'(Espacio de nombres global)'],['../vendor_2phpmailer_2phpmailer_2_r_e_a_d_m_e_8md.html',1,'(Espacio de nombres global)'],['../vendor_2symfony_2polyfill-ctype_2_r_e_a_d_m_e_8md.html',1,'(Espacio de nombres global)'],['../vendor_2symfony_2polyfill-mbstring_2_r_e_a_d_m_e_8md.html',1,'(Espacio de nombres global)'],['../vendor_2symfony_2polyfill-php80_2_r_e_a_d_m_e_8md.html',1,'(Espacio de nombres global)']]],
+  ['receiveraddress_2ephp_4',['ReceiverAddress.php',['../_merchant_order_2_receiver_address_8php.html',1,'(Espacio de nombres global)'],['../_payment_2_receiver_address_8php.html',1,'(Espacio de nombres global)'],['../_preference_2_receiver_address_8php.html',1,'(Espacio de nombres global)']]],
+  ['receiveraddresscity_2ephp_5',['ReceiverAddressCity.php',['../_receiver_address_city_8php.html',1,'']]],
+  ['receiveraddresscountry_2ephp_6',['ReceiverAddressCountry.php',['../_receiver_address_country_8php.html',1,'']]],
+  ['receiveraddressstate_2ephp_7',['ReceiverAddressState.php',['../_receiver_address_state_8php.html',1,'']]],
+  ['recetas_2ephp_8',['recetas.php',['../recetas_8php.html',1,'']]],
+  ['recuperar_2ephp_9',['recuperar.php',['../dashboard_2recuperar_8php.html',1,'(Espacio de nombres global)'],['../recuperar_2recuperar_8php.html',1,'(Espacio de nombres global)']]],
+  ['redirecturls_2ephp_10',['RedirectUrls.php',['../_redirect_urls_8php.html',1,'']]],
+  ['reenviar_5fcodigo_2ephp_11',['reenviar_codigo.php',['../reenviar__codigo_8php.html',1,'']]],
+  ['refund_2ephp_12',['Refund.php',['../_refund_8php.html',1,'']]],
+  ['refundpartial_2ephp_13',['RefundPartial.php',['../_refund_partial_8php.html',1,'']]],
+  ['refundtotal_2ephp_14',['RefundTotal.php',['../_refund_total_8php.html',1,'']]],
+  ['regex_2ephp_15',['Regex.php',['../_regex_8php.html',1,'']]],
+  ['register_2ephp_16',['register.php',['../register_8php.html',1,'']]],
+  ['registro_2ephp_17',['registro.php',['../registro_8php.html',1,'']]],
+  ['replacingwriter_2ephp_18',['ReplacingWriter.php',['../_replacing_writer_8php.html',1,'']]],
+  ['repositorybuilder_2ephp_19',['RepositoryBuilder.php',['../_repository_builder_8php.html',1,'']]],
+  ['repositoryinterface_2ephp_20',['RepositoryInterface.php',['../_repository_interface_8php.html',1,'']]],
+  ['requestoptions_2ephp_21',['RequestOptions.php',['../_request_options_8php.html',1,'']]],
+  ['resolver_2ephp_22',['Resolver.php',['../_resolver_8php.html',1,'']]],
+  ['result_2ephp_23',['Result.php',['../_result_8php.html',1,'']]]
+];

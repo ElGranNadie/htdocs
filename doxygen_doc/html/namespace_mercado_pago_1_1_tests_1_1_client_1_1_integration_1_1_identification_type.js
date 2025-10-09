@@ -1,0 +1,4 @@
+var namespace_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type =
+[
+    [ "IdentificationTypeClientITTest", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test" ]
+];

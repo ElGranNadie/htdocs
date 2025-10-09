@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Resources/MerchantOrder/Shipment.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_shipment_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Shipment.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_shipment_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>MercadoPago\Resources\MerchantOrder;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use MercadoPago\Serialization\Mapper;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html">Shipment</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    use Mapper;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a45deabf8715454b9a8d96044da8578c3">   13</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a45deabf8715454b9a8d96044da8578c3">$id</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a8d5986eadd35b98d6afa5717c3ea7e54">   16</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a8d5986eadd35b98d6afa5717c3ea7e54">$shipping_type</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ab46fbb78609eef14098ef78dae4c7b55">   19</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ab46fbb78609eef14098ef78dae4c7b55">$shipping_mode</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a9172e4b3a4346967e318422e0b6ff569">   22</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a9172e4b3a4346967e318422e0b6ff569">$picking_type</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#aaf196d6b4b529401e2d8fccf752aaab8">   25</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#aaf196d6b4b529401e2d8fccf752aaab8">$status</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a0696c6803cf0adec6f556a6cfdb5c462">   28</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a0696c6803cf0adec6f556a6cfdb5c462">$shipping_substatus</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a4501cd9a71b20fb73b0fd04b0137e99b">   31</a></span>    <span class="keyword">public</span> ?array <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a4501cd9a71b20fb73b0fd04b0137e99b">$items</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a104af04ce55eac595e9b7f455294976e">   34</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a104af04ce55eac595e9b7f455294976e">$date_created</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a0d5094c2f4ab2a08ac38a5bd37d5368b">   37</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a0d5094c2f4ab2a08ac38a5bd37d5368b">$last_modified</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ab1b1aa5f947a835ef6ef4b17b9f2b028">   40</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ab1b1aa5f947a835ef6ef4b17b9f2b028">$date_first_printed</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a2b35831256c14cc38d533317987bc251">   43</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a2b35831256c14cc38d533317987bc251">$service_id</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ae72e88f971e862cec3ceb4c2ff2b65c3">   46</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ae72e88f971e862cec3ceb4c2ff2b65c3">$sender_id</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#aba80817b5166adcf07f628b27ffedac2">   49</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#aba80817b5166adcf07f628b27ffedac2">$receiver_id</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a0ed49bf29159c1d6491d12424257c7f1">   52</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a0ed49bf29159c1d6491d12424257c7f1">$receiver_address</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ae074fdc5073ba4519da1ea88024c4052">   55</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ae074fdc5073ba4519da1ea88024c4052">$shipping_option</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">private</span> $map = [</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="stringliteral">&quot;receiver_address&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\MerchantOrder\ReceiverAddress&quot;</span>,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="stringliteral">&quot;shipping_option&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\MerchantOrder\ShippingOption&quot;</span>,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    ];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a41945b3a31a71d6a6cc4ae7c7c8662db">   65</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a41945b3a31a71d6a6cc4ae7c7c8662db">getMap</a>(): array</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> $this-&gt;map;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html">MercadoPago\Resources\MerchantOrder\Shipment</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">Shipment.php:8</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a0696c6803cf0adec6f556a6cfdb5c462"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a0696c6803cf0adec6f556a6cfdb5c462">MercadoPago\Resources\MerchantOrder\Shipment\$shipping_substatus</a></div><div class="ttdeci">string $shipping_substatus</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Shipment.php:28</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a0d5094c2f4ab2a08ac38a5bd37d5368b"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a0d5094c2f4ab2a08ac38a5bd37d5368b">MercadoPago\Resources\MerchantOrder\Shipment\$last_modified</a></div><div class="ttdeci">string $last_modified</div><div class="ttdef"><b>Definition</b> <a href="#l00037">Shipment.php:37</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a0ed49bf29159c1d6491d12424257c7f1"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a0ed49bf29159c1d6491d12424257c7f1">MercadoPago\Resources\MerchantOrder\Shipment\$receiver_address</a></div><div class="ttdeci">array object null $receiver_address</div><div class="ttdef"><b>Definition</b> <a href="#l00052">Shipment.php:52</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a104af04ce55eac595e9b7f455294976e"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a104af04ce55eac595e9b7f455294976e">MercadoPago\Resources\MerchantOrder\Shipment\$date_created</a></div><div class="ttdeci">string $date_created</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Shipment.php:34</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a2b35831256c14cc38d533317987bc251"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a2b35831256c14cc38d533317987bc251">MercadoPago\Resources\MerchantOrder\Shipment\$service_id</a></div><div class="ttdeci">string $service_id</div><div class="ttdef"><b>Definition</b> <a href="#l00043">Shipment.php:43</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a41945b3a31a71d6a6cc4ae7c7c8662db"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a41945b3a31a71d6a6cc4ae7c7c8662db">MercadoPago\Resources\MerchantOrder\Shipment\getMap</a></div><div class="ttdeci">getMap()</div><div class="ttdef"><b>Definition</b> <a href="#l00065">Shipment.php:65</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a4501cd9a71b20fb73b0fd04b0137e99b"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a4501cd9a71b20fb73b0fd04b0137e99b">MercadoPago\Resources\MerchantOrder\Shipment\$items</a></div><div class="ttdeci">array $items</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Shipment.php:31</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a45deabf8715454b9a8d96044da8578c3"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a45deabf8715454b9a8d96044da8578c3">MercadoPago\Resources\MerchantOrder\Shipment\$id</a></div><div class="ttdeci">int $id</div><div class="ttdef"><b>Definition</b> <a href="#l00013">Shipment.php:13</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a8d5986eadd35b98d6afa5717c3ea7e54"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a8d5986eadd35b98d6afa5717c3ea7e54">MercadoPago\Resources\MerchantOrder\Shipment\$shipping_type</a></div><div class="ttdeci">string $shipping_type</div><div class="ttdef"><b>Definition</b> <a href="#l00016">Shipment.php:16</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_a9172e4b3a4346967e318422e0b6ff569"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#a9172e4b3a4346967e318422e0b6ff569">MercadoPago\Resources\MerchantOrder\Shipment\$picking_type</a></div><div class="ttdeci">string $picking_type</div><div class="ttdef"><b>Definition</b> <a href="#l00022">Shipment.php:22</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_aaf196d6b4b529401e2d8fccf752aaab8"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#aaf196d6b4b529401e2d8fccf752aaab8">MercadoPago\Resources\MerchantOrder\Shipment\$status</a></div><div class="ttdeci">string $status</div><div class="ttdef"><b>Definition</b> <a href="#l00025">Shipment.php:25</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_ab1b1aa5f947a835ef6ef4b17b9f2b028"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ab1b1aa5f947a835ef6ef4b17b9f2b028">MercadoPago\Resources\MerchantOrder\Shipment\$date_first_printed</a></div><div class="ttdeci">string $date_first_printed</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Shipment.php:40</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_ab46fbb78609eef14098ef78dae4c7b55"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ab46fbb78609eef14098ef78dae4c7b55">MercadoPago\Resources\MerchantOrder\Shipment\$shipping_mode</a></div><div class="ttdeci">string $shipping_mode</div><div class="ttdef"><b>Definition</b> <a href="#l00019">Shipment.php:19</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_aba80817b5166adcf07f628b27ffedac2"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#aba80817b5166adcf07f628b27ffedac2">MercadoPago\Resources\MerchantOrder\Shipment\$receiver_id</a></div><div class="ttdeci">int $receiver_id</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Shipment.php:49</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_ae074fdc5073ba4519da1ea88024c4052"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ae074fdc5073ba4519da1ea88024c4052">MercadoPago\Resources\MerchantOrder\Shipment\$shipping_option</a></div><div class="ttdeci">array object null $shipping_option</div><div class="ttdef"><b>Definition</b> <a href="#l00055">Shipment.php:55</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment_html_ae72e88f971e862cec3ceb4c2ff2b65c3"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_shipment.html#ae72e88f971e862cec3ceb4c2ff2b65c3">MercadoPago\Resources\MerchantOrder\Shipment\$sender_id</a></div><div class="ttdeci">int $sender_id</div><div class="ttdef"><b>Definition</b> <a href="#l00046">Shipment.php:46</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_81b3df120731b49823a3878898d62a59.html">Resources</a></li><li class="navelem"><a href="dir_d273eabd5ae1213c2e00284bee226f5f.html">MerchantOrder</a></li><li class="navelem"><a href="_shipment_8php.html">Shipment.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

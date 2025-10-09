@@ -1,0 +1,4 @@
+var class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_method_1_1_payment_method_client_unit_test =
+[
+    [ "testGetSuccess", "class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_method_1_1_payment_method_client_unit_test.html#aa03a291b3e238f9ca7cbe049a0471c90", null ]
+];

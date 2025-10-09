@@ -1,21 +1,37 @@
 <?php
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+/** Información del usuario (id) */
 $user_id = $_SESSION['user_id'] ?? null;
+
+/** Información del usuario (nombre) */
 $nombre_usuario = $_SESSION['usuario_nombre'] ?? null;
+
+/** Información del usuario (premium) */
 $es_premium = $_SESSION['usuario_premium'] ?? false;
 
 // 👉 Detectar página actual
 $current_page = basename($_SERVER['PHP_SELF']);
 
-// 👉 Definir rutas
+/** Página principal (inicio) */
 $index = "/index.php";
+
+/** Sección "Quiénes somos" */
 $quienessomos = "/dashboard/quienes-somos.php";   
-$quehacemos = "/dashboard/Nicole.php";       
+
+/** Sección "Qué hacemos" */
+$quehacemos = "/dashboard/Nicole.php";
+
+/** Sección "Contáctanos" */
 $contactanos = "/dashboard/contactanos.php";
+
+/** Iniciar sesion*/
 $tlogin = "/dashboard/login.php";
+
+/** Chat - solo si el usuario está logueado y no está en la página de chat */
 $chat = "/dashboard/chat.php";
 ?>
 
@@ -50,7 +66,7 @@ $chat = "/dashboard/chat.php";
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <!-- Links de navegación -->
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item"><a class="nav-link" href="<?php echo $index ?>">Introducción</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $index ?>">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $quienessomos ?>">¿Quiénes Somos?</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $quehacemos ?>">Nicole</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $contactanos ?>">Contáctanos</a></li>

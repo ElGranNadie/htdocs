@@ -1,12 +1,33 @@
 <?php 
+/**
+ * @file chat.php
+ * @brief Interfaz principal del chat de la aplicación.
+ * 
+ * Este módulo gestiona la vista principal del sistema de chat del proyecto.
+ * Valida si existe una sesión activa y, en caso afirmativo, obtiene los datos del usuario
+ * (nombre, estado premium y fecha de expiración). Luego renderiza la interfaz HTML con 
+ * el área de mensajes, el campo de texto y los botones de interacción.
+ * 
+ * @details 
+ * - Si el usuario está logueado, se muestra su nombre en el encabezado del chat.
+ * - Se valida si la cuenta es premium y si su suscripción sigue activa.
+ * - Si no existe sesión, se considera al usuario como “Invitado”.
+ */
 require '../varset/varset.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 };
-// Usuario logueado
+
+/** Información del usuario (id) */
 $user_id = $_SESSION['user_id'] ?? null;
+
+/** Información del usuario (nombre) */
 $nombre_usuario = $_SESSION['usuario_nombre'] ?? "Invitado";
+
+/** Información de conexión a la base de datos */
 require 'conexion.php';
+
+/** Verificar y actualizar estado premium del usuario */
 $es_premium = false;
 if ($user_id) {
     $sql = "SELECT nombre_us AS nombre, es_premium, premium_expiracion 
@@ -30,7 +51,8 @@ if ($user_id) {
         $stmt->close();
     }
 }
-
+ 
+/** Información de la página actual */
 $current_page = basename(__FILE__);
 ?>
 <!DOCTYPE html>

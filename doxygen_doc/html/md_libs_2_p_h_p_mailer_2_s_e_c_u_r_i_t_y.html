@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Security notices relating to PHPMailer</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md_libs_2_p_h_p_mailer_2_s_e_c_u_r_i_t_y.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Security notices relating to PHPMailer </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md62"></a></p>
+<p>Please disclose any security issues or vulnerabilities found through <a href="https://tidelift.com/security">Tidelift's coordinated disclosure system</a> or to the maintainers privately.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> 6.4.1 and earlier contain a vulnerability that can result in untrusted code being called (if such code is injected into the host project's scope by other means). If the <span class="tt">$patternselect</span> parameter to <span class="tt">validateAddress()</span> is set to &lsquo;'php&rsquo;<span class="tt"> (the default, defined by </span>PHPMailer::$validator<span class="tt">), and the global namespace contains a function called </span>php`, it will be called in preference to the built-in validator of the same name. Mitigated in <a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> 6.5.0 by denying the use of simple strings as validator function names. Recorded as <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-3603">CVE-2021-3603</a>. Reported by <a href="#" onclick="location.href='mai'+'lto:'+'vi@'+'ha'+'ckb'+'er'+'ry.'+'xy'+'z'; return false;">Vikrant Singh Chauhan</a> via <a href="https://www.huntr.dev/">huntr.dev</a>.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions 6.4.1 and earlier contain a possible remote code execution vulnerability through the <span class="tt">$lang_path</span> parameter of the <span class="tt">setLanguage()</span> method. If the <span class="tt">$lang_path</span> parameter is passed unfiltered from user input, it can be set to <a href="https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats#unc-paths">a UNC path</a>, and if an attacker is also able to persuade the server to load a file from that UNC path, a script file under their control may be executed. This vulnerability only applies to systems that resolve UNC paths, typically only Microsoft Windows. <a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> 6.5.0 mitigates this by no longer treating translation files as PHP code, but by parsing their text content directly. This approach avoids the possibility of executing unknown code while retaining backward compatibility. This isn't ideal, so the current translation format is deprecated and will be replaced in the next major release. Recorded as <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34551">CVE-2021-34551</a>. Reported by <a href="https://listensec.com">Jilin Diting Information Technology Co., Ltd</a> via Tidelift.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions between 6.1.8 and 6.4.0 contain a regression of the earlier CVE-2018-19296 object injection vulnerability as a result of <a href="https://github.com/PHPMailer/PHPMailer/commit/e2e07a355ee8ff36aba21d0242c5950c56e4c6f9">a fix for Windows UNC paths in 6.1.8</a>. Recorded as <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-36326">CVE-2020-36326</a>. Reported by Fariskhi Vidyan via Tidelift. 6.4.1 fixes this issue, and also enforces stricter checks for URL schemes in local path contexts.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions 6.1.5 and earlier contain an output escaping bug that occurs in <span class="tt">Content-Type</span> and <span class="tt">Content-Disposition</span> when filenames passed into <span class="tt">addAttachment</span> and other methods that accept attachment names contain double quote characters, in contravention of RFC822 3.4.1. No specific vulnerability has been found relating to this, but it could allow file attachments to bypass attachment filters that are based on matching filename extensions. Recorded as <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-13625">CVE-2020-13625</a>. Reported by Elar Lang of Clarified Security.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions prior to 6.0.6 and 5.2.27 are vulnerable to an object injection attack by passing <span class="tt">phar://</span> paths into <span class="tt">addAttachment()</span> and other functions that may receive unfiltered local paths, possibly leading to RCE. Recorded as <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2018-19296">CVE-2018-19296</a>. See <a href="https://knasmueller.net/5-answers-about-php-phar-exploitation">this article</a> for more info on this type of vulnerability. Mitigated by blocking the use of paths containing URL-protocol style prefixes such as <span class="tt">phar://</span>. Reported by Sehun Oh of cyberone.kr.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions prior to 5.2.24 (released July 26th 2017) have an XSS vulnerability in one of the code examples, <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-11503">CVE-2017-11503</a>. The <span class="tt">code_generator.phps</span> example did not filter user input prior to output. This file is distributed with a <span class="tt">.phps</span> extension, so it is not normally executable unless it is explicitly renamed, and the file is not included when <a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> is loaded through composer, so it is safe by default. There was also an undisclosed potential XSS vulnerability in the default exception handler (unused by default). Patches for both issues kindly provided by Patrick Monnerat of the Fedora Project.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions prior to 5.2.22 (released January 9th 2017) have a local file disclosure vulnerability, <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-5223">CVE-2017-5223</a>. If content passed into <span class="tt">msgHTML()</span> is sourced from unfiltered user input, relative paths can map to absolute local file paths and added as attachments. Also note that <span class="tt">addAttachment</span> (just like <span class="tt">file_get_contents</span>, <span class="tt">passthru</span>, <span class="tt">unlink</span>, etc) should not be passed user-sourced params either! Reported by Yongxiang Li of Asiasecurity.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions prior to 5.2.20 (released December 28th 2016) are vulnerable to <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-10045">CVE-2016-10045</a> a remote code execution vulnerability, responsibly reported by <a href="https://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10045-Vuln-Patch-Bypass.html">Dawid Golunski</a>, and patched by Paul Buonopane (@Zenexer).</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions prior to 5.2.18 (released December 2016) are vulnerable to <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-10033">CVE-2016-10033</a> a remote code execution vulnerability, responsibly reported by <a href="https://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10033-Vuln.html">Dawid Golunski</a>.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions prior to 5.2.14 (released November 2015) are vulnerable to <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8476">CVE-2015-8476</a> an SMTP CRLF injection bug permitting arbitrary message sending.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions prior to 5.2.10 (released May 2015) are vulnerable to <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-5619">CVE-2008-5619</a>, a remote code execution vulnerability in the bundled html2text library. This file was removed in 5.2.10, so if you are using a version prior to that and make use of the html2text function, it's vitally important that you upgrade and remove this file.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> versions prior to 2.0.7 and 2.2.1 are vulnerable to <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-0796">CVE-2012-0796</a>, an email header injection attack.</p>
+<p>Joomla 1.6.0 uses <a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> in an unsafe way, allowing it to reveal local file paths, reported in <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-3747">CVE-2011-3747</a>.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> didn't sanitise the <span class="tt">$lang_path</span> parameter in <span class="tt">SetLanguage</span>. This wasn't a problem in itself, but some apps (PHPClassifieds, ATutor) also failed to sanitise user-provided parameters passed to it, permitting semi-arbitrary local file inclusion, reported in <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4914">CVE-2010-4914</a>, <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-2021">CVE-2007-2021</a> and <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-5734">CVE-2006-5734</a>.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> 1.7.2 and earlier contained a possible DDoS vulnerability reported in <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-1807">CVE-2005-1807</a>.</p>
+<p><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a> 1.7 and earlier (June 2003) have a possible vulnerability in the <span class="tt">SendmailSend</span> method where shell commands may not be sanitised. Reported in <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-3215">CVE-2007-3215</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

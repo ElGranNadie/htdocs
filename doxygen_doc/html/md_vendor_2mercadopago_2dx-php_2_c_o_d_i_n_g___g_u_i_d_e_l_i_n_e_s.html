@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Coding Guidelines</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md_vendor_2mercadopago_2dx-php_2_c_o_d_i_n_g___g_u_i_d_e_l_i_n_e_s.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Coding Guidelines </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md90"></a></p>
+<p>The Mercado Pago PHP SDK is a collaborative effort from the start. The SDK team thinks that contributions from different developer will enrich its feature set and make it more relevant to the community.</p>
+<p>However, absorbing all contributions as-is, while expedient, might lead to difficulties in maintenance of the codebase is left unchecked. A collaborative codebase often establish guidelines for contributors to ensure code remains maintainable over time. The effort to maintain the SDK is no different in this regard, so a bit of guidance is in order.</p>
+<p>The purpose of this guide is to set a baseline for contributions. These guidelines are not intended to limit the tools at your disposal nor to rewire the way you think but rather to encourage good neighbor behavior.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md91"></a>
+Language Guidelines</h1>
+<p>We use <b>english</b> language. This is to be consistent everywhere, and to be considerate with developers that do not speak our native language.</p>
+<p>Therefore: source code, comments, documentation, commit messages, review comments, and any other kind of contribution * MUST* use english language.</p>
+<p>Typos are unavoidable, but try to reduce them by using a spellchecker. Most IDEs can be configured to run one automatically.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md92"></a>
+Code Guidelines</h1>
+<p>To contribute to the project you need to have installed in your machine <a href="https://pre-commit.com/">pre-commit tool</a> to check the code style and formatting.</p>
+<ol type="1">
+<li>To check if pre-commit is installed, you must run the command below successfully:</li>
+</ol>
+<div class="fragment"><div class="line">$ pre-commit --version</div>
+<div class="line">pre-commit 2.17.0</div>
+</div><!-- fragment --><ol type="1">
+<li>After pre-commit is installed at your machine, inside the SDK project folder, you must run the command below to set up the git hook scripts of the project:</li>
+</ol>
+<div class="fragment"><div class="line">$ pre-commit install</div>
+</div><!-- fragment --><p>After that, git hooks will run automatically before every commit command.</p>
+<p>Generally speaking, be conscious when contributing and try following the same style that the code in the SDK already has. If you have any doubts, just ask us!</p>
+<p>This rules will be enforced automatically when making a pull requests, and checks will fail if you do not follow them, resulting in your contribution being automatically rejected until fixed.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md93"></a>
+Comment Guidelines</h1>
+<p>Comments in code are a hard thing to write, not because the words are difficult to produce but because it is hard to make relevant comments. Too much of it and people do not read comments (and it obfuscates code reading) and too little of it gives you no recourse but to read large portions of codebase to get insight as to what a feature/codeblock is doing. Both situations are undesirable and efforts should be made at all time to have a please comment reading experience</p>
+<p>As a general rule you would have to comment on decisions you made while coding that are not part of any specification.</p>
+<p>In particular, you should always comment any decision that:</p>
+<ul>
+<li>Departs from common wisdom or convention (The <b>why's</b> are necessary).</li>
+<li>Takes a significant amount of time to produce. A good rule of thumb here is that if you spent more than 1 hour thinking on how to produce a fragment of code that took 2 minutes of wrist time to write you should document your thinking to aid reader and allow for validation.</li>
+<li>Need to preserve properties of the implementation. This is the case of performance sensitive portions of the codebase, implementations of security primitives, congestion control algorithms, etc.</li>
+</ul>
+<p>As a general rule of what not to comment you should avoid:</p>
+<ul>
+<li>Commenting on structure of programs that is already part of a convention, specified or otherwise.</li>
+<li>Having pedantic explanations of behavior that can be found by immediate examination of the surrounding code artifacts.</li>
+<li>Commenting on behavior you cannot attest.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md94"></a>
+Branching Guidelines</h2>
+<p>Currently <span class="tt">master</span> is our only long term branch, below a few suggestions of short term branches naming:</p>
+<ul>
+<li><span class="tt">hotfix/something-needs-fix</span>: Small routine patches in code to feature already there.</li>
+<li><span class="tt">feature/something-new</span>: A new feature or a change in an existent feature. Beware of breaking changes that would require a major version bump.</li>
+<li><span class="tt">doc/improves-documentation-for-this-feature</span>: If you add or change documentation with no impact to the source code.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md95"></a>
+Git Guidelines</h2>
+<p>All commits <b>SHOULD</b> follow the <a href="https://chris.beams.io/posts/git-commit">seven rules of a great Git commit message</a>:</p>
+<ol type="1">
+<li>Separate subject from body with a blank line.</li>
+<li>Limit the subject line to 72 characters.</li>
+<li>Capitalize the subject line.</li>
+<li>Do not end the subject line with a period.</li>
+<li>Use the imperative mood in the subject line.</li>
+<li>Wrap the body at 72 characters.</li>
+<li>Use the body to explain what and why vs. how.</li>
+</ol>
+<p>Commits such as "fix tests", "now it's working", and many other common messages we find usually in code <b>WON'T</b> be accepted.</p>
+<p>Ideally we would like to enforce these rules, but we are realistic and understand that it might be a big change for some people. So unless deviating heavily from what was stated we might accept your commits even if not following these rules perfectly.</p>
+<p>Please avoid taking too much time to deliver code, and always <a href="https://git-scm.com/docs/git-rebase">rebase</a> your code to avoid reverse merge commits. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

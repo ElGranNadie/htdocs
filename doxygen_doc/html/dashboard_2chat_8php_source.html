@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente dashboard/chat.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('dashboard_2chat_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">chat.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="dashboard_2chat_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>require <span class="stringliteral">&#39;../varset/varset.php&#39;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="dashboard_2chat_8php.html#aaa6cb2f0dcc39b4cc1d795b40dac50d0">   17</a></span><span class="keywordflow">if</span> (session_status() === PHP_SESSION_NONE) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    session_start();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="dashboard_2chat_8php.html#af0fcd925f00973e32f7214859dfb3c6b">   22</a></span><a class="code hl_variable" href="update__preferencias_8php.html#af0fcd925f00973e32f7214859dfb3c6b">$user_id</a> = $_SESSION[<span class="stringliteral">&#39;user_id&#39;</span>] ?? <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="dashboard_2chat_8php.html#a1e8bdac960009835a91d924647b4b81b">   25</a></span><a class="code hl_variable" href="dashboard_2chat_8php.html#a1e8bdac960009835a91d924647b4b81b">$nombre_usuario</a> = $_SESSION[<span class="stringliteral">&#39;usuario_nombre&#39;</span>] ?? <span class="stringliteral">&quot;Invitado&quot;</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>require <span class="stringliteral">&#39;conexion.php&#39;</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="dashboard_2chat_8php.html#ac9368292df8ddb02e72d238a2aa40e08">   31</a></span><a class="code hl_variable" href="dashboard_2chat_8php.html#ac9368292df8ddb02e72d238a2aa40e08">$es_premium</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordflow">if</span> (<a class="code hl_variable" href="update__preferencias_8php.html#af0fcd925f00973e32f7214859dfb3c6b">$user_id</a>) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="update__preferencias_8php.html#a047170d6020a882807665812a27e2525">$sql</a> = <span class="stringliteral">&quot;SELECT nombre_us AS nombre, es_premium, premium_expiracion </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="stringliteral">            FROM usuarios </span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="stringliteral">            WHERE id = ?&quot;</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="debug__login_8php.html#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a> = <a class="code hl_variable" href="db__config_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;prepare(<a class="code hl_variable" href="update__preferencias_8php.html#a047170d6020a882807665812a27e2525">$sql</a>)) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="debug__login_8php.html#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a>-&gt;bind_param(<span class="stringliteral">&quot;i&quot;</span>, <a class="code hl_variable" href="update__preferencias_8php.html#af0fcd925f00973e32f7214859dfb3c6b">$user_id</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="debug__login_8php.html#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a>-&gt;execute();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = <a class="code hl_variable" href="debug__login_8php.html#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a>-&gt;get_result();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> ($row = <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;fetch_assoc()) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_variable" href="dashboard_2chat_8php.html#a1e8bdac960009835a91d924647b4b81b">$nombre_usuario</a> = $row[<span class="stringliteral">&#39;nombre&#39;</span>] ?? <a class="code hl_variable" href="dashboard_2chat_8php.html#a1e8bdac960009835a91d924647b4b81b">$nombre_usuario</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            $_SESSION[<span class="stringliteral">&#39;usuario_nombre&#39;</span>] = <a class="code hl_variable" href="dashboard_2chat_8php.html#a1e8bdac960009835a91d924647b4b81b">$nombre_usuario</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> ($row[<span class="stringliteral">&#39;es_premium&#39;</span>] == 1 &amp;&amp; !empty($row[<span class="stringliteral">&#39;premium_expiracion&#39;</span>]) &amp;&amp; strtotime($row[<span class="stringliteral">&#39;premium_expiracion&#39;</span>]) &gt; time()) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <a class="code hl_variable" href="dashboard_2chat_8php.html#ac9368292df8ddb02e72d238a2aa40e08">$es_premium</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                $_SESSION[<span class="stringliteral">&#39;usuario_premium&#39;</span>] = 1;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                $_SESSION[<span class="stringliteral">&#39;usuario_premium&#39;</span>] = 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_variable" href="debug__login_8php.html#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a>-&gt;close();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="dashboard_2chat_8php.html#a6f0d082d1f2e2016d936e53d66b5022a">   56</a></span><a class="code hl_variable" href="dashboard_2chat_8php.html#a6f0d082d1f2e2016d936e53d66b5022a">$current_page</a> = basename(__FILE__);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>?&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>&lt;!DOCTYPE html&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>&lt;html lang=<span class="stringliteral">&quot;es&quot;</span>&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>&lt;head&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    &lt;title&gt;Chat&lt;/title&gt; &lt;!-- Título de la página --&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    &lt;?php require <span class="stringliteral">&#39;other.php&#39;</span>; ?&gt; &lt;!-- Incluye metadatos y enlaces comunes --&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    &lt;?php require <span class="stringliteral">&#39;stylesheet.php&#39;</span>; ?&gt; &lt;!-- Incluye los estilos del dashboard --&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>&lt;/head&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>&lt;body&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    &lt;?php require <span class="stringliteral">&#39;../dashboard/header.php&#39;</span>; ?&gt; &lt;!-- Incluye el encabezado de la página --&gt;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;body-container row&quot;</span> style=<span class="stringliteral">&quot;padding:0;margin: 0px;&quot;</span>&gt; </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;chat-container&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;chat-section col-12&quot;</span> style=<span class="stringliteral">&quot;padding:0;margin: 0px;&quot;</span>&gt; &lt;!-- Contenedor del chat --&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;chat-header&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;row&quot;</span>&gt; &lt;!-- Encabezado del chat --&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;chat-header col-11&quot;</span>&gt;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    &lt;?php <span class="keywordflow">if</span> (<a class="code hl_variable" href="update__preferencias_8php.html#af0fcd925f00973e32f7214859dfb3c6b">$user_id</a>): ?&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        &lt;a <span class="keywordtype">id</span>=<span class="stringliteral">&quot;nav-unused&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;nav-unused&quot;</span> data-nombre=<span class="stringliteral">&quot;&lt;?php echo htmlspecialchars($nombre_usuario); ?&gt;&quot;</span>&gt;👤 &lt;?php echo htmlspecialchars(<a class="code hl_variable" href="dashboard_2chat_8php.html#a1e8bdac960009835a91d924647b4b81b">$nombre_usuario</a>); ?&gt;&lt;/a&gt;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="dashboard_2chat_8php.html#a82cd33ca97ff99f2fcc5e9c81d65251b">   73</a></span>                    &lt;?php <a class="code hl_variable" href="dashboard_2chat_8php.html#a82cd33ca97ff99f2fcc5e9c81d65251b">endif</a>; ?&gt;&lt;/div&gt; </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;chat-messages&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;chat-messages row&quot;</span> style=<span class="stringliteral">&quot;padding:0;margin: 0px;&quot;</span>&gt;&lt;/div&gt; &lt;!-- Contenedor de mensajes del chat --&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;message-input input-container&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;chat-input row&quot;</span>&gt; &lt;!-- Contenedor de entrada de mensajes --&gt;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                &lt;textarea <span class="keywordtype">id</span>=<span class="stringliteral">&quot;user-message&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;col-10&quot;</span> rows=<span class="stringliteral">&quot;1&quot;</span> placeholder=<span class="stringliteral">&quot;Escribe tu mensaje...&quot;</span>&gt;&lt;/textarea&gt; &lt;!-- Área de texto para escribir mensajes --&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                &lt;button <span class="keywordtype">id</span>=<span class="stringliteral">&quot;microphone-button&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;mic-btn col-1&quot;</span>&gt; &lt;!-- Botón de micrófono que aun no funciona por cierto--&gt;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    &lt;svg viewBox=<span class="stringliteral">&quot;0 0 24 24&quot;</span> fill=<span class="stringliteral">&quot;none&quot;</span> stroke=<span class="stringliteral">&quot;currentColor&quot;</span> stroke-width=<span class="stringliteral">&quot;2&quot;</span> stroke-linecap=<span class="stringliteral">&quot;round&quot;</span> stroke-linejoin=<span class="stringliteral">&quot;round&quot;</span>&gt;&lt;path d=<span class="stringliteral">&quot;M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z&quot;</span>&gt;&lt;/path&gt;&lt;path d=<span class="stringliteral">&quot;M19 10v2a7 7 0 0 1-14 0v-2&quot;</span>&gt;&lt;/path&gt;&lt;line x1=<span class="stringliteral">&quot;12&quot;</span> y1=<span class="stringliteral">&quot;19&quot;</span> x2=<span class="stringliteral">&quot;12&quot;</span> y2=<span class="stringliteral">&quot;23&quot;</span>&gt;&lt;/line&gt;&lt;line x1=<span class="stringliteral">&quot;8&quot;</span> y1=<span class="stringliteral">&quot;23&quot;</span> x2=<span class="stringliteral">&quot;16&quot;</span> y2=<span class="stringliteral">&quot;23&quot;</span>&gt;&lt;/line&gt;&lt;/svg&gt;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    &lt;!--i <span class="keyword">class</span>=<span class="stringliteral">&quot;ph ph-microphone&quot;</span>&gt;&lt;/i--&gt;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                &lt;/button&gt;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                &lt;button <span class="keywordtype">id</span>=<span class="stringliteral">&quot;send-button&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;send-btn col-1&quot;</span>&gt; &lt;!-- Botón de enviar mensaje --&gt;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    &lt;!--i <span class="keyword">class</span>=<span class="stringliteral">&quot;ph ph-arrow-right&quot;</span>&gt;&lt;/i--&gt;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    &lt;svg viewBox=<span class="stringliteral">&quot;0 0 24 24&quot;</span> fill=<span class="stringliteral">&quot;none&quot;</span> stroke=<span class="stringliteral">&quot;currentColor&quot;</span> stroke-width=<span class="stringliteral">&quot;2&quot;</span> stroke-linecap=<span class="stringliteral">&quot;round&quot;</span> stroke-linejoin=<span class="stringliteral">&quot;round&quot;</span>&gt;&lt;line x1=<span class="stringliteral">&quot;22&quot;</span> y1=<span class="stringliteral">&quot;2&quot;</span> x2=<span class="stringliteral">&quot;11&quot;</span> y2=<span class="stringliteral">&quot;13&quot;</span>&gt;&lt;/line&gt;&lt;polyline points=<span class="stringliteral">&quot;22 2 15 22 11 13 2 13&quot;</span>&gt;&lt;/polyline&gt;&lt;/svg&gt;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                &lt;/button&gt;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    &lt;?php require <span class="stringliteral">&#39;../dashboard/footer.php&#39;</span>; ?&gt; &lt;!-- Incluye el pie de página --&gt;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    &lt;?php require <span class="stringliteral">&#39;../dashboard/scripts.php&#39;</span>; ?&gt; &lt;!-- Incluye los términos y condiciones --&gt;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>&lt;/body&gt;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>&lt;/html&gt;</div>
+<div class="ttc" id="aapi_2login_8php_html_a112ef069ddc0454086e3d1e6d8d55d07"><div class="ttname"><a href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a></div><div class="ttdeci">$result</div><div class="ttdef"><b>Definition</b> <a href="api_2login_8php_source.html#l00021">login.php:21</a></div></div>
+<div class="ttc" id="adashboard_2chat_8php_html_a1e8bdac960009835a91d924647b4b81b"><div class="ttname"><a href="dashboard_2chat_8php.html#a1e8bdac960009835a91d924647b4b81b">$nombre_usuario</a></div><div class="ttdeci">$nombre_usuario</div><div class="ttdef"><b>Definition</b> <a href="#l00025">chat.php:25</a></div></div>
+<div class="ttc" id="adashboard_2chat_8php_html_a6f0d082d1f2e2016d936e53d66b5022a"><div class="ttname"><a href="dashboard_2chat_8php.html#a6f0d082d1f2e2016d936e53d66b5022a">$current_page</a></div><div class="ttdeci">if($user_id) $current_page</div><div class="ttdef"><b>Definition</b> <a href="#l00056">chat.php:56</a></div></div>
+<div class="ttc" id="adashboard_2chat_8php_html_a82cd33ca97ff99f2fcc5e9c81d65251b"><div class="ttname"><a href="dashboard_2chat_8php.html#a82cd33ca97ff99f2fcc5e9c81d65251b">endif</a></div><div class="ttdeci">endif</div><div class="ttdef"><b>Definition</b> <a href="#l00073">chat.php:73</a></div></div>
+<div class="ttc" id="adashboard_2chat_8php_html_ac9368292df8ddb02e72d238a2aa40e08"><div class="ttname"><a href="dashboard_2chat_8php.html#ac9368292df8ddb02e72d238a2aa40e08">$es_premium</a></div><div class="ttdeci">$es_premium</div><div class="ttdef"><b>Definition</b> <a href="#l00031">chat.php:31</a></div></div>
+<div class="ttc" id="adb__config_8php_html_aa8a5a87b9c1a6a0819b88447cbe41877"><div class="ttname"><a href="db__config_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a></div><div class="ttdeci">$conn</div><div class="ttdef"><b>Definition</b> <a href="db__config_8php_source.html#l00013">db_config.php:13</a></div></div>
+<div class="ttc" id="adebug__login_8php_html_aa72329a38f1cd5219712b4080f19a8b1"><div class="ttname"><a href="debug__login_8php.html#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a></div><div class="ttdeci">if(! $email||! $password) $stmt</div><div class="ttdef"><b>Definition</b> <a href="debug__login_8php_source.html#l00013">debug_login.php:13</a></div></div>
+<div class="ttc" id="aupdate__preferencias_8php_html_a047170d6020a882807665812a27e2525"><div class="ttname"><a href="update__preferencias_8php.html#a047170d6020a882807665812a27e2525">$sql</a></div><div class="ttdeci">$sql</div><div class="ttdef"><b>Definition</b> <a href="update__preferencias_8php_source.html#l00025">update_preferencias.php:25</a></div></div>
+<div class="ttc" id="aupdate__preferencias_8php_html_af0fcd925f00973e32f7214859dfb3c6b"><div class="ttname"><a href="update__preferencias_8php.html#af0fcd925f00973e32f7214859dfb3c6b">$user_id</a></div><div class="ttdeci">$user_id</div><div class="ttdef"><b>Definition</b> <a href="update__preferencias_8php_source.html#l00012">update_preferencias.php:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_97f27a8d3efc40e8fefbbd7dfe5560e8.html">dashboard</a></li><li class="navelem"><a href="dashboard_2chat_8php.html">chat.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

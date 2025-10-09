@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Resources/Payment/PaymentRefundListResult.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_payment_refund_list_result_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PaymentRefundListResult.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_payment_refund_list_result_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>MercadoPago\Resources\Payment;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use MercadoPago\Serialization\Mapper;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html">PaymentRefundListResult</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    use Mapper;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a7388309f8b28c8d59d0af62409a1e42c">   14</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a7388309f8b28c8d59d0af62409a1e42c">$id</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ad3ed7b1920db78afa3fa97baa0c00926">   17</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ad3ed7b1920db78afa3fa97baa0c00926">$payment_id</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a14b948ba15f1f23e4d81781cdbdd6c8d">   20</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">float</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a14b948ba15f1f23e4d81781cdbdd6c8d">$amount</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ae299941caf1d49f2612bf50b54ffd233">   23</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">float</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ae299941caf1d49f2612bf50b54ffd233">$adjustment_amount</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a5ce4018f59cbed0a848b91222e2ff82a">   26</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a5ce4018f59cbed0a848b91222e2ff82a">$status</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a42c7db5c6ec9662b58586ad0dc168eb0">   29</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a42c7db5c6ec9662b58586ad0dc168eb0">$refund_mode</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a87d1c9ab608c93cd4b3426ca9c7ab8b0">   32</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a87d1c9ab608c93cd4b3426ca9c7ab8b0">$date_created</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a5110ddaf22d9247f472c410c84a1db1a">   35</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a5110ddaf22d9247f472c410c84a1db1a">$reason</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a5467cc867f1acc94774ab9ef551d278a">   38</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a5467cc867f1acc94774ab9ef551d278a">$unique_sequence_number</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a236cf006bade6d522a3e82e5f567a2ec">   41</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a236cf006bade6d522a3e82e5f567a2ec">$source</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a592feb727e35db66c39e9cf1f2729031">   44</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a592feb727e35db66c39e9cf1f2729031">$amount_refunded_to_payer</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a752548ed651221d9798dfb59f801d9f5">   47</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a752548ed651221d9798dfb59f801d9f5">$partition_details</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ac1f820e889c036bbf94fc5947183c7d4">   50</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ac1f820e889c036bbf94fc5947183c7d4">$labels</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ab704abd62858a4163a49598b3ef24f4f">   53</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ab704abd62858a4163a49598b3ef24f4f">$additional_data</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a1a3410f22cca2310b8785f4834dfa05b">   56</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a1a3410f22cca2310b8785f4834dfa05b">$expiration_date</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a95868459b9c82804da3e47f80142886a">   58</a></span>    <span class="keyword">public</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a95868459b9c82804da3e47f80142886a">$map</a> = [</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="stringliteral">&quot;source&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Common\Source&quot;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    ];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ab3e90a4c496edcc8740a2956d77114fa">   65</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ab3e90a4c496edcc8740a2956d77114fa">getMap</a>(): array</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a95868459b9c82804da3e47f80142886a">$this-&gt;map</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html">MercadoPago\Resources\Payment\PaymentRefundListResult</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">PaymentRefundListResult.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a14b948ba15f1f23e4d81781cdbdd6c8d"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a14b948ba15f1f23e4d81781cdbdd6c8d">MercadoPago\Resources\Payment\PaymentRefundListResult\$amount</a></div><div class="ttdeci">float $amount</div><div class="ttdef"><b>Definition</b> <a href="#l00020">PaymentRefundListResult.php:20</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a1a3410f22cca2310b8785f4834dfa05b"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a1a3410f22cca2310b8785f4834dfa05b">MercadoPago\Resources\Payment\PaymentRefundListResult\$expiration_date</a></div><div class="ttdeci">string $expiration_date</div><div class="ttdef"><b>Definition</b> <a href="#l00056">PaymentRefundListResult.php:56</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a236cf006bade6d522a3e82e5f567a2ec"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a236cf006bade6d522a3e82e5f567a2ec">MercadoPago\Resources\Payment\PaymentRefundListResult\$source</a></div><div class="ttdeci">array object null $source</div><div class="ttdef"><b>Definition</b> <a href="#l00041">PaymentRefundListResult.php:41</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a42c7db5c6ec9662b58586ad0dc168eb0"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a42c7db5c6ec9662b58586ad0dc168eb0">MercadoPago\Resources\Payment\PaymentRefundListResult\$refund_mode</a></div><div class="ttdeci">string $refund_mode</div><div class="ttdef"><b>Definition</b> <a href="#l00029">PaymentRefundListResult.php:29</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a5110ddaf22d9247f472c410c84a1db1a"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a5110ddaf22d9247f472c410c84a1db1a">MercadoPago\Resources\Payment\PaymentRefundListResult\$reason</a></div><div class="ttdeci">string $reason</div><div class="ttdef"><b>Definition</b> <a href="#l00035">PaymentRefundListResult.php:35</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a5467cc867f1acc94774ab9ef551d278a"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a5467cc867f1acc94774ab9ef551d278a">MercadoPago\Resources\Payment\PaymentRefundListResult\$unique_sequence_number</a></div><div class="ttdeci">string $unique_sequence_number</div><div class="ttdef"><b>Definition</b> <a href="#l00038">PaymentRefundListResult.php:38</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a592feb727e35db66c39e9cf1f2729031"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a592feb727e35db66c39e9cf1f2729031">MercadoPago\Resources\Payment\PaymentRefundListResult\$amount_refunded_to_payer</a></div><div class="ttdeci">int $amount_refunded_to_payer</div><div class="ttdef"><b>Definition</b> <a href="#l00044">PaymentRefundListResult.php:44</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a5ce4018f59cbed0a848b91222e2ff82a"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a5ce4018f59cbed0a848b91222e2ff82a">MercadoPago\Resources\Payment\PaymentRefundListResult\$status</a></div><div class="ttdeci">string $status</div><div class="ttdef"><b>Definition</b> <a href="#l00026">PaymentRefundListResult.php:26</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a7388309f8b28c8d59d0af62409a1e42c"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a7388309f8b28c8d59d0af62409a1e42c">MercadoPago\Resources\Payment\PaymentRefundListResult\$id</a></div><div class="ttdeci">int $id</div><div class="ttdef"><b>Definition</b> <a href="#l00014">PaymentRefundListResult.php:14</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a752548ed651221d9798dfb59f801d9f5"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a752548ed651221d9798dfb59f801d9f5">MercadoPago\Resources\Payment\PaymentRefundListResult\$partition_details</a></div><div class="ttdeci">array object null $partition_details</div><div class="ttdef"><b>Definition</b> <a href="#l00047">PaymentRefundListResult.php:47</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a87d1c9ab608c93cd4b3426ca9c7ab8b0"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a87d1c9ab608c93cd4b3426ca9c7ab8b0">MercadoPago\Resources\Payment\PaymentRefundListResult\$date_created</a></div><div class="ttdeci">string $date_created</div><div class="ttdef"><b>Definition</b> <a href="#l00032">PaymentRefundListResult.php:32</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_a95868459b9c82804da3e47f80142886a"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#a95868459b9c82804da3e47f80142886a">MercadoPago\Resources\Payment\PaymentRefundListResult\$map</a></div><div class="ttdeci">$map</div><div class="ttdef"><b>Definition</b> <a href="#l00058">PaymentRefundListResult.php:58</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_ab3e90a4c496edcc8740a2956d77114fa"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ab3e90a4c496edcc8740a2956d77114fa">MercadoPago\Resources\Payment\PaymentRefundListResult\getMap</a></div><div class="ttdeci">getMap()</div><div class="ttdef"><b>Definition</b> <a href="#l00065">PaymentRefundListResult.php:65</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_ab704abd62858a4163a49598b3ef24f4f"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ab704abd62858a4163a49598b3ef24f4f">MercadoPago\Resources\Payment\PaymentRefundListResult\$additional_data</a></div><div class="ttdeci">array object null $additional_data</div><div class="ttdef"><b>Definition</b> <a href="#l00053">PaymentRefundListResult.php:53</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_ac1f820e889c036bbf94fc5947183c7d4"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ac1f820e889c036bbf94fc5947183c7d4">MercadoPago\Resources\Payment\PaymentRefundListResult\$labels</a></div><div class="ttdeci">array object null $labels</div><div class="ttdef"><b>Definition</b> <a href="#l00050">PaymentRefundListResult.php:50</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_ad3ed7b1920db78afa3fa97baa0c00926"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ad3ed7b1920db78afa3fa97baa0c00926">MercadoPago\Resources\Payment\PaymentRefundListResult\$payment_id</a></div><div class="ttdeci">int $payment_id</div><div class="ttdef"><b>Definition</b> <a href="#l00017">PaymentRefundListResult.php:17</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result_html_ae299941caf1d49f2612bf50b54ffd233"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_1_1_payment_refund_list_result.html#ae299941caf1d49f2612bf50b54ffd233">MercadoPago\Resources\Payment\PaymentRefundListResult\$adjustment_amount</a></div><div class="ttdeci">float $adjustment_amount</div><div class="ttdef"><b>Definition</b> <a href="#l00023">PaymentRefundListResult.php:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_81b3df120731b49823a3878898d62a59.html">Resources</a></li><li class="navelem"><a href="dir_754fc4adea86ec591bb6afdcb5c45493.html">Payment</a></li><li class="navelem"><a href="_payment_refund_list_result_8php.html">PaymentRefundListResult.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

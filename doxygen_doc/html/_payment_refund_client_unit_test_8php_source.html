@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/tests/MercadoPago/Client/Unit/Payment/PaymentRefundClientUnitTest.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_payment_refund_client_unit_test_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PaymentRefundClientUnitTest.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_payment_refund_client_unit_test_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>MercadoPago\Tests\Client\Unit\Payment;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use MercadoPago\Client\Payment\PaymentRefundClient;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>use MercadoPago\MercadoPagoConfig;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>use MercadoPago\Net\MPDefaultHttpClient;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>use MercadoPago\Tests\Client\Unit\Base\BaseClient;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html">   13</a></span><span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html">PaymentRefundClientUnitTest</a> <span class="keyword">extends</span> <a class="code hl_class" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_base_1_1_base_client.html">BaseClient</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#aec8cd332879e6ee801115fd20164c247">   15</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#aec8cd332879e6ee801115fd20164c247">testCreateRefundSuccess</a>(): void</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        $filepath = <span class="stringliteral">&#39;../../../../Resources/Mocks/Response/Payment/payment_refund.json&#39;</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        $mock_http_request = $this-&gt;mockHttpRequest($filepath, 200);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        $http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>($mock_http_request);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPagoConfig::setHttpClient</a>($http_client);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_refund_client.html">PaymentRefundClient</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a> = 18552260055;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_variable" href="pago__exitoso_8php.html#af48fe050f529b6ca56356299183b7778">$amount</a> = 10.0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        $refund_result = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;refund(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>, <a class="code hl_variable" href="pago__exitoso_8php.html#af48fe050f529b6ca56356299183b7778">$amount</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        $this-&gt;assertSame(200, $refund_result-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        $this-&gt;assertSame(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>, $refund_result-&gt;payment_id);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        $this-&gt;assertSame(<a class="code hl_variable" href="pago__exitoso_8php.html#af48fe050f529b6ca56356299183b7778">$amount</a>, $refund_result-&gt;amount);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;2023-08-24T15:35:15.783-04:00&quot;</span>, $refund_result-&gt;date_created);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;approved&quot;</span>, $refund_result-&gt;status);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;Firstname Lastname&quot;</span>, $refund_result-&gt;source-&gt;name);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#a829735b611e8097bca149edbd0d4fe12">   36</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#a829735b611e8097bca149edbd0d4fe12">testCreateRefundTotalSuccess</a>(): void</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        $filepath = <span class="stringliteral">&#39;../../../../Resources/Mocks/Response/Payment/payment_refund.json&#39;</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        $mock_http_request = $this-&gt;mockHttpRequest($filepath, 200);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        $http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>($mock_http_request);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPagoConfig::setHttpClient</a>($http_client);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_refund_client.html">PaymentRefundClient</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a> = 18552260055;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        $refund_result = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;refundTotal(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        $this-&gt;assertSame(200, $refund_result-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        $this-&gt;assertSame(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>, $refund_result-&gt;payment_id);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        $this-&gt;assertSame(10.0, $refund_result-&gt;amount);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;2023-08-24T15:35:15.783-04:00&quot;</span>, $refund_result-&gt;date_created);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;approved&quot;</span>, $refund_result-&gt;status);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;Firstname Lastname&quot;</span>, $refund_result-&gt;source-&gt;name);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#abeb168725382967f34659ba447691a22">   56</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#abeb168725382967f34659ba447691a22">testGetRefundSuccess</a>(): void</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        $filepath = <span class="stringliteral">&#39;../../../../Resources/Mocks/Response/Payment/payment_refund.json&#39;</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        $mock_http_request = $this-&gt;mockHttpRequest($filepath, 200);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        $http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>($mock_http_request);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPagoConfig::setHttpClient</a>($http_client);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_refund_client.html">PaymentRefundClient</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a> = 18552260055;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        $refund_id = 1009042015;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        $refund_result = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;get(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>, $refund_id);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        $this-&gt;assertSame(200, $refund_result-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        $this-&gt;assertSame(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>, $refund_result-&gt;payment_id);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        $this-&gt;assertSame(10.0, $refund_result-&gt;amount);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;2023-08-24T15:35:15.783-04:00&quot;</span>, $refund_result-&gt;date_created);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;approved&quot;</span>, $refund_result-&gt;status);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;Firstname Lastname&quot;</span>, $refund_result-&gt;source-&gt;name);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#a8b47acc318598a06a61f00515990420b">   77</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#a8b47acc318598a06a61f00515990420b">testListRefundSuccess</a>(): void</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        $filepath = <span class="stringliteral">&#39;../../../../Resources/Mocks/Response/Payment/payment_refund_list.json&#39;</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        $mock_http_request = $this-&gt;mockHttpRequest($filepath, 200);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        $http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>($mock_http_request);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPagoConfig::setHttpClient</a>($http_client);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_refund_client.html">PaymentRefundClient</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a> = 18552260055;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        $refund_result = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;list(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        $this-&gt;assertSame(200, $refund_result-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        $this-&gt;assertSame(2, count($refund_result-&gt;data));</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        $this-&gt;assertSame(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>, $refund_result-&gt;data[0]-&gt;payment_id);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        $this-&gt;assertSame(1009042015, $refund_result-&gt;data[0]-&gt;id);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        $this-&gt;assertSame(5.0, $refund_result-&gt;data[0]-&gt;amount);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;2023-08-24T15:35:15.783-04:00&quot;</span>, $refund_result-&gt;data[0]-&gt;date_created);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;approved&quot;</span>, $refund_result-&gt;data[0]-&gt;status);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;Test Test&quot;</span>, $refund_result-&gt;data[0]-&gt;source-&gt;name);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        $this-&gt;assertSame(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>, $refund_result-&gt;data[1]-&gt;payment_id);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        $this-&gt;assertSame(1009042016, $refund_result-&gt;data[1]-&gt;id);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        $this-&gt;assertSame(5.0, $refund_result-&gt;data[1]-&gt;amount);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;2023-08-24T15:35:15.783-04:00&quot;</span>, $refund_result-&gt;data[1]-&gt;date_created);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;approved&quot;</span>, $refund_result-&gt;data[1]-&gt;status);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;Test Test&quot;</span>, $refund_result-&gt;data[1]-&gt;source-&gt;name);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_payment_1_1_payment_refund_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_refund_client.html">MercadoPago\Client\Payment\PaymentRefundClient</a></div><div class="ttdef"><b>Definition</b> <a href="_payment_refund_client_8php_source.html#l00015">PaymentRefundClient.php:16</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a51fd29cbaf1eb510225961d3e75aee96"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPago\MercadoPagoConfig\setHttpClient</a></div><div class="ttdeci">static setHttpClient(MPHttpClient $http_client)</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00073">MercadoPagoConfig.php:73</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_default_http_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MercadoPago\Net\MPDefaultHttpClient</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_default_http_client_8php_source.html#l00010">MPDefaultHttpClient.php:11</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_base_1_1_base_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_base_1_1_base_client.html">MercadoPago\Tests\Client\Unit\Base\BaseClient</a></div><div class="ttdef"><b>Definition</b> <a href="_base_client_8php_source.html#l00010">BaseClient.php:11</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test_html"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html">MercadoPago\Tests\Client\Unit\Payment\PaymentRefundClientUnitTest</a></div><div class="ttdef"><b>Definition</b> <a href="#l00013">PaymentRefundClientUnitTest.php:14</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test_html_a829735b611e8097bca149edbd0d4fe12"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#a829735b611e8097bca149edbd0d4fe12">MercadoPago\Tests\Client\Unit\Payment\PaymentRefundClientUnitTest\testCreateRefundTotalSuccess</a></div><div class="ttdeci">testCreateRefundTotalSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00036">PaymentRefundClientUnitTest.php:36</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test_html_a8b47acc318598a06a61f00515990420b"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#a8b47acc318598a06a61f00515990420b">MercadoPago\Tests\Client\Unit\Payment\PaymentRefundClientUnitTest\testListRefundSuccess</a></div><div class="ttdeci">testListRefundSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00077">PaymentRefundClientUnitTest.php:77</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test_html_abeb168725382967f34659ba447691a22"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#abeb168725382967f34659ba447691a22">MercadoPago\Tests\Client\Unit\Payment\PaymentRefundClientUnitTest\testGetRefundSuccess</a></div><div class="ttdeci">testGetRefundSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00056">PaymentRefundClientUnitTest.php:56</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test_html_aec8cd332879e6ee801115fd20164c247"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_refund_client_unit_test.html#aec8cd332879e6ee801115fd20164c247">MercadoPago\Tests\Client\Unit\Payment\PaymentRefundClientUnitTest\testCreateRefundSuccess</a></div><div class="ttdeci">testCreateRefundSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00015">PaymentRefundClientUnitTest.php:15</a></div></div>
+<div class="ttc" id="apago_8php_html_ad1405dc1ba2e288764378e79bff7a87d"><div class="ttname"><a href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a></div><div class="ttdeci">$client</div><div class="ttdef"><b>Definition</b> <a href="pago_8php_source.html#l00014">pago.php:14</a></div></div>
+<div class="ttc" id="apago__exitoso_8php_html_a4938730abe5159d71edc8a2cab59ccfa"><div class="ttname"><a href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a></div><div class="ttdeci">if(!mysqli_real_connect( $conn, $host, $user, $password, $dbname, $port, NULL, MYSQLI_CLIENT_SSL)) if(!isset($_GET[&#39;payment_id&#39;])) $payment_id</div><div class="ttdef"><b>Definition</b> <a href="pago__exitoso_8php_source.html#l00032">pago_exitoso.php:32</a></div></div>
+<div class="ttc" id="apago__exitoso_8php_html_af48fe050f529b6ca56356299183b7778"><div class="ttname"><a href="pago__exitoso_8php.html#af48fe050f529b6ca56356299183b7778">$amount</a></div><div class="ttdeci">$amount</div><div class="ttdef"><b>Definition</b> <a href="pago__exitoso_8php_source.html#l00071">pago_exitoso.php:71</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_ab008c55aa212b3997cab5dabca3bf53.html">tests</a></li><li class="navelem"><a href="dir_334d9e4b2d9d5525b4a13f4dce74526f.html">MercadoPago</a></li><li class="navelem"><a href="dir_d13f56b82f2eaa82f6618f06f4c20871.html">Client</a></li><li class="navelem"><a href="dir_445c5e2931ed6cb5f6a4d56c833b09e3.html">Unit</a></li><li class="navelem"><a href="dir_94ac7890f505bb4aeb47db2d1ea27ad1.html">Payment</a></li><li class="navelem"><a href="_payment_refund_client_unit_test_8php.html">PaymentRefundClientUnitTest.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

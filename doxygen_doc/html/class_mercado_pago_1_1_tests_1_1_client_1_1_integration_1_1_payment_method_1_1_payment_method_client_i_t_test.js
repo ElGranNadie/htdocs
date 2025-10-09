@@ -1,0 +1,6 @@
+var class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_payment_method_1_1_payment_method_client_i_t_test =
+[
+    [ "setUpBeforeClass", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_payment_method_1_1_payment_method_client_i_t_test.html#af84f5f72ba20289caee183791cfb75d8", null ],
+    [ "testGetSuccess", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_payment_method_1_1_payment_method_client_i_t_test.html#a4316bbd8835ed3c66e2358d83011a8e8", null ],
+    [ "testGetWithInvalidAccessTokenFailure", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_payment_method_1_1_payment_method_client_i_t_test.html#a43d011371979c2876ec0c554606980ff", null ]
+];

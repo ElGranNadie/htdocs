@@ -1,0 +1,26 @@
+var class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result =
+[
+    [ "getMap", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a4214981de810a470118f6a72aa04040f", null ],
+    [ "$application_id", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a36032c42387fba9759b2464eee903d14", null ],
+    [ "$auto_recurring", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a90d574fb646141478bc563a9e857f66e", null ],
+    [ "$back_url", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a67213edc395584b34b075c72ef7d882e", null ],
+    [ "$card_id", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a56fa2c207e032b2050f20f8be4cbc05d", null ],
+    [ "$collector_id", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a592804a776e0a3a4445ac1254122bdcf", null ],
+    [ "$date_created", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a05984981f786f127b9e40942c73bbd54", null ],
+    [ "$external_reference", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#acaed3e5f40e61e879ce9d187936f7afa", null ],
+    [ "$first_invoice_offset", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a79c5715978395bce733e1cc1f913d03b", null ],
+    [ "$id", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#af98308c8b92ecbfda263daa0ebf330a8", null ],
+    [ "$init_point", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a82549a061ef1a70e2c10ac0823c91dae", null ],
+    [ "$last_modified", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a386da1e05e96d294addfeb8699b6acef", null ],
+    [ "$map", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#aeb189e0919ca76d9fead313671feff70", null ],
+    [ "$next_payment_date", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#adfa27725a56003af868aa0526c2b88ff", null ],
+    [ "$payer_email", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#afb0e0902a3192477d9cdb03f41d92b94", null ],
+    [ "$payer_first_name", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#ae353393e66fea07bf056b3e17b3d412d", null ],
+    [ "$payer_id", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a83cdd2afc6860676d5804f8ceb75a902", null ],
+    [ "$payer_last_name", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#ad1a76f213733df8a0375063fa506980c", null ],
+    [ "$payment_method_id", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a8841899845a0a54065d91f52c5f939b9", null ],
+    [ "$preapproval_plan_id", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a50228c17368b15805ebdcb6afd1df90b", null ],
+    [ "$reason", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#ae8d885e41e8e77bb521dfddf322d902d", null ],
+    [ "$status", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#a267e3804330ff22aad06be829a02cfdf", null ],
+    [ "$summarized", "class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_pre_approval_list_result.html#aed681ec4350063d1fa62cc544f932fdf", null ]
+];

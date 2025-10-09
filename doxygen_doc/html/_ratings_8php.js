@@ -1,0 +1,4 @@
+var _ratings_8php =
+[
+    [ "MercadoPago\\Resources\\User\\Ratings", "class_mercado_pago_1_1_resources_1_1_user_1_1_ratings.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_ratings" ]
+];

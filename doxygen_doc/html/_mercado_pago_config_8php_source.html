@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/MercadoPagoConfig.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_mercado_pago_config_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MercadoPagoConfig.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_mercado_pago_config_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mercado_pago.html">MercadoPago</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use <a class="code hl_class" href="class_mercado_pago_1_1_exceptions_1_1_invalid_argument_exception.html">MercadoPago\Exceptions\InvalidArgumentException</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>use <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MercadoPago\Net\MPDefaultHttpClient</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>use <a class="code hl_interface" href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MercadoPago\Net\MPHttpClient</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPagoConfig</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a89c9a69f758746a8964ce1cb0912712e">   13</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_mercado_pago_config.html#a89c9a69f758746a8964ce1cb0912712e">$CURRENT_VERSION</a> = <span class="stringliteral">&quot;3.5.1&quot;</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#abb617efed898a46d15b389272d640693">   16</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_mercado_pago_config.html#abb617efed898a46d15b389272d640693">$BASE_URL</a> = <span class="stringliteral">&quot;https://api.mercadopago.com&quot;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a3f080edbde5e2be59206c26471362d63">   19</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_mercado_pago_config.html#a3f080edbde5e2be59206c26471362d63">$PRODUCT_ID</a> = <span class="stringliteral">&quot;BC32A7RU643001OI3940&quot;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#aef28b52ccbef3053dc55093817d96350">   22</a></span>    <span class="keyword">public</span> <span class="keyword">const</span> <a class="code hl_variable" href="class_mercado_pago_1_1_mercado_pago_config.html#aef28b52ccbef3053dc55093817d96350">LOCAL</a> = <span class="stringliteral">&#39;local&#39;</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a4beecac40aac184bf0f55598fb3df34f">   25</a></span>    <span class="keyword">public</span> <span class="keyword">const</span> <a class="code hl_variable" href="class_mercado_pago_1_1_mercado_pago_config.html#a4beecac40aac184bf0f55598fb3df34f">SERVER</a> = <span class="stringliteral">&#39;server&#39;</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> $runtime_enviroment = self::SERVER;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> $access_token = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> $integrator_id = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> $corporation_id = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> $platform_id = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">int</span> $max_retries = 3;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">int</span> $retry_delay = 500;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">int</span> $max_connections = 10;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">int</span> $connection_timeout = 20000;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">private</span> <span class="keyword">static</span> ?<a class="code hl_interface" href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MPHttpClient</a> $http_client = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a87e712df4ae7f30b910f69849d08944c">   61</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a87e712df4ae7f30b910f69849d08944c">getHttpClient</a>(): <a class="code hl_interface" href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MPHttpClient</a></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (self::$http_client == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            self::$http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> self::$http_client;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">   73</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">setHttpClient</a>(<a class="code hl_interface" href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MPHttpClient</a> $http_client): void</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        self::$http_client = $http_client;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a70e97f79963aa39bcf609a19717f55a7">   82</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a70e97f79963aa39bcf609a19717f55a7">getAccessToken</a>(): string</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> self::$access_token;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#aeca7d9ddf6dadcea63fe7fc0126ea4c2">   92</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#aeca7d9ddf6dadcea63fe7fc0126ea4c2">setAccessToken</a>(<span class="keywordtype">string</span> $access_token): void</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        self::$access_token = $access_token;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#aa7b544d76215fe9fa4975b1beaf05cca">  101</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#aa7b544d76215fe9fa4975b1beaf05cca">getIntegratorId</a>(): string</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> self::$integrator_id;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#ab50a384417038f0c708214eebdf66fcb">  111</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#ab50a384417038f0c708214eebdf66fcb">setIntegratorId</a>(<span class="keywordtype">string</span> $integrator_id): void</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        self::$integrator_id = $integrator_id;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#ab99e660264867f37e55b98836d448352">  120</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#ab99e660264867f37e55b98836d448352">getCorporationId</a>(): string</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">return</span> self::$corporation_id;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a5058c2219f6a651a6bf9294b3839c15e">  130</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a5058c2219f6a651a6bf9294b3839c15e">setCorporationId</a>(<span class="keywordtype">string</span> $corporation_id): void</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        self::$corporation_id = $corporation_id;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#aa981b754b7fb833937535b55d729cf94">  139</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#aa981b754b7fb833937535b55d729cf94">getPlatformId</a>(): string</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">return</span> self::$platform_id;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#afcd61732cfebfe99f51cf6c31cd78e03">  149</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#afcd61732cfebfe99f51cf6c31cd78e03">setPlatformId</a>(<span class="keywordtype">string</span> $platform_id): void</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        self::$platform_id = $platform_id;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
+<div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a525aaf585e49b160a693ec6ba18e49ca">  158</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a525aaf585e49b160a693ec6ba18e49ca">getMaxRetries</a>(): int</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">return</span> self::$max_retries;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
+</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a50ba91f28e3a93c8adde28d6bc9f7677">  168</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a50ba91f28e3a93c8adde28d6bc9f7677">setMaxRetries</a>(<span class="keywordtype">int</span> $max_retries): void</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        self::$max_retries = $max_retries;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
+</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span></div>
+<div class="foldopen" id="foldopen00177" data-start="{" data-end="}">
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a5ce712807cecdf4dd2ca0f7df0f0c1bd">  177</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a5ce712807cecdf4dd2ca0f7df0f0c1bd">getRetryDelay</a>(): int</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">return</span> self::$retry_delay;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
+</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span></div>
+<div class="foldopen" id="foldopen00187" data-start="{" data-end="}">
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a50fe9dbd83e18aab1de99bf6724f1584">  187</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a50fe9dbd83e18aab1de99bf6724f1584">setRetryDelay</a>(<span class="keywordtype">int</span> $retry_delay): void</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        self::$retry_delay = $retry_delay;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }</div>
+</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span></div>
+<div class="foldopen" id="foldopen00196" data-start="{" data-end="}">
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#abd8965ce74d4fa80855ce214d320b4a1">  196</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#abd8965ce74d4fa80855ce214d320b4a1">getMaxConnections</a>(): int</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">return</span> self::$max_connections;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
+</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span></div>
+<div class="foldopen" id="foldopen00206" data-start="{" data-end="}">
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a4712b3951ca1387cb6814ff0838f7351">  206</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a4712b3951ca1387cb6814ff0838f7351">setMaxConnections</a>(<span class="keywordtype">int</span> $max_connections): void</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        self::$max_connections = $max_connections;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    }</div>
+</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span></div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a5ca9a67827739e00ed0596a2f63306ce">  215</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a5ca9a67827739e00ed0596a2f63306ce">getConnectionTimeout</a>(): int</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">return</span> self::$connection_timeout;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    }</div>
+</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span></div>
+<div class="foldopen" id="foldopen00225" data-start="{" data-end="}">
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a476866c72f55a97cfece1cbed64b7640">  225</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a476866c72f55a97cfece1cbed64b7640">setConnectionTimeout</a>(<span class="keywordtype">int</span> $connection_timeout): void</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        self::$connection_timeout = $connection_timeout;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
+</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span></div>
+<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a644f1747dc1b8f814ff0d96ee8299d16">  234</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a644f1747dc1b8f814ff0d96ee8299d16">getRuntimeEnviroment</a>(): string</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">return</span> self::$runtime_enviroment;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    }</div>
+</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span></div>
+<div class="foldopen" id="foldopen00244" data-start="{" data-end="}">
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_mercado_pago_config.html#a24b3be3d8b9bb749dff32a42c1a4a5df">  244</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a24b3be3d8b9bb749dff32a42c1a4a5df">setRuntimeEnviroment</a>(<span class="keywordtype">string</span> $enviroment): void</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keywordflow">if</span> ($enviroment != self::LOCAL &amp;&amp; $enviroment != self::SERVER) {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_exceptions_1_1_invalid_argument_exception.html">InvalidArgumentException</a>(<span class="stringliteral">&quot;Enviroment must be equal to MercadoPagoConfig::LOCAL or MercadoPagoConfig::SERVER.&quot;</span>);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        self::$runtime_enviroment = $enviroment;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    }</div>
+</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_exceptions_1_1_invalid_argument_exception_html"><div class="ttname"><a href="class_mercado_pago_1_1_exceptions_1_1_invalid_argument_exception.html">MercadoPago\Exceptions\InvalidArgumentException</a></div><div class="ttdef"><b>Definition</b> <a href="_invalid_argument_exception_8php_source.html#l00008">InvalidArgumentException.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">MercadoPagoConfig.php:11</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a24b3be3d8b9bb749dff32a42c1a4a5df"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a24b3be3d8b9bb749dff32a42c1a4a5df">MercadoPago\MercadoPagoConfig\setRuntimeEnviroment</a></div><div class="ttdeci">static setRuntimeEnviroment(string $enviroment)</div><div class="ttdef"><b>Definition</b> <a href="#l00244">MercadoPagoConfig.php:244</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a3f080edbde5e2be59206c26471362d63"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a3f080edbde5e2be59206c26471362d63">MercadoPago\MercadoPagoConfig\$PRODUCT_ID</a></div><div class="ttdeci">static string $PRODUCT_ID</div><div class="ttdef"><b>Definition</b> <a href="#l00019">MercadoPagoConfig.php:19</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a4712b3951ca1387cb6814ff0838f7351"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a4712b3951ca1387cb6814ff0838f7351">MercadoPago\MercadoPagoConfig\setMaxConnections</a></div><div class="ttdeci">static setMaxConnections(int $max_connections)</div><div class="ttdef"><b>Definition</b> <a href="#l00206">MercadoPagoConfig.php:206</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a476866c72f55a97cfece1cbed64b7640"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a476866c72f55a97cfece1cbed64b7640">MercadoPago\MercadoPagoConfig\setConnectionTimeout</a></div><div class="ttdeci">static setConnectionTimeout(int $connection_timeout)</div><div class="ttdef"><b>Definition</b> <a href="#l00225">MercadoPagoConfig.php:225</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a4beecac40aac184bf0f55598fb3df34f"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a4beecac40aac184bf0f55598fb3df34f">MercadoPago\MercadoPagoConfig\SERVER</a></div><div class="ttdeci">const SERVER</div><div class="ttdef"><b>Definition</b> <a href="#l00025">MercadoPagoConfig.php:25</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a5058c2219f6a651a6bf9294b3839c15e"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a5058c2219f6a651a6bf9294b3839c15e">MercadoPago\MercadoPagoConfig\setCorporationId</a></div><div class="ttdeci">static setCorporationId(string $corporation_id)</div><div class="ttdef"><b>Definition</b> <a href="#l00130">MercadoPagoConfig.php:130</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a50ba91f28e3a93c8adde28d6bc9f7677"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a50ba91f28e3a93c8adde28d6bc9f7677">MercadoPago\MercadoPagoConfig\setMaxRetries</a></div><div class="ttdeci">static setMaxRetries(int $max_retries)</div><div class="ttdef"><b>Definition</b> <a href="#l00168">MercadoPagoConfig.php:168</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a50fe9dbd83e18aab1de99bf6724f1584"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a50fe9dbd83e18aab1de99bf6724f1584">MercadoPago\MercadoPagoConfig\setRetryDelay</a></div><div class="ttdeci">static setRetryDelay(int $retry_delay)</div><div class="ttdef"><b>Definition</b> <a href="#l00187">MercadoPagoConfig.php:187</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a51fd29cbaf1eb510225961d3e75aee96"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPago\MercadoPagoConfig\setHttpClient</a></div><div class="ttdeci">static setHttpClient(MPHttpClient $http_client)</div><div class="ttdef"><b>Definition</b> <a href="#l00073">MercadoPagoConfig.php:73</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a525aaf585e49b160a693ec6ba18e49ca"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a525aaf585e49b160a693ec6ba18e49ca">MercadoPago\MercadoPagoConfig\getMaxRetries</a></div><div class="ttdeci">static getMaxRetries()</div><div class="ttdef"><b>Definition</b> <a href="#l00158">MercadoPagoConfig.php:158</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a5ca9a67827739e00ed0596a2f63306ce"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a5ca9a67827739e00ed0596a2f63306ce">MercadoPago\MercadoPagoConfig\getConnectionTimeout</a></div><div class="ttdeci">static getConnectionTimeout()</div><div class="ttdef"><b>Definition</b> <a href="#l00215">MercadoPagoConfig.php:215</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a5ce712807cecdf4dd2ca0f7df0f0c1bd"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a5ce712807cecdf4dd2ca0f7df0f0c1bd">MercadoPago\MercadoPagoConfig\getRetryDelay</a></div><div class="ttdeci">static getRetryDelay()</div><div class="ttdef"><b>Definition</b> <a href="#l00177">MercadoPagoConfig.php:177</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a644f1747dc1b8f814ff0d96ee8299d16"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a644f1747dc1b8f814ff0d96ee8299d16">MercadoPago\MercadoPagoConfig\getRuntimeEnviroment</a></div><div class="ttdeci">static getRuntimeEnviroment()</div><div class="ttdef"><b>Definition</b> <a href="#l00234">MercadoPagoConfig.php:234</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a70e97f79963aa39bcf609a19717f55a7"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a70e97f79963aa39bcf609a19717f55a7">MercadoPago\MercadoPagoConfig\getAccessToken</a></div><div class="ttdeci">static getAccessToken()</div><div class="ttdef"><b>Definition</b> <a href="#l00082">MercadoPagoConfig.php:82</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a87e712df4ae7f30b910f69849d08944c"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a87e712df4ae7f30b910f69849d08944c">MercadoPago\MercadoPagoConfig\getHttpClient</a></div><div class="ttdeci">static getHttpClient()</div><div class="ttdef"><b>Definition</b> <a href="#l00061">MercadoPagoConfig.php:61</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a89c9a69f758746a8964ce1cb0912712e"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a89c9a69f758746a8964ce1cb0912712e">MercadoPago\MercadoPagoConfig\$CURRENT_VERSION</a></div><div class="ttdeci">static string $CURRENT_VERSION</div><div class="ttdef"><b>Definition</b> <a href="#l00013">MercadoPagoConfig.php:13</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_aa7b544d76215fe9fa4975b1beaf05cca"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#aa7b544d76215fe9fa4975b1beaf05cca">MercadoPago\MercadoPagoConfig\getIntegratorId</a></div><div class="ttdeci">static getIntegratorId()</div><div class="ttdef"><b>Definition</b> <a href="#l00101">MercadoPagoConfig.php:101</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_aa981b754b7fb833937535b55d729cf94"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#aa981b754b7fb833937535b55d729cf94">MercadoPago\MercadoPagoConfig\getPlatformId</a></div><div class="ttdeci">static getPlatformId()</div><div class="ttdef"><b>Definition</b> <a href="#l00139">MercadoPagoConfig.php:139</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_ab50a384417038f0c708214eebdf66fcb"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#ab50a384417038f0c708214eebdf66fcb">MercadoPago\MercadoPagoConfig\setIntegratorId</a></div><div class="ttdeci">static setIntegratorId(string $integrator_id)</div><div class="ttdef"><b>Definition</b> <a href="#l00111">MercadoPagoConfig.php:111</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_ab99e660264867f37e55b98836d448352"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#ab99e660264867f37e55b98836d448352">MercadoPago\MercadoPagoConfig\getCorporationId</a></div><div class="ttdeci">static getCorporationId()</div><div class="ttdef"><b>Definition</b> <a href="#l00120">MercadoPagoConfig.php:120</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_abb617efed898a46d15b389272d640693"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#abb617efed898a46d15b389272d640693">MercadoPago\MercadoPagoConfig\$BASE_URL</a></div><div class="ttdeci">static string $BASE_URL</div><div class="ttdef"><b>Definition</b> <a href="#l00016">MercadoPagoConfig.php:16</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_abd8965ce74d4fa80855ce214d320b4a1"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#abd8965ce74d4fa80855ce214d320b4a1">MercadoPago\MercadoPagoConfig\getMaxConnections</a></div><div class="ttdeci">static getMaxConnections()</div><div class="ttdef"><b>Definition</b> <a href="#l00196">MercadoPagoConfig.php:196</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_aeca7d9ddf6dadcea63fe7fc0126ea4c2"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#aeca7d9ddf6dadcea63fe7fc0126ea4c2">MercadoPago\MercadoPagoConfig\setAccessToken</a></div><div class="ttdeci">static setAccessToken(string $access_token)</div><div class="ttdef"><b>Definition</b> <a href="#l00092">MercadoPagoConfig.php:92</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_aef28b52ccbef3053dc55093817d96350"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#aef28b52ccbef3053dc55093817d96350">MercadoPago\MercadoPagoConfig\LOCAL</a></div><div class="ttdeci">const LOCAL</div><div class="ttdef"><b>Definition</b> <a href="#l00022">MercadoPagoConfig.php:22</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_afcd61732cfebfe99f51cf6c31cd78e03"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#afcd61732cfebfe99f51cf6c31cd78e03">MercadoPago\MercadoPagoConfig\setPlatformId</a></div><div class="ttdeci">static setPlatformId(string $platform_id)</div><div class="ttdef"><b>Definition</b> <a href="#l00149">MercadoPagoConfig.php:149</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_default_http_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MercadoPago\Net\MPDefaultHttpClient</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_default_http_client_8php_source.html#l00010">MPDefaultHttpClient.php:11</a></div></div>
+<div class="ttc" id="ainterface_mercado_pago_1_1_net_1_1_m_p_http_client_html"><div class="ttname"><a href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MercadoPago\Net\MPHttpClient</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_http_client_8php_source.html#l00006">MPHttpClient.php:7</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_html"><div class="ttname"><a href="namespace_mercado_pago.html">MercadoPago</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="_mercado_pago_config_8php.html">MercadoPagoConfig.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

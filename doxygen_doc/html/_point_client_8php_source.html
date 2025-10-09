@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Client/Point/PointClient.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_point_client_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PointClient.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_point_client_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="namespace_mercado_pago_1_1_client_1_1_point.html">    3</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mercado_pago_1_1_client_1_1_point.html">MercadoPago\Client\Point</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">MercadoPago\Client\Common\RequestOptions</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_mercado_pago_client.html">MercadoPago\Client\MercadoPagoClient</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>use <a class="code hl_class" href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>use <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_http_method.html">MercadoPago\Net\HttpMethod</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>use <a class="code hl_interface" href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MercadoPago\Net\MPHttpClient</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>use <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_search_request.html">MercadoPago\Net\MPSearchRequest</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>use <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_intent.html">MercadoPago\Resources\PaymentIntent</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>use <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_intent_cancel.html">MercadoPago\Resources\PaymentIntentCancel</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>use <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_intent_list.html">MercadoPago\Resources\PaymentIntentList</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>use <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_intent_status.html">MercadoPago\Resources\PaymentIntentStatus</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>use <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_point_device_operating_mode.html">MercadoPago\Resources\PointDeviceOperatingMode</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>use <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_point_devices.html">MercadoPago\Resources\PointDevices</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>use <a class="code hl_class" href="class_mercado_pago_1_1_serialization_1_1_serializer.html">MercadoPago\Serialization\Serializer</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html">   20</a></span><span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html">PointClient</a> <span class="keyword">extends</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_mercado_pago_client.html">MercadoPagoClient</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">private</span> <span class="keyword">const</span> PAYMENT_INTENT_URL = <span class="stringliteral">&quot;/point/integration-api/devices/%s/payment-intents&quot;</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">private</span> <span class="keyword">const</span> PAYMENT_INTENT_SEARCH_URL = <span class="stringliteral">&quot;/point/integration-api/payment-intents/%s&quot;</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">private</span> <span class="keyword">const</span> PAYMENT_INTENT_LIST_URL = <span class="stringliteral">&quot;/point/integration-api/payment-intents/events&quot;</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span> <span class="keyword">const</span> PAYMENT_INTENT_DELETE_URL = <span class="stringliteral">&quot;/point/integration-api/devices/%s/payment-intents/%s&quot;</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span> <span class="keyword">const</span> PAYMENT_INTENT_STATUS_URL = <span class="stringliteral">&quot;/point/integration-api/payment-intents/%s/events&quot;</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">private</span> <span class="keyword">const</span> DEVICES_URL = <span class="stringliteral">&quot;/point/integration-api/devices&quot;</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> <span class="keyword">const</span> DEVICE_WITH_ID_URL = <span class="stringliteral">&quot;/point/integration-api/devices/%s&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#aee860e30d3e6a10bcdb1eb0ada5211f1">   37</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#aee860e30d3e6a10bcdb1eb0ada5211f1">__construct</a>(?<a class="code hl_interface" href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MPHttpClient</a> $MPHttpClient = <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        parent::__construct($MPHttpClient ?: <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a87e712df4ae7f30b910f69849d08944c">MercadoPagoConfig::getHttpClient</a>());</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a059076b9ff0329e963b14758a3f59f86">   51</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a059076b9ff0329e963b14758a3f59f86">createPaymentIntent</a>(<span class="keywordtype">string</span> $device_id, array $request, ?<a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a> $request_options = <span class="keyword">null</span>): <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_intent.html">PaymentIntent</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a> = parent::send(sprintf(self::PAYMENT_INTENT_URL, $device_id), HttpMethod::POST, json_encode($request), <span class="keyword">null</span>, $request_options);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = Serializer::deserializeFromJson(PaymentIntent::class, <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>-&gt;getContent());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;setResponse(<a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a669f5df5101ae86342b7db4f64b89419">   67</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a669f5df5101ae86342b7db4f64b89419">searchPaymentIntent</a>(<span class="keywordtype">string</span> $payment_intent_id, ?<a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a> $request_options = <span class="keyword">null</span>): <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_intent.html">PaymentIntent</a></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a> = parent::send(sprintf(self::PAYMENT_INTENT_SEARCH_URL, $payment_intent_id), HttpMethod::GET, <span class="keyword">null</span>, <span class="keyword">null</span>, $request_options);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = Serializer::deserializeFromJson(PaymentIntent::class, <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>-&gt;getContent());</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;setResponse(<a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a9b09bfbe609a4122583b045ec57be2a3">   84</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a9b09bfbe609a4122583b045ec57be2a3">cancelPaymentIntent</a>(<span class="keywordtype">string</span> $device_id, <span class="keywordtype">string</span> $payment_intent_id, ?<a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a> $request_options = <span class="keyword">null</span>): <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_intent_cancel.html">PaymentIntentCancel</a></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a> = parent::send(sprintf(self::PAYMENT_INTENT_DELETE_URL, $device_id, $payment_intent_id), HttpMethod::DELETE, <span class="keyword">null</span>, <span class="keyword">null</span>, $request_options);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = Serializer::deserializeFromJson(PaymentIntentCancel::class, <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>-&gt;getContent());</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;setResponse(<a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a383c00b265993b4b786eade9091a74b4">  100</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a383c00b265993b4b786eade9091a74b4">getPaymentIntentList</a>(<a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_payment_intent_list_request.html">PointPaymentIntentListRequest</a> $request, ?<a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a> $request_options = <span class="keyword">null</span>): <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_intent_list.html">PaymentIntentList</a></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a> = parent::send(self::PAYMENT_INTENT_LIST_URL, HttpMethod::GET, <span class="keyword">null</span>, $request-&gt;<a class="code hl_function" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_payment_intent_list_request.html#ae19af1ba107df06a844d028463026621">getParameters</a>(), $request_options);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = Serializer::deserializeFromJson(PaymentIntentList::class, <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>-&gt;getContent());</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;setResponse(<a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a232d7b7fe79fd180289ee2bfd0940f0e">  116</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a232d7b7fe79fd180289ee2bfd0940f0e">getPaymentIntentStatus</a>(<span class="keywordtype">string</span> $payment_intent_id, ?<a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a> $request_options = <span class="keyword">null</span>): <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_payment_intent_status.html">PaymentIntentStatus</a></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a> = parent::send(sprintf(self::PAYMENT_INTENT_STATUS_URL, $payment_intent_id), HttpMethod::GET, <span class="keyword">null</span>, <span class="keyword">null</span>, $request_options);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = Serializer::deserializeFromJson(PaymentIntentStatus::class, <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>-&gt;getContent());</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;setResponse(<a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a4df5d4cb3272283052ceaf0df4a770ce">  132</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a4df5d4cb3272283052ceaf0df4a770ce">getDevices</a>(<a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_search_request.html">MPSearchRequest</a> $request, ?<a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a> $request_options = <span class="keyword">null</span>): <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_point_devices.html">PointDevices</a></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        $query_params = isset($request) ? $request-&gt;<a class="code hl_function" href="class_mercado_pago_1_1_net_1_1_m_p_search_request.html#ab4e7a3473c4c61ba757392259ca50060">getParameters</a>() : <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a> = parent::send(self::DEVICES_URL, HttpMethod::GET, <span class="keyword">null</span>, $query_params, $request_options);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = Serializer::deserializeFromJson(PointDevices::class, <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>-&gt;getContent());</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;setResponse(<a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a0fb8ce843b8774476c68d3180ea812a9">  149</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a0fb8ce843b8774476c68d3180ea812a9">changeDeviceOperatingMode</a>(<span class="keywordtype">string</span> $device_id, <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_point_1_1_point_device_operating_mode_request.html">PointDeviceOperatingModeRequest</a> $request, ?<a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a> $request_options = <span class="keyword">null</span>): <a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_point_device_operating_mode.html">PointDeviceOperatingMode</a></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a> = parent::send(sprintf(self::DEVICE_WITH_ID_URL, $device_id), HttpMethod::PATCH, json_encode($request), <span class="keyword">null</span>, $request_options);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = Serializer::deserializeFromJson(PointDeviceOperatingMode::class, <a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>-&gt;getContent());</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>-&gt;setResponse(<a class="code hl_variable" href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    }</div>
+</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>}</div>
+</div>
+<div class="ttc" id="aapi_2login_8php_html_a112ef069ddc0454086e3d1e6d8d55d07"><div class="ttname"><a href="api_2login_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a></div><div class="ttdeci">$result</div><div class="ttdef"><b>Definition</b> <a href="api_2login_8php_source.html#l00021">login.php:21</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_common_1_1_request_options_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">MercadoPago\Client\Common\RequestOptions</a></div><div class="ttdef"><b>Definition</b> <a href="_request_options_8php_source.html#l00006">RequestOptions.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_mercado_pago_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_mercado_pago_client.html">MercadoPago\Client\MercadoPagoClient</a></div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_client_8php_source.html#l00013">MercadoPagoClient.php:14</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html">MercadoPago\Client\Point\PointClient</a></div><div class="ttdef"><b>Definition</b> <a href="#l00020">PointClient.php:21</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_client_html_a059076b9ff0329e963b14758a3f59f86"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a059076b9ff0329e963b14758a3f59f86">MercadoPago\Client\Point\PointClient\createPaymentIntent</a></div><div class="ttdeci">createPaymentIntent(string $device_id, array $request, ?RequestOptions $request_options=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00051">PointClient.php:51</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_client_html_a0fb8ce843b8774476c68d3180ea812a9"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a0fb8ce843b8774476c68d3180ea812a9">MercadoPago\Client\Point\PointClient\changeDeviceOperatingMode</a></div><div class="ttdeci">changeDeviceOperatingMode(string $device_id, PointDeviceOperatingModeRequest $request, ?RequestOptions $request_options=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00149">PointClient.php:149</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_client_html_a232d7b7fe79fd180289ee2bfd0940f0e"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a232d7b7fe79fd180289ee2bfd0940f0e">MercadoPago\Client\Point\PointClient\getPaymentIntentStatus</a></div><div class="ttdeci">getPaymentIntentStatus(string $payment_intent_id, ?RequestOptions $request_options=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00116">PointClient.php:116</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_client_html_a383c00b265993b4b786eade9091a74b4"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a383c00b265993b4b786eade9091a74b4">MercadoPago\Client\Point\PointClient\getPaymentIntentList</a></div><div class="ttdeci">getPaymentIntentList(PointPaymentIntentListRequest $request, ?RequestOptions $request_options=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00100">PointClient.php:100</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_client_html_a4df5d4cb3272283052ceaf0df4a770ce"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a4df5d4cb3272283052ceaf0df4a770ce">MercadoPago\Client\Point\PointClient\getDevices</a></div><div class="ttdeci">getDevices(MPSearchRequest $request, ?RequestOptions $request_options=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00132">PointClient.php:132</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_client_html_a669f5df5101ae86342b7db4f64b89419"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a669f5df5101ae86342b7db4f64b89419">MercadoPago\Client\Point\PointClient\searchPaymentIntent</a></div><div class="ttdeci">searchPaymentIntent(string $payment_intent_id, ?RequestOptions $request_options=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">PointClient.php:67</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_client_html_a9b09bfbe609a4122583b045ec57be2a3"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#a9b09bfbe609a4122583b045ec57be2a3">MercadoPago\Client\Point\PointClient\cancelPaymentIntent</a></div><div class="ttdeci">cancelPaymentIntent(string $device_id, string $payment_intent_id, ?RequestOptions $request_options=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00084">PointClient.php:84</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_client_html_aee860e30d3e6a10bcdb1eb0ada5211f1"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_client.html#aee860e30d3e6a10bcdb1eb0ada5211f1">MercadoPago\Client\Point\PointClient\__construct</a></div><div class="ttdeci">__construct(?MPHttpClient $MPHttpClient=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00037">PointClient.php:37</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_device_operating_mode_request_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_device_operating_mode_request.html">MercadoPago\Client\Point\PointDeviceOperatingModeRequest</a></div><div class="ttdef"><b>Definition</b> <a href="_point_device_operating_mode_request_8php_source.html#l00006">PointDeviceOperatingModeRequest.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_payment_intent_list_request_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_payment_intent_list_request.html">MercadoPago\Client\Point\PointPaymentIntentListRequest</a></div><div class="ttdef"><b>Definition</b> <a href="_point_payment_intent_list_request_8php_source.html#l00006">PointPaymentIntentListRequest.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_point_1_1_point_payment_intent_list_request_html_ae19af1ba107df06a844d028463026621"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_point_1_1_point_payment_intent_list_request.html#ae19af1ba107df06a844d028463026621">MercadoPago\Client\Point\PointPaymentIntentListRequest\getParameters</a></div><div class="ttdeci">getParameters()</div><div class="ttdef"><b>Definition</b> <a href="_point_payment_intent_list_request_8php_source.html#l00014">PointPaymentIntentListRequest.php:14</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a></div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00010">MercadoPagoConfig.php:11</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a87e712df4ae7f30b910f69849d08944c"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a87e712df4ae7f30b910f69849d08944c">MercadoPago\MercadoPagoConfig\getHttpClient</a></div><div class="ttdeci">static getHttpClient()</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00061">MercadoPagoConfig.php:61</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_http_method_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_http_method.html">MercadoPago\Net\HttpMethod</a></div><div class="ttdef"><b>Definition</b> <a href="_http_method_8php_source.html#l00006">HttpMethod.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_search_request_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_search_request.html">MercadoPago\Net\MPSearchRequest</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_search_request_8php_source.html#l00008">MPSearchRequest.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_search_request_html_ab4e7a3473c4c61ba757392259ca50060"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_search_request.html#ab4e7a3473c4c61ba757392259ca50060">MercadoPago\Net\MPSearchRequest\getParameters</a></div><div class="ttdeci">getParameters()</div><div class="ttdef"><b>Definition</b> <a href="_m_p_search_request_8php_source.html#l00057">MPSearchRequest.php:57</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_intent_cancel_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_intent_cancel.html">MercadoPago\Resources\PaymentIntentCancel</a></div><div class="ttdef"><b>Definition</b> <a href="_payment_intent_cancel_8php_source.html#l00008">PaymentIntentCancel.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_intent_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_intent.html">MercadoPago\Resources\PaymentIntent</a></div><div class="ttdef"><b>Definition</b> <a href="_payment_intent_8php_source.html#l00009">PaymentIntent.php:10</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_intent_list_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_intent_list.html">MercadoPago\Resources\PaymentIntentList</a></div><div class="ttdef"><b>Definition</b> <a href="_payment_intent_list_8php_source.html#l00009">PaymentIntentList.php:10</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_payment_intent_status_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_payment_intent_status.html">MercadoPago\Resources\PaymentIntentStatus</a></div><div class="ttdef"><b>Definition</b> <a href="_payment_intent_status_8php_source.html#l00008">PaymentIntentStatus.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_point_device_operating_mode_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_point_device_operating_mode.html">MercadoPago\Resources\PointDeviceOperatingMode</a></div><div class="ttdef"><b>Definition</b> <a href="_point_device_operating_mode_8php_source.html#l00008">PointDeviceOperatingMode.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_point_devices_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_point_devices.html">MercadoPago\Resources\PointDevices</a></div><div class="ttdef"><b>Definition</b> <a href="_point_devices_8php_source.html#l00009">PointDevices.php:10</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_serialization_1_1_serializer_html"><div class="ttname"><a href="class_mercado_pago_1_1_serialization_1_1_serializer.html">MercadoPago\Serialization\Serializer</a></div><div class="ttdef"><b>Definition</b> <a href="_serializer_8php_source.html#l00008">Serializer.php:9</a></div></div>
+<div class="ttc" id="ainterface_mercado_pago_1_1_net_1_1_m_p_http_client_html"><div class="ttname"><a href="interface_mercado_pago_1_1_net_1_1_m_p_http_client.html">MercadoPago\Net\MPHttpClient</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_http_client_8php_source.html#l00006">MPHttpClient.php:7</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_1_1_client_1_1_point_html"><div class="ttname"><a href="namespace_mercado_pago_1_1_client_1_1_point.html">MercadoPago\Client\Point</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">PointClient.php:3</a></div></div>
+<div class="ttc" id="atest__api_8php_html_af4b6fb1bbc77ccc05f10da3b16935b99"><div class="ttname"><a href="test__api_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99">$response</a></div><div class="ttdeci">$response</div><div class="ttdef"><b>Definition</b> <a href="test__api_8php_source.html#l00010">test_api.php:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_a05e16f472862cc370fb4784956599de.html">Client</a></li><li class="navelem"><a href="dir_5473ad519d70de265e519cf824108a67.html">Point</a></li><li class="navelem"><a href="_point_client_8php.html">PointClient.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

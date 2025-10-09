@@ -1,0 +1,4 @@
+var _identification_type_client_unit_test_8php =
+[
+    [ "MercadoPago\\Tests\\Client\\Unit\\IdentificationType\\IdentificationTypeClientUnitTest", "class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_identification_type_1_1_identification_type_client_unit_test.html", "class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_identification_type_1_1_identification_type_client_unit_test" ]
+];

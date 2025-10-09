@@ -1,0 +1,5 @@
+var namespace_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_payment =
+[
+    [ "PaymentClientITTest", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_payment_1_1_payment_client_i_t_test.html", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_payment_1_1_payment_client_i_t_test" ],
+    [ "PaymentRefundClientITTest", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_payment_1_1_payment_refund_client_i_t_test.html", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_payment_1_1_payment_refund_client_i_t_test" ]
+];

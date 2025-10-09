@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Endpoints N.I.C.O.L.E — Documento visual y técnico</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('endpoints.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Endpoints N.I.C.O.L.E — Documento visual y técnico </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Guía completa y visual de los endpoints principales (auth, usuarios, webhook, IA).</p>
+<p>Este documento describe los endpoints REST disponibles en N.I.C.O.L.E. Actualmente cuenta con <b>8 endpoints activos</b> organizados por módulos.</p>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="registro"></a>
+Registro de Usuario (register.php)</h1>
+<div style="background:#e0f7ff; padding:8px; border-radius:6px; color:#003366;"> <b>Registrar Usuario + Envío de Código de Verificación</b> </div><ul>
+<li><b>Qué hace:</b> Crea un nuevo usuario en la base de datos y envía por correo un código de verificación temporal.</li>
+<li><b>Para qué sirve:</b> Permite que los nuevos usuarios se registren en el sistema y confirmen su cuenta mediante un código recibido en su correo electrónico.</li>
+<li><b>Cómo funciona:</b><ol type="1">
+<li>Recibe los datos del usuario (nombre, correo, usuario, contraseña, edad).</li>
+<li>Verifica si el correo o usuario ya existen.</li>
+<li>Genera un código aleatorio de 6 dígitos y una fecha de expiración (10 minutos).</li>
+<li>Inserta el nuevo usuario en la tabla <span class="tt">usuarios</span> y crea su registro en <span class="tt">preferencias_culinarias</span>.</li>
+<li>Envía el código por correo electrónico usando la función <span class="tt"><a class="el" href="mail_8php.html#a08ec1d76b975f20ad771b0f6e73f425e">enviarCodigo()</a></span>.</li>
+<li>Si algo falla (envío o inserción), se realiza <b>rollback</b> de la transacción.</li>
+</ol>
+</li>
+</ul>
+<p><b>Endpoint:</b> <code>/auth/register.php</code><br  />
+ <b>Método:</b> POST<br  />
+</p>
+<p><b>Cabeceras requeridas:</b> </p><div class="fragment"><div class="line">Access-Control-Allow-Origin: *</div>
+<div class="line">Content-Type: application/json</div>
+</div><!-- fragment --><p><b>Cuerpo esperado (JSON):</b> </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;nombre_us&quot;: &quot;Juan Pérez&quot;,</div>
+<div class="line">  &quot;correo&quot;: &quot;juan@example.com&quot;,</div>
+<div class="line">  &quot;pass&quot;: &quot;12345678&quot;,</div>
+<div class="line">  &quot;edad&quot;: 25,</div>
+<div class="line">  &quot;usuario&quot;: &quot;juanp&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>Ejemplo respuesta exitosa (200):</b> </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;success&quot;: true,</div>
+<div class="line">  &quot;message&quot;: &quot;Registro exitoso. Se envió un código de verificación.&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>Ejemplo respuesta por error (409):</b> </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;success&quot;: false,</div>
+<div class="line">  &quot;message&quot;: &quot;El correo o usuario ya está registrado&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>Errores comunes:</b></p><ul>
+<li><b>Faltan datos</b>: cuando algún campo obligatorio está vacío.</li>
+<li><b>Correo duplicado</b>: ya existe un registro con el mismo correo o usuario.</li>
+<li><b>Error al enviar correo</b>: no se pudo enviar el código, se deshace el registro.</li>
+</ul>
+<p><b>Detalles técnicos:</b></p><ul>
+<li>El código de verificación tiene una validez de <b>10 minutos</b>.</li>
+<li>La contraseña se almacena con <b>password_hash()</b>.</li>
+<li>Si falla el correo, se usa <b>rollback()</b> para revertir el registro.</li>
+<li>Inserta también una fila vacía en <span class="tt">preferencias_culinarias</span> vinculada al nuevo <span class="tt">usuario_id</span>.</li>
+</ul>
+<p><b>Dependencias:</b></p><ul>
+<li><span class="tt"><a class="el" href="db__config_8php.html">db_config.php</a></span></li>
+<li><span class="tt">../dashboard/mail.php</span></li>
+</ul>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="reenviar"></a>
+Reenviar Código de Verificación (reenviar_codigo.php)</h1>
+<ul>
+<li><b>Qué hace:</b> Genera un nuevo código de 6 dígitos y lo envía por correo electrónico a un usuario que aún no ha completado su registro.</li>
+<li><b>Cuándo se usa:</b> Cuando el usuario ha ingresado su correo, pero no ha confirmado su registro porque no recibió o su código anterior expiró.</li>
+<li><b>Cómo funciona:</b><ol type="1">
+<li>Recibe el correo electrónico desde el frontend.</li>
+<li>Genera un nuevo código aleatorio y establece una nueva fecha de expiración (+10 minutos).</li>
+<li>Actualiza los campos <span class="tt">codigo_verificacion</span> y <span class="tt">expiracion_codigo</span> en la tabla <span class="tt">usuarios</span>.</li>
+<li>Envía el nuevo código al correo mediante <span class="tt"><a class="el" href="mail_8php.html#a08ec1d76b975f20ad771b0f6e73f425e">enviarCodigo()</a></span>.</li>
+</ol>
+</li>
+<li><b>Método:</b> POST</li>
+<li><b>Entrada esperada (JSON):</b> <div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;email&quot;: &quot;usuario@ejemplo.com&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li><b>Respuesta exitosa:</b> <div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;success&quot;: true,</div>
+<div class="line">  &quot;message&quot;: &quot;Código reenviado&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li><b>Respuesta de error:</b> <div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;success&quot;: false,</div>
+<div class="line">  &quot;message&quot;: &quot;Error al reenviar el código&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+</ul>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="verificar"></a>
+Verificar Código (verificar.php)</h1>
+<ul>
+<li><b>Qué hace:</b> Valida que el código ingresado sea correcto y no haya expirado. Si la verificación es exitosa, marca la cuenta como confirmada.</li>
+<li><b>Cuándo se usa:</b> En el paso final del registro, cuando el usuario introduce el código que recibió por correo electrónico.</li>
+<li><b>Método:</b> POST</li>
+<li><b>Entrada esperada (JSON):</b> <div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;email&quot;: &quot;usuario@ejemplo.com&quot;,</div>
+<div class="line">  &quot;codigo&quot;: &quot;123456&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li><b>Respuestas posibles:</b> ✅ Éxito: <div class="fragment"><div class="line">{ &quot;success&quot;: true, &quot;message&quot;: &quot;Cuenta verificada exitosamente&quot; }</div>
+</div><!-- fragment --> ❌ Código incorrecto: <div class="fragment"><div class="line">{ &quot;success&quot;: false, &quot;message&quot;: &quot;Código incorrecto&quot; }</div>
+</div><!-- fragment --> ⏰ Código expirado: <div class="fragment"><div class="line">{ &quot;success&quot;: false, &quot;message&quot;: &quot;El código ha expirado&quot; }</div>
+</div><!-- fragment --> ⚠️ Faltan datos: <div class="fragment"><div class="line">{ &quot;success&quot;: false, &quot;message&quot;: &quot;Faltan datos&quot; }</div>
+</div><!-- fragment --></li>
+</ul>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="login"></a>
+Inicio de Sesión (login.php)</h1>
+<ul>
+<li><b>Qué hace:</b> Valida credenciales, verifica si la cuenta fue confirmada y devuelve datos básicos del usuario si todo es correcto.</li>
+<li><b>Método:</b> POST</li>
+<li><b>Entrada esperada (JSON):</b> <div class="fragment"><div class="line">{ &quot;email&quot;: &quot;usuario@ejemplo.com&quot;, &quot;password&quot;: &quot;contraseña123&quot; }</div>
+</div><!-- fragment --></li>
+<li><b>Respuestas:</b> ✅ Éxito: <div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;success&quot;: true,</div>
+<div class="line">  &quot;message&quot;: &quot;Inicio de sesión exitoso&quot;,</div>
+<div class="line">  &quot;user&quot;: { &quot;id&quot;: 1, &quot;nombre&quot;: &quot;Juan&quot;, &quot;correo&quot;: &quot;juan@ejemplo.com&quot; }</div>
+<div class="line">}</div>
+</div><!-- fragment --> ⚠️ No verificada: <div class="fragment"><div class="line">{ &quot;success&quot;: false, &quot;message&quot;: &quot;Tu cuenta aún no ha sido verificada.&quot; }</div>
+</div><!-- fragment --> ❌ Contraseña incorrecta: <div class="fragment"><div class="line">{ &quot;success&quot;: false, &quot;message&quot;: &quot;Contraseña incorrecta&quot; }</div>
+</div><!-- fragment --></li>
+</ul>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="preferencias"></a>
+Preferencias del Usuario (guardar_preferencia.php)</h1>
+<ul>
+<li><b>Qué hace:</b> Registra o actualiza las preferencias alimenticias, datos físicos y alergias de un usuario existente.</li>
+<li><b>Cómo funciona:</b> Recibe correo, sabores, alergias, peso, altura y fecha de nacimiento. <br  />
+ Verifica el usuario, recalcula edad si aplica, crea o actualiza preferencias.</li>
+</ul>
+<p><b>Endpoint:</b> <span class="tt">/guardar_preferencia.php</span> <br  />
+ <b>Método:</b> POST <br  />
+</p>
+<p><b>Entrada esperada:</b> </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;correo&quot;: &quot;juan@example.com&quot;,</div>
+<div class="line">  &quot;sabores_preferidos&quot;: &quot;Dulce, Picante&quot;,</div>
+<div class="line">  &quot;alergias&quot;: &quot;Mariscos&quot;,</div>
+<div class="line">  &quot;peso&quot;: 68.2,</div>
+<div class="line">  &quot;altura&quot;: 1.70,</div>
+<div class="line">  &quot;fecha_nacimiento&quot;: &quot;2002-04-15&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>Ejemplo éxito:</b> </p><div class="fragment"><div class="line">{ &quot;success&quot;: true, &quot;message&quot;: &quot;Preferencias guardadas correctamente&quot; }</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="obtener"></a>
+Obtener Usuario (obtener_usuario.php)</h1>
+<ul>
+<li><b>Qué hace:</b> Devuelve la información general y preferencias básicas del usuario según su correo.</li>
+<li><b>Método:</b> POST <br  />
+</li>
+<li><b>Entrada:</b> <div class="fragment"><div class="line">{ &quot;correo&quot;: &quot;usuario@ejemplo.com&quot; }</div>
+</div><!-- fragment --></li>
+<li><b>Respuesta éxito:</b> <div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;success&quot;: true,</div>
+<div class="line">  &quot;user&quot;: {</div>
+<div class="line">    &quot;id&quot;: 1,</div>
+<div class="line">    &quot;nombre&quot;: &quot;Juan&quot;,</div>
+<div class="line">    &quot;correo&quot;: &quot;juan@ejemplo.com&quot;,</div>
+<div class="line">    &quot;edad&quot;: 25,</div>
+<div class="line">    &quot;peso&quot;: 70.5,</div>
+<div class="line">    &quot;altura&quot;: 1.75</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+</ul>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="actualizar"></a>
+Actualizar Usuario (actualizar_usuario.php)</h1>
+<ul>
+<li><b>Qué hace:</b> Inserta o actualiza la información del usuario (gustos, alergias, peso y altura).</li>
+<li><b>Uso típico:</b> En perfil o después del registro.</li>
+</ul>
+<p><b>Método:</b> POST <br  />
+ <b>Entrada:</b> </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;correo&quot;: &quot;usuario@ejemplo.com&quot;,</div>
+<div class="line">  &quot;gustos&quot;: [&quot;dulce&quot;],</div>
+<div class="line">  &quot;alergias&quot;: [&quot;gluten&quot;],</div>
+<div class="line">  &quot;peso&quot;: 70.5,</div>
+<div class="line">  &quot;altura&quot;: &quot;175&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="webhook"></a>
+Webhook de MercadoPago (dashboard/webhook.php)</h1>
+<ul>
+<li><b>Qué hace:</b> Procesa notificaciones automáticas de <a class="el" href="namespace_mercado_pago.html">MercadoPago</a>. <br  />
+</li>
+<li><b>Para qué sirve:</b> Mantener actualizado el estado de pagos (aprobado, rechazado, pendiente). <br  />
+</li>
+<li><b>Cómo funciona:</b> <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> llama este endpoint, se valida y actualizan tablas de pagos/usuarios.</li>
+</ul>
+<p><b>Endpoint:</b> <span class="tt">/dashboard/webhook.php</span> (POST) <br  />
+ <b>Respuesta:</b> <br  />
+ </p><div class="fragment"><div class="line">{ &quot;status&quot;: &quot;success&quot;, &quot;message&quot;: &quot;Pago procesado&quot; }</div>
+</div><!-- fragment --><hr  />
+ <h1 class="doxsection"><a class="anchor" id="ia"></a>
+Inteligencia Artificial (scripts.js)</h1>
+<ul>
+<li><b>Qué hace:</b> Envía un prompt y recibe respuesta generada por IA (LMStudio). <br  />
+</li>
+<li><b>Para qué sirve:</b> Generar recetas, responder dudas o conversar. <br  />
+</li>
+<li><b>Endpoint:</b> <span class="tt"><a href="https://nicoleia.servehttp.com:90/v1/chat/completions">https://nicoleia.servehttp.com:90/v1/chat/completions</a></span> (POST) <b>Respuesta ejemplo:</b> <div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;choices&quot;: [</div>
+<div class="line">    { &quot;message&quot;: { &quot;content&quot;: &quot;Aquí tienes una receta rápida...&quot; } }</div>
+<div class="line">  ]</div>
+<div class="line">}</div>
+</div><!-- fragment --> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

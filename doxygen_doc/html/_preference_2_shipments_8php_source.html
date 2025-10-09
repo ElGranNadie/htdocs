@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Resources/Preference/Shipments.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_preference_2_shipments_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Shipments.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_preference_2_shipments_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>MercadoPago\Resources\Preference;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use MercadoPago\Serialization\Mapper;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html">Shipments</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    use Mapper;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#adcb47b54240c0d644ddd58e62ad49196">   14</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#adcb47b54240c0d644ddd58e62ad49196">$mode</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#acf4643c6c8c0372f5a33249039d80428">   17</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">bool</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#acf4643c6c8c0372f5a33249039d80428">$local_pickup</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a6003c8adecf3382d0efc2ec95ec838ca">   20</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a6003c8adecf3382d0efc2ec95ec838ca">$dimensions</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#ab757b2c4c661a2194fa79fc7b92da2e4">   23</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#ab757b2c4c661a2194fa79fc7b92da2e4">$default_shipping_method</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a439fa5b2f5b9967c31f0bf24b575b0d2">   26</a></span>    <span class="keyword">public</span> ?array <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a439fa5b2f5b9967c31f0bf24b575b0d2">$free_methods</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a7874ec07f8f97106a3ea1d45294873d9">   29</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">float</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a7874ec07f8f97106a3ea1d45294873d9">$cost</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#ad891c346fa9dc866af3ddec4af96cb87">   32</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">bool</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#ad891c346fa9dc866af3ddec4af96cb87">$free_shipping</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a1809518b0ee35023ce5767f0a5ba2e30">   35</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a1809518b0ee35023ce5767f0a5ba2e30">$receiver_address</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a91e3d2db95977f2601125e9a15190cb6">   38</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">bool</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a91e3d2db95977f2601125e9a15190cb6">$express_shipment</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a6df8cabab86cd4cc6d730d063b7b7d7f">   40</a></span>    <span class="keyword">public</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a6df8cabab86cd4cc6d730d063b7b7d7f">$map</a> = [</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="stringliteral">&quot;free_methods&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Preference\FreeMethod&quot;</span>,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="stringliteral">&quot;receiver_address&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Preference\ReceiverAddress&quot;</span>,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    ];</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#ae937d10eeb10a8152d67ca89c61943df">   48</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#ae937d10eeb10a8152d67ca89c61943df">getMap</a>(): array</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a6df8cabab86cd4cc6d730d063b7b7d7f">$this-&gt;map</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html">MercadoPago\Resources\Preference\Shipments</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">Shipments.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_a1809518b0ee35023ce5767f0a5ba2e30"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a1809518b0ee35023ce5767f0a5ba2e30">MercadoPago\Resources\Preference\Shipments\$receiver_address</a></div><div class="ttdeci">array object null $receiver_address</div><div class="ttdef"><b>Definition</b> <a href="#l00035">Shipments.php:35</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_a439fa5b2f5b9967c31f0bf24b575b0d2"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a439fa5b2f5b9967c31f0bf24b575b0d2">MercadoPago\Resources\Preference\Shipments\$free_methods</a></div><div class="ttdeci">array $free_methods</div><div class="ttdef"><b>Definition</b> <a href="#l00026">Shipments.php:26</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_a6003c8adecf3382d0efc2ec95ec838ca"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a6003c8adecf3382d0efc2ec95ec838ca">MercadoPago\Resources\Preference\Shipments\$dimensions</a></div><div class="ttdeci">string $dimensions</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Shipments.php:20</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_a6df8cabab86cd4cc6d730d063b7b7d7f"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a6df8cabab86cd4cc6d730d063b7b7d7f">MercadoPago\Resources\Preference\Shipments\$map</a></div><div class="ttdeci">$map</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Shipments.php:40</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_a7874ec07f8f97106a3ea1d45294873d9"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a7874ec07f8f97106a3ea1d45294873d9">MercadoPago\Resources\Preference\Shipments\$cost</a></div><div class="ttdeci">float $cost</div><div class="ttdef"><b>Definition</b> <a href="#l00029">Shipments.php:29</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_a91e3d2db95977f2601125e9a15190cb6"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#a91e3d2db95977f2601125e9a15190cb6">MercadoPago\Resources\Preference\Shipments\$express_shipment</a></div><div class="ttdeci">bool $express_shipment</div><div class="ttdef"><b>Definition</b> <a href="#l00038">Shipments.php:38</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_ab757b2c4c661a2194fa79fc7b92da2e4"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#ab757b2c4c661a2194fa79fc7b92da2e4">MercadoPago\Resources\Preference\Shipments\$default_shipping_method</a></div><div class="ttdeci">int $default_shipping_method</div><div class="ttdef"><b>Definition</b> <a href="#l00023">Shipments.php:23</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_acf4643c6c8c0372f5a33249039d80428"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#acf4643c6c8c0372f5a33249039d80428">MercadoPago\Resources\Preference\Shipments\$local_pickup</a></div><div class="ttdeci">bool $local_pickup</div><div class="ttdef"><b>Definition</b> <a href="#l00017">Shipments.php:17</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_ad891c346fa9dc866af3ddec4af96cb87"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#ad891c346fa9dc866af3ddec4af96cb87">MercadoPago\Resources\Preference\Shipments\$free_shipping</a></div><div class="ttdeci">bool $free_shipping</div><div class="ttdef"><b>Definition</b> <a href="#l00032">Shipments.php:32</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_adcb47b54240c0d644ddd58e62ad49196"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#adcb47b54240c0d644ddd58e62ad49196">MercadoPago\Resources\Preference\Shipments\$mode</a></div><div class="ttdeci">string $mode</div><div class="ttdef"><b>Definition</b> <a href="#l00014">Shipments.php:14</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_preference_1_1_shipments_html_ae937d10eeb10a8152d67ca89c61943df"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_preference_1_1_shipments.html#ae937d10eeb10a8152d67ca89c61943df">MercadoPago\Resources\Preference\Shipments\getMap</a></div><div class="ttdeci">getMap()</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Shipments.php:48</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_81b3df120731b49823a3878898d62a59.html">Resources</a></li><li class="navelem"><a href="dir_d75af7f365f91f4bb2ef9c5be3f770b4.html">Preference</a></li><li class="navelem"><a href="_preference_2_shipments_8php.html">Shipments.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

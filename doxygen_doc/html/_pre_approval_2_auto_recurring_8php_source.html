@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Resources/PreApproval/AutoRecurring.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_pre_approval_2_auto_recurring_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AutoRecurring.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_pre_approval_2_auto_recurring_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="namespace_mercado_pago_1_1_resources_1_1_pre_approval.html">    3</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mercado_pago_1_1_resources_1_1_pre_approval.html">MercadoPago\Resources\PreApproval</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html">AutoRecurring</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#a9fe1099ead9a50e76999e3c0bc7602b6">    9</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#a9fe1099ead9a50e76999e3c0bc7602b6">$currency_id</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ab82bbec92655e1cb754a0ee142532efa">   12</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">float</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ab82bbec92655e1cb754a0ee142532efa">$transaction_amount</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad399f8b7e2be2cbce5b1307163f97b4b">   15</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad399f8b7e2be2cbce5b1307163f97b4b">$frequency</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad78f2cc2f1e98ed877bcdcd23b8b4bff">   18</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad78f2cc2f1e98ed877bcdcd23b8b4bff">$frequency_type</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad4efda16ed82d19a4cd2a5f3a2b5ee24">   21</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad4efda16ed82d19a4cd2a5f3a2b5ee24">$start_date</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#a8102d920e09f64bec400dee8a173599f">   24</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#a8102d920e09f64bec400dee8a173599f">$end_date</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#a7d3eb00ae3ddbbca034e8bccf4873e9d">   27</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">bool</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#a7d3eb00ae3ddbbca034e8bccf4873e9d">$billing_day_proportional</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#af994cf779416ec91ff4408a2538bc38f">   30</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">bool</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#af994cf779416ec91ff4408a2538bc38f">$has_billing_day</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad34e2a08c8801ac5537ca14c6d1d5aff">   33</a></span>    <span class="keyword">public</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad34e2a08c8801ac5537ca14c6d1d5aff">$free_trial</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html">MercadoPago\Resources\PreApproval\AutoRecurring</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">AutoRecurring.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html_a7d3eb00ae3ddbbca034e8bccf4873e9d"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#a7d3eb00ae3ddbbca034e8bccf4873e9d">MercadoPago\Resources\PreApproval\AutoRecurring\$billing_day_proportional</a></div><div class="ttdeci">bool $billing_day_proportional</div><div class="ttdef"><b>Definition</b> <a href="#l00027">AutoRecurring.php:27</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html_a8102d920e09f64bec400dee8a173599f"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#a8102d920e09f64bec400dee8a173599f">MercadoPago\Resources\PreApproval\AutoRecurring\$end_date</a></div><div class="ttdeci">string $end_date</div><div class="ttdef"><b>Definition</b> <a href="#l00024">AutoRecurring.php:24</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html_a9fe1099ead9a50e76999e3c0bc7602b6"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#a9fe1099ead9a50e76999e3c0bc7602b6">MercadoPago\Resources\PreApproval\AutoRecurring\$currency_id</a></div><div class="ttdeci">string $currency_id</div><div class="ttdef"><b>Definition</b> <a href="#l00009">AutoRecurring.php:9</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html_ab82bbec92655e1cb754a0ee142532efa"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ab82bbec92655e1cb754a0ee142532efa">MercadoPago\Resources\PreApproval\AutoRecurring\$transaction_amount</a></div><div class="ttdeci">float $transaction_amount</div><div class="ttdef"><b>Definition</b> <a href="#l00012">AutoRecurring.php:12</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html_ad34e2a08c8801ac5537ca14c6d1d5aff"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad34e2a08c8801ac5537ca14c6d1d5aff">MercadoPago\Resources\PreApproval\AutoRecurring\$free_trial</a></div><div class="ttdeci">$free_trial</div><div class="ttdef"><b>Definition</b> <a href="#l00033">AutoRecurring.php:33</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html_ad399f8b7e2be2cbce5b1307163f97b4b"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad399f8b7e2be2cbce5b1307163f97b4b">MercadoPago\Resources\PreApproval\AutoRecurring\$frequency</a></div><div class="ttdeci">int $frequency</div><div class="ttdef"><b>Definition</b> <a href="#l00015">AutoRecurring.php:15</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html_ad4efda16ed82d19a4cd2a5f3a2b5ee24"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad4efda16ed82d19a4cd2a5f3a2b5ee24">MercadoPago\Resources\PreApproval\AutoRecurring\$start_date</a></div><div class="ttdeci">string $start_date</div><div class="ttdef"><b>Definition</b> <a href="#l00021">AutoRecurring.php:21</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html_ad78f2cc2f1e98ed877bcdcd23b8b4bff"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#ad78f2cc2f1e98ed877bcdcd23b8b4bff">MercadoPago\Resources\PreApproval\AutoRecurring\$frequency_type</a></div><div class="ttdeci">string $frequency_type</div><div class="ttdef"><b>Definition</b> <a href="#l00018">AutoRecurring.php:18</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring_html_af994cf779416ec91ff4408a2538bc38f"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_pre_approval_1_1_auto_recurring.html#af994cf779416ec91ff4408a2538bc38f">MercadoPago\Resources\PreApproval\AutoRecurring\$has_billing_day</a></div><div class="ttdeci">bool $has_billing_day</div><div class="ttdef"><b>Definition</b> <a href="#l00030">AutoRecurring.php:30</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_1_1_resources_1_1_pre_approval_html"><div class="ttname"><a href="namespace_mercado_pago_1_1_resources_1_1_pre_approval.html">MercadoPago\Resources\PreApproval</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">AutoRecurring.php:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_81b3df120731b49823a3878898d62a59.html">Resources</a></li><li class="navelem"><a href="dir_56fca615479fdbe8a991e4a783e08256.html">PreApproval</a></li><li class="navelem"><a href="_pre_approval_2_auto_recurring_8php.html">AutoRecurring.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

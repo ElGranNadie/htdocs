@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/tests/MercadoPago/Client/Integration/IdentificationType/IdentificationTypeClientITTest.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_identification_type_client_i_t_test_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IdentificationTypeClientITTest.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_identification_type_client_i_t_test_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="namespace_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type.html">    3</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type.html">MercadoPago\Tests\Client\Integration\IdentificationType</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">MercadoPago\Client\Common\RequestOptions</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_identification_type_1_1_identification_type_client.html">MercadoPago\Client\IdentificationType\IdentificationTypeClient</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>use <a class="code hl_class" href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html">MercadoPago\Exceptions\MPApiException</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>use <a class="code hl_class" href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>use PHPUnit\Framework\TestCase;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html">   14</a></span><span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html">IdentificationTypeClientITTest</a> <span class="keyword">extends</span> TestCase</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#abf2a38f561a5967ece8a6fe2d072f58c">   16</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#abf2a38f561a5967ece8a6fe2d072f58c">setUpBeforeClass</a>(): void</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#aeca7d9ddf6dadcea63fe7fc0126ea4c2">MercadoPagoConfig::setAccessToken</a>(getenv(<span class="stringliteral">&quot;ACCESS_TOKEN&quot;</span>));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#ad0fb53d3a33f773e8a316d118bd726f4">   21</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#ad0fb53d3a33f773e8a316d118bd726f4">testListSuccess</a>(): void</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_identification_type_1_1_identification_type_client.html">IdentificationTypeClient</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        $identification_type = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;list();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        $this-&gt;assertNotNull($identification_type-&gt;data);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        $this-&gt;assertSame(200, $identification_type-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        $this-&gt;assertCount(2, $identification_type-&gt;getResponse()-&gt;getContent());</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        $this-&gt;assertCount(2, $identification_type-&gt;data);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        $this-&gt;assertNotNull($identification_type-&gt;data[0]-&gt;id);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;CPF&quot;</span>, $identification_type-&gt;data[0]-&gt;id);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;CNPJ&quot;</span>, $identification_type-&gt;data[1]-&gt;id);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#a56ed50faa90f25beb869e6c22f6b14f1">   34</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#a56ed50faa90f25beb869e6c22f6b14f1">testListWithRequestOptionsFailure</a>(): void</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        $this-&gt;expectException(MPApiException::class);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_identification_type_1_1_identification_type_client.html">IdentificationTypeClient</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        $request_options = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        $request_options-&gt;setAccessToken(<span class="stringliteral">&quot;invalid_access_token&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;list($request_options);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_common_1_1_request_options_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">MercadoPago\Client\Common\RequestOptions</a></div><div class="ttdef"><b>Definition</b> <a href="_request_options_8php_source.html#l00006">RequestOptions.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_identification_type_1_1_identification_type_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_identification_type_1_1_identification_type_client.html">MercadoPago\Client\IdentificationType\IdentificationTypeClient</a></div><div class="ttdef"><b>Definition</b> <a href="_identification_type_client_8php_source.html#l00014">IdentificationTypeClient.php:15</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_exceptions_1_1_m_p_api_exception_html"><div class="ttname"><a href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html">MercadoPago\Exceptions\MPApiException</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_api_exception_8php_source.html#l00009">MPApiException.php:10</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a></div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00010">MercadoPagoConfig.php:11</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_aeca7d9ddf6dadcea63fe7fc0126ea4c2"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#aeca7d9ddf6dadcea63fe7fc0126ea4c2">MercadoPago\MercadoPagoConfig\setAccessToken</a></div><div class="ttdeci">static setAccessToken(string $access_token)</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00092">MercadoPagoConfig.php:92</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test_html"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html">MercadoPago\Tests\Client\Integration\IdentificationType\IdentificationTypeClientITTest</a></div><div class="ttdef"><b>Definition</b> <a href="#l00014">IdentificationTypeClientITTest.php:15</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test_html_a56ed50faa90f25beb869e6c22f6b14f1"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#a56ed50faa90f25beb869e6c22f6b14f1">MercadoPago\Tests\Client\Integration\IdentificationType\IdentificationTypeClientITTest\testListWithRequestOptionsFailure</a></div><div class="ttdeci">testListWithRequestOptionsFailure()</div><div class="ttdef"><b>Definition</b> <a href="#l00034">IdentificationTypeClientITTest.php:34</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test_html_abf2a38f561a5967ece8a6fe2d072f58c"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#abf2a38f561a5967ece8a6fe2d072f58c">MercadoPago\Tests\Client\Integration\IdentificationType\IdentificationTypeClientITTest\setUpBeforeClass</a></div><div class="ttdeci">static setUpBeforeClass()</div><div class="ttdef"><b>Definition</b> <a href="#l00016">IdentificationTypeClientITTest.php:16</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test_html_ad0fb53d3a33f773e8a316d118bd726f4"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#ad0fb53d3a33f773e8a316d118bd726f4">MercadoPago\Tests\Client\Integration\IdentificationType\IdentificationTypeClientITTest\testListSuccess</a></div><div class="ttdeci">testListSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00021">IdentificationTypeClientITTest.php:21</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_html"><div class="ttname"><a href="namespace_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type.html">MercadoPago\Tests\Client\Integration\IdentificationType</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">IdentificationTypeClientITTest.php:3</a></div></div>
+<div class="ttc" id="apago_8php_html_ad1405dc1ba2e288764378e79bff7a87d"><div class="ttname"><a href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a></div><div class="ttdeci">$client</div><div class="ttdef"><b>Definition</b> <a href="pago_8php_source.html#l00014">pago.php:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_ab008c55aa212b3997cab5dabca3bf53.html">tests</a></li><li class="navelem"><a href="dir_334d9e4b2d9d5525b4a13f4dce74526f.html">MercadoPago</a></li><li class="navelem"><a href="dir_d13f56b82f2eaa82f6618f06f4c20871.html">Client</a></li><li class="navelem"><a href="dir_119953d41af70b847714841cc6ad5d8d.html">Integration</a></li><li class="navelem"><a href="dir_53814837d237412106cbb0d3b3ac776e.html">IdentificationType</a></li><li class="navelem"><a href="_identification_type_client_i_t_test_8php.html">IdentificationTypeClientITTest.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

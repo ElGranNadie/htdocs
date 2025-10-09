@@ -1,0 +1,4 @@
+var class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_identification_type_1_1_identification_type_client_unit_test =
+[
+    [ "testListSuccess", "class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_identification_type_1_1_identification_type_client_unit_test.html#a687a482aceefa50e56cce6c4c7018e7f", null ]
+];

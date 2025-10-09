@@ -1,0 +1,4 @@
+var namespace_mercado_pago_1_1_resources_1_1_identification_type =
+[
+    [ "IdentificationTypeListResult", "class_mercado_pago_1_1_resources_1_1_identification_type_1_1_identification_type_list_result.html", "class_mercado_pago_1_1_resources_1_1_identification_type_1_1_identification_type_list_result" ]
+];

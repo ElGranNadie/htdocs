@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Referencia del archivo api/login.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('api_2login_8php.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo login.php</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="api_2login_8php_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6efc15b5a2314dd4b5aaa556a375c6d6" id="r_a6efc15b5a2314dd4b5aaa556a375c6d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a> = json_decode(file_get_contents(&quot;php://input&quot;), true)</td></tr>
+<tr class="memitem:ad634f418b20382e2802f80532d76d3cd" id="r_ad634f418b20382e2802f80532d76d3cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad634f418b20382e2802f80532d76d3cd">$email</a> = trim($data['email'] ?? '')</td></tr>
+<tr class="memitem:a607686ef9f99ea7c42f4f3dd3dbb2b0d" id="r_a607686ef9f99ea7c42f4f3dd3dbb2b0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a> = trim($data['password'] ?? '')</td></tr>
+<tr class="memitem:aa72329a38f1cd5219712b4080f19a8b1" id="r_aa72329a38f1cd5219712b4080f19a8b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(! $email||! $password)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a> = $conn-&gt;prepare(&quot;SELECT id, nombre_us, correo, pass, usuario, verificado, es_premium FROM usuarios WHERE correo = ?&quot;)</td></tr>
+<tr class="memitem:a112ef069ddc0454086e3d1e6d8d55d07" id="r_a112ef069ddc0454086e3d1e6d8d55d07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = $stmt-&gt;get_result()</td></tr>
+<tr class="memitem:ace39b1eb8e704dfc9962072b153f0311" id="r_ace39b1eb8e704dfc9962072b153f0311"><td class="memItemLeft" align="right" valign="top"><a class="el" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>($user=$result-&gt;fetch_assoc())&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace39b1eb8e704dfc9962072b153f0311">else</a></td></tr>
+</table>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a6efc15b5a2314dd4b5aaa556a375c6d6" name="a6efc15b5a2314dd4b5aaa556a375c6d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6efc15b5a2314dd4b5aaa556a375c6d6">&#9670;&#160;</a></span>$data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$data = json_decode(file_get_contents(&quot;php://input&quot;), true)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="api_2login_8php_source.html#l00008">8</a> del archivo <a class="el" href="api_2login_8php_source.html">login.php</a>.</p>
+
+</div>
+</div>
+<a id="ad634f418b20382e2802f80532d76d3cd" name="ad634f418b20382e2802f80532d76d3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad634f418b20382e2802f80532d76d3cd">&#9670;&#160;</a></span>$email</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$email = trim($data['email'] ?? '')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="api_2login_8php_source.html#l00009">9</a> del archivo <a class="el" href="api_2login_8php_source.html">login.php</a>.</p>
+
+</div>
+</div>
+<a id="a607686ef9f99ea7c42f4f3dd3dbb2b0d" name="a607686ef9f99ea7c42f4f3dd3dbb2b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">&#9670;&#160;</a></span>$password</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$password = trim($data['password'] ?? '')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="api_2login_8php_source.html#l00010">10</a> del archivo <a class="el" href="api_2login_8php_source.html">login.php</a>.</p>
+
+</div>
+</div>
+<a id="a112ef069ddc0454086e3d1e6d8d55d07" name="a112ef069ddc0454086e3d1e6d8d55d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a112ef069ddc0454086e3d1e6d8d55d07">&#9670;&#160;</a></span>$result</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$result = $stmt-&gt;get_result()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Resultado devuelto por el webhook receptor (puede ser texto o JSON). Si falla la conexión, devuelve <span class="tt">false</span>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="api_2login_8php_source.html#l00021">21</a> del archivo <a class="el" href="api_2login_8php_source.html">login.php</a>.</p>
+
+</div>
+</div>
+<a id="aa72329a38f1cd5219712b4080f19a8b1" name="aa72329a38f1cd5219712b4080f19a8b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72329a38f1cd5219712b4080f19a8b1">&#9670;&#160;</a></span>$stmt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a> (! $email||! $password) $stmt = $conn-&gt;prepare(&quot;SELECT id, nombre_us, correo, pass, usuario, verificado, es_premium FROM usuarios WHERE correo = ?&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="api_2login_8php_source.html#l00018">18</a> del archivo <a class="el" href="api_2login_8php_source.html">login.php</a>.</p>
+
+</div>
+</div>
+<a id="ace39b1eb8e704dfc9962072b153f0311" name="ace39b1eb8e704dfc9962072b153f0311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace39b1eb8e704dfc9962072b153f0311">&#9670;&#160;</a></span>else</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a> ( $user=$result-&gt;fetch_assoc()) else</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    echo json_encode([<span class="stringliteral">&quot;success&quot;</span> =&gt; <span class="keyword">false</span>, <span class="stringliteral">&quot;message&quot;</span> =&gt; <span class="stringliteral">&quot;Correo no encontrado&quot;</span>])</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="api_2login_8php_source.html#l00051">51</a> del archivo <a class="el" href="api_2login_8php_source.html">login.php</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_0188a3e6da905bc60aceb35bf790b8c9.html">api</a></li><li class="navelem"><a href="api_2login_8php.html">login.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

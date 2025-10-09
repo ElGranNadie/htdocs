@@ -1,0 +1,6 @@
+var class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test =
+[
+    [ "setUpBeforeClass", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#abf2a38f561a5967ece8a6fe2d072f58c", null ],
+    [ "testListSuccess", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#ad0fb53d3a33f773e8a316d118bd726f4", null ],
+    [ "testListWithRequestOptionsFailure", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html#a56ed50faa90f25beb869e6c22f6b14f1", null ]
+];

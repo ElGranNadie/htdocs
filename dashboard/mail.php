@@ -6,6 +6,21 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/credenciales.php';
 
 /**
+ * @file mail.php
+ * @brief Módulo responsable del envío de correos electrónicos con códigos de verificación.
+ *
+ * Este archivo utiliza la librería PHPMailer para enviar correos electrónicos a los usuarios
+ * con un código de verificación, utilizado generalmente para procesos de recuperación de contraseña
+ * o validación de cuenta. La función principal `enviarCodigo()` recibe el correo destino y el
+ * código generado, y gestiona todo el proceso de configuración y envío mediante SMTP.
+ *
+ * @details 
+ * - Implementa autenticación segura a través del servidor SMTP de Gmail.
+ * - Maneja errores mediante excepciones y registros en el log del servidor.
+ * - El mensaje se envía en formato HTML e incluye el código de verificación y su tiempo de validez.
+ */
+
+/**
  * Envía un correo con un código de verificación al correo indicado
  *
  * @param string $correoDestino El correo del usuario
@@ -17,36 +32,38 @@ function enviarCodigo($correoDestino, $codigo) {
     $mail = new PHPMailer(true);
 
     try {
-        // Configura el uso de SMTP para el envío de correos
+        /** SMTP Configuration para el envío de correos */
         $mail->isSMTP();
-        // Establece el servidor SMTP de Gmail
+        
+        /** Establece el servidor SMTP de Gmail */
         $mail->Host = 'smtp.gmail.com';
-        // Habilita la autenticación SMTP
+
+        /** Habilita la autenticación SMTP */
         $mail->SMTPAuth = true;
-        // Nombre de usuario para autenticarse (correo del remitente)
+        /** Nombre de usuario para autenticarse (correo del remitente) */
         $mail->Username = EMAIL_USER;
-        // Contraseña del correo del remitente
+        /** Contraseña del correo del remitente */
         $mail->Password = EMAIL_PASS;
-        // Tipo de cifrado (TLS)
+        /** Tipo de cifrado (TLS) */
         $mail->SMTPSecure = 'tls';
-        // Puerto del servidor SMTP (587 para TLS)
+        /** Puerto del servidor SMTP (587 para TLS) */
         $mail->Port = 587;
 
-        // Configura el juego de caracteres a UTF-8
+        /** Configura el juego de caracteres a UTF-8 */
         $mail->CharSet = 'UTF-8';
 
-        // Establece el remitente del correo
+        /** Establece el remitente del correo */
         $mail->setFrom(EMAIL_USER, 'Verificación App');
-        // Añade el destinatario del correo
+        /** Añade el destinatario del correo */
         $mail->addAddress($correoDestino);
-        // Indica que el contenido del correo estará en formato HTML
+        /** Indica que el contenido del correo estará en formato HTML */
         $mail->isHTML(true);
-        // Asunto del correo
+        /** Asunto del correo */
         $mail->Subject = 'Código de verificación para recuperar tu contrasena';
-        // Cuerpo del correo (mensaje HTML con el código de verificación)
+        /** Cuerpo del correo (mensaje HTML con el código de verificación) */
         $mail->Body = "<p>Hola, tu código de verificación es: <strong>$codigo</strong></p><p>Este código expirará en 10 minutos.</p>";
 
-        // Intenta enviar el correo
+        /** Intenta enviar el correo */
         $mail->send();
         // Retorna true si el correo fue enviado exitosamente
         return true;

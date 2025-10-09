@@ -1,4 +1,38 @@
 <?php session_start(); 
+/**
+ * @file login.php
+ * @brief Vista del formulario de inicio de sesión del sistema N.I.C.O.L.E.
+ *
+ * Este archivo implementa la interfaz gráfica de inicio de sesión para el usuario. 
+ * Forma parte del flujo de autenticación y redirige las credenciales ingresadas 
+ * hacia el archivo @ref procesar_login.php, donde se realiza la validación contra la base de datos.
+ *
+ * @details
+ * - Utiliza sesiones PHP para manejar mensajes de error en caso de credenciales inválidas.
+ * - Integra componentes compartidos mediante @c require: 
+ *   - @c ../varset/varset.php → variables globales como el logo.
+ *   - @c other.php → metadatos y enlaces comunes.
+ *   - @c stylesheet.php → estilos del dashboard.
+ *   - @c ../dashboard/header.php → cabecera de la página.
+ *   - @c footer.php → pie de página.
+ *   - @c scripts.php → dependencias JS (ej. Bootstrap).
+ *
+ * @note El estilo del carrusel está definido de forma interna en este archivo, 
+ * ya que no es compartido con el resto del sistema.
+ *
+ * @section flujo Flujo general
+ * 1. El usuario accede al formulario de inicio de sesión.
+ * 2. Se renderiza un carrusel motivacional y el formulario de login.
+ * 3. Si existen errores previos en la sesión (ej. credenciales inválidas), se muestran al usuario.
+ * 4. Al enviar el formulario, se envían las credenciales mediante POST hacia @ref procesar_login.php.
+ * 5. El sistema procesa y responde en consecuencia (redirección o error).
+ *
+ * @section seguridad Consideraciones de seguridad
+ * - Uso de HTTPS recomendado para proteger la transmisión de credenciales.
+ * - Validación de entradas en @ref procesar_login.php para evitar inyecciones SQL.
+ * - Manejo seguro de contraseñas (hashing en el servidor).
+ *
+ */
     require '../varset/varset.php';
 ?>
 <!DOCTYPE html>

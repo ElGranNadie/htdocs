@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Referencia del archivo dashboard/procesar_registro.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('procesar__registro_8php.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo procesar_registro.php</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Maneja el proceso de registro de usuarios, validaciones, preferencias y verificación por correo.  
+<a href="#details">Más...</a></p>
+
+<p><a href="procesar__registro_8php_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0544c3fe466e421738dae463968b70ba" id="r_a0544c3fe466e421738dae463968b70ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(isset( $_POST[ 'paso']) &amp;&amp;$_POST[ 'paso']==='1') elseif(isset($_POST['finalizar_registro']))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0544c3fe466e421738dae463968b70ba">else</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Maneja el proceso de registro de usuarios, validaciones, preferencias y verificación por correo. </p>
+<p>Este script gestiona el registro de nuevos usuarios en el sistema. Incluye la validación de datos, almacenamiento temporal en sesión, inserción de datos en la base de datos y envío de un código de verificación por correo electrónico mediante <a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="dependencias"></a>
+Dependencias</h1>
+<ul>
+<li>../dashboard/conexion.php : Conexión a la base de datos.</li>
+<li>../utils/validaciones.php : Funciones de validación (correo, contraseña, etc.).</li>
+<li>../dashboard/mail.php : Configuración y funciones de envío de correos (<a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a>).</li>
+<li>../dashboard/credenciales.php : Contiene EMAIL_USER y EMAIL_PASS para autenticación SMTP.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="flujo"></a>
+Flujo general</h1>
+<ol type="1">
+<li>Verificar que la solicitud se haya enviado mediante POST.</li>
+<li>Determinar el paso del registro (<span class="tt">paso=1</span> o <span class="tt">finalizar_registro</span>).</li>
+<li>Validar los datos ingresados (correo, contraseña, usuario, etc.).</li>
+<li>Verificar duplicados en la base de datos (correo y usuario).</li>
+<li>Almacenar temporalmente los datos en sesión.</li>
+<li>Registrar preferencias del usuario.</li>
+<li>Generar código de verificación y enviar correo.</li>
+<li>Confirmar registro exitoso o manejar errores mediante rollback.</li>
+</ol>
+<p>Variables de sesión utilizadas:</p><ul>
+<li>&lsquo;$_SESSION['old&rsquo;]<span class="tt"> : Mantiene los valores previos del formulario para conservarlos ante errores.</span></li>
+<li><span class="tt"></span>$_SESSION['temp_user_data']<span class="tt"> : Datos temporales del usuario entre pasos del registro.</span></li>
+<li><span class="tt"></span>$_SESSION['correo_verificar']<span class="tt"> : Correo al que se enviará el código de verificación.</span></li>
+<li><span class="tt"></span>$_SESSION['error']<span class="tt"> : Lista de errores de validación o fallos en el proceso.</span></li>
+<li><span class="tt"></span>$_SESSION['success']` : Mensaje de éxito si el registro fue completado.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="paso1"></a>
+Verificar método POST</h2>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> ($_SERVER[<span class="stringliteral">&#39;REQUEST_METHOD&#39;</span>] === <span class="stringliteral">&#39;POST&#39;</span>) {</div>
+</div><!-- fragment --><p> Solo se procesa el registro si la solicitud proviene de un formulario con método POST.</p>
+<h2 class="doxsection"><a class="anchor" id="paso2"></a>
+Capturar datos del formulario login.php</h2>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (isset($_POST[<span class="stringliteral">&#39;paso&#39;</span>]) &amp;&amp; $_POST[<span class="stringliteral">&#39;paso&#39;</span>] === <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line">    <a class="code hl_variable" href="register_8php.html#aaa7b9d1ce32c1d2e32f7ad3e0b59aac2">$nombre</a> = trim($_POST[<span class="stringliteral">&#39;nombre&#39;</span>]);</div>
+<div class="line">    <a class="code hl_variable" href="register_8php.html#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a> = trim($_POST[<span class="stringliteral">&#39;correo&#39;</span>]);</div>
+<div class="line">    <a class="code hl_variable" href="db__config_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a> = $_POST[<span class="stringliteral">&#39;pass&#39;</span>];</div>
+<div class="line">    <a class="code hl_variable" href="register_8php.html#a38722dbf8a1fad801b04354ba1b07aeb">$edad</a> = intval($_POST[<span class="stringliteral">&#39;edad&#39;</span>]);</div>
+<div class="line">    <a class="code hl_variable" href="register_8php.html#a559c8003f481610caf373b85cc607fb6">$usuario</a> = trim($_POST[<span class="stringliteral">&#39;usuario&#39;</span>]);</div>
+<div class="ttc" id="adb__config_8php_html_a607686ef9f99ea7c42f4f3dd3dbb2b0d"><div class="ttname"><a href="db__config_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a></div><div class="ttdeci">$password</div><div class="ttdef"><b>Definition</b> <a href="db__config_8php_source.html#l00007">db_config.php:7</a></div></div>
+<div class="ttc" id="aregister_8php_html_a38722dbf8a1fad801b04354ba1b07aeb"><div class="ttname"><a href="register_8php.html#a38722dbf8a1fad801b04354ba1b07aeb">$edad</a></div><div class="ttdeci">$edad</div><div class="ttdef"><b>Definition</b> <a href="register_8php_source.html#l00043">register.php:43</a></div></div>
+<div class="ttc" id="aregister_8php_html_a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f"><div class="ttname"><a href="register_8php.html#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a></div><div class="ttdeci">$correo</div><div class="ttdef"><b>Definition</b> <a href="register_8php_source.html#l00011">register.php:11</a></div></div>
+<div class="ttc" id="aregister_8php_html_a559c8003f481610caf373b85cc607fb6"><div class="ttname"><a href="register_8php.html#a559c8003f481610caf373b85cc607fb6">$usuario</a></div><div class="ttdeci">$usuario</div><div class="ttdef"><b>Definition</b> <a href="register_8php_source.html#l00042">register.php:42</a></div></div>
+<div class="ttc" id="aregister_8php_html_aaa7b9d1ce32c1d2e32f7ad3e0b59aac2"><div class="ttname"><a href="register_8php.html#aaa7b9d1ce32c1d2e32f7ad3e0b59aac2">$nombre</a></div><div class="ttdeci">$nombre</div><div class="ttdef"><b>Definition</b> <a href="register_8php_source.html#l00010">register.php:10</a></div></div>
+</div><!-- fragment --><p> Aquí se capturan los datos iniciales del usuario (nombre, correo, edad y usuario).</p>
+<h2 class="doxsection"><a class="anchor" id="paso3"></a>
+Validar correo</h2>
+<div class="fragment"><div class="line"><a class="code hl_variable" href="registro_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> = array_merge(<a class="code hl_variable" href="registro_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>, <a class="code hl_function" href="validaciones_8php.html#a61c6731c6de20d45ab3bfeaba4b28ad1">validarCorreo</a>(<a class="code hl_variable" href="register_8php.html#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a>));</div>
+<div class="line"><a class="code hl_variable" href="registro_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a> = array_merge(<a class="code hl_variable" href="registro_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a>, <a class="code hl_function" href="validaciones_8php.html#a3ad9b9e20da874f35a6efa052c8e714c">validarPassword</a>(<a class="code hl_variable" href="db__config_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>));</div>
+<div class="ttc" id="aregistro_8php_html_a70fbb718980d7db3d52d37d7a5c39166"><div class="ttname"><a href="registro_8php.html#a70fbb718980d7db3d52d37d7a5c39166">$errores</a></div><div class="ttdeci">$errores</div><div class="ttdef"><b>Definition</b> <a href="registro_8php_source.html#l00107">registro.php:107</a></div></div>
+<div class="ttc" id="avalidaciones_8php_html_a3ad9b9e20da874f35a6efa052c8e714c"><div class="ttname"><a href="validaciones_8php.html#a3ad9b9e20da874f35a6efa052c8e714c">validarPassword</a></div><div class="ttdeci">validarPassword($password)</div><div class="ttdoc">Valida la seguridad de una contraseña.</div><div class="ttdef"><b>Definition</b> <a href="validaciones_8php_source.html#l00047">validaciones.php:47</a></div></div>
+<div class="ttc" id="avalidaciones_8php_html_a61c6731c6de20d45ab3bfeaba4b28ad1"><div class="ttname"><a href="validaciones_8php.html#a61c6731c6de20d45ab3bfeaba4b28ad1">validarCorreo</a></div><div class="ttdeci">validarCorreo($correo)</div><div class="ttdoc">Valida el formato de un correo electrónico.</div><div class="ttdef"><b>Definition</b> <a href="validaciones_8php_source.html#l00030">validaciones.php:30</a></div></div>
+</div><!-- fragment --><p> Se validan formato de correo y complejidad de contraseña. <br  />
+ Si existen errores, se redirige a <span class="tt"><a class="el" href="registro_8php.html" title="Vista del formulario de registro inicial del sistema N.I.C.O.L.E.">registro.php</a></span> mostrando mensajes.</p>
+<h2 class="doxsection"><a class="anchor" id="paso4"></a>
+Consultar usuario en la base de datos</h2>
+<div class="fragment"><div class="line">$check_email = <a class="code hl_variable" href="db__config_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;prepare(<span class="stringliteral">&quot;SELECT correo FROM usuarios WHERE correo = ?&quot;</span>);</div>
+<div class="line">$check_user = <a class="code hl_variable" href="db__config_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;prepare(<span class="stringliteral">&quot;SELECT nombre_us FROM usuarios WHERE nombre_us = ?&quot;</span>);</div>
+<div class="ttc" id="adb__config_8php_html_aa8a5a87b9c1a6a0819b88447cbe41877"><div class="ttname"><a href="db__config_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a></div><div class="ttdeci">$conn</div><div class="ttdef"><b>Definition</b> <a href="db__config_8php_source.html#l00013">db_config.php:13</a></div></div>
+</div><!-- fragment --><p> Antes de crear el usuario, se verifica que el correo y nombre de usuario no estén en uso.</p>
+<h2 class="doxsection"><a class="anchor" id="paso5"></a>
+Verificar contraseña y guardar sesión</h2>
+<div class="fragment"><div class="line">$_SESSION[<span class="stringliteral">&#39;temp_user_data&#39;</span>] = [</div>
+<div class="line">    <span class="stringliteral">&#39;nombre&#39;</span> =&gt; <a class="code hl_variable" href="register_8php.html#aaa7b9d1ce32c1d2e32f7ad3e0b59aac2">$nombre</a>,</div>
+<div class="line">    <span class="stringliteral">&#39;correo&#39;</span> =&gt; <a class="code hl_variable" href="register_8php.html#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a>,</div>
+<div class="line">    <span class="stringliteral">&#39;password&#39;</span> =&gt; <a class="code hl_variable" href="db__config_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>,</div>
+<div class="line">    <span class="stringliteral">&#39;edad&#39;</span> =&gt; <a class="code hl_variable" href="register_8php.html#a38722dbf8a1fad801b04354ba1b07aeb">$edad</a>,</div>
+<div class="line">    <span class="stringliteral">&#39;usuario&#39;</span> =&gt; <a class="code hl_variable" href="register_8php.html#a559c8003f481610caf373b85cc607fb6">$usuario</a></div>
+<div class="line">];</div>
+<div class="line">header(<span class="stringliteral">&quot;Location: preferencias.php&quot;</span>);</div>
+<div class="line"><a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="ttc" id="apago_8php_html_a6733eb5f605d09eaede9845835d71c4e"><div class="ttname"><a href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a></div><div class="ttdeci">exit</div><div class="ttdef"><b>Definition</b> <a href="pago_8php_source.html#l00045">pago.php:45</a></div></div>
+</div><!-- fragment --><p> Los datos se guardan temporalmente y el usuario es redirigido a la selección de preferencias culinarias.</p>
+<h2 class="doxsection"><a class="anchor" id="paso6"></a>
+Redirigir si hay errores</h2>
+<div class="fragment"><div class="line">elseif (isset($_POST[<span class="stringliteral">&#39;finalizar_registro&#39;</span>])) {</div>
+<div class="line">    <a class="code hl_variable" href="register_8php.html#adc1e8b8b52697427e421c8f869fe06f2">$hashed_password</a> = password_hash($userData[<span class="stringliteral">&#39;password&#39;</span>], PASSWORD_DEFAULT);</div>
+<div class="line">    <a class="code hl_variable" href="api_2verificar_8php.html#a444fc5b8706f764823c2ab552f68422c">$codigo</a> = generarCodigo();</div>
+<div class="line">    $expira = date(<span class="stringliteral">&#39;Y-m-d H:i:s&#39;</span>, strtotime(<span class="stringliteral">&#39;+10 minutes&#39;</span>));</div>
+<div class="ttc" id="aapi_2verificar_8php_html_a444fc5b8706f764823c2ab552f68422c"><div class="ttname"><a href="api_2verificar_8php.html#a444fc5b8706f764823c2ab552f68422c">$codigo</a></div><div class="ttdeci">$codigo</div><div class="ttdef"><b>Definition</b> <a href="api_2verificar_8php_source.html#l00010">verificar.php:10</a></div></div>
+<div class="ttc" id="aregister_8php_html_adc1e8b8b52697427e421c8f869fe06f2"><div class="ttname"><a href="register_8php.html#adc1e8b8b52697427e421c8f869fe06f2">$hashed_password</a></div><div class="ttdeci">if($result-&gt;num_rows &gt; 0) $hashed_password</div><div class="ttdef"><b>Definition</b> <a href="register_8php_source.html#l00038">register.php:38</a></div></div>
+</div><!-- fragment --><p> Se genera un código de verificación de 6 dígitos con expiración de 10 minutos.</p>
+<h2 class="doxsection"><a class="anchor" id="paso7"></a>
+Redirigir si no es POST</h2>
+<div class="fragment"><div class="line"><a class="code hl_variable" href="debug__login_8php.html#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a> = <a class="code hl_variable" href="db__config_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;prepare(<span class="stringliteral">&quot;INSERT INTO usuarios (...) VALUES (?, ?, ?, ?, ?, ?, ?)&quot;</span>);</div>
+<div class="line"><a class="code hl_variable" href="debug__login_8php.html#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a>-&gt;bind_param(...);</div>
+<div class="ttc" id="adebug__login_8php_html_aa72329a38f1cd5219712b4080f19a8b1"><div class="ttname"><a href="debug__login_8php.html#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a></div><div class="ttdeci">if(! $email||! $password) $stmt</div><div class="ttdef"><b>Definition</b> <a href="debug__login_8php_source.html#l00013">debug_login.php:13</a></div></div>
+</div><!-- fragment --><p> Inserta datos personales del usuario y luego sus preferencias culinarias.</p>
+<h2 class="doxsection"><a class="anchor" id="paso8"></a>
+Cerrar conexión</h2>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="mail_8php.html#a08ec1d76b975f20ad771b0f6e73f425e">enviarCodigo</a>($userData[<span class="stringliteral">&#39;correo&#39;</span>], <a class="code hl_variable" href="api_2verificar_8php.html#a444fc5b8706f764823c2ab552f68422c">$codigo</a>)) {</div>
+<div class="line">    <a class="code hl_variable" href="db__config_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;commit();</div>
+<div class="line">    $_SESSION[<span class="stringliteral">&#39;correo_verificar&#39;</span>] = $userData[<span class="stringliteral">&#39;correo&#39;</span>];</div>
+<div class="line">    $_SESSION[<span class="stringliteral">&#39;success&#39;</span>] = <span class="stringliteral">&quot;Registro completado exitosamente...&quot;</span>;</div>
+<div class="line">    header(<span class="stringliteral">&quot;Location: ../dashboard/verificar.php&quot;</span>);</div>
+<div class="line">    <a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="amail_8php_html_a08ec1d76b975f20ad771b0f6e73f425e"><div class="ttname"><a href="mail_8php.html#a08ec1d76b975f20ad771b0f6e73f425e">enviarCodigo</a></div><div class="ttdeci">enviarCodigo($correoDestino, $codigo)</div><div class="ttdef"><b>Definition</b> <a href="mail_8php_source.html#l00030">mail.php:30</a></div></div>
+</div><!-- fragment --><p> Si el correo se envía correctamente, se confirma el registro y se redirige a la verificación.</p>
+<h2 class="doxsection"><a class="anchor" id="paso9"></a>
+Manejo de errores</h2>
+<div class="fragment"><div class="line">} <span class="keywordflow">catch</span> (Exception $e) {</div>
+<div class="line">    <a class="code hl_variable" href="db__config_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;rollback();</div>
+<div class="line">    $_SESSION[<span class="stringliteral">&#39;error&#39;</span>] = [<span class="stringliteral">&quot;Error al completar el registro: &quot;</span> . $e-&gt;getMessage()];</div>
+<div class="line">    header(<span class="stringliteral">&quot;Location: preferencias.php&quot;</span>);</div>
+<div class="line">    <a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> En caso de error, se revierte la transacción para mantener la integridad de los datos.</p>
+<h2 class="doxsection"><a class="anchor" id="paso10"></a>
+Redirección si no es POST</h2>
+<div class="fragment"><div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    header(<span class="stringliteral">&quot;Location: registro.php&quot;</span>);</div>
+<div class="line">    <a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Si la solicitud no proviene del formulario o no es POST, se redirige a <span class="tt"><a class="el" href="registro_8php.html" title="Vista del formulario de registro inicial del sistema N.I.C.O.L.E.">registro.php</a></span>.</p>
+<h2 class="doxsection"><a class="anchor" id="pasoFinal"></a>
+Redirección en caso de éxito</h2>
+<div class="fragment"><div class="line"><a class="code hl_variable" href="db__config_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;close();</div>
+</div><!-- fragment --><p> Se cierra la conexión a la base de datos al finalizar el proceso.</p>
+<h1 class="doxsection"><a class="anchor" id="variables"></a>
+Variables utilizadas en el proceso</h1>
+<p>A continuación se describen las <b>principales variables</b> empleadas durante el flujo de registro. <br  />
+ Se indican su propósito, tipo y momento en el que intervienen dentro del proceso.</p>
+<hr  />
+<p>🔹 <b>$nombre</b> <br  />
+ • Tipo: <em>string</em> <br  />
+ • Descripción: Contiene el nombre completo del usuario capturado desde el formulario de registro. <br  />
+ • Se utiliza durante la primera etapa (<span class="tt">paso=1</span>).</p>
+<p>🔹 <b>$correo</b> <br  />
+ • Tipo: <em>string</em> <br  />
+ • Descripción: Dirección de correo electrónico del usuario. También se usa para enviar el código de verificación. <br  />
+ • Etapa: Paso 1 y paso final (envío del código).</p>
+<p>🔹 <b>$password</b> <br  />
+ • Tipo: <em>string</em> <br  />
+ • Descripción: Contraseña ingresada por el usuario en texto plano. <br  />
+ • Etapa: Paso 1 (antes de encriptar).</p>
+<p>🔹 <b>$hashed_password</b> <br  />
+ • Tipo: <em>string</em> <br  />
+ • Descripción: Contraseña cifrada mediante <span class="tt">password_hash()</span> antes de almacenarla en la base de datos. <br  />
+ • Etapa: Paso 6 (finalización del registro).</p>
+<p>🔹 <b>$edad</b> <br  />
+ • Tipo: <em>int</em> <br  />
+ • Descripción: Edad numérica del usuario capturada desde el formulario. <br  />
+ • Etapa: Paso 1.</p>
+<p>🔹 <b>$usuario</b> <br  />
+ • Tipo: <em>string</em> <br  />
+ • Descripción: Apodo o alias único elegido por el usuario para identificarse dentro del sistema. <br  />
+ • Etapa: Paso 1.</p>
+<p>🔹 <b>$errores</b> <br  />
+ • Tipo: <em>array</em> <br  />
+ • Descripción: Lista de errores detectados durante las validaciones (correo, contraseña, duplicados). <br  />
+ • Etapa: Paso 3 y validaciones.</p>
+<p>🔹 <b>$codigo</b> <br  />
+ • Tipo: <em>string (6 dígitos)</em> <br  />
+ • Descripción: Código único de verificación generado por la función <span class="tt">generarCodigo()</span>. <br  />
+ Este código se envía al correo electrónico del usuario para confirmar su autenticidad <br  />
+ y validar su registro dentro del sistema. <br  />
+ • Expira en 10 minutos desde su creación. <br  />
+ • Etapa: Paso 6 (verificación por correo).</p>
+<p>🔹 <b>$expira</b> <br  />
+ • Tipo: <em>string (datetime)</em> <br  />
+ • Descripción: Fecha y hora límite para validar el código de verificación. <br  />
+ • Etapa: Paso 6.</p>
+<p>🔹 <b>$conn</b> <br  />
+ • Tipo: <em>mysqli</em> <br  />
+ • Descripción: Conexión activa a la base de datos utilizada para todas las operaciones SQL. <br  />
+ • Etapa: Global (en todo el flujo).</p>
+<p>🔹 <b>$stmt</b> <br  />
+ • Tipo: <em>mysqli_stmt</em> <br  />
+ • Descripción: Sentencia preparada para insertar datos del usuario y preferencias. <br  />
+ • Etapa: Paso 7 (inserción en base de datos).</p>
+<hr  />
+<p> 🧠 <b>Variables de sesión</b></p>
+<p>🔸 &lsquo;$_SESSION['temp_user_data&rsquo;]` <br  />
+ Contiene los datos temporales del usuario entre el primer paso y la selección de preferencias. <br  />
+ Se elimina tras completar el registro.</p>
+<p>🔸 &lsquo;$_SESSION['correo_verificar&rsquo;]<span class="tt">  \ilinebr&lt;br&gt;
+Guarda el correo al que se envía el código de verificación, usado luego en </span>verificar.php`.</p>
+<p>🔸 &lsquo;$_SESSION['success&rsquo;]` <br  />
+ Mensaje de éxito mostrado tras completar el registro correctamente.</p>
+<p>🔸 &lsquo;$_SESSION['error&rsquo;]` <br  />
+ Lista de errores acumulados o mensajes de fallo en el registro.</p>
+<p>🔸 &lsquo;$_SESSION['old&rsquo;]` <br  />
+ Permite mantener los datos previos del formulario si ocurre un error.</p>
+<hr  />
+<p>🧩 <b>Funciones auxiliares</b></p>
+<p>🔸 <span class="tt">generarCodigo()</span> <br  />
+ Devuelve un número aleatorio de 6 dígitos (<span class="tt">string</span>) entre <b>100000</b> y <b>999999</b>, usado como código de verificación.</p>
+<p>🔸 <span class="tt">enviarCodigo($correo, $codigo)</span> <br  />
+ Envía el código generado al correo del usuario mediante <b><a class="el" href="namespace_p_h_p_mailer.html">PHPMailer</a></b>. <br  />
+ Retorna <span class="tt">true</span> si el envío fue exitoso o <span class="tt">false</span> si ocurrió un error.</p>
+<hr  />
+<p>✅ <b>Redirección final</b> <br  />
+ Una vez completado el registro, el sistema envía el correo de verificación y redirige automáticamente al usuario hacia <br  />
+ <span class="tt">../dashboard/verificar.php</span>, donde podrá ingresar el código recibido. <br  />
+ En caso de error o fallo en el envío, se revierte la transacción (<span class="tt">rollback</span>) y se retorna a <span class="tt"><a class="el" href="preferencias_8php.html">preferencias.php</a></span>. </p>
+
+<p class="definition">Definición en el archivo <a class="el" href="procesar__registro_8php_source.html">procesar_registro.php</a>.</p>
+</div><a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a0544c3fe466e421738dae463968b70ba" name="a0544c3fe466e421738dae463968b70ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0544c3fe466e421738dae463968b70ba">&#9670;&#160;</a></span>else</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">else</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        header(<span class="stringliteral">&quot;Location: registro.php&quot;</span>)</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="procesar__registro_8php_source.html#l00381">381</a> del archivo <a class="el" href="procesar__registro_8php_source.html">procesar_registro.php</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_97f27a8d3efc40e8fefbbd7dfe5560e8.html">dashboard</a></li><li class="navelem"><a href="procesar__registro_8php.html">procesar_registro.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

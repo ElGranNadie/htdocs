@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de cÃ³digo fuente libs/fpdf/tutorial/tuto6.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajerÃ­a y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('tuto6_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">tuto6.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="tuto6_8php.html">Ir a la documentaciÃ³n de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>require(<span class="stringliteral">&#39;../fpdf.php&#39;</span>);</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">class </span><a class="code hl_class" href="class_p_d_f.html">PDF</a> <span class="keyword">extends</span> <a class="code hl_class" href="class_f_p_d_f.html">FPDF</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_p_d_f.html#ac12395cbecd3065665ceabc83d84604b">    6</a></span><span class="keyword">protected</span> <a class="code hl_variable" href="class_p_d_f.html#ac12395cbecd3065665ceabc83d84604b">$B</a> = 0;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_p_d_f.html#aec6324527baba848fc71d967ca926462">    7</a></span><span class="keyword">protected</span> <a class="code hl_variable" href="class_p_d_f.html#aec6324527baba848fc71d967ca926462">$I</a> = 0;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_p_d_f.html#a0799d169791740052c6f15ef41a5bc0d">    8</a></span><span class="keyword">protected</span> <a class="code hl_variable" href="class_p_d_f.html#a0799d169791740052c6f15ef41a5bc0d">$U</a> = 0;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_p_d_f.html#a70f0ca0740e48fedc7621f2c85fc5f47">    9</a></span><span class="keyword">protected</span> <a class="code hl_variable" href="class_p_d_f.html#a70f0ca0740e48fedc7621f2c85fc5f47">$HREF</a> = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_p_d_f.html#a80bf28129fee358ee8888ce8c2f6273c">   11</a></span><span class="keyword">function</span> <a class="code hl_function" href="class_p_d_f.html#a80bf28129fee358ee8888ce8c2f6273c">WriteHTML</a>(<a class="code hl_variable" href="tuto6_8php.html#a6f96e7fc92441776c9d1cd3386663b40">$html</a>)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// Intérprete de HTML</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_variable" href="tuto6_8php.html#a6f96e7fc92441776c9d1cd3386663b40">$html</a> = str_replace(<span class="stringliteral">&quot;\n&quot;</span>,<span class="charliteral">&#39; &#39;</span>,<a class="code hl_variable" href="tuto6_8php.html#a6f96e7fc92441776c9d1cd3386663b40">$html</a>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    $a = preg_split(<span class="stringliteral">&#39;/&lt;(.*)&gt;/U&#39;</span>,<a class="code hl_variable" href="tuto6_8php.html#a6f96e7fc92441776c9d1cd3386663b40">$html</a>,-1,PREG_SPLIT_DELIM_CAPTURE);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">foreach</span>($a as $i=&gt;$e)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">if</span>($i%2==0)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="comment">// Text</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">if</span>($this-&gt;HREF)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                $this-&gt;<a class="code hl_function" href="class_p_d_f.html#aed7b9ddbd7ec1e334c5687a62129941b">PutLink</a>($this-&gt;HREF,$e);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                $this-&gt;<a class="code hl_function" href="class_f_p_d_f.html#a75beddaabec9e3d2b8939bd46f99e615">Write</a>(5,$e);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="comment">// Etiqueta</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span>($e[0]==<span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                $this-&gt;<a class="code hl_function" href="class_p_d_f.html#aacf9a54e89e6cc1f6c0c47ad7929a2fd">CloseTag</a>(strtoupper(substr($e,1)));</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="comment">// Extraer atributos</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                $a2 = explode(<span class="charliteral">&#39; &#39;</span>,$e);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                $tag = strtoupper(array_shift($a2));</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                $attr = array();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">foreach</span>($a2 as $v)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    <span class="keywordflow">if</span>(preg_match(<span class="stringliteral">&#39;/([^=]*)=[&quot;\&#39;]?([^&quot;\&#39;]*)/&#39;</span>,$v,$a3))</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                        $attr[strtoupper($a3[1])] = $a3[2];</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                $this-&gt;<a class="code hl_function" href="class_p_d_f.html#a2c96493c42bc1d07268194e303fbf87f">OpenTag</a>($tag,$attr);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_p_d_f.html#a2c96493c42bc1d07268194e303fbf87f">   48</a></span><span class="keyword">function</span> <a class="code hl_function" href="class_p_d_f.html#a2c96493c42bc1d07268194e303fbf87f">OpenTag</a>($tag, $attr)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// Etiqueta de apertura</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span>($tag==<span class="charliteral">&#39;B&#39;</span> || $tag==<span class="charliteral">&#39;I&#39;</span> || $tag==<span class="charliteral">&#39;U&#39;</span>)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        $this-&gt;<a class="code hl_function" href="class_p_d_f.html#ac72ce8cec6f15cc8f7f08fc0fedeb846">SetStyle</a>($tag,<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">if</span>($tag==<span class="charliteral">&#39;A&#39;</span>)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        $this-&gt;HREF = $attr[<span class="stringliteral">&#39;HREF&#39;</span>];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span>($tag==<span class="stringliteral">&#39;BR&#39;</span>)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        $this-&gt;<a class="code hl_function" href="class_f_p_d_f.html#a445e0364c7fa330c415495bb31f5651c">Ln</a>(5);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_p_d_f.html#aacf9a54e89e6cc1f6c0c47ad7929a2fd">   59</a></span><span class="keyword">function</span> <a class="code hl_function" href="class_p_d_f.html#aacf9a54e89e6cc1f6c0c47ad7929a2fd">CloseTag</a>($tag)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// Etiqueta de cierre</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span>($tag==<span class="charliteral">&#39;B&#39;</span> || $tag==<span class="charliteral">&#39;I&#39;</span> || $tag==<span class="charliteral">&#39;U&#39;</span>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        $this-&gt;<a class="code hl_function" href="class_p_d_f.html#ac72ce8cec6f15cc8f7f08fc0fedeb846">SetStyle</a>($tag,<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">if</span>($tag==<span class="charliteral">&#39;A&#39;</span>)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        $this-&gt;HREF = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_p_d_f.html#ac72ce8cec6f15cc8f7f08fc0fedeb846">   68</a></span><span class="keyword">function</span> <a class="code hl_function" href="class_p_d_f.html#ac72ce8cec6f15cc8f7f08fc0fedeb846">SetStyle</a>($tag, $enable)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Modificar estilo y escoger la fuente correspondiente</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    $this-&gt;$tag += ($enable ? 1 : -1);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    $style = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">foreach</span>(array(<span class="charliteral">&#39;B&#39;</span>, <span class="charliteral">&#39;I&#39;</span>, <span class="charliteral">&#39;U&#39;</span>) as $s)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">if</span>($this-&gt;$s&gt;0)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            $style .= $s;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    $this-&gt;<a class="code hl_function" href="class_f_p_d_f.html#a82acf7b1322a634829b56bb209045e1c">SetFont</a>(<span class="stringliteral">&#39;&#39;</span>,$style);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_p_d_f.html#aed7b9ddbd7ec1e334c5687a62129941b">   81</a></span><span class="keyword">function</span> <a class="code hl_function" href="class_p_d_f.html#aed7b9ddbd7ec1e334c5687a62129941b">PutLink</a>($URL, $txt)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// Escribir un hiper-enlace</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    $this-&gt;<a class="code hl_function" href="class_f_p_d_f.html#a59f12883ff2b60013eb0fe2c8c7e2dd5">SetTextColor</a>(0,0,255);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    $this-&gt;<a class="code hl_function" href="class_p_d_f.html#ac72ce8cec6f15cc8f7f08fc0fedeb846">SetStyle</a>(<span class="charliteral">&#39;U&#39;</span>,<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    $this-&gt;<a class="code hl_function" href="class_f_p_d_f.html#a75beddaabec9e3d2b8939bd46f99e615">Write</a>(5,$txt,$URL);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    $this-&gt;<a class="code hl_function" href="class_p_d_f.html#ac72ce8cec6f15cc8f7f08fc0fedeb846">SetStyle</a>(<span class="charliteral">&#39;U&#39;</span>,<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    $this-&gt;<a class="code hl_function" href="class_f_p_d_f.html#a59f12883ff2b60013eb0fe2c8c7e2dd5">SetTextColor</a>(0);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="tuto6_8php.html#a6f96e7fc92441776c9d1cd3386663b40">   92</a></span><a class="code hl_variable" href="tuto6_8php.html#a6f96e7fc92441776c9d1cd3386663b40">$html</a> = <span class="stringliteral">&#39;Ahora puede imprimir fácilmente texto mezclando diferentes estilos: &lt;b&gt;negrita&lt;/b&gt;, &lt;i&gt;itálica&lt;/i&gt;,</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="stringliteral">&lt;u&gt;subrayado&lt;/u&gt;, o ¡ &lt;b&gt;&lt;i&gt;&lt;u&gt;todos a la vez&lt;/u&gt;&lt;/i&gt;&lt;/b&gt;!&lt;br&gt;&lt;br&gt;También puede incluir enlaces en el</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="stringliteral">texto, como &lt;a href=&quot;http://www.fpdf.org&quot;&gt;www.fpdf.org&lt;/a&gt;, o en una imagen: pulse en el logotipo.&#39;</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="tuto6_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">   96</a></span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_p_d_f.html">PDF</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">// Primera página</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;AddPage();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;SetFont(<span class="stringliteral">&#39;Arial&#39;</span>,<span class="stringliteral">&#39;&#39;</span>,20);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;Write(5,<span class="stringliteral">&#39;Para saber qué hay de nuevo en este tutorial, pulse &#39;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;SetFont(<span class="stringliteral">&#39;&#39;</span>,<span class="charliteral">&#39;U&#39;</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="tuto6_8php.html#a5d346e31b75d916e3bac9cb193bfc97f">  102</a></span><a class="code hl_variable" href="tuto6_8php.html#a5d346e31b75d916e3bac9cb193bfc97f">$link</a> = <a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;AddLink();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;Write(5,<span class="stringliteral">&#39;aquí&#39;</span>,<a class="code hl_variable" href="tuto6_8php.html#a5d346e31b75d916e3bac9cb193bfc97f">$link</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;SetFont(<span class="stringliteral">&#39;&#39;</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">// Segunda página</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;AddPage();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;SetLink(<a class="code hl_variable" href="tuto6_8php.html#a5d346e31b75d916e3bac9cb193bfc97f">$link</a>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;Image(<span class="stringliteral">&#39;logo.png&#39;</span>,10,12,30,0,<span class="stringliteral">&#39;&#39;</span>,<span class="stringliteral">&#39;http://www.fpdf.org&#39;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;SetLeftMargin(45);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;SetFontSize(14);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;WriteHTML(<a class="code hl_variable" href="tuto6_8php.html#a6f96e7fc92441776c9d1cd3386663b40">$html</a>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><a class="code hl_variable" href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a>-&gt;Output();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>?&gt;</div>
+<div class="ttc" id="aclass_f_p_d_f_html"><div class="ttname"><a href="class_f_p_d_f.html">FPDF</a></div><div class="ttdef"><b>Definition</b> <a href="fpdf_8php_source.html#l00010">fpdf.php:11</a></div></div>
+<div class="ttc" id="aclass_f_p_d_f_html_a445e0364c7fa330c415495bb31f5651c"><div class="ttname"><a href="class_f_p_d_f.html#a445e0364c7fa330c415495bb31f5651c">FPDF\Ln</a></div><div class="ttdeci">Ln($h=null)</div><div class="ttdef"><b>Definition</b> <a href="fpdf_8php_source.html#l00859">fpdf.php:859</a></div></div>
+<div class="ttc" id="aclass_f_p_d_f_html_a59f12883ff2b60013eb0fe2c8c7e2dd5"><div class="ttname"><a href="class_f_p_d_f.html#a59f12883ff2b60013eb0fe2c8c7e2dd5">FPDF\SetTextColor</a></div><div class="ttdeci">SetTextColor($r, $g=null, $b=null)</div><div class="ttdef"><b>Definition</b> <a href="fpdf_8php_source.html#l00395">fpdf.php:395</a></div></div>
+<div class="ttc" id="aclass_f_p_d_f_html_a75beddaabec9e3d2b8939bd46f99e615"><div class="ttname"><a href="class_f_p_d_f.html#a75beddaabec9e3d2b8939bd46f99e615">FPDF\Write</a></div><div class="ttdeci">Write($h, $txt, $link=&#39;&#39;)</div><div class="ttdef"><b>Definition</b> <a href="fpdf_8php_source.html#l00776">fpdf.php:776</a></div></div>
+<div class="ttc" id="aclass_f_p_d_f_html_a82acf7b1322a634829b56bb209045e1c"><div class="ttname"><a href="class_f_p_d_f.html#a82acf7b1322a634829b56bb209045e1c">FPDF\SetFont</a></div><div class="ttdeci">SetFont($family, $style=&#39;&#39;, $size=0)</div><div class="ttdef"><b>Definition</b> <a href="fpdf_8php_source.html#l00475">fpdf.php:475</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html"><div class="ttname"><a href="class_p_d_f.html">PDF</a></div><div class="ttdef"><b>Definition</b> <a href="tuto2_8php_source.html#l00004">tuto2.php:5</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html_a0799d169791740052c6f15ef41a5bc0d"><div class="ttname"><a href="class_p_d_f.html#a0799d169791740052c6f15ef41a5bc0d">PDF\$U</a></div><div class="ttdeci">$U</div><div class="ttdef"><b>Definition</b> <a href="#l00008">tuto6.php:8</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html_a2c96493c42bc1d07268194e303fbf87f"><div class="ttname"><a href="class_p_d_f.html#a2c96493c42bc1d07268194e303fbf87f">PDF\OpenTag</a></div><div class="ttdeci">OpenTag($tag, $attr)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">tuto6.php:48</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html_a70f0ca0740e48fedc7621f2c85fc5f47"><div class="ttname"><a href="class_p_d_f.html#a70f0ca0740e48fedc7621f2c85fc5f47">PDF\$HREF</a></div><div class="ttdeci">$HREF</div><div class="ttdef"><b>Definition</b> <a href="#l00009">tuto6.php:9</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html_a80bf28129fee358ee8888ce8c2f6273c"><div class="ttname"><a href="class_p_d_f.html#a80bf28129fee358ee8888ce8c2f6273c">PDF\WriteHTML</a></div><div class="ttdeci">WriteHTML($html)</div><div class="ttdef"><b>Definition</b> <a href="#l00011">tuto6.php:11</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html_aacf9a54e89e6cc1f6c0c47ad7929a2fd"><div class="ttname"><a href="class_p_d_f.html#aacf9a54e89e6cc1f6c0c47ad7929a2fd">PDF\CloseTag</a></div><div class="ttdeci">CloseTag($tag)</div><div class="ttdef"><b>Definition</b> <a href="#l00059">tuto6.php:59</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html_ac12395cbecd3065665ceabc83d84604b"><div class="ttname"><a href="class_p_d_f.html#ac12395cbecd3065665ceabc83d84604b">PDF\$B</a></div><div class="ttdeci">$B</div><div class="ttdef"><b>Definition</b> <a href="#l00006">tuto6.php:6</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html_ac72ce8cec6f15cc8f7f08fc0fedeb846"><div class="ttname"><a href="class_p_d_f.html#ac72ce8cec6f15cc8f7f08fc0fedeb846">PDF\SetStyle</a></div><div class="ttdeci">SetStyle($tag, $enable)</div><div class="ttdef"><b>Definition</b> <a href="#l00068">tuto6.php:68</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html_aec6324527baba848fc71d967ca926462"><div class="ttname"><a href="class_p_d_f.html#aec6324527baba848fc71d967ca926462">PDF\$I</a></div><div class="ttdeci">$I</div><div class="ttdef"><b>Definition</b> <a href="#l00007">tuto6.php:7</a></div></div>
+<div class="ttc" id="aclass_p_d_f_html_aed7b9ddbd7ec1e334c5687a62129941b"><div class="ttname"><a href="class_p_d_f.html#aed7b9ddbd7ec1e334c5687a62129941b">PDF\PutLink</a></div><div class="ttdeci">PutLink($URL, $txt)</div><div class="ttdef"><b>Definition</b> <a href="#l00081">tuto6.php:81</a></div></div>
+<div class="ttc" id="atuto1_8php_html_a964ee5ee597c515cbb4dad2f14054cb4"><div class="ttname"><a href="tuto1_8php.html#a964ee5ee597c515cbb4dad2f14054cb4">$pdf</a></div><div class="ttdeci">$pdf</div><div class="ttdef"><b>Definition</b> <a href="tuto1_8php_source.html#l00004">tuto1.php:4</a></div></div>
+<div class="ttc" id="atuto6_8php_html_a5d346e31b75d916e3bac9cb193bfc97f"><div class="ttname"><a href="tuto6_8php.html#a5d346e31b75d916e3bac9cb193bfc97f">$link</a></div><div class="ttdeci">$link</div><div class="ttdef"><b>Definition</b> <a href="#l00102">tuto6.php:102</a></div></div>
+<div class="ttc" id="atuto6_8php_html_a6f96e7fc92441776c9d1cd3386663b40"><div class="ttname"><a href="tuto6_8php.html#a6f96e7fc92441776c9d1cd3386663b40">$html</a></div><div class="ttdeci">$html</div><div class="ttdef"><b>Definition</b> <a href="#l00092">tuto6.php:92</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a href="dir_8e782acb5291a8bf82b9770dd89c5f48.html">fpdf</a></li><li class="navelem"><a href="dir_fe2079dfa187b63efe9aaec23364b531.html">tutorial</a></li><li class="navelem"><a href="tuto6_8php.html">tuto6.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

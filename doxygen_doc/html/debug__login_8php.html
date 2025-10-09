@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Referencia del archivo api/debug_login.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('debug__login_8php.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo debug_login.php</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="debug__login_8php_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6efc15b5a2314dd4b5aaa556a375c6d6" id="r_a6efc15b5a2314dd4b5aaa556a375c6d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a> = json_decode(file_get_contents(&quot;php://input&quot;), true)</td></tr>
+<tr class="memitem:ad634f418b20382e2802f80532d76d3cd" id="r_ad634f418b20382e2802f80532d76d3cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad634f418b20382e2802f80532d76d3cd">$email</a> = trim($data['email'] ?? '')</td></tr>
+<tr class="memitem:a607686ef9f99ea7c42f4f3dd3dbb2b0d" id="r_a607686ef9f99ea7c42f4f3dd3dbb2b0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a> = trim($data['password'] ?? '')</td></tr>
+<tr class="memitem:aa72329a38f1cd5219712b4080f19a8b1" id="r_aa72329a38f1cd5219712b4080f19a8b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(! $email||! $password)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa72329a38f1cd5219712b4080f19a8b1">$stmt</a> = $conn-&gt;prepare(&quot;SELECT id, correo, pass, verificado FROM usuarios WHERE correo = ?&quot;)</td></tr>
+<tr class="memitem:a49a8a4009b02e49717caa88b128affc5" id="r_a49a8a4009b02e49717caa88b128affc5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49a8a4009b02e49717caa88b128affc5">$res</a> = $stmt-&gt;get_result()</td></tr>
+<tr class="memitem:a4c2221c787875d531a93ac9829e91820" id="r_a4c2221c787875d531a93ac9829e91820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(! $row=$res-&gt;fetch_assoc())&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c2221c787875d531a93ac9829e91820">$stored</a> = $row['pass']</td></tr>
+<tr class="memitem:a8897f1d5c543b92a9093e680f8255da8" id="r_a8897f1d5c543b92a9093e680f8255da8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8897f1d5c543b92a9093e680f8255da8">$is_bcrypt</a> = (strpos($stored, '$2y$') === 0 || strpos($stored, '$2b$') === 0)</td></tr>
+<tr class="memitem:a2df5f9fc9f5b004538a024ea14448d12" id="r_a2df5f9fc9f5b004538a024ea14448d12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2df5f9fc9f5b004538a024ea14448d12">$is_sha256</a> = preg_match('/^[0-9a-f]{64}$/i', $stored)</td></tr>
+<tr class="memitem:a2ffac1cb17ebb43d47dd07c5235dd023" id="r_a2ffac1cb17ebb43d47dd07c5235dd023"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ffac1cb17ebb43d47dd07c5235dd023">$is_md5</a> = preg_match('/^[0-9a-f]{32}$/i', $stored)</td></tr>
+<tr class="memitem:a17f51265c8310567b0efeec05bacdd7c" id="r_a17f51265c8310567b0efeec05bacdd7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17f51265c8310567b0efeec05bacdd7c">$bcrypt_ok</a> = password_verify($password, $stored)</td></tr>
+<tr class="memitem:a0e8e7c2487f8481f4293bb8380f7ccb6" id="r_a0e8e7c2487f8481f4293bb8380f7ccb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e8e7c2487f8481f4293bb8380f7ccb6">$sha256_ok</a> = (hash('sha256', $password) === $stored)</td></tr>
+<tr class="memitem:a652fa89705c0c7eda059f3f604394663" id="r_a652fa89705c0c7eda059f3f604394663"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a652fa89705c0c7eda059f3f604394663">$md5_ok</a> = (md5($password) === $stored)</td></tr>
+<tr class="memitem:a3780181533338a4feedbf9b6de727097" id="r_a3780181533338a4feedbf9b6de727097"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3780181533338a4feedbf9b6de727097">$plain_ok</a> = ($password === $stored)</td></tr>
+</table>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a17f51265c8310567b0efeec05bacdd7c" name="a17f51265c8310567b0efeec05bacdd7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17f51265c8310567b0efeec05bacdd7c">&#9670;&#160;</a></span>$bcrypt_ok</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$bcrypt_ok = password_verify($password, $stored)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00028">28</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a6efc15b5a2314dd4b5aaa556a375c6d6" name="a6efc15b5a2314dd4b5aaa556a375c6d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6efc15b5a2314dd4b5aaa556a375c6d6">&#9670;&#160;</a></span>$data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$data = json_decode(file_get_contents(&quot;php://input&quot;), true)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Simula la estructura JSON enviada por Mercado Pago. Incluye un tipo de evento ("payment") y un ID de pago aleatorio.</p>
+<p>Representación en arreglo asociativo del JSON recibido en <span class="tt">$input</span>.</p>
+<p>Permite acceder de forma estructurada a la información:</p><ul>
+<li><span class="tt">$data["type"]</span> → Tipo de evento (ej. <span class="tt">payment</span>)</li>
+<li><span class="tt">$data["data"]["id"]</span> → ID del pago generado en <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> </li>
+</ul>
+<p>Inserta el pago en la base de datos si aún no existe.</p>
+<p>Se usa <span class="tt">INSERT IGNORE</span> para prevenir registros duplicados en caso de que <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> envíe la notificación varias veces (lo cual es común en webhooks).</p>
+<p>Tabla: <span class="tt">pagos</span> Campos guardados:</p><ul>
+<li>payment_id → ID único del pago en <a class="el" href="namespace_mercado_pago.html">MercadoPago</a>.</li>
+<li>status → Estado del pago (<span class="tt">approved</span>, <span class="tt">pending</span>, <span class="tt">rejected</span>).</li>
+<li>amount → Monto de la transacción.</li>
+<li>method → Método de pago (tarjeta, boleto, etc.).</li>
+<li>date → Fecha de creación del pago.</li>
+<li>reference → Identificador interno (ej. user_id).</li>
+</ul>
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00005">5</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="ad634f418b20382e2802f80532d76d3cd" name="ad634f418b20382e2802f80532d76d3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad634f418b20382e2802f80532d76d3cd">&#9670;&#160;</a></span>$email</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$email = trim($data['email'] ?? '')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00006">6</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a8897f1d5c543b92a9093e680f8255da8" name="a8897f1d5c543b92a9093e680f8255da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8897f1d5c543b92a9093e680f8255da8">&#9670;&#160;</a></span>$is_bcrypt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$is_bcrypt = (strpos($stored, '$2y$') === 0 || strpos($stored, '$2b$') === 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00024">24</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a2ffac1cb17ebb43d47dd07c5235dd023" name="a2ffac1cb17ebb43d47dd07c5235dd023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffac1cb17ebb43d47dd07c5235dd023">&#9670;&#160;</a></span>$is_md5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$is_md5 = preg_match('/^[0-9a-f]{32}$/i', $stored)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00026">26</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a2df5f9fc9f5b004538a024ea14448d12" name="a2df5f9fc9f5b004538a024ea14448d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df5f9fc9f5b004538a024ea14448d12">&#9670;&#160;</a></span>$is_sha256</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$is_sha256 = preg_match('/^[0-9a-f]{64}$/i', $stored)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00025">25</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a652fa89705c0c7eda059f3f604394663" name="a652fa89705c0c7eda059f3f604394663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652fa89705c0c7eda059f3f604394663">&#9670;&#160;</a></span>$md5_ok</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$md5_ok = (md5($password) === $stored)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00030">30</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a607686ef9f99ea7c42f4f3dd3dbb2b0d" name="a607686ef9f99ea7c42f4f3dd3dbb2b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">&#9670;&#160;</a></span>$password</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$password = trim($data['password'] ?? '')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00007">7</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a3780181533338a4feedbf9b6de727097" name="a3780181533338a4feedbf9b6de727097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3780181533338a4feedbf9b6de727097">&#9670;&#160;</a></span>$plain_ok</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$plain_ok = ($password === $stored)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00031">31</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a49a8a4009b02e49717caa88b128affc5" name="a49a8a4009b02e49717caa88b128affc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a8a4009b02e49717caa88b128affc5">&#9670;&#160;</a></span>$res</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$res = $stmt-&gt;get_result()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00016">16</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a0e8e7c2487f8481f4293bb8380f7ccb6" name="a0e8e7c2487f8481f4293bb8380f7ccb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e8e7c2487f8481f4293bb8380f7ccb6">&#9670;&#160;</a></span>$sha256_ok</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$sha256_ok = (hash('sha256', $password) === $stored)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00029">29</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="aa72329a38f1cd5219712b4080f19a8b1" name="aa72329a38f1cd5219712b4080f19a8b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72329a38f1cd5219712b4080f19a8b1">&#9670;&#160;</a></span>$stmt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a> (! $email||! $password) $stmt = $conn-&gt;prepare(&quot;SELECT id, correo, pass, verificado FROM usuarios WHERE correo = ?&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00013">13</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+<a id="a4c2221c787875d531a93ac9829e91820" name="a4c2221c787875d531a93ac9829e91820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2221c787875d531a93ac9829e91820">&#9670;&#160;</a></span>$stored</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a> (! $row=$res-&gt;fetch_assoc()) $stored = $row['pass']</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="debug__login_8php_source.html#l00023">23</a> del archivo <a class="el" href="debug__login_8php_source.html">debug_login.php</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_0188a3e6da905bc60aceb35bf790b8c9.html">api</a></li><li class="navelem"><a href="debug__login_8php.html">debug_login.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

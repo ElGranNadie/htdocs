@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/src/MercadoPago/Resources/CardToken.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_card_token_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CardToken.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_card_token_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="namespace_mercado_pago_1_1_resources.html">    3</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mercado_pago_1_1_resources.html">MercadoPago\Resources</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_resource.html">MercadoPago\Net\MPResource</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>use <a class="code hl_variable" href="namespace_mercado_pago_1_1_serialization.html#aca99c8710670e3a7d527a0436115a883">MercadoPago\Serialization\Mapper</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_resources_1_1_card_token.html">CardToken</a> <span class="keyword">extends</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_resource.html">MPResource</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    use Mapper;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#ad12f103258c911362c37ae5f831fd8af">   15</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#ad12f103258c911362c37ae5f831fd8af">$id</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a36e845adc80c313d7d686db38f104f3c">   18</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a36e845adc80c313d7d686db38f104f3c">$last_four_digits</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#af9f8bac77df10a5e693a2ae309b32356">   21</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#af9f8bac77df10a5e693a2ae309b32356">$first_six_digits</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a7579aad4395e5e897749597ddd890160">   24</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a7579aad4395e5e897749597ddd890160">$expiration_year</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a03edb0bef9b963227c9843a7761d143b">   27</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a03edb0bef9b963227c9843a7761d143b">$expiration_month</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#ae4b32f157bc3c8fd6eea2ec09f50fecb">   30</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#ae4b32f157bc3c8fd6eea2ec09f50fecb">$date_created</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#aa52c56c3d49fc674932c81905074bb9b">   33</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#aa52c56c3d49fc674932c81905074bb9b">$date_last_updated</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a3e35ab8c0411df1fdcbdb74344214563">   36</a></span>    <span class="keyword">public</span> array|<span class="keywordtype">object</span>|<span class="keyword">null</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a3e35ab8c0411df1fdcbdb74344214563">$cardholder</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#af66da8254822c00ccbe4ae5a42c47fb0">   39</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#af66da8254822c00ccbe4ae5a42c47fb0">$card_id</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#ab942bd011a608efb67bdfce1d31826b7">   42</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#ab942bd011a608efb67bdfce1d31826b7">$status</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a261ac2b652246f137469fd5fbe50fd80">   45</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">string</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a261ac2b652246f137469fd5fbe50fd80">$date_due</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#aa8e9b1a9b7ef395ae91ec2c00ff56a91">   48</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">bool</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#aa8e9b1a9b7ef395ae91ec2c00ff56a91">$luhn_validation</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#ab2faf6d40e1a12d29eade2388621361e">   51</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">bool</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#ab2faf6d40e1a12d29eade2388621361e">$live_mode</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a3deaf657a2bf63d907e3016b587040f1">   54</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">bool</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a3deaf657a2bf63d907e3016b587040f1">$require_esc</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a58f6870804211abb08fc9679e15eb14e">   57</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#a58f6870804211abb08fc9679e15eb14e">$card_number_length</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#acda5c67b516e0bb6cfb71588618b282f">   60</a></span>    <span class="keyword">public</span> ?<span class="keywordtype">int</span> <a class="code hl_variable" href="class_mercado_pago_1_1_resources_1_1_card_token.html#acda5c67b516e0bb6cfb71588618b282f">$security_code_length</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">private</span> $map = [</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="stringliteral">&quot;cardholder&quot;</span> =&gt; <span class="stringliteral">&quot;MercadoPago\Resources\Payment\Cardholder&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    ];</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_resources_1_1_card_token.html#af57528e55188572b6f0fd880824fd4c8">   70</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_resources_1_1_card_token.html#af57528e55188572b6f0fd880824fd4c8">getMap</a>(): array</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> $this-&gt;map;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_resource_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_resource.html">MercadoPago\Net\MPResource</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_resource_8php_source.html#l00006">MPResource.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html">MercadoPago\Resources\CardToken</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">CardToken.php:10</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_a03edb0bef9b963227c9843a7761d143b"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#a03edb0bef9b963227c9843a7761d143b">MercadoPago\Resources\CardToken\$expiration_month</a></div><div class="ttdeci">int $expiration_month</div><div class="ttdef"><b>Definition</b> <a href="#l00027">CardToken.php:27</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_a261ac2b652246f137469fd5fbe50fd80"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#a261ac2b652246f137469fd5fbe50fd80">MercadoPago\Resources\CardToken\$date_due</a></div><div class="ttdeci">string $date_due</div><div class="ttdef"><b>Definition</b> <a href="#l00045">CardToken.php:45</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_a36e845adc80c313d7d686db38f104f3c"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#a36e845adc80c313d7d686db38f104f3c">MercadoPago\Resources\CardToken\$last_four_digits</a></div><div class="ttdeci">string $last_four_digits</div><div class="ttdef"><b>Definition</b> <a href="#l00018">CardToken.php:18</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_a3deaf657a2bf63d907e3016b587040f1"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#a3deaf657a2bf63d907e3016b587040f1">MercadoPago\Resources\CardToken\$require_esc</a></div><div class="ttdeci">bool $require_esc</div><div class="ttdef"><b>Definition</b> <a href="#l00054">CardToken.php:54</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_a3e35ab8c0411df1fdcbdb74344214563"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#a3e35ab8c0411df1fdcbdb74344214563">MercadoPago\Resources\CardToken\$cardholder</a></div><div class="ttdeci">array object null $cardholder</div><div class="ttdef"><b>Definition</b> <a href="#l00036">CardToken.php:36</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_a58f6870804211abb08fc9679e15eb14e"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#a58f6870804211abb08fc9679e15eb14e">MercadoPago\Resources\CardToken\$card_number_length</a></div><div class="ttdeci">int $card_number_length</div><div class="ttdef"><b>Definition</b> <a href="#l00057">CardToken.php:57</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_a7579aad4395e5e897749597ddd890160"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#a7579aad4395e5e897749597ddd890160">MercadoPago\Resources\CardToken\$expiration_year</a></div><div class="ttdeci">int $expiration_year</div><div class="ttdef"><b>Definition</b> <a href="#l00024">CardToken.php:24</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_aa52c56c3d49fc674932c81905074bb9b"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#aa52c56c3d49fc674932c81905074bb9b">MercadoPago\Resources\CardToken\$date_last_updated</a></div><div class="ttdeci">string $date_last_updated</div><div class="ttdef"><b>Definition</b> <a href="#l00033">CardToken.php:33</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_aa8e9b1a9b7ef395ae91ec2c00ff56a91"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#aa8e9b1a9b7ef395ae91ec2c00ff56a91">MercadoPago\Resources\CardToken\$luhn_validation</a></div><div class="ttdeci">bool $luhn_validation</div><div class="ttdef"><b>Definition</b> <a href="#l00048">CardToken.php:48</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_ab2faf6d40e1a12d29eade2388621361e"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#ab2faf6d40e1a12d29eade2388621361e">MercadoPago\Resources\CardToken\$live_mode</a></div><div class="ttdeci">bool $live_mode</div><div class="ttdef"><b>Definition</b> <a href="#l00051">CardToken.php:51</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_ab942bd011a608efb67bdfce1d31826b7"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#ab942bd011a608efb67bdfce1d31826b7">MercadoPago\Resources\CardToken\$status</a></div><div class="ttdeci">string $status</div><div class="ttdef"><b>Definition</b> <a href="#l00042">CardToken.php:42</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_acda5c67b516e0bb6cfb71588618b282f"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#acda5c67b516e0bb6cfb71588618b282f">MercadoPago\Resources\CardToken\$security_code_length</a></div><div class="ttdeci">int $security_code_length</div><div class="ttdef"><b>Definition</b> <a href="#l00060">CardToken.php:60</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_ad12f103258c911362c37ae5f831fd8af"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#ad12f103258c911362c37ae5f831fd8af">MercadoPago\Resources\CardToken\$id</a></div><div class="ttdeci">string $id</div><div class="ttdef"><b>Definition</b> <a href="#l00015">CardToken.php:15</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_ae4b32f157bc3c8fd6eea2ec09f50fecb"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#ae4b32f157bc3c8fd6eea2ec09f50fecb">MercadoPago\Resources\CardToken\$date_created</a></div><div class="ttdeci">string $date_created</div><div class="ttdef"><b>Definition</b> <a href="#l00030">CardToken.php:30</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_af57528e55188572b6f0fd880824fd4c8"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#af57528e55188572b6f0fd880824fd4c8">MercadoPago\Resources\CardToken\getMap</a></div><div class="ttdeci">getMap()</div><div class="ttdef"><b>Definition</b> <a href="#l00070">CardToken.php:70</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_af66da8254822c00ccbe4ae5a42c47fb0"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#af66da8254822c00ccbe4ae5a42c47fb0">MercadoPago\Resources\CardToken\$card_id</a></div><div class="ttdeci">int $card_id</div><div class="ttdef"><b>Definition</b> <a href="#l00039">CardToken.php:39</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_resources_1_1_card_token_html_af9f8bac77df10a5e693a2ae309b32356"><div class="ttname"><a href="class_mercado_pago_1_1_resources_1_1_card_token.html#af9f8bac77df10a5e693a2ae309b32356">MercadoPago\Resources\CardToken\$first_six_digits</a></div><div class="ttdeci">string $first_six_digits</div><div class="ttdef"><b>Definition</b> <a href="#l00021">CardToken.php:21</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_1_1_resources_html"><div class="ttname"><a href="namespace_mercado_pago_1_1_resources.html">MercadoPago\Resources</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">CardToken.php:3</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_1_1_serialization_html_aca99c8710670e3a7d527a0436115a883"><div class="ttname"><a href="namespace_mercado_pago_1_1_serialization.html#aca99c8710670e3a7d527a0436115a883">MercadoPago\Serialization\Mapper</a></div><div class="ttdeci">trait Mapper</div><div class="ttdef"><b>Definition</b> <a href="_mapper_8php_source.html#l00008">Mapper.php:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_908d81f260ce2af22badf3d51dd57a9c.html">src</a></li><li class="navelem"><a href="dir_b2f394494930d3e48bf1829ab90d367e.html">MercadoPago</a></li><li class="navelem"><a href="dir_81b3df120731b49823a3878898d62a59.html">Resources</a></li><li class="navelem"><a href="_card_token_8php.html">CardToken.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

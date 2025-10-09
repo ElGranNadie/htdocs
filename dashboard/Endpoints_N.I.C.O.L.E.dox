@@ -1,0 +1,284 @@
+<?php
+/**
+ * @file endpoints_doc.php
+ * @page endpoints Endpoints N.I.C.O.L.E — Documento visual y técnico
+ * @brief Guía completa y visual de los endpoints principales (auth, usuarios, webhook, IA).
+ *
+ * Este documento describe los endpoints REST disponibles en N.I.C.O.L.E.
+ * Actualmente cuenta con **8 endpoints activos** organizados por módulos.
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section registro Registro de Usuario (register.php)
+ *
+ * <div style="background:#e0f7ff; padding:8px; border-radius:6px; color:#003366;">
+ * <b>Registrar Usuario + Envío de Código de Verificación</b>
+ * </div>
+ *
+ * - **Qué hace:** Crea un nuevo usuario en la base de datos y envía por correo un código de verificación temporal.
+ * - **Para qué sirve:** Permite que los nuevos usuarios se registren en el sistema y confirmen su cuenta mediante un código recibido en su correo electrónico.
+ * - **Cómo funciona:**
+ *   1. Recibe los datos del usuario (nombre, correo, usuario, contraseña, edad).
+ *   2. Verifica si el correo o usuario ya existen.
+ *   3. Genera un código aleatorio de 6 dígitos y una fecha de expiración (10 minutos).
+ *   4. Inserta el nuevo usuario en la tabla `usuarios` y crea su registro en `preferencias_culinarias`.
+ *   5. Envía el código por correo electrónico usando la función `enviarCodigo()`.
+ *   6. Si algo falla (envío o inserción), se realiza **rollback** de la transacción.
+ *
+ * **Endpoint:** <code>/auth/register.php</code><br>
+ * **Método:** POST<br>
+ *
+ * **Cabeceras requeridas:**
+ * @code
+ * Access-Control-Allow-Origin: *
+ * Content-Type: application/json
+ * @endcode
+ *
+ * **Cuerpo esperado (JSON):**
+ * @code{.json}
+ * {
+ *   "nombre_us": "Juan Pérez",
+ *   "correo": "juan@example.com",
+ *   "pass": "12345678",
+ *   "edad": 25,
+ *   "usuario": "juanp"
+ * }
+ * @endcode
+ *
+ * **Ejemplo respuesta exitosa (200):**
+ * @code{.json}
+ * {
+ *   "success": true,
+ *   "message": "Registro exitoso. Se envió un código de verificación."
+ * }
+ * @endcode
+ *
+ * **Ejemplo respuesta por error (409):**
+ * @code{.json}
+ * {
+ *   "success": false,
+ *   "message": "El correo o usuario ya está registrado"
+ * }
+ * @endcode
+ *
+ * **Errores comunes:**
+ * - <b>Faltan datos</b>: cuando algún campo obligatorio está vacío.
+ * - <b>Correo duplicado</b>: ya existe un registro con el mismo correo o usuario.
+ * - <b>Error al enviar correo</b>: no se pudo enviar el código, se deshace el registro.
+ *
+ * **Detalles técnicos:**
+ * - El código de verificación tiene una validez de **10 minutos**.
+ * - La contraseña se almacena con **password_hash()**.
+ * - Si falla el correo, se usa **rollback()** para revertir el registro.
+ * - Inserta también una fila vacía en `preferencias_culinarias` vinculada al nuevo `usuario_id`.
+ *
+ * **Dependencias:**
+ * - `db_config.php`
+ * - `../dashboard/mail.php`
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section reenviar Reenviar Código de Verificación (reenviar_codigo.php)
+ *
+ * - **Qué hace:** Genera un nuevo código de 6 dígitos y lo envía por correo electrónico
+ *   a un usuario que aún no ha completado su registro.
+ *
+ * - **Cuándo se usa:** Cuando el usuario ha ingresado su correo, pero no ha confirmado
+ *   su registro porque no recibió o su código anterior expiró.
+ *
+ * - **Cómo funciona:**
+ *   1. Recibe el correo electrónico desde el frontend.
+ *   2. Genera un nuevo código aleatorio y establece una nueva fecha de expiración (+10 minutos).
+ *   3. Actualiza los campos `codigo_verificacion` y `expiracion_codigo` en la tabla `usuarios`.
+ *   4. Envía el nuevo código al correo mediante `enviarCodigo()`.
+ *
+ * - **Método:** POST
+ *
+ * - **Entrada esperada (JSON):**
+ *   ```json
+ *   {
+ *     "email": "usuario@ejemplo.com"
+ *   }
+ *   ```
+ *
+ * - **Respuesta exitosa:**
+ *   ```json
+ *   {
+ *     "success": true,
+ *     "message": "Código reenviado"
+ *   }
+ *   ```
+ *
+ * - **Respuesta de error:**
+ *   ```json
+ *   {
+ *     "success": false,
+ *     "message": "Error al reenviar el código"
+ *   }
+ *   ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section verificar Verificar Código (verificar.php)
+ *
+ * - **Qué hace:** Valida que el código ingresado sea correcto y no haya expirado.
+ *   Si la verificación es exitosa, marca la cuenta como confirmada.
+ *
+ * - **Cuándo se usa:** En el paso final del registro, cuando el usuario introduce
+ *   el código que recibió por correo electrónico.
+ *
+ * - **Método:** POST
+ *
+ * - **Entrada esperada (JSON):**
+ *   ```json
+ *   {
+ *     "email": "usuario@ejemplo.com",
+ *     "codigo": "123456"
+ *   }
+ *   ```
+ *
+ * - **Respuestas posibles:**
+ *   ✅ Éxito:
+ *   ```json
+ *   { "success": true, "message": "Cuenta verificada exitosamente" }
+ *   ```
+ *   ❌ Código incorrecto:
+ *   ```json
+ *   { "success": false, "message": "Código incorrecto" }
+ *   ```
+ *   ⏰ Código expirado:
+ *   ```json
+ *   { "success": false, "message": "El código ha expirado" }
+ *   ```
+ *   ⚠️ Faltan datos:
+ *   ```json
+ *   { "success": false, "message": "Faltan datos" }
+ *   ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section login Inicio de Sesión (login.php)
+ *
+ * - **Qué hace:** Valida credenciales, verifica si la cuenta fue confirmada
+ *   y devuelve datos básicos del usuario si todo es correcto.
+ *
+ * - **Método:** POST
+ *
+ * - **Entrada esperada (JSON):**
+ *   ```json
+ *   { "email": "usuario@ejemplo.com", "password": "contraseña123" }
+ *   ```
+ *
+ * - **Respuestas:**
+ *   ✅ Éxito:
+ *   ```json
+ *   {
+ *     "success": true,
+ *     "message": "Inicio de sesión exitoso",
+ *     "user": { "id": 1, "nombre": "Juan", "correo": "juan@ejemplo.com" }
+ *   }
+ *   ```
+ *   ⚠️ No verificada:
+ *   ```json
+ *   { "success": false, "message": "Tu cuenta aún no ha sido verificada." }
+ *   ```
+ *   ❌ Contraseña incorrecta:
+ *   ```json
+ *   { "success": false, "message": "Contraseña incorrecta" }
+ *   ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section preferencias Preferencias del Usuario (guardar_preferencia.php)
+ *
+ * - **Qué hace:** Registra o actualiza las preferencias alimenticias, datos físicos y alergias de un usuario existente.
+ * - **Cómo funciona:** Recibe correo, sabores, alergias, peso, altura y fecha de nacimiento.  
+ *   Verifica el usuario, recalcula edad si aplica, crea o actualiza preferencias.
+ *
+ * **Endpoint:** `/guardar_preferencia.php`  
+ * **Método:** POST  
+ *
+ * **Entrada esperada:**
+ * ```json
+ * {
+ *   "correo": "juan@example.com",
+ *   "sabores_preferidos": "Dulce, Picante",
+ *   "alergias": "Mariscos",
+ *   "peso": 68.2,
+ *   "altura": 1.70,
+ *   "fecha_nacimiento": "2002-04-15"
+ * }
+ * ```
+ *
+ * **Ejemplo éxito:**
+ * ```json
+ * { "success": true, "message": "Preferencias guardadas correctamente" }
+ * ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section obtener Obtener Usuario (obtener_usuario.php)
+ *
+ * - **Qué hace:** Devuelve la información general y preferencias básicas del usuario según su correo.
+ *
+ * - **Método:** POST  
+ * - **Entrada:**
+ * ```json
+ * { "correo": "usuario@ejemplo.com" }
+ * ```
+ * - **Respuesta éxito:**
+ * ```json
+ * {
+ *   "success": true,
+ *   "user": {
+ *     "id": 1,
+ *     "nombre": "Juan",
+ *     "correo": "juan@ejemplo.com",
+ *     "edad": 25,
+ *     "peso": 70.5,
+ *     "altura": 1.75
+ *   }
+ * }
+ * ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section actualizar Actualizar Usuario (actualizar_usuario.php)
+ *
+ * - **Qué hace:** Inserta o actualiza la información del usuario (gustos, alergias, peso y altura).
+ * - **Uso típico:** En perfil o después del registro.
+ *
+ * **Método:** POST  
+ * **Entrada:**
+ * ```json
+ * {
+ *   "correo": "usuario@ejemplo.com",
+ *   "gustos": ["dulce"],
+ *   "alergias": ["gluten"],
+ *   "peso": 70.5,
+ *   "altura": "175"
+ * }
+ * ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section webhook Webhook de MercadoPago (dashboard/webhook.php)
+ *
+ * - **Qué hace:** Procesa notificaciones automáticas de MercadoPago.  
+ * - **Para qué sirve:** Mantener actualizado el estado de pagos (aprobado, rechazado, pendiente).  
+ * - **Cómo funciona:** MercadoPago llama este endpoint, se valida y actualizan tablas de pagos/usuarios.
+ *
+ * **Endpoint:** `/dashboard/webhook.php` (POST)  
+ * **Respuesta:**  
+ * ```json
+ * { "status": "success", "message": "Pago procesado" }
+ * ```
+ *
+ * -------------------------------------------------------------------------------------------
+ * @section ia Inteligencia Artificial (scripts.js)
+ *
+ * - **Qué hace:** Envía un prompt y recibe respuesta generada por IA (LMStudio).  
+ * - **Para qué sirve:** Generar recetas, responder dudas o conversar.  
+ * - **Endpoint:** `https://nicoleia.servehttp.com:90/v1/chat/completions` (POST)
+ * **Respuesta ejemplo:**
+ * ```json
+ * {
+ *   "choices": [
+ *     { "message": { "content": "Aquí tienes una receta rápida..." } }
+ *   ]
+ * }
+ * ```
+ */
+?>

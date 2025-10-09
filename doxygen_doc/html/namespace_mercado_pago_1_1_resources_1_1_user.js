@@ -1,0 +1,28 @@
+var namespace_mercado_pago_1_1_resources_1_1_user =
+[
+    [ "Address", "class_mercado_pago_1_1_resources_1_1_user_1_1_address.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_address" ],
+    [ "AlternativePhone", "class_mercado_pago_1_1_resources_1_1_user_1_1_alternative_phone.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_alternative_phone" ],
+    [ "BillData", "class_mercado_pago_1_1_resources_1_1_user_1_1_bill_data.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_bill_data" ],
+    [ "BuyerReputation", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation" ],
+    [ "BuyerReputationCancelled", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation_cancelled.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation_cancelled" ],
+    [ "BuyerReputationNotYetRated", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation_not_yet_rated.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation_not_yet_rated" ],
+    [ "BuyerReputationTransactions", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation_transactions.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation_transactions" ],
+    [ "BuyerReputationUnrated", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation_unrated.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_buyer_reputation_unrated" ],
+    [ "Cancellations", "class_mercado_pago_1_1_resources_1_1_user_1_1_cancellations.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_cancellations" ],
+    [ "Claims", "class_mercado_pago_1_1_resources_1_1_user_1_1_claims.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_claims" ],
+    [ "Company", "class_mercado_pago_1_1_resources_1_1_user_1_1_company.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_company" ],
+    [ "Context", "class_mercado_pago_1_1_resources_1_1_user_1_1_context.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_context" ],
+    [ "Credit", "class_mercado_pago_1_1_resources_1_1_user_1_1_credit.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_credit" ],
+    [ "DelayedHandlingTime", "class_mercado_pago_1_1_resources_1_1_user_1_1_delayed_handling_time.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_delayed_handling_time" ],
+    [ "Metrics", "class_mercado_pago_1_1_resources_1_1_user_1_1_metrics.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_metrics" ],
+    [ "Phone", "class_mercado_pago_1_1_resources_1_1_user_1_1_phone.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_phone" ],
+    [ "Ratings", "class_mercado_pago_1_1_resources_1_1_user_1_1_ratings.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_ratings" ],
+    [ "Sales", "class_mercado_pago_1_1_resources_1_1_user_1_1_sales.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_sales" ],
+    [ "SellerReputation", "class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_seller_reputation" ],
+    [ "Status", "class_mercado_pago_1_1_resources_1_1_user_1_1_status.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_status" ],
+    [ "StatusBilling", "class_mercado_pago_1_1_resources_1_1_user_1_1_status_billing.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_status_billing" ],
+    [ "StatusBuyImmediatePayment", "class_mercado_pago_1_1_resources_1_1_user_1_1_status_buy_immediate_payment.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_status_buy_immediate_payment" ],
+    [ "StatusList", "class_mercado_pago_1_1_resources_1_1_user_1_1_status_list.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_status_list" ],
+    [ "StatusShoppingCart", "class_mercado_pago_1_1_resources_1_1_user_1_1_status_shopping_cart.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_status_shopping_cart" ],
+    [ "Transactions", "class_mercado_pago_1_1_resources_1_1_user_1_1_transactions.html", "class_mercado_pago_1_1_resources_1_1_user_1_1_transactions" ]
+];

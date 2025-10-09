@@ -1,0 +1,12 @@
+var class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test =
+[
+    [ "setUpBeforeClass", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test.html#a1ccafe6046c32fa8cd99e8126a971c8e", null ],
+    [ "testCreateSuccess", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test.html#ae76ac7acc85ba17dfee3b64b105f4156", null ],
+    [ "testCreateWithRequestOptionsFailure", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test.html#a051912f6156d21a66b402c70e4c7af8d", null ],
+    [ "testGetSuccess", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test.html#a7631c97713c20df7e9c84f46f8e550d0", null ],
+    [ "testGetWithRequestOptionsFailure", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test.html#a30fe2203830d7676ba98dc60b648e830", null ],
+    [ "testSearchSuccess", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test.html#a3c5fc585a3baf847650affffead3c722", null ],
+    [ "testSearchWithRequestOptionsFailure", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test.html#ad7d93538640ea4f566a6dd3e5b093617", null ],
+    [ "testUpdateSuccess", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test.html#ab3aa543528286b8efe32489b6ae6aa37", null ],
+    [ "testUpdateWithRequestOptionsFailure", "class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_pre_approval_plan_1_1_pre_approval_plan_client_i_t_test.html#a5610f7b162b55ecf4db0bd7837a16ea9", null ]
+];

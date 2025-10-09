@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/examples/Order/Transaction/Create.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_order_2_transaction_2_create_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Create.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_order_2_transaction_2_create_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_order_1_1_transaction.html">    3</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_examples_1_1_order_1_1_transaction.html">Examples\Order\Transaction</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Step 1: Require the library from your Composer vendor folder</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>require_once <span class="stringliteral">&#39;../../../vendor/autoload.php&#39;</span>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">MercadoPago\Client\Common\RequestOptions</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_order_1_1_order_transaction_client.html">MercadoPago\Client\Order\OrderTransactionClient</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>use <a class="code hl_class" href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html">MercadoPago\Exceptions\MPApiException</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>use <a class="code hl_class" href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Step 2: Set production or sandbox access token</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>MercadoPagoConfig::setAccessToken(<span class="stringliteral">&quot;&lt;ACCESS_TOKEN&gt;&quot;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Step 2.1 (optional - default is SERVER): Set your runtime enviroment from MercadoPagoConfig::RUNTIME_ENVIROMENTS</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// In case you want to test in your local machine first, set runtime enviroment to LOCAL</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>MercadoPagoConfig::setRuntimeEnviroment(MercadoPagoConfig::LOCAL);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Step 3: Initialize the API client</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_order_1_1_transaction.html#a1db193526f46937d4036fe7a5ae547ce">   20</a></span><a class="code hl_variable" href="namespace_examples_1_1_order_1_1_transaction.html#a1db193526f46937d4036fe7a5ae547ce">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_order_1_1_order_transaction_client.html">OrderTransactionClient</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_order_1_1_transaction.html#a1bb0fca8c59177e8488382ddc5b31930">   22</a></span><span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// Step 4: Create the request</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    $request = [</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="stringliteral">&quot;payments&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            [</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                <span class="stringliteral">&quot;amount&quot;</span> =&gt; <span class="stringliteral">&quot;100.00&quot;</span>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="stringliteral">&quot;payment_method&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                    <span class="stringliteral">&quot;id&quot;</span> =&gt; <span class="stringliteral">&quot;master&quot;</span>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                    <span class="stringliteral">&quot;type&quot;</span> =&gt; <span class="stringliteral">&quot;credit_card&quot;</span>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    <span class="stringliteral">&quot;token&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;CARD_TOKEN&gt;&quot;</span>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                    <span class="stringliteral">&quot;installments&quot;</span> =&gt; 1,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                ],</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            ],</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        ],</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    ];</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// Step 5: Create the request options, setting X-Idempotency-Key</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_order_1_1_transaction.html#a10509c2d5853728673d7bec7448be4ab">   39</a></span>    <a class="code hl_variable" href="namespace_examples_1_1_order_1_1_transaction.html#a10509c2d5853728673d7bec7448be4ab">$request_options</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">RequestOptions</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_variable" href="namespace_examples_1_1_order_1_1_transaction.html#a10509c2d5853728673d7bec7448be4ab">$request_options</a>-&gt;setCustomHeaders([<span class="stringliteral">&quot;X-Idempotency-Key: &lt;SOME_UNIQUE_VALUE&gt;&quot;</span>]);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// Step 6: Make the request</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_order_1_1_transaction.html#af7cbec8dc2421cfc7880ab9ffcd77ae9">   43</a></span>    <a class="code hl_variable" href="namespace_examples_1_1_order_1_1_transaction.html#af7cbec8dc2421cfc7880ab9ffcd77ae9">$transaction</a> = <a class="code hl_variable" href="namespace_examples_1_1_order_1_1_transaction.html#a1db193526f46937d4036fe7a5ae547ce">$client</a>-&gt;create(<span class="stringliteral">&quot;&lt;ORDER_ID&gt;&quot;</span>, $request, <a class="code hl_variable" href="namespace_examples_1_1_order_1_1_transaction.html#a10509c2d5853728673d7bec7448be4ab">$request_options</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    echo <span class="stringliteral">&quot;Payment ID: &quot;</span> . <a class="code hl_variable" href="namespace_examples_1_1_order_1_1_transaction.html#af7cbec8dc2421cfc7880ab9ffcd77ae9">$transaction</a>-&gt;payments[0]-&gt;id;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    echo <span class="stringliteral">&quot;\nPayment method ID: &quot;</span> . <a class="code hl_variable" href="namespace_examples_1_1_order_1_1_transaction.html#af7cbec8dc2421cfc7880ab9ffcd77ae9">$transaction</a>-&gt;payments[0]-&gt;payment_method-&gt;id;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    echo <span class="stringliteral">&quot;\nPayment method type: &quot;</span> . <a class="code hl_variable" href="namespace_examples_1_1_order_1_1_transaction.html#af7cbec8dc2421cfc7880ab9ffcd77ae9">$transaction</a>-&gt;payments[0]-&gt;payment_method-&gt;type;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// Step 7: Handle exceptions</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="keywordflow">catch</span> (<a class="code hl_class" href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html">MPApiException</a> $e) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    echo <span class="stringliteral">&quot;\nStatus code: &quot;</span> . $e-&gt;<a class="code hl_function" href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html#a8df0b34d461ad0a57b523e2ec0069492">getApiResponse</a>()-&gt;getStatusCode();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    echo <span class="stringliteral">&quot;\nContent: &quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    var_dump($e-&gt;<a class="code hl_function" href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html#a8df0b34d461ad0a57b523e2ec0069492">getApiResponse</a>()-&gt;getContent());</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    echo <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="keywordflow">catch</span> (\Exception $e) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    echo $e-&gt;getMessage();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_common_1_1_request_options_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_common_1_1_request_options.html">MercadoPago\Client\Common\RequestOptions</a></div><div class="ttdef"><b>Definition</b> <a href="_request_options_8php_source.html#l00006">RequestOptions.php:7</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_order_1_1_order_transaction_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_order_1_1_order_transaction_client.html">MercadoPago\Client\Order\OrderTransactionClient</a></div><div class="ttdef"><b>Definition</b> <a href="_order_transaction_client_8php_source.html#l00016">OrderTransactionClient.php:17</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_exceptions_1_1_m_p_api_exception_html"><div class="ttname"><a href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html">MercadoPago\Exceptions\MPApiException</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_api_exception_8php_source.html#l00009">MPApiException.php:10</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_exceptions_1_1_m_p_api_exception_html_a8df0b34d461ad0a57b523e2ec0069492"><div class="ttname"><a href="class_mercado_pago_1_1_exceptions_1_1_m_p_api_exception.html#a8df0b34d461ad0a57b523e2ec0069492">MercadoPago\Exceptions\MPApiException\getApiResponse</a></div><div class="ttdeci">getApiResponse()</div><div class="ttdef"><b>Definition</b> <a href="_m_p_api_exception_8php_source.html#l00027">MPApiException.php:27</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a></div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00010">MercadoPagoConfig.php:11</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_order_1_1_transaction_html"><div class="ttname"><a href="namespace_examples_1_1_order_1_1_transaction.html">Examples\Order\Transaction</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">Create.php:3</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_order_1_1_transaction_html_a10509c2d5853728673d7bec7448be4ab"><div class="ttname"><a href="namespace_examples_1_1_order_1_1_transaction.html#a10509c2d5853728673d7bec7448be4ab">Examples\Order\Transaction\$request_options</a></div><div class="ttdeci">$request_options</div><div class="ttdef"><b>Definition</b> <a href="#l00039">Create.php:39</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_order_1_1_transaction_html_a1db193526f46937d4036fe7a5ae547ce"><div class="ttname"><a href="namespace_examples_1_1_order_1_1_transaction.html#a1db193526f46937d4036fe7a5ae547ce">Examples\Order\Transaction\$client</a></div><div class="ttdeci">$client</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Create.php:20</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_order_1_1_transaction_html_af7cbec8dc2421cfc7880ab9ffcd77ae9"><div class="ttname"><a href="namespace_examples_1_1_order_1_1_transaction.html#af7cbec8dc2421cfc7880ab9ffcd77ae9">Examples\Order\Transaction\$transaction</a></div><div class="ttdeci">$transaction</div><div class="ttdef"><b>Definition</b> <a href="#l00043">Create.php:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_83267cb93f6adc9ed4cd12f8c2a60616.html">examples</a></li><li class="navelem"><a href="dir_324c8cfcabf7df7faaec192f43b3d1e8.html">Order</a></li><li class="navelem"><a href="dir_d84f342c6287328c11e4b75b1342b836.html">Transaction</a></li><li class="navelem"><a href="_order_2_transaction_2_create_8php.html">Create.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

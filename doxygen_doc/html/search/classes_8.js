@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['identification_0',['Identification',['../class_mercado_pago_1_1_resources_1_1_common_1_1_identification.html',1,'MercadoPago::Resources::Common']]],
+  ['identificationtypeclient_1',['IdentificationTypeClient',['../class_mercado_pago_1_1_client_1_1_identification_type_1_1_identification_type_client.html',1,'MercadoPago::Client::IdentificationType']]],
+  ['identificationtypeclientittest_2',['IdentificationTypeClientITTest',['../class_mercado_pago_1_1_tests_1_1_client_1_1_integration_1_1_identification_type_1_1_identification_type_client_i_t_test.html',1,'MercadoPago::Tests::Client::Integration::IdentificationType']]],
+  ['identificationtypeclientunittest_3',['IdentificationTypeClientUnitTest',['../class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_identification_type_1_1_identification_type_client_unit_test.html',1,'MercadoPago::Tests::Client::Unit::IdentificationType']]],
+  ['identificationtypelistresult_4',['IdentificationTypeListResult',['../class_mercado_pago_1_1_resources_1_1_identification_type_1_1_identification_type_list_result.html',1,'MercadoPago::Resources::IdentificationType']]],
+  ['identificationtyperesult_5',['IdentificationTypeResult',['../class_mercado_pago_1_1_resources_1_1_identification_type_result.html',1,'MercadoPago::Resources']]],
+  ['immutablewriter_6',['ImmutableWriter',['../class_dotenv_1_1_repository_1_1_adapter_1_1_immutable_writer.html',1,'Dotenv::Repository::Adapter']]],
+  ['installedversions_7',['InstalledVersions',['../class_composer_1_1_installed_versions.html',1,'Composer']]],
+  ['integrationdata_8',['IntegrationData',['../class_mercado_pago_1_1_resources_1_1_order_1_1_integration_data.html',1,'MercadoPago::Resources::Order']]],
+  ['invalidargumentexception_9',['InvalidArgumentException',['../class_mercado_pago_1_1_exceptions_1_1_invalid_argument_exception.html',1,'MercadoPago::Exceptions']]],
+  ['invalidencodingexception_10',['InvalidEncodingException',['../class_dotenv_1_1_exception_1_1_invalid_encoding_exception.html',1,'Dotenv::Exception']]],
+  ['invalidfileexception_11',['InvalidFileException',['../class_dotenv_1_1_exception_1_1_invalid_file_exception.html',1,'Dotenv::Exception']]],
+  ['invalidpathexception_12',['InvalidPathException',['../class_dotenv_1_1_exception_1_1_invalid_path_exception.html',1,'Dotenv::Exception']]],
+  ['invoice_13',['Invoice',['../class_mercado_pago_1_1_resources_1_1_invoice.html',1,'MercadoPago::Resources']]],
+  ['invoiceclient_14',['InvoiceClient',['../class_mercado_pago_1_1_client_1_1_invoice_1_1_invoice_client.html',1,'MercadoPago::Client::Invoice']]],
+  ['invoiceclientunittest_15',['InvoiceClientUnitTest',['../class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_invoice_1_1_invoice_client_unit_test.html',1,'MercadoPago::Tests::Client::Unit::Invoice']]],
+  ['invoiceperiod_16',['InvoicePeriod',['../class_mercado_pago_1_1_resources_1_1_order_1_1_invoice_period.html',1,'MercadoPago::Resources::Order']]],
+  ['invoicesearch_17',['InvoiceSearch',['../class_mercado_pago_1_1_resources_1_1_invoice_search.html',1,'MercadoPago::Resources']]],
+  ['invoicesearchresult_18',['InvoiceSearchResult',['../class_mercado_pago_1_1_resources_1_1_invoice_1_1_invoice_search_result.html',1,'MercadoPago::Resources::Invoice']]],
+  ['issuer_19',['Issuer',['../class_mercado_pago_1_1_resources_1_1_customer_1_1_issuer.html',1,'MercadoPago::Resources::Customer']]],
+  ['item_20',['Item',['../class_mercado_pago_1_1_resources_1_1_merchant_order_1_1_item.html',1,'MercadoPago\Resources\MerchantOrder\Item'],['../class_mercado_pago_1_1_resources_1_1_preference_1_1_item.html',1,'MercadoPago\Resources\Preference\Item']]],
+  ['items_21',['Items',['../class_mercado_pago_1_1_resources_1_1_order_1_1_items.html',1,'MercadoPago::Resources::Order']]]
+];

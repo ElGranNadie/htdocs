@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['identification_2ephp_0',['Identification.php',['../_identification_8php.html',1,'']]],
+  ['identificationtypeclient_2ephp_1',['IdentificationTypeClient.php',['../_identification_type_client_8php.html',1,'']]],
+  ['identificationtypeclientittest_2ephp_2',['IdentificationTypeClientITTest.php',['../_identification_type_client_i_t_test_8php.html',1,'']]],
+  ['identificationtypeclientunittest_2ephp_3',['IdentificationTypeClientUnitTest.php',['../_identification_type_client_unit_test_8php.html',1,'']]],
+  ['identificationtypelistresult_2ephp_4',['IdentificationTypeListResult.php',['../_identification_type_list_result_8php.html',1,'']]],
+  ['identificationtyperesult_2ephp_5',['IdentificationTypeResult.php',['../_identification_type_result_8php.html',1,'']]],
+  ['immutablewriter_2ephp_6',['ImmutableWriter.php',['../_immutable_writer_8php.html',1,'']]],
+  ['index_2ephp_7',['index.php',['../dashboard_2index_8php.html',1,'(Espacio de nombres global)'],['../index_8php.html',1,'(Espacio de nombres global)']]],
+  ['installed_2ephp_8',['installed.php',['../installed_8php.html',1,'']]],
+  ['installedversions_2ephp_9',['InstalledVersions.php',['../_installed_versions_8php.html',1,'']]],
+  ['integrationdata_2ephp_10',['IntegrationData.php',['../_integration_data_8php.html',1,'']]],
+  ['invalidargumentexception_2ephp_11',['InvalidArgumentException.php',['../_invalid_argument_exception_8php.html',1,'']]],
+  ['invalidencodingexception_2ephp_12',['InvalidEncodingException.php',['../_invalid_encoding_exception_8php.html',1,'']]],
+  ['invalidfileexception_2ephp_13',['InvalidFileException.php',['../_invalid_file_exception_8php.html',1,'']]],
+  ['invalidpathexception_2ephp_14',['InvalidPathException.php',['../_invalid_path_exception_8php.html',1,'']]],
+  ['invoice_2ephp_15',['Invoice.php',['../_invoice_8php.html',1,'']]],
+  ['invoiceclient_2ephp_16',['InvoiceClient.php',['../_invoice_client_8php.html',1,'']]],
+  ['invoiceclientunittest_2ephp_17',['InvoiceClientUnitTest.php',['../_invoice_client_unit_test_8php.html',1,'']]],
+  ['invoiceperiod_2ephp_18',['InvoicePeriod.php',['../_invoice_period_8php.html',1,'']]],
+  ['invoicesearch_2ephp_19',['InvoiceSearch.php',['../_invoice_search_8php.html',1,'']]],
+  ['invoicesearchresult_2ephp_20',['InvoiceSearchResult.php',['../_invoice_search_result_8php.html',1,'']]],
+  ['issuer_2ephp_21',['Issuer.php',['../_issuer_8php.html',1,'']]],
+  ['item_2ephp_22',['Item.php',['../_merchant_order_2_item_8php.html',1,'(Espacio de nombres global)'],['../_preference_2_item_8php.html',1,'(Espacio de nombres global)']]],
+  ['items_2ephp_23',['Items.php',['../_items_8php.html',1,'']]]
+];

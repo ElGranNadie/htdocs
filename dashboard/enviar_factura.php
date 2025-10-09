@@ -4,9 +4,11 @@ require '../libs/PHPMailer/src/SMTP.php';
 require '../libs/PHPMailer/src/Exception.php';
 require '../libs/fpdf/fpdf.php';
 
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+/** funcion para generar y enviar factura */
 function generarYEnviarFactura($conn, $usuario_id, $amount, $method, $payment_id) {
     // 🔹 Obtener datos del usuario
     $query = $conn->prepare("SELECT nombre_us, correo FROM usuarios WHERE id = ?");

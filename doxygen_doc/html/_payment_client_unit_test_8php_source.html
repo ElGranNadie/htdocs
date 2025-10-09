@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Archivo de código fuente vendor/mercadopago/dx-php/tests/MercadoPago/Client/Unit/Payment/PaymentClientUnitTest.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_payment_client_unit_test_8php_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PaymentClientUnitTest.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_payment_client_unit_test_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="namespace_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment.html">    3</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment.html">MercadoPago\Tests\Client\Unit\Payment</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">MercadoPago\Client\Payment\PaymentClient</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>use <a class="code hl_class" href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>use <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MercadoPago\Net\MPDefaultHttpClient</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>use <a class="code hl_class" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_base_1_1_base_client.html">MercadoPago\Tests\Client\Unit\Base\BaseClient</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html">   13</a></span><span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_class" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html">PaymentClientUnitTest</a> <span class="keyword">extends</span> <a class="code hl_class" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_base_1_1_base_client.html">BaseClient</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a9ef165e47ea5c35ada02b83e5480f60c">   15</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a9ef165e47ea5c35ada02b83e5480f60c">testCreateSuccess</a>(): void</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        $filepath = <span class="stringliteral">&#39;../../../../Resources/Mocks/Response/Payment/payment_base.json&#39;</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        $mock_http_request = $this-&gt;mockHttpRequest($filepath, 201);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        $http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>($mock_http_request);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPagoConfig::setHttpClient</a>($http_client);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">PaymentClient</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        $payment = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;create($this-&gt;createRequest());</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        $this-&gt;assertSame(201, $payment-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        $this-&gt;assertSame(17014025134, $payment-&gt;id);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;2022-01-10T10:10:10.000-00:00&quot;</span>, $payment-&gt;date_created);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;approved&quot;</span>, $payment-&gt;status);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;128185910&quot;</span>, $payment-&gt;payer-&gt;id);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;19119119100&quot;</span>, $payment-&gt;payer-&gt;identification-&gt;number);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;order_1631894348&quot;</span>, $payment-&gt;metadata-&gt;order_number);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;mercadopago_fee&quot;</span>, $payment-&gt;fee_details[0]-&gt;type);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a2625bd4522b059018749635c61ac52cc">   35</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a2625bd4522b059018749635c61ac52cc">testGetSuccess</a>(): void</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        $filepath = <span class="stringliteral">&#39;../../../../Resources/Mocks/Response/Payment/payment_base.json&#39;</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        $mock_http_request = $this-&gt;mockHttpRequest($filepath, 200);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        $http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>($mock_http_request);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPagoConfig::setHttpClient</a>($http_client);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">PaymentClient</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a> = 17014025134;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        $payment = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;get(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        $this-&gt;assertSame(200, $payment-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        $this-&gt;assertSame(17014025134, $payment-&gt;id);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a1af85f0747d3661d7189d0a1d578ef53">   50</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a1af85f0747d3661d7189d0a1d578ef53">testCancelSuccess</a>(): void</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        $filepath = <span class="stringliteral">&#39;../../../../Resources/Mocks/Response/Payment/payment_cancelled.json&#39;</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        $mock_http_request = $this-&gt;mockHttpRequest($filepath, 200);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        $http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>($mock_http_request);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPagoConfig::setHttpClient</a>($http_client);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">PaymentClient</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a> = 17014025134;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        $payment = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;cancel(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        $this-&gt;assertSame(200, $payment-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        $this-&gt;assertSame(17014025134, $payment-&gt;id);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        $this-&gt;assertSame(<span class="stringliteral">&quot;cancelled&quot;</span>, $payment-&gt;status);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#af6c6edc79ef0f9edb0591b8df73436c9">   66</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#af6c6edc79ef0f9edb0591b8df73436c9">testCaptureSuccess</a>(): void</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        $filepath = <span class="stringliteral">&#39;../../../../Resources/Mocks/Response/Payment/payment_captured.json&#39;</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        $mock_http_request = $this-&gt;mockHttpRequest($filepath, 200);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        $http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>($mock_http_request);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPagoConfig::setHttpClient</a>($http_client);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">PaymentClient</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a> = 17014025134;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        $payment = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;capture(<a class="code hl_variable" href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a>, 5);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        $this-&gt;assertSame(200, $payment-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        $this-&gt;assertSame(17014025134, $payment-&gt;id);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        $this-&gt;assertTrue($payment-&gt;captured);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a49b1d643486928095ded6345f1f6966f">   82</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a49b1d643486928095ded6345f1f6966f">testSearchSuccess</a>(): void</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        $filepath = <span class="stringliteral">&#39;../../../../Resources/Mocks/Response/Payment/payment_search.json&#39;</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        $mock_http_request = $this-&gt;mockHttpRequest($filepath, 200);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        $http_client = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MPDefaultHttpClient</a>($mock_http_request);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_function" href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPagoConfig::setHttpClient</a>($http_client);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">PaymentClient</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        $search_request = new \MercadoPago\Net\MPSearchRequest(5, 0, []);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        $search_result = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;search($search_request);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        $this-&gt;assertSame(200, $search_result-&gt;getResponse()-&gt;getStatusCode());</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        $this-&gt;assertSame(5, $search_result-&gt;paging-&gt;limit);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        $this-&gt;assertSame(0, $search_result-&gt;paging-&gt;offset);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        $this-&gt;assertSame(102, $search_result-&gt;paging-&gt;total);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        $this-&gt;assertSame(5, count($search_result-&gt;results));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        $this-&gt;assertSame(1241012238, $search_result-&gt;results[0]-&gt;id);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">private</span> <span class="keyword">function</span> createRequest(): array</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        $request = [</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="stringliteral">&quot;transaction_amount&quot;</span> =&gt; 100,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="stringliteral">&quot;description&quot;</span> =&gt; <span class="stringliteral">&quot;description&quot;</span>,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="stringliteral">&quot;payment_method_id&quot;</span> =&gt; <span class="stringliteral">&quot;pix&quot;</span>,</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="stringliteral">&quot;payer&quot;</span> =&gt; [</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="stringliteral">&quot;email&quot;</span> =&gt; <span class="stringliteral">&quot;test_user_24634097@testuser.com&quot;</span>,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            ]</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        ];</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> $request;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_payment_1_1_payment_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">MercadoPago\Client\Payment\PaymentClient</a></div><div class="ttdef"><b>Definition</b> <a href="_payment_client_8php_source.html#l00016">PaymentClient.php:17</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a></div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00010">MercadoPagoConfig.php:11</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html_a51fd29cbaf1eb510225961d3e75aee96"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html#a51fd29cbaf1eb510225961d3e75aee96">MercadoPago\MercadoPagoConfig\setHttpClient</a></div><div class="ttdeci">static setHttpClient(MPHttpClient $http_client)</div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00073">MercadoPagoConfig.php:73</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_net_1_1_m_p_default_http_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_net_1_1_m_p_default_http_client.html">MercadoPago\Net\MPDefaultHttpClient</a></div><div class="ttdef"><b>Definition</b> <a href="_m_p_default_http_client_8php_source.html#l00010">MPDefaultHttpClient.php:11</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_base_1_1_base_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_base_1_1_base_client.html">MercadoPago\Tests\Client\Unit\Base\BaseClient</a></div><div class="ttdef"><b>Definition</b> <a href="_base_client_8php_source.html#l00010">BaseClient.php:11</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test_html"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html">MercadoPago\Tests\Client\Unit\Payment\PaymentClientUnitTest</a></div><div class="ttdef"><b>Definition</b> <a href="#l00013">PaymentClientUnitTest.php:14</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test_html_a1af85f0747d3661d7189d0a1d578ef53"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a1af85f0747d3661d7189d0a1d578ef53">MercadoPago\Tests\Client\Unit\Payment\PaymentClientUnitTest\testCancelSuccess</a></div><div class="ttdeci">testCancelSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00050">PaymentClientUnitTest.php:50</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test_html_a2625bd4522b059018749635c61ac52cc"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a2625bd4522b059018749635c61ac52cc">MercadoPago\Tests\Client\Unit\Payment\PaymentClientUnitTest\testGetSuccess</a></div><div class="ttdeci">testGetSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00035">PaymentClientUnitTest.php:35</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test_html_a49b1d643486928095ded6345f1f6966f"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a49b1d643486928095ded6345f1f6966f">MercadoPago\Tests\Client\Unit\Payment\PaymentClientUnitTest\testSearchSuccess</a></div><div class="ttdeci">testSearchSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00082">PaymentClientUnitTest.php:82</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test_html_a9ef165e47ea5c35ada02b83e5480f60c"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#a9ef165e47ea5c35ada02b83e5480f60c">MercadoPago\Tests\Client\Unit\Payment\PaymentClientUnitTest\testCreateSuccess</a></div><div class="ttdeci">testCreateSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00015">PaymentClientUnitTest.php:15</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test_html_af6c6edc79ef0f9edb0591b8df73436c9"><div class="ttname"><a href="class_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_1_1_payment_client_unit_test.html#af6c6edc79ef0f9edb0591b8df73436c9">MercadoPago\Tests\Client\Unit\Payment\PaymentClientUnitTest\testCaptureSuccess</a></div><div class="ttdeci">testCaptureSuccess()</div><div class="ttdef"><b>Definition</b> <a href="#l00066">PaymentClientUnitTest.php:66</a></div></div>
+<div class="ttc" id="anamespace_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment_html"><div class="ttname"><a href="namespace_mercado_pago_1_1_tests_1_1_client_1_1_unit_1_1_payment.html">MercadoPago\Tests\Client\Unit\Payment</a></div><div class="ttdef"><b>Definition</b> <a href="#l00003">PaymentClientUnitTest.php:3</a></div></div>
+<div class="ttc" id="apago_8php_html_ad1405dc1ba2e288764378e79bff7a87d"><div class="ttname"><a href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a></div><div class="ttdeci">$client</div><div class="ttdef"><b>Definition</b> <a href="pago_8php_source.html#l00014">pago.php:14</a></div></div>
+<div class="ttc" id="apago__exitoso_8php_html_a4938730abe5159d71edc8a2cab59ccfa"><div class="ttname"><a href="pago__exitoso_8php.html#a4938730abe5159d71edc8a2cab59ccfa">$payment_id</a></div><div class="ttdeci">if(!mysqli_real_connect( $conn, $host, $user, $password, $dbname, $port, NULL, MYSQLI_CLIENT_SSL)) if(!isset($_GET[&#39;payment_id&#39;])) $payment_id</div><div class="ttdef"><b>Definition</b> <a href="pago__exitoso_8php_source.html#l00032">pago_exitoso.php:32</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a href="dir_ed6f5334ecf92f87eca69f96e5f76e86.html">mercadopago</a></li><li class="navelem"><a href="dir_0b0c17763da0da9854d5e5b88d896b82.html">dx-php</a></li><li class="navelem"><a href="dir_ab008c55aa212b3997cab5dabca3bf53.html">tests</a></li><li class="navelem"><a href="dir_334d9e4b2d9d5525b4a13f4dce74526f.html">MercadoPago</a></li><li class="navelem"><a href="dir_d13f56b82f2eaa82f6618f06f4c20871.html">Client</a></li><li class="navelem"><a href="dir_445c5e2931ed6cb5f6a4d56c833b09e3.html">Unit</a></li><li class="navelem"><a href="dir_94ac7890f505bb4aeb47db2d1ea27ad1.html">Payment</a></li><li class="navelem"><a href="_payment_client_unit_test_8php.html">PaymentClientUnitTest.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

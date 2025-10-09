@@ -1,0 +1,912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Referencia del archivo libs/fpdf/makefont/makefont.php</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('makefont_2makefont_8php.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo makefont.php</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="makefont_2makefont_8php_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a971f74d77a96a0c72721e33b05a31913" id="r_a971f74d77a96a0c72721e33b05a31913"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a971f74d77a96a0c72721e33b05a31913">Message</a> ($txt, $severity='')</td></tr>
+<tr class="memitem:a350da5601143252db250f7bf3ca2c5c6" id="r_a350da5601143252db250f7bf3ca2c5c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a350da5601143252db250f7bf3ca2c5c6">Notice</a> ($txt)</td></tr>
+<tr class="memitem:ac3b83e4bc83ff322cbd88f70f269e7c2" id="r_ac3b83e4bc83ff322cbd88f70f269e7c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3b83e4bc83ff322cbd88f70f269e7c2">Warning</a> ($txt)</td></tr>
+<tr class="memitem:a8fb508c3ca3ccca6f318cb26631edfd4" id="r_a8fb508c3ca3ccca6f318cb26631edfd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a> ($txt)</td></tr>
+<tr class="memitem:a2fc077176f6f32e1885532112cc1a01f" id="r_a2fc077176f6f32e1885532112cc1a01f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fc077176f6f32e1885532112cc1a01f">LoadMap</a> ($enc)</td></tr>
+<tr class="memitem:a2316f5fcce6f314ed2eb4fc3426c0c4a" id="r_a2316f5fcce6f314ed2eb4fc3426c0c4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2316f5fcce6f314ed2eb4fc3426c0c4a">GetInfoFromTrueType</a> ($file, $embed, $subset, $map)</td></tr>
+<tr class="memitem:a4dee0951be5f4f2e9333a709eca3096a" id="r_a4dee0951be5f4f2e9333a709eca3096a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dee0951be5f4f2e9333a709eca3096a">GetInfoFromType1</a> ($file, $embed, $map)</td></tr>
+<tr class="memitem:a2741a34186d086acfeb6b2899646381e" id="r_a2741a34186d086acfeb6b2899646381e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2741a34186d086acfeb6b2899646381e">MakeFontDescriptor</a> ($info)</td></tr>
+<tr class="memitem:a2003a94dff4192e37e37c6b7cabc9da8" id="r_a2003a94dff4192e37e37c6b7cabc9da8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2003a94dff4192e37e37c6b7cabc9da8">MakeWidthArray</a> ($widths)</td></tr>
+<tr class="memitem:a6a51afba9135056d951a104d55f6af12" id="r_a6a51afba9135056d951a104d55f6af12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a51afba9135056d951a104d55f6af12">MakeFontEncoding</a> ($map)</td></tr>
+<tr class="memitem:a15b0b7223a5713a1d99dffe60f5e4393" id="r_a15b0b7223a5713a1d99dffe60f5e4393"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15b0b7223a5713a1d99dffe60f5e4393">MakeUnicodeArray</a> ($map)</td></tr>
+<tr class="memitem:abd2121a3e400e1df96d0dac02ade77a2" id="r_abd2121a3e400e1df96d0dac02ade77a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd2121a3e400e1df96d0dac02ade77a2">SaveToFile</a> ($file, $s, $mode)</td></tr>
+<tr class="memitem:a1772e90f25043c86be98c497ba40ecfd" id="r_a1772e90f25043c86be98c497ba40ecfd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1772e90f25043c86be98c497ba40ecfd">MakeDefinitionFile</a> ($file, $type, $enc, $embed, $subset, $map, $info)</td></tr>
+<tr class="memitem:aeffe6f587a970747bc9df152f068f05b" id="r_aeffe6f587a970747bc9df152f068f05b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeffe6f587a970747bc9df152f068f05b">MakeFont</a> ($fontfile, $enc='cp1252', $embed=true, $subset=true)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a8fb508c3ca3ccca6f318cb26631edfd4" name="a8fb508c3ca3ccca6f318cb26631edfd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb508c3ca3ccca6f318cb26631edfd4">&#9670;&#160;</a></span>Error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Error </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$txt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00038">38</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>{</div>
+<div class="line"><span class="lineno">   40</span>    <a class="code hl_function" href="#a971f74d77a96a0c72721e33b05a31913">Message</a>($txt, <span class="stringliteral">&#39;Error&#39;</span>);</div>
+<div class="line"><span class="lineno">   41</span>    <a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>;</div>
+<div class="line"><span class="lineno">   42</span>}</div>
+<div class="ttc" id="amakefont_2makefont_8php_html_a971f74d77a96a0c72721e33b05a31913"><div class="ttname"><a href="#a971f74d77a96a0c72721e33b05a31913">Message</a></div><div class="ttdeci">Message($txt, $severity=&#39;&#39;)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00012">makefont.php:12</a></div></div>
+<div class="ttc" id="apago_8php_html_a6733eb5f605d09eaede9845835d71c4e"><div class="ttname"><a href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a></div><div class="ttdeci">exit</div><div class="ttdef"><b>Definition</b> <a href="pago_8php_source.html#l00045">pago.php:45</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2316f5fcce6f314ed2eb4fc3426c0c4a" name="a2316f5fcce6f314ed2eb4fc3426c0c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2316f5fcce6f314ed2eb4fc3426c0c4a">&#9670;&#160;</a></span>GetInfoFromTrueType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GetInfoFromTrueType </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$embed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$subset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$map</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00062">62</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{</div>
+<div class="line"><span class="lineno">   64</span>    <span class="comment">// Return information from a TrueType font</span></div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        $ttf = <span class="keyword">new</span> <a class="code hl_class" href="class_t_t_f_parser.html">TTFParser</a>(<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>);</div>
+<div class="line"><span class="lineno">   68</span>        $ttf-&gt;Parse();</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">catch</span>(Exception $e)</div>
+<div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>($e-&gt;getMessage());</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span>($embed)</div>
+<div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span>(!$ttf-&gt;embeddable)</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>(<span class="stringliteral">&#39;Font license does not allow embedding&#39;</span>);</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span>($subset)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            $chars = array();</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">foreach</span>($map as $v)</div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">if</span>($v[<span class="stringliteral">&#39;name&#39;</span>]!=<span class="stringliteral">&#39;.notdef&#39;</span>)</div>
+<div class="line"><span class="lineno">   84</span>                    $chars[] = $v[<span class="stringliteral">&#39;uv&#39;</span>];</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>            $ttf-&gt;Subset($chars);</div>
+<div class="line"><span class="lineno">   87</span>            $info[<span class="stringliteral">&#39;Data&#39;</span>] = $ttf-&gt;Build();</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   90</span>            $info[<span class="stringliteral">&#39;Data&#39;</span>] = file_get_contents(<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>);</div>
+<div class="line"><span class="lineno">   91</span>        $info[<span class="stringliteral">&#39;OriginalSize&#39;</span>] = strlen($info[<span class="stringliteral">&#39;Data&#39;</span>]);</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   93</span>    $k = 1000/$ttf-&gt;unitsPerEm;</div>
+<div class="line"><span class="lineno">   94</span>    $info[<span class="stringliteral">&#39;FontName&#39;</span>] = $ttf-&gt;postScriptName;</div>
+<div class="line"><span class="lineno">   95</span>    $info[<span class="stringliteral">&#39;Bold&#39;</span>] = $ttf-&gt;bold;</div>
+<div class="line"><span class="lineno">   96</span>    $info[<span class="stringliteral">&#39;ItalicAngle&#39;</span>] = $ttf-&gt;italicAngle;</div>
+<div class="line"><span class="lineno">   97</span>    $info[<span class="stringliteral">&#39;IsFixedPitch&#39;</span>] = $ttf-&gt;isFixedPitch;</div>
+<div class="line"><span class="lineno">   98</span>    $info[<span class="stringliteral">&#39;Ascender&#39;</span>] = round($k*$ttf-&gt;typoAscender);</div>
+<div class="line"><span class="lineno">   99</span>    $info[<span class="stringliteral">&#39;Descender&#39;</span>] = round($k*$ttf-&gt;typoDescender);</div>
+<div class="line"><span class="lineno">  100</span>    $info[<span class="stringliteral">&#39;UnderlineThickness&#39;</span>] = round($k*$ttf-&gt;underlineThickness);</div>
+<div class="line"><span class="lineno">  101</span>    $info[<span class="stringliteral">&#39;UnderlinePosition&#39;</span>] = round($k*$ttf-&gt;underlinePosition);</div>
+<div class="line"><span class="lineno">  102</span>    $info[<span class="stringliteral">&#39;FontBBox&#39;</span>] = array(round($k*$ttf-&gt;xMin), round($k*$ttf-&gt;yMin), round($k*$ttf-&gt;xMax), round($k*$ttf-&gt;yMax));</div>
+<div class="line"><span class="lineno">  103</span>    $info[<span class="stringliteral">&#39;CapHeight&#39;</span>] = round($k*$ttf-&gt;capHeight);</div>
+<div class="line"><span class="lineno">  104</span>    $info[<span class="stringliteral">&#39;MissingWidth&#39;</span>] = round($k*$ttf-&gt;glyphs[0][<span class="charliteral">&#39;w&#39;</span>]);</div>
+<div class="line"><span class="lineno">  105</span>    $widths = array_fill(0, 256, $info[<span class="stringliteral">&#39;MissingWidth&#39;</span>]);</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">foreach</span>($map as $c=&gt;$v)</div>
+<div class="line"><span class="lineno">  107</span>    {</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span>($v[<span class="stringliteral">&#39;name&#39;</span>]!=<span class="stringliteral">&#39;.notdef&#39;</span>)</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span>(isset($ttf-&gt;chars[$v[<span class="stringliteral">&#39;uv&#39;</span>]]))</div>
+<div class="line"><span class="lineno">  111</span>            {</div>
+<div class="line"><span class="lineno">  112</span>                $id = $ttf-&gt;chars[$v[<span class="stringliteral">&#39;uv&#39;</span>]];</div>
+<div class="line"><span class="lineno">  113</span>                $w = $ttf-&gt;glyphs[$id][<span class="charliteral">&#39;w&#39;</span>];</div>
+<div class="line"><span class="lineno">  114</span>                $widths[$c] = round($k*$w);</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  117</span>                <a class="code hl_function" href="#ac3b83e4bc83ff322cbd88f70f269e7c2">Warning</a>(<span class="stringliteral">&#39;Character &#39;</span>.$v[<span class="stringliteral">&#39;name&#39;</span>].<span class="stringliteral">&#39; is missing&#39;</span>);</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>    $info[<span class="stringliteral">&#39;Widths&#39;</span>] = $widths;</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">return</span> $info;</div>
+<div class="line"><span class="lineno">  122</span>}</div>
+<div class="ttc" id="a_ceviche_one-_regular_8php_html_aa1bfbd27060176201b271918dff57e8f"><div class="ttname"><a href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a></div><div class="ttdeci">$file</div><div class="ttdef"><b>Definition</b> <a href="_ceviche_one-_regular_8php_source.html#l00022">CevicheOne-Regular.php:22</a></div></div>
+<div class="ttc" id="aclass_t_t_f_parser_html"><div class="ttname"><a href="class_t_t_f_parser.html">TTFParser</a></div><div class="ttdef"><b>Definition</b> <a href="ttfparser_8php_source.html#l00010">ttfparser.php:11</a></div></div>
+<div class="ttc" id="amakefont_2makefont_8php_html_a8fb508c3ca3ccca6f318cb26631edfd4"><div class="ttname"><a href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a></div><div class="ttdeci">Error($txt)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00038">makefont.php:38</a></div></div>
+<div class="ttc" id="amakefont_2makefont_8php_html_ac3b83e4bc83ff322cbd88f70f269e7c2"><div class="ttname"><a href="#ac3b83e4bc83ff322cbd88f70f269e7c2">Warning</a></div><div class="ttdeci">Warning($txt)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00033">makefont.php:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4dee0951be5f4f2e9333a709eca3096a" name="a4dee0951be5f4f2e9333a709eca3096a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dee0951be5f4f2e9333a709eca3096a">&#9670;&#160;</a></span>GetInfoFromType1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GetInfoFromType1 </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$embed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$map</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00124">124</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>{</div>
+<div class="line"><span class="lineno">  126</span>    <span class="comment">// Return information from a Type1 font</span></div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">if</span>($embed)</div>
+<div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        $f = fopen(<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>, <span class="stringliteral">&#39;rb&#39;</span>);</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span>(!$f)</div>
+<div class="line"><span class="lineno">  131</span>            <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>(<span class="stringliteral">&#39;Can\&#39;t open font file&#39;</span>);</div>
+<div class="line"><span class="lineno">  132</span>        <span class="comment">// Read first segment</span></div>
+<div class="line"><span class="lineno">  133</span>        $a = unpack(<span class="stringliteral">&#39;Cmarker/Ctype/Vsize&#39;</span>, fread($f,6));</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span>($a[<span class="stringliteral">&#39;marker&#39;</span>]!=128)</div>
+<div class="line"><span class="lineno">  135</span>            <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>(<span class="stringliteral">&#39;Font file is not a valid binary Type1&#39;</span>);</div>
+<div class="line"><span class="lineno">  136</span>        $size1 = $a[<span class="stringliteral">&#39;size&#39;</span>];</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_variable" href="debug__login_8php.html#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a> = fread($f, $size1);</div>
+<div class="line"><span class="lineno">  138</span>        <span class="comment">// Read second segment</span></div>
+<div class="line"><span class="lineno">  139</span>        $a = unpack(<span class="stringliteral">&#39;Cmarker/Ctype/Vsize&#39;</span>, fread($f,6));</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">if</span>($a[<span class="stringliteral">&#39;marker&#39;</span>]!=128)</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>(<span class="stringliteral">&#39;Font file is not a valid binary Type1&#39;</span>);</div>
+<div class="line"><span class="lineno">  142</span>        $size2 = $a[<span class="stringliteral">&#39;size&#39;</span>];</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_variable" href="debug__login_8php.html#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a> .= fread($f, $size2);</div>
+<div class="line"><span class="lineno">  144</span>        fclose($f);</div>
+<div class="line"><span class="lineno">  145</span>        $info[<span class="stringliteral">&#39;Data&#39;</span>] = <a class="code hl_variable" href="debug__login_8php.html#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a>;</div>
+<div class="line"><span class="lineno">  146</span>        $info[<span class="stringliteral">&#39;Size1&#39;</span>] = $size1;</div>
+<div class="line"><span class="lineno">  147</span>        $info[<span class="stringliteral">&#39;Size2&#39;</span>] = $size2;</div>
+<div class="line"><span class="lineno">  148</span>    }</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>    $afm = substr(<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>, 0, -3).<span class="stringliteral">&#39;afm&#39;</span>;</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">if</span>(!file_exists($afm))</div>
+<div class="line"><span class="lineno">  152</span>        <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>(<span class="stringliteral">&#39;AFM font file not found: &#39;</span>.$afm);</div>
+<div class="line"><span class="lineno">  153</span>    $a = file($afm);</div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">if</span>(empty($a))</div>
+<div class="line"><span class="lineno">  155</span>        <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>(<span class="stringliteral">&#39;AFM file empty or not readable&#39;</span>);</div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">foreach</span>($a as $line)</div>
+<div class="line"><span class="lineno">  157</span>    {</div>
+<div class="line"><span class="lineno">  158</span>        $e = explode(<span class="charliteral">&#39; &#39;</span>, rtrim($line));</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span>(count($e)&lt;2)</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  161</span>        $entry = $e[0];</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span>($entry==<span class="charliteral">&#39;C&#39;</span>)</div>
+<div class="line"><span class="lineno">  163</span>        {</div>
+<div class="line"><span class="lineno">  164</span>            $w = $e[4];</div>
+<div class="line"><span class="lineno">  165</span>            <a class="code hl_variable" href="courier_8php.html#ab2fc40d43824ea3e1ce5d86dee0d763b">$name</a> = $e[7];</div>
+<div class="line"><span class="lineno">  166</span>            <a class="code hl_variable" href="helvetica_8php.html#ac2951b03dbb0317e6c61ec920b7479dc">$cw</a>[<a class="code hl_variable" href="courier_8php.html#ab2fc40d43824ea3e1ce5d86dee0d763b">$name</a>] = $w;</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+<div class="line"><span class="lineno">  168</span>        elseif($entry==<span class="stringliteral">&#39;FontName&#39;</span>)</div>
+<div class="line"><span class="lineno">  169</span>            $info[&#39;FontName&#39;] = $e[1];</div>
+<div class="line"><span class="lineno">  170</span>        elseif($entry==&#39;Weight&#39;)</div>
+<div class="line"><span class="lineno">  171</span>            $info[&#39;Weight&#39;] = $e[1];</div>
+<div class="line"><span class="lineno">  172</span>        elseif($entry==&#39;ItalicAngle&#39;)</div>
+<div class="line"><span class="lineno">  173</span>            $info[&#39;ItalicAngle&#39;] = (<span class="keywordtype">int</span>)$e[1];</div>
+<div class="line"><span class="lineno">  174</span>        elseif($entry==&#39;Ascender&#39;)</div>
+<div class="line"><span class="lineno">  175</span>            $info[&#39;Ascender&#39;] = (<span class="keywordtype">int</span>)$e[1];</div>
+<div class="line"><span class="lineno">  176</span>        elseif($entry==&#39;Descender&#39;)</div>
+<div class="line"><span class="lineno">  177</span>            $info[&#39;Descender&#39;] = (<span class="keywordtype">int</span>)$e[1];</div>
+<div class="line"><span class="lineno">  178</span>        elseif($entry==&#39;UnderlineThickness&#39;)</div>
+<div class="line"><span class="lineno">  179</span>            $info[&#39;UnderlineThickness&#39;] = (<span class="keywordtype">int</span>)$e[1];</div>
+<div class="line"><span class="lineno">  180</span>        elseif($entry==&#39;UnderlinePosition&#39;)</div>
+<div class="line"><span class="lineno">  181</span>            $info[&#39;UnderlinePosition&#39;] = (<span class="keywordtype">int</span>)$e[1];</div>
+<div class="line"><span class="lineno">  182</span>        elseif($entry==&#39;IsFixedPitch&#39;)</div>
+<div class="line"><span class="lineno">  183</span>            $info[&#39;IsFixedPitch&#39;] = ($e[1]==&#39;true&#39;);</div>
+<div class="line"><span class="lineno">  184</span>        elseif($entry==&#39;FontBBox&#39;)</div>
+<div class="line"><span class="lineno">  185</span>            $info[&#39;FontBBox&#39;] = array((<span class="keywordtype">int</span>)$e[1], (<span class="keywordtype">int</span>)$e[2], (<span class="keywordtype">int</span>)$e[3], (<span class="keywordtype">int</span>)$e[4]);</div>
+<div class="line"><span class="lineno">  186</span>        elseif($entry==&#39;CapHeight&#39;)</div>
+<div class="line"><span class="lineno">  187</span>            $info[&#39;CapHeight&#39;] = (<span class="keywordtype">int</span>)$e[1];</div>
+<div class="line"><span class="lineno">  188</span>        elseif($entry==&#39;StdVW&#39;)</div>
+<div class="line"><span class="lineno">  189</span>            $info[&#39;StdVW&#39;] = (<span class="keywordtype">int</span>)$e[1];</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>    <a class="code hl_variable" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(!isset($info[&#39;FontName&#39;]))</div>
+<div class="line"><span class="lineno">  193</span>        Error(&#39;FontName missing in AFM file&#39;);</div>
+<div class="line"><span class="lineno">  194</span>    <a class="code hl_variable" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(!isset($info[&#39;Ascender&#39;]))</div>
+<div class="line"><span class="lineno">  195</span>        $info[&#39;Ascender&#39;] = $info[&#39;FontBBox&#39;][3];</div>
+<div class="line"><span class="lineno">  196</span>    <a class="code hl_variable" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(!isset($info[&#39;Descender&#39;]))</div>
+<div class="line"><span class="lineno">  197</span>        $info[&#39;Descender&#39;] = $info[&#39;FontBBox&#39;][1];</div>
+<div class="line"><span class="lineno">  198</span>    $info[&#39;Bold&#39;] = isset($info[&#39;Weight&#39;]) &amp;&amp; preg_match(&#39;/bold|black/i&#39;, $info[&#39;Weight&#39;]);</div>
+<div class="line"><span class="lineno">  199</span>    <a class="code hl_variable" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(isset(<a class="code hl_variable" href="helvetica_8php.html#ac2951b03dbb0317e6c61ec920b7479dc">$cw</a>[&#39;.notdef&#39;]))</div>
+<div class="line"><span class="lineno">  200</span>        $info[&#39;MissingWidth&#39;] = <a class="code hl_variable" href="helvetica_8php.html#ac2951b03dbb0317e6c61ec920b7479dc">$cw</a>[&#39;.notdef&#39;];</div>
+<div class="line"><span class="lineno">  201</span>    <a class="code hl_variable" href="forgot__password_8php.html#a2e86f63ae868afddf30308e06df69418">else</a></div>
+<div class="line"><span class="lineno">  202</span>        $info[&#39;MissingWidth&#39;] = 0;</div>
+<div class="line"><span class="lineno">  203</span>    $widths = array_fill(0, 256, $info[&#39;MissingWidth&#39;]);</div>
+<div class="line"><span class="lineno">  204</span>    foreach($map as $c=&gt;$v)</div>
+<div class="line"><span class="lineno">  205</span>    {</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span>($v[<span class="stringliteral">&#39;name&#39;</span>]!=<span class="stringliteral">&#39;.notdef&#39;</span>)</div>
+<div class="line"><span class="lineno">  207</span>        {</div>
+<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">if</span>(isset(<a class="code hl_variable" href="helvetica_8php.html#ac2951b03dbb0317e6c61ec920b7479dc">$cw</a>[$v[<span class="stringliteral">&#39;name&#39;</span>]]))</div>
+<div class="line"><span class="lineno">  209</span>                $widths[$c] = <a class="code hl_variable" href="helvetica_8php.html#ac2951b03dbb0317e6c61ec920b7479dc">$cw</a>[$v[<span class="stringliteral">&#39;name&#39;</span>]];</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  211</span>                <a class="code hl_function" href="#ac3b83e4bc83ff322cbd88f70f269e7c2">Warning</a>(<span class="stringliteral">&#39;Character &#39;</span>.$v[<span class="stringliteral">&#39;name&#39;</span>].<span class="stringliteral">&#39; is missing&#39;</span>);</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
+<div class="line"><span class="lineno">  214</span>    $info[<span class="stringliteral">&#39;Widths&#39;</span>] = $widths;</div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordflow">return</span> $info;</div>
+<div class="line"><span class="lineno">  216</span>}</div>
+<div class="ttc" id="acourier_8php_html_ab2fc40d43824ea3e1ce5d86dee0d763b"><div class="ttname"><a href="courier_8php.html#ab2fc40d43824ea3e1ce5d86dee0d763b">$name</a></div><div class="ttdeci">$name</div><div class="ttdef"><b>Definition</b> <a href="courier_8php_source.html#l00003">courier.php:3</a></div></div>
+<div class="ttc" id="adebug__login_8php_html_a6efc15b5a2314dd4b5aaa556a375c6d6"><div class="ttname"><a href="debug__login_8php.html#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a></div><div class="ttdeci">$data</div><div class="ttdef"><b>Definition</b> <a href="debug__login_8php_source.html#l00005">debug_login.php:5</a></div></div>
+<div class="ttc" id="aforgot__password_8php_html_a255fa5877cc387dafdd9c78a4d4f93ea"><div class="ttname"><a href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a></div><div class="ttdeci">if(empty( $action)||empty( $email)) respond(400</div><div class="ttdef"><b>Definition</b> <a href="forgot__password_8php_source.html#l00017">forgot_password.php:17</a></div></div>
+<div class="ttc" id="aforgot__password_8php_html_a2e86f63ae868afddf30308e06df69418"><div class="ttname"><a href="forgot__password_8php.html#a2e86f63ae868afddf30308e06df69418">else</a></div><div class="ttdeci">if($action===&#39;request_code&#39;) elseif( $action===&#39;verify_code&#39;) elseif($action===&#39;reset_password&#39;) else</div><div class="ttdef"><b>Definition</b> <a href="forgot__password_8php_source.html#l00083">forgot_password.php:83</a></div></div>
+<div class="ttc" id="ahelvetica_8php_html_ac2951b03dbb0317e6c61ec920b7479dc"><div class="ttname"><a href="helvetica_8php.html#ac2951b03dbb0317e6c61ec920b7479dc">$cw</a></div><div class="ttdeci">$cw</div><div class="ttdef"><b>Definition</b> <a href="helvetica_8php_source.html#l00006">helvetica.php:6</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2fc077176f6f32e1885532112cc1a01f" name="a2fc077176f6f32e1885532112cc1a01f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc077176f6f32e1885532112cc1a01f">&#9670;&#160;</a></span>LoadMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LoadMap </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$enc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00044">44</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
+<div class="line"><span class="lineno">   46</span>    <a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a> = dirname(__FILE__).<span class="charliteral">&#39;/&#39;</span>.strtolower(<a class="code hl_variable" href="courier_8php.html#ac35f45ece02c139742f8d3edacae5925">$enc</a>).<span class="stringliteral">&#39;.map&#39;</span>;</div>
+<div class="line"><span class="lineno">   47</span>    $a = file(<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>);</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">if</span>(empty($a))</div>
+<div class="line"><span class="lineno">   49</span>        <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>(<span class="stringliteral">&#39;Encoding not found: &#39;</span>.<a class="code hl_variable" href="courier_8php.html#ac35f45ece02c139742f8d3edacae5925">$enc</a>);</div>
+<div class="line"><span class="lineno">   50</span>    $map = array_fill(0, 256, array(<span class="stringliteral">&#39;uv&#39;</span>=&gt;-1, <span class="stringliteral">&#39;name&#39;</span>=&gt;<span class="stringliteral">&#39;.notdef&#39;</span>));</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">foreach</span>($a as $line)</div>
+<div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        $e = explode(<span class="charliteral">&#39; &#39;</span>, rtrim($line));</div>
+<div class="line"><span class="lineno">   54</span>        $c = hexdec(substr($e[0],1));</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a> = hexdec(substr($e[1],2));</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_variable" href="courier_8php.html#ab2fc40d43824ea3e1ce5d86dee0d763b">$name</a> = $e[2];</div>
+<div class="line"><span class="lineno">   57</span>        $map[$c] = array(<span class="stringliteral">&#39;uv&#39;</span>=&gt;<a class="code hl_variable" href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a>, <span class="stringliteral">&#39;name&#39;</span>=&gt;<a class="code hl_variable" href="courier_8php.html#ab2fc40d43824ea3e1ce5d86dee0d763b">$name</a>);</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> $map;</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+<div class="ttc" id="acourier_8php_html_a6002e8c8e44c609c5087ce9b1c5867de"><div class="ttname"><a href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a></div><div class="ttdeci">$uv</div><div class="ttdef"><b>Definition</b> <a href="courier_8php_source.html#l00009">courier.php:9</a></div></div>
+<div class="ttc" id="acourier_8php_html_ac35f45ece02c139742f8d3edacae5925"><div class="ttname"><a href="courier_8php.html#ac35f45ece02c139742f8d3edacae5925">$enc</a></div><div class="ttdeci">$enc</div><div class="ttdef"><b>Definition</b> <a href="courier_8php_source.html#l00008">courier.php:8</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1772e90f25043c86be98c497ba40ecfd" name="a1772e90f25043c86be98c497ba40ecfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1772e90f25043c86be98c497ba40ecfd">&#9670;&#160;</a></span>MakeDefinitionFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MakeDefinitionFile </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$enc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$embed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$subset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$map</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$info</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00351">351</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  352</span>{</div>
+<div class="line"><span class="lineno">  353</span>    $s = <span class="stringliteral">&quot;&lt;?php\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  354</span>    $s .= <span class="stringliteral">&#39;$type = \&#39;&#39;</span>.$type.<span class="stringliteral">&quot;&#39;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  355</span>    $s .= <span class="stringliteral">&#39;$name = \&#39;&#39;</span>.$info[<span class="stringliteral">&#39;FontName&#39;</span>].<span class="stringliteral">&quot;&#39;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  356</span>    $s .= <span class="stringliteral">&#39;$desc = &#39;</span>.MakeFontDescriptor($info).<span class="stringliteral">&quot;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  357</span>    $s .= <span class="stringliteral">&#39;$up = &#39;</span>.$info[<span class="stringliteral">&#39;UnderlinePosition&#39;</span>].<span class="stringliteral">&quot;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  358</span>    $s .= <span class="stringliteral">&#39;$ut = &#39;</span>.$info[<span class="stringliteral">&#39;UnderlineThickness&#39;</span>].<span class="stringliteral">&quot;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  359</span>    $s .= <span class="stringliteral">&#39;$cw = &#39;</span>.MakeWidthArray($info[<span class="stringliteral">&#39;Widths&#39;</span>]).<span class="stringliteral">&quot;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  360</span>    $s .= <span class="stringliteral">&#39;$enc = \&#39;&#39;</span>.$enc.<span class="stringliteral">&quot;&#39;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  361</span>    $diff = <a class="code hl_function" href="#a6a51afba9135056d951a104d55f6af12">MakeFontEncoding</a>($map);</div>
+<div class="line"><span class="lineno">  362</span>    <span class="keywordflow">if</span>($diff)</div>
+<div class="line"><span class="lineno">  363</span>        $s .= <span class="stringliteral">&#39;$diff = \&#39;&#39;</span>.$diff.<span class="stringliteral">&quot;&#39;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  364</span>    $s .= <span class="stringliteral">&#39;$uv = &#39;</span>.MakeUnicodeArray($map).<span class="stringliteral">&quot;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  365</span>    <span class="keywordflow">if</span>($embed)</div>
+<div class="line"><span class="lineno">  366</span>    {</div>
+<div class="line"><span class="lineno">  367</span>        $s .= <span class="stringliteral">&#39;$file = \&#39;&#39;</span>.$info[<span class="stringliteral">&#39;File&#39;</span>].<span class="stringliteral">&quot;&#39;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  368</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="courier_8php.html#a9a4a6fba2208984cabb3afacadf33919">$type</a>==<span class="stringliteral">&#39;Type1&#39;</span>)</div>
+<div class="line"><span class="lineno">  369</span>        {</div>
+<div class="line"><span class="lineno">  370</span>            $s .= <span class="stringliteral">&#39;$size1 = &#39;</span>.$info[<span class="stringliteral">&#39;Size1&#39;</span>].<span class="stringliteral">&quot;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  371</span>            $s .= <span class="stringliteral">&#39;$size2 = &#39;</span>.$info[<span class="stringliteral">&#39;Size2&#39;</span>].<span class="stringliteral">&quot;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  372</span>        }</div>
+<div class="line"><span class="lineno">  373</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  374</span>        {</div>
+<div class="line"><span class="lineno">  375</span>            $s .= <span class="stringliteral">&#39;$originalsize = &#39;</span>.$info[<span class="stringliteral">&#39;OriginalSize&#39;</span>].<span class="stringliteral">&quot;;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">if</span>($subset)</div>
+<div class="line"><span class="lineno">  377</span>                $s .= <span class="stringliteral">&quot;\$subsetted = true;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  378</span>        }</div>
+<div class="line"><span class="lineno">  379</span>    }</div>
+<div class="line"><span class="lineno">  380</span>    $s .= <span class="stringliteral">&quot;?&gt;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  381</span>    <a class="code hl_function" href="#abd2121a3e400e1df96d0dac02ade77a2">SaveToFile</a>(<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>, $s, <span class="charliteral">&#39;t&#39;</span>);</div>
+<div class="line"><span class="lineno">  382</span>}</div>
+<div class="ttc" id="acourier_8php_html_a9a4a6fba2208984cabb3afacadf33919"><div class="ttname"><a href="courier_8php.html#a9a4a6fba2208984cabb3afacadf33919">$type</a></div><div class="ttdeci">$type</div><div class="ttdef"><b>Definition</b> <a href="courier_8php_source.html#l00002">courier.php:2</a></div></div>
+<div class="ttc" id="amakefont_2makefont_8php_html_a6a51afba9135056d951a104d55f6af12"><div class="ttname"><a href="#a6a51afba9135056d951a104d55f6af12">MakeFontEncoding</a></div><div class="ttdeci">MakeFontEncoding($map)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00278">makefont.php:278</a></div></div>
+<div class="ttc" id="amakefont_2makefont_8php_html_abd2121a3e400e1df96d0dac02ade77a2"><div class="ttname"><a href="#abd2121a3e400e1df96d0dac02ade77a2">SaveToFile</a></div><div class="ttdeci">SaveToFile($file, $s, $mode)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00342">makefont.php:342</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeffe6f587a970747bc9df152f068f05b" name="aeffe6f587a970747bc9df152f068f05b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeffe6f587a970747bc9df152f068f05b">&#9670;&#160;</a></span>MakeFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MakeFont </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$fontfile</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$enc</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'cp1252'</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$embed</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$subset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00384">384</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  385</span>{</div>
+<div class="line"><span class="lineno">  386</span>    <span class="comment">// Generate a font definition file</span></div>
+<div class="line"><span class="lineno">  387</span>    <span class="keywordflow">if</span>(!file_exists($fontfile))</div>
+<div class="line"><span class="lineno">  388</span>        <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>(<span class="stringliteral">&#39;Font file not found: &#39;</span>.$fontfile);</div>
+<div class="line"><span class="lineno">  389</span>    $ext = strtolower(substr($fontfile,-3));</div>
+<div class="line"><span class="lineno">  390</span>    <span class="keywordflow">if</span>($ext==<span class="stringliteral">&#39;ttf&#39;</span> || $ext==<span class="stringliteral">&#39;otf&#39;</span>)</div>
+<div class="line"><span class="lineno">  391</span>        <a class="code hl_variable" href="courier_8php.html#a9a4a6fba2208984cabb3afacadf33919">$type</a> = <span class="stringliteral">&#39;TrueType&#39;</span>;</div>
+<div class="line"><span class="lineno">  392</span>    elseif($ext==<span class="stringliteral">&#39;pfb&#39;</span>)</div>
+<div class="line"><span class="lineno">  393</span>        <a class="code hl_variable" href="courier_8php.html#a9a4a6fba2208984cabb3afacadf33919">$type</a> = &#39;Type1&#39;;</div>
+<div class="line"><span class="lineno">  394</span>    <a class="code hl_variable" href="forgot__password_8php.html#a2e86f63ae868afddf30308e06df69418">else</a></div>
+<div class="line"><span class="lineno">  395</span>        Error(&#39;Unrecognized font file extension: &#39;.$ext);</div>
+<div class="line"><span class="lineno">  396</span> </div>
+<div class="line"><span class="lineno">  397</span>    $map = <a class="code hl_function" href="#a2fc077176f6f32e1885532112cc1a01f">LoadMap</a>(<a class="code hl_variable" href="courier_8php.html#ac35f45ece02c139742f8d3edacae5925">$enc</a>);</div>
+<div class="line"><span class="lineno">  398</span> </div>
+<div class="line"><span class="lineno">  399</span>    <a class="code hl_variable" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(<a class="code hl_variable" href="courier_8php.html#a9a4a6fba2208984cabb3afacadf33919">$type</a>==&#39;TrueType&#39;)</div>
+<div class="line"><span class="lineno">  400</span>        $info = <a class="code hl_function" href="#a2316f5fcce6f314ed2eb4fc3426c0c4a">GetInfoFromTrueType</a>($fontfile, $embed, $subset, $map);</div>
+<div class="line"><span class="lineno">  401</span>    <a class="code hl_variable" href="forgot__password_8php.html#a2e86f63ae868afddf30308e06df69418">else</a></div>
+<div class="line"><span class="lineno">  402</span>        $info = <a class="code hl_function" href="#a4dee0951be5f4f2e9333a709eca3096a">GetInfoFromType1</a>($fontfile, $embed, $map);</div>
+<div class="line"><span class="lineno">  403</span> </div>
+<div class="line"><span class="lineno">  404</span>    $basename = substr(basename($fontfile), 0, -4);</div>
+<div class="line"><span class="lineno">  405</span>    <a class="code hl_variable" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>($embed)</div>
+<div class="line"><span class="lineno">  406</span>    {</div>
+<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">if</span>(function_exists(<span class="stringliteral">&#39;gzcompress&#39;</span>))</div>
+<div class="line"><span class="lineno">  408</span>        {</div>
+<div class="line"><span class="lineno">  409</span>            <a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a> = $basename.<span class="stringliteral">&#39;.z&#39;</span>;</div>
+<div class="line"><span class="lineno">  410</span>            <a class="code hl_function" href="#abd2121a3e400e1df96d0dac02ade77a2">SaveToFile</a>(<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>, gzcompress($info[<span class="stringliteral">&#39;Data&#39;</span>]), <span class="charliteral">&#39;b&#39;</span>);</div>
+<div class="line"><span class="lineno">  411</span>            $info[<span class="stringliteral">&#39;File&#39;</span>] = <a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>;</div>
+<div class="line"><span class="lineno">  412</span>            <a class="code hl_function" href="#a971f74d77a96a0c72721e33b05a31913">Message</a>(<span class="stringliteral">&#39;Font file compressed: &#39;</span>.<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>);</div>
+<div class="line"><span class="lineno">  413</span>        }</div>
+<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  415</span>        {</div>
+<div class="line"><span class="lineno">  416</span>            $info[<span class="stringliteral">&#39;File&#39;</span>] = basename($fontfile);</div>
+<div class="line"><span class="lineno">  417</span>            $subset = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  418</span>            <a class="code hl_function" href="#a350da5601143252db250f7bf3ca2c5c6">Notice</a>(<span class="stringliteral">&#39;Font file could not be compressed (zlib extension not available)&#39;</span>);</div>
+<div class="line"><span class="lineno">  419</span>        }</div>
+<div class="line"><span class="lineno">  420</span>    }</div>
+<div class="line"><span class="lineno">  421</span> </div>
+<div class="line"><span class="lineno">  422</span>    <a class="code hl_function" href="#a1772e90f25043c86be98c497ba40ecfd">MakeDefinitionFile</a>($basename.<span class="stringliteral">&#39;.php&#39;</span>, <a class="code hl_variable" href="courier_8php.html#a9a4a6fba2208984cabb3afacadf33919">$type</a>, <a class="code hl_variable" href="courier_8php.html#ac35f45ece02c139742f8d3edacae5925">$enc</a>, $embed, $subset, $map, $info);</div>
+<div class="line"><span class="lineno">  423</span>    <a class="code hl_function" href="#a971f74d77a96a0c72721e33b05a31913">Message</a>(<span class="stringliteral">&#39;Font definition file generated: &#39;</span>.$basename.<span class="stringliteral">&#39;.php&#39;</span>);</div>
+<div class="line"><span class="lineno">  424</span>}</div>
+<div class="line"><span class="lineno">  425</span> </div>
+<div class="line"><span class="lineno">  426</span><span class="keywordflow">if</span>(PHP_SAPI==<span class="stringliteral">&#39;cli&#39;</span>)</div>
+<div class="line"><span class="lineno">  427</span>{</div>
+<div class="line"><span class="lineno">  428</span>    <span class="comment">// Command-line interface</span></div>
+<div class="line"><span class="lineno">  429</span>    ini_set(<span class="stringliteral">&#39;log_errors&#39;</span>, <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">  430</span>    <span class="keywordflow">if</span>($argc==1)</div>
+<div class="line"><span class="lineno">  431</span>        die(<span class="stringliteral">&quot;Usage: php makefont.php fontfile [encoding] [embed] [subset]\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  432</span>    $fontfile = $argv[1];</div>
+<div class="line"><span class="lineno">  433</span>    <span class="keywordflow">if</span>($argc&gt;=3)</div>
+<div class="line"><span class="lineno">  434</span>        <a class="code hl_variable" href="courier_8php.html#ac35f45ece02c139742f8d3edacae5925">$enc</a> = $argv[2];</div>
+<div class="line"><span class="lineno">  435</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  436</span>        <a class="code hl_variable" href="courier_8php.html#ac35f45ece02c139742f8d3edacae5925">$enc</a> = <span class="stringliteral">&#39;cp1252&#39;</span>;</div>
+<div class="line"><span class="lineno">  437</span>    <span class="keywordflow">if</span>($argc&gt;=4)</div>
+<div class="line"><span class="lineno">  438</span>        $embed = ($argv[3]==<span class="stringliteral">&#39;true&#39;</span> || $argv[3]==<span class="charliteral">&#39;1&#39;</span>);</div>
+<div class="line"><span class="lineno">  439</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  440</span>        $embed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  441</span>    <span class="keywordflow">if</span>($argc&gt;=5)</div>
+<div class="line"><span class="lineno">  442</span>        $subset = ($argv[4]==<span class="stringliteral">&#39;true&#39;</span> || $argv[4]==<span class="charliteral">&#39;1&#39;</span>);</div>
+<div class="line"><span class="lineno">  443</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  444</span>        $subset = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  445</span>    <a class="code hl_function" href="#aeffe6f587a970747bc9df152f068f05b">MakeFont</a>($fontfile, <a class="code hl_variable" href="courier_8php.html#ac35f45ece02c139742f8d3edacae5925">$enc</a>, $embed, $subset);</div>
+<div class="line"><span class="lineno">  446</span>}</div>
+<div class="ttc" id="amakefont_2makefont_8php_html_a1772e90f25043c86be98c497ba40ecfd"><div class="ttname"><a href="#a1772e90f25043c86be98c497ba40ecfd">MakeDefinitionFile</a></div><div class="ttdeci">MakeDefinitionFile($file, $type, $enc, $embed, $subset, $map, $info)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00351">makefont.php:351</a></div></div>
+<div class="ttc" id="amakefont_2makefont_8php_html_a2316f5fcce6f314ed2eb4fc3426c0c4a"><div class="ttname"><a href="#a2316f5fcce6f314ed2eb4fc3426c0c4a">GetInfoFromTrueType</a></div><div class="ttdeci">GetInfoFromTrueType($file, $embed, $subset, $map)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00062">makefont.php:62</a></div></div>
+<div class="ttc" id="amakefont_2makefont_8php_html_a2fc077176f6f32e1885532112cc1a01f"><div class="ttname"><a href="#a2fc077176f6f32e1885532112cc1a01f">LoadMap</a></div><div class="ttdeci">LoadMap($enc)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00044">makefont.php:44</a></div></div>
+<div class="ttc" id="amakefont_2makefont_8php_html_a350da5601143252db250f7bf3ca2c5c6"><div class="ttname"><a href="#a350da5601143252db250f7bf3ca2c5c6">Notice</a></div><div class="ttdeci">Notice($txt)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00028">makefont.php:28</a></div></div>
+<div class="ttc" id="amakefont_2makefont_8php_html_a4dee0951be5f4f2e9333a709eca3096a"><div class="ttname"><a href="#a4dee0951be5f4f2e9333a709eca3096a">GetInfoFromType1</a></div><div class="ttdeci">GetInfoFromType1($file, $embed, $map)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00124">makefont.php:124</a></div></div>
+<div class="ttc" id="amakefont_2makefont_8php_html_aeffe6f587a970747bc9df152f068f05b"><div class="ttname"><a href="#aeffe6f587a970747bc9df152f068f05b">MakeFont</a></div><div class="ttdeci">MakeFont($fontfile, $enc=&#39;cp1252&#39;, $embed=true, $subset=true)</div><div class="ttdef"><b>Definition</b> <a href="makefont_2makefont_8php_source.html#l00384">makefont.php:384</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2741a34186d086acfeb6b2899646381e" name="a2741a34186d086acfeb6b2899646381e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2741a34186d086acfeb6b2899646381e">&#9670;&#160;</a></span>MakeFontDescriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MakeFontDescriptor </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00218">218</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>{</div>
+<div class="line"><span class="lineno">  220</span>    <span class="comment">// Ascent</span></div>
+<div class="line"><span class="lineno">  221</span>    $fd = <span class="stringliteral">&quot;array(&#39;Ascent&#39;=&gt;&quot;</span>.$info[<span class="stringliteral">&#39;Ascender&#39;</span>];</div>
+<div class="line"><span class="lineno">  222</span>    <span class="comment">// Descent</span></div>
+<div class="line"><span class="lineno">  223</span>    $fd .= <span class="stringliteral">&quot;,&#39;Descent&#39;=&gt;&quot;</span>.$info[<span class="stringliteral">&#39;Descender&#39;</span>];</div>
+<div class="line"><span class="lineno">  224</span>    <span class="comment">// CapHeight</span></div>
+<div class="line"><span class="lineno">  225</span>    <span class="keywordflow">if</span>(!empty($info[<span class="stringliteral">&#39;CapHeight&#39;</span>]))</div>
+<div class="line"><span class="lineno">  226</span>        $fd .= <span class="stringliteral">&quot;,&#39;CapHeight&#39;=&gt;&quot;</span>.$info[<span class="stringliteral">&#39;CapHeight&#39;</span>];</div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  228</span>        $fd .= <span class="stringliteral">&quot;,&#39;CapHeight&#39;=&gt;&quot;</span>.$info[<span class="stringliteral">&#39;Ascender&#39;</span>];</div>
+<div class="line"><span class="lineno">  229</span>    <span class="comment">// Flags</span></div>
+<div class="line"><span class="lineno">  230</span>    $flags = 0;</div>
+<div class="line"><span class="lineno">  231</span>    <span class="keywordflow">if</span>($info[<span class="stringliteral">&#39;IsFixedPitch&#39;</span>])</div>
+<div class="line"><span class="lineno">  232</span>        $flags += 1&lt;&lt;0;</div>
+<div class="line"><span class="lineno">  233</span>    $flags += 1&lt;&lt;5;</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">if</span>($info[<span class="stringliteral">&#39;ItalicAngle&#39;</span>]!=0)</div>
+<div class="line"><span class="lineno">  235</span>        $flags += 1&lt;&lt;6;</div>
+<div class="line"><span class="lineno">  236</span>    $fd .= <span class="stringliteral">&quot;,&#39;Flags&#39;=&gt;&quot;</span>.$flags;</div>
+<div class="line"><span class="lineno">  237</span>    <span class="comment">// FontBBox</span></div>
+<div class="line"><span class="lineno">  238</span>    $fbb = $info[<span class="stringliteral">&#39;FontBBox&#39;</span>];</div>
+<div class="line"><span class="lineno">  239</span>    $fd .= <span class="stringliteral">&quot;,&#39;FontBBox&#39;=&gt;&#39;[&quot;</span>.$fbb[0].<span class="charliteral">&#39; &#39;</span>.$fbb[1].<span class="charliteral">&#39; &#39;</span>.$fbb[2].<span class="charliteral">&#39; &#39;</span>.$fbb[3].<span class="stringliteral">&quot;]&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  240</span>    <span class="comment">// ItalicAngle</span></div>
+<div class="line"><span class="lineno">  241</span>    $fd .= <span class="stringliteral">&quot;,&#39;ItalicAngle&#39;=&gt;&quot;</span>.$info[<span class="stringliteral">&#39;ItalicAngle&#39;</span>];</div>
+<div class="line"><span class="lineno">  242</span>    <span class="comment">// StemV</span></div>
+<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">if</span>(isset($info[<span class="stringliteral">&#39;StdVW&#39;</span>]))</div>
+<div class="line"><span class="lineno">  244</span>        $stemv = $info[<span class="stringliteral">&#39;StdVW&#39;</span>];</div>
+<div class="line"><span class="lineno">  245</span>    elseif($info[<span class="stringliteral">&#39;Bold&#39;</span>])</div>
+<div class="line"><span class="lineno">  246</span>        $stemv = 120;</div>
+<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  248</span>        $stemv = 70;</div>
+<div class="line"><span class="lineno">  249</span>    $fd .= <span class="stringliteral">&quot;,&#39;StemV&#39;=&gt;&quot;</span>.$stemv;</div>
+<div class="line"><span class="lineno">  250</span>    <span class="comment">// MissingWidth</span></div>
+<div class="line"><span class="lineno">  251</span>    $fd .= <span class="stringliteral">&quot;,&#39;MissingWidth&#39;=&gt;&quot;</span>.$info[<span class="stringliteral">&#39;MissingWidth&#39;</span>].<span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><span class="lineno">  252</span>    <span class="keywordflow">return</span> $fd;</div>
+<div class="line"><span class="lineno">  253</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6a51afba9135056d951a104d55f6af12" name="a6a51afba9135056d951a104d55f6af12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a51afba9135056d951a104d55f6af12">&#9670;&#160;</a></span>MakeFontEncoding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MakeFontEncoding </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00278">278</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  279</span>{</div>
+<div class="line"><span class="lineno">  280</span>    <span class="comment">// Build differences from reference encoding</span></div>
+<div class="line"><span class="lineno">  281</span>    $ref = <a class="code hl_function" href="#a2fc077176f6f32e1885532112cc1a01f">LoadMap</a>(<span class="stringliteral">&#39;cp1252&#39;</span>);</div>
+<div class="line"><span class="lineno">  282</span>    $s = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><span class="lineno">  283</span>    $last = 0;</div>
+<div class="line"><span class="lineno">  284</span>    <span class="keywordflow">for</span>($c=32;$c&lt;=255;$c++)</div>
+<div class="line"><span class="lineno">  285</span>    {</div>
+<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">if</span>($map[$c][<span class="stringliteral">&#39;name&#39;</span>]!=$ref[$c][<span class="stringliteral">&#39;name&#39;</span>])</div>
+<div class="line"><span class="lineno">  287</span>        {</div>
+<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span>($c!=$last+1)</div>
+<div class="line"><span class="lineno">  289</span>                $s .= $c.<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  290</span>            $last = $c;</div>
+<div class="line"><span class="lineno">  291</span>            $s .= <span class="charliteral">&#39;/&#39;</span>.$map[$c][<span class="stringliteral">&#39;name&#39;</span>].<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  292</span>        }</div>
+<div class="line"><span class="lineno">  293</span>    }</div>
+<div class="line"><span class="lineno">  294</span>    <span class="keywordflow">return</span> rtrim($s);</div>
+<div class="line"><span class="lineno">  295</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a15b0b7223a5713a1d99dffe60f5e4393" name="a15b0b7223a5713a1d99dffe60f5e4393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b0b7223a5713a1d99dffe60f5e4393">&#9670;&#160;</a></span>MakeUnicodeArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MakeUnicodeArray </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00297">297</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  298</span>{</div>
+<div class="line"><span class="lineno">  299</span>    <span class="comment">// Build mapping to Unicode values</span></div>
+<div class="line"><span class="lineno">  300</span>    $ranges = array();</div>
+<div class="line"><span class="lineno">  301</span>    <span class="keywordflow">foreach</span>($map as $c=&gt;$v)</div>
+<div class="line"><span class="lineno">  302</span>    {</div>
+<div class="line"><span class="lineno">  303</span>        <a class="code hl_variable" href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a> = $v[<span class="stringliteral">&#39;uv&#39;</span>];</div>
+<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a>!=-1)</div>
+<div class="line"><span class="lineno">  305</span>        {</div>
+<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">if</span>(isset($range))</div>
+<div class="line"><span class="lineno">  307</span>            {</div>
+<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">if</span>($c==$range[1]+1 &amp;&amp; <a class="code hl_variable" href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a>==$range[3]+1)</div>
+<div class="line"><span class="lineno">  309</span>                {</div>
+<div class="line"><span class="lineno">  310</span>                    $range[1]++;</div>
+<div class="line"><span class="lineno">  311</span>                    $range[3]++;</div>
+<div class="line"><span class="lineno">  312</span>                }</div>
+<div class="line"><span class="lineno">  313</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  314</span>                {</div>
+<div class="line"><span class="lineno">  315</span>                    $ranges[] = $range;</div>
+<div class="line"><span class="lineno">  316</span>                    $range = array($c, $c, <a class="code hl_variable" href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a>, <a class="code hl_variable" href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a>);</div>
+<div class="line"><span class="lineno">  317</span>                }</div>
+<div class="line"><span class="lineno">  318</span>            }</div>
+<div class="line"><span class="lineno">  319</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  320</span>                $range = array($c, $c, <a class="code hl_variable" href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a>, <a class="code hl_variable" href="courier_8php.html#a6002e8c8e44c609c5087ce9b1c5867de">$uv</a>);</div>
+<div class="line"><span class="lineno">  321</span>        }</div>
+<div class="line"><span class="lineno">  322</span>    }</div>
+<div class="line"><span class="lineno">  323</span>    $ranges[] = $range;</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>    <span class="keywordflow">foreach</span>($ranges as $range)</div>
+<div class="line"><span class="lineno">  326</span>    {</div>
+<div class="line"><span class="lineno">  327</span>        <span class="keywordflow">if</span>(isset($s))</div>
+<div class="line"><span class="lineno">  328</span>            $s .= <span class="charliteral">&#39;,&#39;</span>;</div>
+<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  330</span>            $s = <span class="stringliteral">&#39;array(&#39;</span>;</div>
+<div class="line"><span class="lineno">  331</span>        $s .= $range[0].<span class="stringliteral">&#39;=&gt;&#39;</span>;</div>
+<div class="line"><span class="lineno">  332</span>        $nb = $range[1]-$range[0]+1;</div>
+<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">if</span>($nb&gt;1)</div>
+<div class="line"><span class="lineno">  334</span>            $s .= <span class="stringliteral">&#39;array(&#39;</span>.$range[2].<span class="charliteral">&#39;,&#39;</span>.$nb.<span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  336</span>            $s .= $range[2];</div>
+<div class="line"><span class="lineno">  337</span>    }</div>
+<div class="line"><span class="lineno">  338</span>    $s .= <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><span class="lineno">  339</span>    <span class="keywordflow">return</span> $s;</div>
+<div class="line"><span class="lineno">  340</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2003a94dff4192e37e37c6b7cabc9da8" name="a2003a94dff4192e37e37c6b7cabc9da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2003a94dff4192e37e37c6b7cabc9da8">&#9670;&#160;</a></span>MakeWidthArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MakeWidthArray </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$widths</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00255">255</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>{</div>
+<div class="line"><span class="lineno">  257</span>    $s = <span class="stringliteral">&quot;array(\n\t&quot;</span>;</div>
+<div class="line"><span class="lineno">  258</span>    <span class="keywordflow">for</span>($c=0;$c&lt;=255;$c++)</div>
+<div class="line"><span class="lineno">  259</span>    {</div>
+<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">if</span>(chr($c)==<span class="stringliteral">&quot;&#39;&quot;</span>)</div>
+<div class="line"><span class="lineno">  261</span>            $s .= <span class="stringliteral">&quot;&#39;\\&#39;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  262</span>        elseif(chr($c)==<span class="stringliteral">&quot;\\&quot;</span>)</div>
+<div class="line"><span class="lineno">  263</span>            $s .= <span class="stringliteral">&quot;&#39;\\\\&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  264</span>        elseif($c&gt;=32 &amp;&amp; $c&lt;=126)</div>
+<div class="line"><span class="lineno">  265</span>            $s .= <span class="stringliteral">&quot;&#39;&quot;</span>.chr($c).<span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  266</span>        <a class="code hl_variable" href="forgot__password_8php.html#a2e86f63ae868afddf30308e06df69418">else</a></div>
+<div class="line"><span class="lineno">  267</span>            $s .= <span class="stringliteral">&quot;chr($c)&quot;</span>;</div>
+<div class="line"><span class="lineno">  268</span>        $s .= &#39;=&gt;&#39;.$widths[$c];</div>
+<div class="line"><span class="lineno">  269</span>        <a class="code hl_variable" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>($c&lt;255)</div>
+<div class="line"><span class="lineno">  270</span>            $s .= <span class="charliteral">&#39;,&#39;</span>;</div>
+<div class="line"><span class="lineno">  271</span>        <a class="code hl_variable" href="forgot__password_8php.html#a255fa5877cc387dafdd9c78a4d4f93ea">if</a>(($c+1)%22==0)</div>
+<div class="line"><span class="lineno">  272</span>            $s .= <span class="stringliteral">&quot;\n\t&quot;</span>;</div>
+<div class="line"><span class="lineno">  273</span>    }</div>
+<div class="line"><span class="lineno">  274</span>    $s .= <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><span class="lineno">  275</span>    <a class="code hl_variable" href="case_folding_8php.html#a4936080747a4aa41d6e7e81ceb323f0e">return</a> $s;</div>
+<div class="line"><span class="lineno">  276</span>}</div>
+<div class="ttc" id="acase_folding_8php_html_a4936080747a4aa41d6e7e81ceb323f0e"><div class="ttname"><a href="case_folding_8php.html#a4936080747a4aa41d6e7e81ceb323f0e">return</a></div><div class="ttdeci">return[&#39;İ&#39;=&gt; &#39;i̇&#39;, &#39;µ&#39;=&gt; &#39;μ&#39;, &#39;ſ&#39;=&gt; &#39;s&#39;, &#39;ͅ&#39;=&gt; &#39;ι&#39;, &#39;ς&#39;=&gt; &#39;σ&#39;, &#39;ϐ&#39;=&gt; &#39;β&#39;, &#39;ϑ&#39;=&gt; &#39;θ&#39;, &#39;ϕ&#39;=&gt; &#39;φ&#39;, &#39;ϖ&#39;=&gt; &#39;π&#39;, &#39;ϰ&#39;=&gt; &#39;κ&#39;, &#39;ϱ&#39;=&gt; &#39;ρ&#39;, &#39;ϵ&#39;=&gt; &#39;ε&#39;, &#39;ẛ&#39;=&gt; &#39;ṡ&#39;, &#39;ι&#39;=&gt; &#39;ι&#39;, &#39;ß&#39;=&gt; &#39;ss&#39;, &#39;ŉ&#39;=&gt; &#39;ʼn&#39;, &#39;ǰ&#39;=&gt; &#39;ǰ&#39;, &#39;ΐ&#39;=&gt; &#39;ΐ&#39;, &#39;ΰ&#39;=&gt; &#39;ΰ&#39;, &#39;և&#39;=&gt; &#39;եւ&#39;, &#39;ẖ&#39;=&gt; &#39;ẖ&#39;, &#39;ẗ&#39;=&gt; &#39;ẗ&#39;, &#39;ẘ&#39;=&gt; &#39;ẘ&#39;, &#39;ẙ&#39;=&gt; &#39;ẙ&#39;, &#39;ẚ&#39;=&gt; &#39;aʾ&#39;, &#39;ẞ&#39;=&gt; &#39;ss&#39;, &#39;ὐ&#39;=&gt; &#39;ὐ&#39;, &#39;ὒ&#39;=&gt; &#39;ὒ&#39;, &#39;ὔ&#39;=&gt; &#39;ὔ&#39;, &#39;ὖ&#39;=&gt; &#39;ὖ&#39;, &#39;ᾀ&#39;=&gt; &#39;ἀι&#39;, &#39;ᾁ&#39;=&gt; &#39;ἁι&#39;, &#39;ᾂ&#39;=&gt; &#39;ἂι&#39;, &#39;ᾃ&#39;=&gt; &#39;ἃι&#39;, &#39;ᾄ&#39;=&gt; &#39;ἄι&#39;, &#39;ᾅ&#39;=&gt; &#39;ἅι&#39;, &#39;ᾆ&#39;=&gt; &#39;ἆι&#39;, &#39;ᾇ&#39;=&gt; &#39;ἇι&#39;, &#39;ᾈ&#39;=&gt; &#39;ἀι&#39;, &#39;ᾉ&#39;=&gt; &#39;ἁι&#39;, &#39;ᾊ&#39;=&gt; &#39;ἂι&#39;, &#39;ᾋ&#39;=&gt; &#39;ἃι&#39;, &#39;ᾌ&#39;=&gt; &#39;ἄι&#39;, &#39;ᾍ&#39;=&gt; &#39;ἅι&#39;, &#39;ᾎ&#39;=&gt; &#39;ἆι&#39;, &#39;ᾏ&#39;=&gt; &#39;ἇι&#39;, &#39;ᾐ&#39;=&gt; &#39;ἠι&#39;, &#39;ᾑ&#39;=&gt; &#39;ἡι&#39;, &#39;ᾒ&#39;=&gt; &#39;ἢι&#39;, &#39;ᾓ&#39;=&gt; &#39;ἣι&#39;, &#39;ᾔ&#39;=&gt; &#39;ἤι&#39;, &#39;ᾕ&#39;=&gt; &#39;ἥι&#39;, &#39;ᾖ&#39;=&gt; &#39;ἦι&#39;, &#39;ᾗ&#39;=&gt; &#39;ἧι&#39;, &#39;ᾘ&#39;=&gt; &#39;ἠι&#39;, &#39;ᾙ&#39;=&gt; &#39;ἡι&#39;, &#39;ᾚ&#39;=&gt; &#39;ἢι&#39;, &#39;ᾛ&#39;=&gt; &#39;ἣι&#39;, &#39;ᾜ&#39;=&gt; &#39;ἤι&#39;, &#39;ᾝ&#39;=&gt; &#39;ἥι&#39;, &#39;ᾞ&#39;=&gt; &#39;ἦι&#39;, &#39;ᾟ&#39;=&gt; &#39;ἧι&#39;, &#39;ᾠ&#39;=&gt; &#39;ὠι&#39;, &#39;ᾡ&#39;=&gt; &#39;ὡι&#39;, &#39;ᾢ&#39;=&gt; &#39;ὢι&#39;, &#39;ᾣ&#39;=&gt; &#39;ὣι&#39;, &#39;ᾤ&#39;=&gt; &#39;ὤι&#39;, &#39;ᾥ&#39;=&gt; &#39;ὥι&#39;, &#39;ᾦ&#39;=&gt; &#39;ὦι&#39;, &#39;ᾧ&#39;=&gt; &#39;ὧι&#39;, &#39;ᾨ&#39;=&gt; &#39;ὠι&#39;, &#39;ᾩ&#39;=&gt; &#39;ὡι&#39;, &#39;ᾪ&#39;=&gt; &#39;ὢι&#39;, &#39;ᾫ&#39;=&gt; &#39;ὣι&#39;, &#39;ᾬ&#39;=&gt; &#39;ὤι&#39;, &#39;ᾭ&#39;=&gt; &#39;ὥι&#39;, &#39;ᾮ&#39;=&gt; &#39;ὦι&#39;, &#39;ᾯ&#39;=&gt; &#39;ὧι&#39;, &#39;ᾲ&#39;=&gt; &#39;ὰι&#39;, &#39;ᾳ&#39;=&gt; &#39;αι&#39;, &#39;ᾴ&#39;=&gt; &#39;άι&#39;, &#39;ᾶ&#39;=&gt; &#39;ᾶ&#39;, &#39;ᾷ&#39;=&gt; &#39;ᾶι&#39;, &#39;ᾼ&#39;=&gt; &#39;αι&#39;, &#39;ῂ&#39;=&gt; &#39;ὴι&#39;, &#39;ῃ&#39;=&gt; &#39;ηι&#39;, &#39;ῄ&#39;=&gt; &#39;ήι&#39;, &#39;ῆ&#39;=&gt; &#39;ῆ&#39;, &#39;ῇ&#39;=&gt; &#39;ῆι&#39;, &#39;ῌ&#39;=&gt; &#39;ηι&#39;, &#39;ῒ&#39;=&gt; &#39;ῒ&#39;, &#39;ῖ&#39;=&gt; &#39;ῖ&#39;, &#39;ῗ&#39;=&gt; &#39;ῗ&#39;, &#39;ῢ&#39;=&gt; &#39;ῢ&#39;, &#39;ῤ&#39;=&gt; &#39;ῤ&#39;, &#39;ῦ&#39;=&gt; &#39;ῦ&#39;, &#39;ῧ&#39;=&gt; &#39;ῧ&#39;, &#39;ῲ&#39;=&gt; &#39;ὼι&#39;, &#39;ῳ&#39;=&gt; &#39;ωι&#39;, &#39;ῴ&#39;=&gt; &#39;ώι&#39;, &#39;ῶ&#39;=&gt; &#39;ῶ&#39;, &#39;ῷ&#39;=&gt; &#39;ῶι&#39;, &#39;ῼ&#39;=&gt; &#39;ωι&#39;, &#39;ﬀ&#39;=&gt; &#39;ff&#39;, &#39;ﬁ&#39;=&gt; &#39;fi&#39;, &#39;ﬂ&#39;=&gt; &#39;fl&#39;, &#39;ﬃ&#39;=&gt; &#39;ffi&#39;, &#39;ﬄ&#39;=&gt; &#39;ffl&#39;, &#39;ﬅ&#39;=&gt; &#39;st&#39;, &#39;ﬆ&#39;=&gt; &#39;st&#39;, &#39;ﬓ&#39;=&gt; &#39;մն&#39;, &#39;ﬔ&#39;=&gt; &#39;մե&#39;, &#39;ﬕ&#39;=&gt; &#39;մի&#39;, &#39;ﬖ&#39;=&gt; &#39;վն&#39;, &#39;ﬗ&#39;=&gt; &#39;մխ&#39;,]</div><div class="ttdef"><b>Definition</b> <a href="case_folding_8php_source.html#l00003">caseFolding.php:119</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a971f74d77a96a0c72721e33b05a31913" name="a971f74d77a96a0c72721e33b05a31913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a971f74d77a96a0c72721e33b05a31913">&#9670;&#160;</a></span>Message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Message </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$txt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$severity</em></span><span class="paramdefsep"> = </span><span class="paramdefval">''</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00012">12</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">if</span>(PHP_SAPI==<span class="stringliteral">&#39;cli&#39;</span>)</div>
+<div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span>($severity)</div>
+<div class="line"><span class="lineno">   17</span>            echo <span class="stringliteral">&quot;$severity: &quot;</span>;</div>
+<div class="line"><span class="lineno">   18</span>        echo <span class="stringliteral">&quot;$txt\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span>($severity)</div>
+<div class="line"><span class="lineno">   23</span>            echo <span class="stringliteral">&quot;&lt;b&gt;$severity&lt;/b&gt;: &quot;</span>;</div>
+<div class="line"><span class="lineno">   24</span>        echo <span class="stringliteral">&quot;$txt&lt;br&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="line"><span class="lineno">   26</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a350da5601143252db250f7bf3ca2c5c6" name="a350da5601143252db250f7bf3ca2c5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350da5601143252db250f7bf3ca2c5c6">&#9670;&#160;</a></span>Notice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Notice </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$txt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00028">28</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>{</div>
+<div class="line"><span class="lineno">   30</span>    <a class="code hl_function" href="#a971f74d77a96a0c72721e33b05a31913">Message</a>($txt, <span class="stringliteral">&#39;Notice&#39;</span>);</div>
+<div class="line"><span class="lineno">   31</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abd2121a3e400e1df96d0dac02ade77a2" name="abd2121a3e400e1df96d0dac02ade77a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd2121a3e400e1df96d0dac02ade77a2">&#9670;&#160;</a></span>SaveToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SaveToFile </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00342">342</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  343</span>{</div>
+<div class="line"><span class="lineno">  344</span>    $f = fopen(<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>, <span class="charliteral">&#39;w&#39;</span>.$mode);</div>
+<div class="line"><span class="lineno">  345</span>    <span class="keywordflow">if</span>(!$f)</div>
+<div class="line"><span class="lineno">  346</span>        <a class="code hl_function" href="#a8fb508c3ca3ccca6f318cb26631edfd4">Error</a>(<span class="stringliteral">&#39;Can\&#39;t write to file &#39;</span>.<a class="code hl_variable" href="_ceviche_one-_regular_8php.html#aa1bfbd27060176201b271918dff57e8f">$file</a>);</div>
+<div class="line"><span class="lineno">  347</span>    fwrite($f, $s);</div>
+<div class="line"><span class="lineno">  348</span>    fclose($f);</div>
+<div class="line"><span class="lineno">  349</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac3b83e4bc83ff322cbd88f70f269e7c2" name="ac3b83e4bc83ff322cbd88f70f269e7c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b83e4bc83ff322cbd88f70f269e7c2">&#9670;&#160;</a></span>Warning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Warning </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>$txt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="makefont_2makefont_8php_source.html#l00033">33</a> del archivo <a class="el" href="makefont_2makefont_8php_source.html">makefont.php</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>{</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_function" href="#a971f74d77a96a0c72721e33b05a31913">Message</a>($txt, <span class="stringliteral">&#39;Warning&#39;</span>);</div>
+<div class="line"><span class="lineno">   36</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a href="dir_8e782acb5291a8bf82b9770dd89c5f48.html">fpdf</a></li><li class="navelem"><a href="dir_66397d3e140ffba0cd078677da6badd6.html">makefont</a></li><li class="navelem"><a href="makefont_2makefont_8php.html">makefont.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

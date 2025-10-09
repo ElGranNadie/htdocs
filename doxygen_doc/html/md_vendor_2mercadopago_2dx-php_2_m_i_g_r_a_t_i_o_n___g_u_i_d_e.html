@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N.I.C.O.L.E: Migration Guide from MercadoPago PHP SDK v2 to v3</title>
+<link rel="icon" href="logo4-48.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo4-48.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">N.I.C.O.L.E<span id="projectnumber">&#160;20251008</span>
+   </div>
+   <div id="projectbrief">Sistema de mensajería y recetas saludables con IA</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md_vendor_2mercadopago_2dx-php_2_m_i_g_r_a_t_i_o_n___g_u_i_d_e.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Migration Guide from MercadoPago PHP SDK v2 to v3 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md102"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md103"></a>
+Introduction</h1>
+<p>This guide aims to assist developers using the <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> PHP SDK in migrating from version 2 to version 3.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md104"></a>
+Motivation</h1>
+<p>The new version of the <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> PHP SDK was developed based on developer feedback and with the goal of improving the integration experience with the <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> API. Improvements have been made to the code structure, new features have been added, and documentation has been enhanced.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md105"></a>
+Major Changes</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md106"></a>
+SDK Structure</h2>
+<p>In the new version, the SDK structure has been reorganized to improve code readability and maintenance. Now, files are organized into directories based on their functionality.</p>
+<p>Here is the new SDK structure:</p>
+<div class="fragment"><div class="line">- src/</div>
+<div class="line">    - MercadoPago/</div>
+<div class="line">        - Client/</div>
+<div class="line">        - Exceptions/</div>
+<div class="line">        - Net/</div>
+<div class="line">        - Resources/</div>
+<div class="line">        - Serialization/</div>
+<div class="line">        - ...</div>
+<div class="line">- tests/</div>
+<div class="line">    - MercadoPago/</div>
+<div class="line">        - ...</div>
+<div class="line">- ...</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md107"></a>
+Dependency Update</h2>
+<p>The new version of the <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> PHP SDK requires PHP version 8.2 or higher. Make sure your application meets this requirement before proceeding with the migration.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md108"></a>
+Use of Composer</h2>
+<p>The new version of the <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> PHP SDK uses <a class="el" href="namespace_composer.html">Composer</a> to manage dependencies. Make sure you have <a class="el" href="namespace_composer.html">Composer</a> installed in your development environment before proceeding with the migration.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md109"></a>
+Step-by-Step Migration</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md110"></a>
+Step 1: SDK Installation</h2>
+<p>To install the new version of the <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> PHP SDK, execute the following command in the root directory of your application:</p>
+<div class="fragment"><div class="line">composer require &quot;mercadopago/dx-php:3.0.0&quot;</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md111"></a>
+Step 2: Update Imports</h2>
+<p>In the new SDK version, some namespaces have been updated. Check all the imports in your code and update them according to the new SDK structure.</p>
+<ul>
+<li><b>Version 2 example:</b> <div class="fragment"><div class="line">require_once <span class="stringliteral">&#39;./vendor/autoload.php&#39;</span>;</div>
+<div class="line"> </div>
+<div class="line">MercadoPago\SDK::setAccessToken(<span class="stringliteral">&quot;&lt;ACCESS_TOKEN&gt;&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">$payment = <span class="keyword">new</span> MercadoPago\Payment();</div>
+</div><!-- fragment --></li>
+<li><b>Version 3 example:</b> <div class="fragment"><div class="line">require_once <span class="stringliteral">&#39;./vendor/autoload.php&#39;</span>;</div>
+<div class="line"> </div>
+<div class="line">use <a class="code hl_class" href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">MercadoPago\Client\Payment\PaymentClient</a>;</div>
+<div class="line">use <a class="code hl_class" href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a>;</div>
+<div class="line"> </div>
+<div class="line">MercadoPagoConfig::setAccessToken(<span class="stringliteral">&quot;&lt;ACCESS_TOKEN&gt;&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> PaymentClient();</div>
+<div class="ttc" id="aclass_mercado_pago_1_1_client_1_1_payment_1_1_payment_client_html"><div class="ttname"><a href="class_mercado_pago_1_1_client_1_1_payment_1_1_payment_client.html">MercadoPago\Client\Payment\PaymentClient</a></div><div class="ttdef"><b>Definition</b> <a href="_payment_client_8php_source.html#l00016">PaymentClient.php:17</a></div></div>
+<div class="ttc" id="aclass_mercado_pago_1_1_mercado_pago_config_html"><div class="ttname"><a href="class_mercado_pago_1_1_mercado_pago_config.html">MercadoPago\MercadoPagoConfig</a></div><div class="ttdef"><b>Definition</b> <a href="_mercado_pago_config_8php_source.html#l00010">MercadoPagoConfig.php:11</a></div></div>
+<div class="ttc" id="apago_8php_html_ad1405dc1ba2e288764378e79bff7a87d"><div class="ttname"><a href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a></div><div class="ttdeci">$client</div><div class="ttdef"><b>Definition</b> <a href="pago_8php_source.html#l00014">pago.php:14</a></div></div>
+</div><!-- fragment --></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md112"></a>
+Step 3: Update Methods</h2>
+<p>Some methods have been renamed and/or removed in the new SDK version. Check all the methods used in your code and update them according to the new version.</p>
+<ul>
+<li><b>Version 2 example:</b> <div class="fragment"><div class="line">$payment = <span class="keyword">new</span> MercadoPago\Payment();</div>
+<div class="line">$payment-&gt;transaction_amount = 100;</div>
+<div class="line">$payment-&gt;description = <span class="stringliteral">&quot;&lt;PRODUCT_DESCRIPTION&gt;&quot;</span>;</div>
+<div class="line">$payment-&gt;payment_method_id = <span class="stringliteral">&quot;&lt;PAYMENT_METHOD_ID&gt;&quot;</span>;</div>
+<div class="line">$payment-&gt;payer = array(</div>
+<div class="line">    <span class="stringliteral">&quot;email&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;PAYER_EMAIL&gt;&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;first_name&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;PAYER_FIRST_NAME&gt;&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;last_name&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;PAYER_LAST_NAME&gt;&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;identification&quot;</span> =&gt; array(</div>
+<div class="line">        <span class="stringliteral">&quot;type&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;IDENTIFICATION_TYPE&gt;&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;number&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;IDENTIFICATION_NUMBER&gt;&quot;</span></div>
+<div class="line">     ),</div>
+<div class="line">    <span class="stringliteral">&quot;address&quot;</span>=&gt;  array(</div>
+<div class="line">        <span class="stringliteral">&quot;zip_code&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;ZIP_CODE&gt;&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;street_name&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;STREET_NAME&gt;&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;street_number&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;STREET_NUMBER&gt;&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;neighborhood&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;NEIGHBORHOOD&gt;&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;city&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;CITY&gt;&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;federal_unit&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;FEDERAL_UNIT&gt;&quot;</span></div>
+<div class="line">     )</div>
+<div class="line">  );</div>
+<div class="line"> </div>
+<div class="line">$payment-&gt;save();</div>
+<div class="line"> </div>
+<div class="line">var_dump($payment);</div>
+</div><!-- fragment --></li>
+<li><b>Version 3 example:</b> <div class="fragment"><div class="line"><a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a> = <span class="keyword">new</span> PaymentClient();</div>
+<div class="line">$request = array(</div>
+<div class="line">    <span class="stringliteral">&quot;transaction_amount&quot;</span> =&gt; 100,</div>
+<div class="line">    <span class="stringliteral">&quot;description&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;PRODUCT_DESCRIPTION&gt;&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;payment_method_id&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;PAYMENT_METHOD_ID&gt;&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;payer&quot;</span> =&gt; [</div>
+<div class="line">        <span class="stringliteral">&quot;email&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;PAYER_EMAIL&gt;&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;first_name&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;PAYER_FIRST_NAME&gt;&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;last_name&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;PAYER_LAST_NAME&gt;&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;identification&quot;</span> =&gt; [</div>
+<div class="line">            <span class="stringliteral">&quot;type&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;IDENTIFICATION_TYPE&gt;&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;number&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;IDENTIFICATION_NUMBER&gt;&quot;</span></div>
+<div class="line">        ],</div>
+<div class="line">        <span class="stringliteral">&quot;address&quot;</span> =&gt;  [</div>
+<div class="line">            <span class="stringliteral">&quot;zip_code&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;ZIP_CODE&gt;&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;street_name&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;STREET_NAME&gt;&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;street_number&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;STREET_NUMBER&gt;&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;neighborhood&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;NEIGHBORHOOD&gt;&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;city&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;CITY&gt;&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;federal_unit&quot;</span> =&gt; <span class="stringliteral">&quot;&lt;FEDERAL_UNIT&gt;&quot;</span></div>
+<div class="line">        ]</div>
+<div class="line">    ]</div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">try</span> {</div>
+<div class="line">    $payment = <a class="code hl_variable" href="pago_8php.html#ad1405dc1ba2e288764378e79bff7a87d">$client</a>-&gt;create($request);</div>
+<div class="line">    echo <span class="stringliteral">&quot;Payment ID: $payment-&gt;id\n&quot;</span>;</div>
+<div class="line">    echo <span class="stringliteral">&quot;Payment Status: $payment-&gt;status\n&quot;</span>;</div>
+<div class="line">} <span class="keywordflow">catch</span> (MPApiException $e) {</div>
+<div class="line">    var_dump($e);</div>
+<div class="line">} <span class="keywordflow">catch</span> (Exception $e) {</div>
+<div class="line">    var_dump($e);</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md113"></a>
+Step 4: Update exception handling</h2>
+<p>The way we handle exceptions has changed. Now it's easier to identify if the error is from some API catching the <span class="tt">MPApiException</span> and accessing it's status code and content.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">catch</span> (MPApiException $e) {</div>
+<div class="line">    echo $e-&gt;getApiResponse()-&gt;getStatusCode();</div>
+<div class="line">    echo $e-&gt;getApiResponse()-&gt;getContent();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>And not API errors can be catched by using the standard Exception.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">catch</span> (Exception $e) {</div>
+<div class="line">    echo $e-&gt;getMessage();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md114"></a>
+Step 5: Review the Documentation</h2>
+<p>The new version of the <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> PHP SDK comes with more comprehensive and up-to-date documentation. We recommend that you review the documentation to understand all the changes and take advantage of the new available features.</p>
+<ul>
+<li><a href="https://www.mercadopago.com/developers/en/docs/sdks-library/server-side">SDKs documentation</a>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md115"></a>
+Conclusion</h1>
+<p>This guide has provided the necessary steps to migrate from <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> PHP SDK v2 to the new version. We hope this information is helpful to you and that you make the most of the resources and improvements available in the new version.</p>
+<p>If you have any questions or encounter any issues during the migration, we recommend consulting the official <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> PHP SDK documentation or contacting <a class="el" href="namespace_mercado_pago.html">MercadoPago</a> support. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
