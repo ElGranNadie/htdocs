@@ -1,23 +1,4 @@
-<?php 
-/**
- * @file index.php
- * @brief Página principal del dashboard N.I.C.O.L.E.
- *
- * Este archivo actúa como la entrada principal al dashboard del sistema.
- * Se estructura en módulos reutilizables (header, footer, scripts, etc.) 
- * para facilitar el mantenimiento y escalabilidad del proyecto.
- *
- * @details
- * - Carga variables globales desde `varset.php`.
- * - Incluye los metadatos y estilos comunes del dashboard.
- * - Divide el contenido principal en secciones narrativas:
- *   - ¿Qué hace NICOLE?
- *   - Cómo funciona
- *   - A futuro
- *
- * @section autores
- * - Equipo de desarrollo N.I.C.O.L.E
- */
+<?php // Se requiere porque aqui se definen las variables que se usan en el dashboard
   require '../varset/varset.php';
 ?>
 <!DOCTYPE html>
