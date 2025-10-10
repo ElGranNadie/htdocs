@@ -4030,6 +4030,11 @@ textarea.form-control-lg {
   flex-basis: 100%;
   align-items: center;
 }
+/* Navbar colapsable en modo oscuro */
+[data-bs-theme="dark"] .navbar-collapse {
+  background-color: var(--bs-dark-bg-subtle);
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
 
 .navbar-toggler {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
@@ -4041,18 +4046,17 @@ textarea.form-control-lg {
   border-radius: var(--bs-navbar-toggler-border-radius);
   transition: var(--bs-navbar-toggler-transition);
 }
-@media (prefers-reduced-motion: reduce) {
-  .navbar-toggler {
-    transition: none;
-  }
-}
+
 .navbar-toggler:hover {
   text-decoration: none;
+  background-color:#7b6cf6;
 }
-.navbar-toggler:focus {
+.navbar-toggler:focus, .navbar-toggler:active {
   text-decoration: none;
   outline: 0;
   box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
+  outline: none !important;
+box-shadow: none !important;
 }
 
 .navbar-toggler-icon {
@@ -4066,6 +4070,9 @@ textarea.form-control-lg {
   background-size: 100%;
 }
 
+[data-bs-theme=light] .navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 .navbar-nav-scroll {
   max-height: var(--bs-scroll-height, 75vh);
   overflow-y: auto;
