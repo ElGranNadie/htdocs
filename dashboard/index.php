@@ -33,13 +33,6 @@
   <title>N.I.C.O.L.E</title> <!-- Título de la página -->
   <?php require 'other.php'; ?> <!-- Incluye metadatos y enlaces comunes -->
   <?php require 'stylesheet.php'; ?> <!-- Incluye los estilos del dashboard -->
-    <style>
-  html, body {
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 100%;
-  }
-</style>
 </head>
 <body>
 <div>
