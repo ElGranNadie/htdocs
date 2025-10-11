@@ -36,7 +36,7 @@
  * @code
  * if (!isset($_SESSION['correo_verificar'])) {
  *     $_SESSION['error'] = "Sesión no válida. Inicia el proceso de registro nuevamente.";
- *     header("Location: ../registro/registro.php");
+ *     header("Location: ../dashboard/registro.php");
  *     exit();
  * }
  * @endcode
@@ -139,7 +139,7 @@
  * @code
  * unset($_SESSION['correo_verificar']);
  * $_SESSION['success'] = "¡Correo verificado correctamente! Ya puedes iniciar sesión.";
- * header("Location: ../login/login.php");
+ * header("Location: ../dashboard/login.php");
  * exit();
  * @endcode
  * 
@@ -198,7 +198,7 @@ require_once '../dashboard/conexion.php';
 // ✅ Verifica si hay un correo guardado en sesión
 if (!isset($_SESSION['correo_verificar'])) {
     $_SESSION['error'] = "Sesión no válida. Inicia el proceso de registro nuevamente.";
-    header("Location: ../registro/registro.php");
+    header("Location: ../dashboard/registro.php");
     exit();
 }
 $correo = $_SESSION['correo_verificar'];
@@ -246,7 +246,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     unset($_SESSION['correo_verificar']);
 
     $_SESSION['success'] = "¡Correo verificado correctamente! Ya puedes iniciar sesión.";
-    header("Location: ../login/login.php");
+    header("Location: ../dashboard/login.php");
     exit();
 }
 ?>

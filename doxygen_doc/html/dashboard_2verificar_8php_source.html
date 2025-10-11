@@ -101,7 +101,7 @@ $(function(){initNavTree('dashboard_2verificar_8php_source.html','',''); });
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">// ✅ Verifica si hay un correo guardado en sesión</span></div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keywordflow">if</span> (!isset($_SESSION[<span class="stringliteral">&#39;correo_verificar&#39;</span>])) {</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    $_SESSION[<span class="stringliteral">&#39;error&#39;</span>] = <span class="stringliteral">&quot;Sesión no válida. Inicia el proceso de registro nuevamente.&quot;</span>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    header(<span class="stringliteral">&quot;Location: ../registro/registro.php&quot;</span>);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    header(<span class="stringliteral">&quot;Location: ../dashboard/registro.php&quot;</span>);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="dashboard_2verificar_8php.html#a6ab47df61c600526b34e7eed19d65d10">  202</a></span>    <a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="dashboard_2verificar_8php.html#a757ee748f7d55915e45fe8802c070509">  203</a></span>}</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><a class="code hl_variable" href="register_8php.html#a43dfe1ee9d8a8ccf9c5ea3dd79fcac6f">$correo</a> = $_SESSION[<span class="stringliteral">&#39;correo_verificar&#39;</span>];</div>
@@ -149,7 +149,7 @@ $(function(){initNavTree('dashboard_2verificar_8php_source.html','',''); });
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    unset($_SESSION[<span class="stringliteral">&#39;correo_verificar&#39;</span>]);</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    $_SESSION[<span class="stringliteral">&#39;success&#39;</span>] = <span class="stringliteral">&quot;¡Correo verificado correctamente! Ya puedes iniciar sesión.&quot;</span>;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    header(<span class="stringliteral">&quot;Location: ../login/login.php&quot;</span>);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    header(<span class="stringliteral">&quot;Location: ../dashboard/login.php&quot;</span>);</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <a class="code hl_variable" href="pago_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>?&gt;</div>

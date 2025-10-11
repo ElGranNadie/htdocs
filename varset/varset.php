@@ -55,7 +55,7 @@
   $terycon = "../terminos/terminos.php"; // ruta de la pagina terminos y condiciones
   $estilosdashboard = "../estilos/dashboardstyle.css"; // ruta de estilos del dashboard
   $mainjs = "../js/main.js"; // ruta del archivo js para la seccion de chat
-  $login = "../login/login.php"; // ruta de la pagina de login del chat
+  $login = "../dashboard/login.php"; // ruta de la pagina de login del chat
   $tlogin = "../dashboard/login.php"; // ruta de la pagina de login del chat
   //<?php echo $contactanos esto era mas experimentacion
   

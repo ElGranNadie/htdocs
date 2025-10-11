@@ -118,7 +118,7 @@
                     <div id="password-match-message"></div>
                     <div class="button-group">
                         <button type="submit" class="login-btn">recuperar contraseña</button>
-                        <button type="button" onclick="window.location.href='../login/login.php'" class="register-btn">volver al inicio</button>
+                        <button type="button" onclick="window.location.href='../dashboard/login.php'" class="register-btn">volver al inicio</button>
                     </div>
                 </form>
             </div>

@@ -9,7 +9,7 @@
 <!--Redirección del lado del servidor a la ruta de login-->
 <body>
     <?php
-    //header("Location: ../login/login.php");
+    //header("Location: ../dashboard/login.php");
     header("Location: ../dashboard/index.php"); // Redirige al dashboard
     exit(); // Asegura que no se ejecute más código después de la redirección
     ?>
