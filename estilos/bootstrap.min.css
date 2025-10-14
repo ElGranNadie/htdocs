@@ -4049,7 +4049,6 @@ textarea.form-control-lg {
 
 .navbar-toggler:hover {
   text-decoration: none;
-  background-color:#7b6cf6;
 }
 .navbar-toggler:focus, .navbar-toggler:active {
   text-decoration: none;
@@ -4073,6 +4072,7 @@ box-shadow: none !important;
 [data-bs-theme=light] .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
 .navbar-nav-scroll {
   max-height: var(--bs-scroll-height, 75vh);
   overflow-y: auto;
@@ -4093,6 +4093,7 @@ box-shadow: none !important;
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
   }
+  
   .navbar-expand-sm .navbar-nav-scroll {
     overflow: visible;
   }
